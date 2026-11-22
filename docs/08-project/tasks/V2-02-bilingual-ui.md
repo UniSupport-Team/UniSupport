@@ -30,3 +30,8 @@
 
 
 **Phối hợp MS-03:** M14 do Dev 1 thực hiện 12h, độc lập với M13 do Dev 2 (20h) và Dev 3 (20h) phụ trách. Hai module chạy song song; BA tham gia mỗi module 4h, QA 1 thực hiện 8h kiểm thử M14. Không thay đổi 24h M14.
+
+
+### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
+
+**Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
