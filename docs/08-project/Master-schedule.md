@@ -187,3 +187,11 @@ Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu m
 
 
 **Quyết định mới M14:** Thay thế phương án Q-I18N xuyên milestone: toàn bộ BA 4h, Dev 1 12h, QA 1 8h được thực hiện trong MS-03 (16/11–04/12/2026), không tăng 910h hay giá 300 triệu. Các mô tả phân bổ xuyên mốc trước đây là lịch sử, không còn hiệu lực.
+
+
+### Phân công song song M13 và M14 tại MS-03 (đã duyệt)
+
+- **M13 – Dashboard & Báo cáo:** Dev 2 **20h**, Dev 3 **20h**, BA **4h** = **44h**. Không phân công Dev 1 cho M13.
+- **M14 – Quản lý đa ngôn ngữ:** Dev 1 **12h**, BA **4h**, QA 1 **8h** = **24h**.
+- **Song song:** M13 dự kiến 23–27/11/2026; M14 trong khung MS-03 16/11–04/12/2026, chồng lấn M13. Ngày làm việc riêng M14 chưa chốt; không tự suy ra Dev 1 làm đủ 12h trong tuần 23–27/11.
+- **Tổng:** không tăng effort 910h, không thay đổi 300 triệu hoặc hạn MS-03. Điều chỉnh phân công 8h Dev 1 trước đây của M13 sang Dev 3; Dev 2 giữ 20h.
