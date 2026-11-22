@@ -103,7 +103,7 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 * **Các công việc chính:**
   * **M12: Giám sát tiến độ (16/11 – 20/11):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng màn hình tracking SLA, cảnh báo ticket quá hạn (Dev 1 12h, Dev 2 20h, Dev 3 8h, BA 4h = 44h).
   * **M13: Dashboard & Báo cáo (23/11 – 27/11):** Dev 2 12h, Dev 3 20h, BA 4h = 36h.
-  * **M14: Quản lý đa ngôn ngữ (23/11 – 27/11):** Dev 1 8h, 1 FR / 2 AC, triển khai song song M13. Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md).
+  * **M14: Quản lý đa ngôn ngữ (23/11 – 27/11):** Dev 1 8h, 1 FR / 2 AC, triển khai song song M13. Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md). M13/M14 dùng chung hạng mục báo giá Q-13 (28.000.000đ), không làm thay đổi phân công giờ.
   * **Test QA/QC Đợt 4 (30/11 – 04/12):** PM, QA 1, QA 2 và BA kiểm thử tính chính xác của số liệu và độ ổn định báo cáo (PM 4h, QA 1 20h, QA 2 20h, BA 24h = 68h).
 
 ### 5. Mốc 4: Bàn giao dự án (07/12/2026 – 18/12/2026)
