@@ -47,7 +47,7 @@ Về phương thức thanh toán thương mại, dự án áp dụng cơ chế 0
 
 > **Nguyên tắc phân biệt giữa Báo giá hạng mục và Điều kiện thanh toán:**
 > - Bảng tại **Mục 2** (`Q-01` đến `Q-13`) là bảng **báo giá chi tiết theo từng module chức năng bàn giao**, thể hiện giá thương mại đã phân bổ cho các hạng mục bàn giao; tổng giá đã bao gồm công việc chung của dự án.
-> - Bảng tại **Mục 3** quy định **lịch trình dòng tiền thanh toán thực tế** giữa hai bên: Áp dụng cơ chế tạm ứng 70% tại MS-00 để đơn vị triển khai chủ động dòng tiền chi trả đội ngũ, tránh rủi ro đứt gãy tài chính trong suốt 14 tuần phát triển. Khách hàng giữ lại 30% để thanh toán tại MS-04 khi nghiệm thu toàn trình.
+> - Bảng tại **Mục 3** quy định **lịch trình dòng tiền thanh toán thực tế** giữa hai bên: Áp dụng cơ chế tạm ứng 70% tại MS-00 để đơn vị triển khai chủ động dòng tiền chi trả đội ngũ, tránh rủi ro đứt gãy tài chính trong kế hoạch 16 tuần (MS-00 đến MS-04). Khách hàng giữ lại 30% để thanh toán tại MS-04 khi nghiệm thu toàn trình.
 
 ---
 
