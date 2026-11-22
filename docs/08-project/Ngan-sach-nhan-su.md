@@ -80,7 +80,17 @@ Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04
 
 ## 6. PHỤ LỤC ĐỐI SOÁT GIÁ THEO MODULE (V1-01 — NỘI BỘ)
 
-Phụ lục này phục vụ kiểm tra phép tính, **không phải nội dung trình bày trong báo giá khách hàng**.
+Phụ lục này phục vụ kiểm tra phép tính, **không phải nội dung trình bày trong báo giá khách hàng**. Sau khi đổi mã module, thứ tự Q-07 đến Q-11 được sắp xếp theo mã mới, **giữ nguyên giá theo chức năng**, không thay đổi tổng hợp đồng.
+
+| Mã báo giá hiện hành | Module hiện hành | Module trước đổi mã | Giá (VNĐ) |
+|---|---|---|---:|
+| Q-07 | M07 – Điều phối Ticket | M11 | 13.000.000 |
+| Q-08 | M08 – Xử lý & Bổ sung | M07 | 10.600.000 |
+| Q-09 | M09 – Trả kết quả | M08 | 14.300.000 |
+| Q-10 | M10 – Theo dõi & Bổ sung | M09 | 14.300.000 |
+| Q-11 | M11 – Kết quả & Đánh giá | M10 | 8.800.000 |
+
+
 
 ### Công thức phân bổ giá trọn gói
 
