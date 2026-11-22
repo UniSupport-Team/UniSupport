@@ -22,7 +22,7 @@ Lộ trình triển khai được tái cấu trúc thành 5 giai đoạn chính 
 | **MS-00 – Khởi động** | Tuần 1 – 3<br>*(01/09 – 18/09)* | - Khảo sát quy trình nghiệp vụ & hoàn thiện tài liệu đặc tả yêu cầu.<br>- Thiết kế kiến trúc tổng thể, cơ sở dữ liệu và khởi tạo hạ tầng kỹ thuật (`INF-01`).<br>- Hoàn thiện bản mẫu giao diện tương tác (**Interactive Prototype**) cho cả 4 vai trò để khách hàng duyệt luồng màn hình và khóa phạm vi thiết kế.<br>*(Lưu ý: Module M01 bắt đầu triển khai từ MS-01)*. |
 | **MS-01 – Nền tảng** | Tuần 4 – 6<br>*(21/09 – 14/10)* | - Phát triển phân hệ nền tảng: Đăng nhập & Xác thực (`M01`), Vai trò & Phân quyền (`M02`), Quản lý tài khoản (`M03`).<br>- **Kiểm thử & Khách hàng test (08/10 – 14/10):** QA/QC thực hiện kiểm thử Đợt 1 và phối hợp khách hàng trực tiếp dùng thử, nghiệm thu sơ bộ giai đoạn nền tảng. |
 | **MS-02 – Ticket và Phân hệ sinh viên** | Tuần 7 – 11<br>*(12/10 – 13/11)* | - Khởi động Module `M04` (Quản lý danh mục) từ **12/10**, gối đầu (overlap) có chủ đích 3 ngày (12/10 – 14/10) với giai đoạn kiểm thử MS-01 để tối ưu thời gian chờ.<br>- Triển khai trọn vẹn quy trình vòng đời Ticket (`M04`–`M11`) và phân hệ sinh viên.<br>- Kiểm thử QA/QC Đợt 2 & Đợt 3. |
-| **MS-03 – Giám sát Dashboard** | Tuần 12 – 14<br>*(16/11 – 04/12)* | - Giám sát tiến độ và cảnh báo chậm hạn SLA thời gian thực (`M12`).<br>- Dashboard thống kê và xuất báo cáo điều hành dành cho cấp quản lý (`M13`).<br>- Quản lý đa ngôn ngữ Việt/Anh (`M14`, 24h), hoàn thành và kiểm thử trong MS-03.<br>- Kiểm thử QA/QC Đợt 4. |
+| **MS-03 – Giám sát Dashboard** | Tuần 12 – 14<br>*(16/11 – 04/12)* | - Giám sát tiến độ và cảnh báo chậm hạn SLA thời gian thực (`M12`).<br>- Dashboard thống kê và xuất báo cáo điều hành dành cho cấp quản lý (`M13`).<br>- Quản lý đa ngôn ngữ Việt/Anh (`M14`, 8h Dev 1), hoàn thành và kiểm thử trong MS-03.<br>- Kiểm thử QA/QC Đợt 4. |
 | **MS-04 – Bàn giao dự án** | Tuần 15 – 16<br>*(07/12 – 18/12)* | - Kiểm thử nghiệm thu người dùng toàn diện (UAT toàn trình).<br>- Đóng gói sản phẩm, hoàn thiện bộ tài liệu kỹ thuật & tài liệu hướng dẫn vận hành.<br>- Chuyển giao hệ thống chính thức lên môi trường Production và ký biên bản bàn giao. |
 
 ### Cơ chế nghiệm thu tại Mốc khởi động (MS-00) và Kế hoạch gối đầu (Overlap):
@@ -42,15 +42,9 @@ Bản cập nhật Proposal này được thực hiện nhằm hướng tới m�
 
 ### M14 — Quản lý đa ngôn ngữ tại MS-03 (V2-02)
 
-Toàn bộ **24h** thuộc **MS-03 (16/11–04/12/2026)**: BA 4h, Dev 1 12h, QA 1 8h. M14 là module thứ 14, cung cấp chuyển ngôn ngữ Việt/Anh cho giao diện M01–M13, nghiệm thu trong MS-03. Không phân bổ I18N ở các mốc khác, không tạo milestone mới, không đổi tổng 910h và giá 300 triệu. Ngày làm việc chi tiết trong MS-03 chờ xếp lịch.
+**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
 
 
-**Phân công song song MS-03:** M13 do Dev 2 (20h), Dev 3 (20h), BA (4h); M14 do Dev 1 (12h), BA (4h), QA 1 (8h). Hai module cùng thuộc MS-03 và có thời gian triển khai chồng lấn, không đổi tổng effort 910h hoặc giá hợp đồng 300 triệu.
+### Baseline M13/M14 có hiệu lực
 
-
-### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
-
-**Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
-
-
-> **Quyết định mới nhất — thay thế phương án 24h:** M14 sử dụng **8h Dev 1 điều chuyển từ M13**, không thêm BA/QA hoặc 24h trước đó. M13 còn **36h** (BA 4h, Dev 2 12h, Dev 3 20h); M14 **8h Dev 1**, cùng triển khai **23–27/11/2026** trong MS-03. Tổng dự án **886h** (712h WBS + 174h BA), giá **300.000.000đ**. Mọi bảng/ghi chú cũ về M14 24h, baseline 910h không còn hiệu lực; Excel bản chốt 886h là cơ sở đối soát. Đây là phân bổ kế hoạch, không phải giờ đã thực hiện.
+**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
