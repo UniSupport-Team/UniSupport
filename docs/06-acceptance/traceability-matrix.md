@@ -112,11 +112,11 @@
 | `Docs-02` | Tạo dữ liệu mẫu và chuẩn bị kịch bản để chạy thử nghiệm thu dự án (UAT) | [#169](https://github.com/UniSupport-Team/UniSupport/issues/169) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
 
 
-### 2.5. Yêu cầu xuyên module — đa ngôn ngữ Việt/Anh (V2-02)
+### 2.5. M14 — Quản lý đa ngôn ngữ Việt/Anh (V2-02, MS-03)
 
 | Mã AC / NFR | Mô tả | Kịch bản kiểm thử | Task triển khai | Milestone | Hạng mục báo giá |
 |---|---|---|---|---|---|
-| `FR-M01-01/AC-I18N-01`, `NFR-I18N-01` | Đăng nhập Việt/Anh, lỗi validation và xác thực giữ nguyên nghiệp vụ | `TC-I18N-01`, `TC-I18N-02` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | Xuyên MS-01–MS-04, lịch chi tiết chờ PM chốt | `Q-I18N` (24h, không tăng giá bán) |
-| `NFR-I18N-01` | Giữ ngôn ngữ, giữ nội dung nhập và biểu mẫu; bao phủ 4 vai trò | `TC-I18N-02`, `TC-I18N-03`, `TC-I18N-04`, `TC-I18N-05` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | Xuyên MS-01–MS-04, lịch chi tiết chờ PM chốt | `Q-I18N` (24h, không tăng giá bán) |
+| `FR-M01-01/AC-I18N-01`, `NFR-I18N-01` | Đăng nhập Việt/Anh, lỗi validation và xác thực giữ nguyên nghiệp vụ | `TC-I18N-01`, `TC-I18N-02` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03 (16/11–04/12/2026); ngày làm việc chờ xếp lịch | `Q-14 / M14` (24h, MS-03; không tăng giá bán) |
+| `NFR-I18N-01` | Giữ ngôn ngữ, giữ nội dung nhập và biểu mẫu; bao phủ 4 vai trò | `TC-I18N-02`, `TC-I18N-03`, `TC-I18N-04`, `TC-I18N-05` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03 (16/11–04/12/2026); ngày làm việc chờ xếp lịch | `Q-14 / M14` (24h, MS-03; không tăng giá bán) |
 
 > Task V2-02 là tài liệu trên nhánh `fix-final`, chưa phải GitHub Issue được tạo; không ghi Issue ID chưa tồn tại. Test cases chưa được thực thi.
