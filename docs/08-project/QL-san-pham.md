@@ -116,7 +116,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 
 ### 6.1. Danh mục tính năng ưu tiên sau bàn giao (Product Backlog)
 
-> **Nguyên tắc ưu tiên:** Danh mục Backlog chỉ bao gồm các tính năng mở rộng nằm ngoài phạm vi 13 phân hệ cốt lõi đã cam kết bàn giao tại PRD. Thứ tự ưu tiên được sắp xếp dựa trên **Tác động tới trải nghiệm người dùng (Impact)** và **Hiệu quả giảm tải vận hành cho nhà trường (Value vs Effort)**.
+> **Nguyên tắc ưu tiên:** Danh mục Backlog chỉ bao gồm các tính năng mở rộng nằm ngoài phạm vi 14 phân hệ cốt lõi đã cam kết bàn giao tại PRD. Thứ tự ưu tiên được sắp xếp dựa trên **Tác động tới trải nghiệm người dùng (Impact)** và **Hiệu quả giảm tải vận hành cho nhà trường (Value vs Effort)**.
 
 | STT | Tính năng cải tiến (Feature) | Giá trị mang lại & Tác động | Độ ưu tiên | Trạng thái |
 |:---:|:---|:---|:---:|:---:|
