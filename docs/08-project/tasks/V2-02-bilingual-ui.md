@@ -17,4 +17,4 @@
 - [ ] Đối chiếu AC-01 và AC-02 khi nghiệm thu; chưa ghi nhận kết quả kiểm thử.
 - [ ] Đồng bộ PRD, ma trận truy vết và Master Schedule.
 
-**Effort:** 8h Dev 1, không phát sinh BA/QA riêng. **Milestone:** MS-03 (23–27/11/2026), song song M13. **Không tự tạo Issue trên main.**
+**Effort:** 8h Dev 1, không phát sinh BA/QA riêng. **Báo giá:** gộp M13/M14 vào Q-13, tổng 28.000.000đ; M14 không thu riêng. **Milestone:** MS-03 (23–27/11/2026), song song M13. **Không tự tạo Issue trên main.**
