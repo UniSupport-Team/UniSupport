@@ -136,7 +136,7 @@
 
 ---
 
-### 2.7. Phân hệ M12 & M13 — Giám sát SLA & Dashboard báo cáo (`MS-03`)
+### 2.7. Phân hệ M12–M14 — Giám sát SLA, Dashboard và đa ngôn ngữ (`MS-03`)
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|:---:|---|---|---|:---:|
 | `TC-M12-M01` | `FR-M12-01/AC-01` | Trưởng phòng xem bảng phân bổ khối lượng công việc nhân viên | Main | Trưởng phòng mở màn hình "Theo dõi tiến độ phòng ban" | Hiển thị chính xác số đơn đã nhận, `In Progress`, `Pending`, `Resolved` của từng nhân viên thuộc phòng ban. | Có |
@@ -152,7 +152,7 @@
 | `TC-M13-M04` | `FR-M13-04/AC-01` | Thống kê điểm CSAT trung bình và hiệu suất KPI nhân viên | Main / Boundary | Xem báo cáo nhân sự có cả đơn chấm sao và đơn đóng tự động (`rating = null`) | Tính đúng tỷ lệ hoàn thành SLA và trung bình CSAT chỉ trên các đơn có đánh giá thực tế; hiển thị `"N/A"` nếu chưa có đánh giá. | Có |
 
 
-### 2.14. Phân hệ M14 — Chuyển đổi ngôn ngữ Việt/Anh (`MS-03`)
+#### M14 — Chuyển đổi ngôn ngữ Việt/Anh (cùng MS-03)
 
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|---|---|---|---|---|
