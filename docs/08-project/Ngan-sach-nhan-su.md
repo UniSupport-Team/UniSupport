@@ -26,37 +26,34 @@ Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04
 ## 2. BẢNG PHÂN BỔ LƯƠNG CHI TIẾT THEO VAI TRÒ VÀ CÁ NHÂN
 
 | STT | Vai trò | SL | Đơn giá TB/h (VNĐ) | Giờ dự kiến | Tổng Gross/người (VNĐ) | BH DN (21,5%) | Chi phí DN/người (VNĐ) |
-| :---: | :--- | :---: | ---: | :---: | ---: | ---: | ---: |
+| :---: | :--- | :---: | ---: | ---: | ---: | ---: | ---: |
 | 1 | Project Manager (PM) | 1 | 200.000 | 72h | 14.400.000 | 3.096.000 | 17.496.000 |
-| 2 | Business Analyst (BA) | 1 | 160.000 | 178h | 28.480.000 | 6.123.200 | 34.603.200 |
+| 2 | Business Analyst (BA) | 1 | 160.000 | 174h | 27.840.000 | 5.985.600 | 33.825.600 |
 | 3 | Senior Developer | 1 | 240.000 | 138h | 33.120.000 | 7.120.800 | 40.240.800 |
-| 4 | Junior Developer (Dev 1) | 1 | 90.000 | 132h | 11.880.000 | 2.554.200 | 14.434.200 |
+| 4 | Junior Developer (Dev 1) | 1 | 90.000 | 120h | 10.800.000 | 2.322.000 | 13.122.000 |
 | 5 | Junior Developer (Dev 2) | 1 | 90.000 | 108h | 9.720.000 | 2.089.800 | 11.809.800 |
 | 6 | Junior Developer (Dev 3) | 1 | 90.000 | 104h | 9.360.000 | 2.012.400 | 11.372.400 |
-| 7 | QA/QC Specialist (QA 1) | 1 | 125.000 | 93h | 11.625.000 | 2.499.375 | 14.124.375 |
-| 8 | QA/QC Specialist (QA 2) | 1 | 125.000 | 93h | 11.625.000 | 2.499.375 | 14.124.375 |
-| **-** | **TỔNG CỘNG** | **8** | **-** | **910h** | **129.210.000** | **27.780.150** | **156.990.150** |
+| 7 | QA/QC Specialist (QA 1) | 1 | 125.000 | 85h | 10.625.000 | 2.284.375 | 12.909.375 |
+| 8 | QA/QC Specialist (QA 2) | 1 | 125.000 | 85h | 10.625.000 | 2.284.375 | 12.909.375 |
+| **—** | **TỔNG CỘNG** | **8** | — | **886h** | **126.490.000** | **27.195.350** | **153.685.350** |
 
-**Tổng kết chi phí:**
-- **Tổng Gross nhân sự:** 129.210.000 VNĐ
-- **Bảo hiểm doanh nghiệp giả định:** 27.780.150 VNĐ
-- **Tổng chi phí nhân sự phía công ty:** 156.990.150 VNĐ
+**Cách tính:** Gross mỗi vai trò = số giờ × đơn giá; BH DN giả định = 21,5% × Gross (làm tròn đến đồng); chi phí DN = Gross + BH. Số giờ theo baseline **886h** của Master Schedule; các mức BH/thuế là giả định phục vụ mô hình tài chính, không phải xác nhận nghĩa vụ thực tế.
 
 ## 3. BẢNG TỔNG HỢP NGÂN SÁCH DỰ ÁN & TÍNH TOÁN SAU THUẾ
 
 | STT | Hạng mục tài chính | Cơ sở tính toán / Công thức | Thành tiền (VNĐ) |
 | :---: | :--- | :--- | ---: |
-| 1 | Tổng giá trị hợp đồng | Giá trọn gói đã bao gồm VAT | 300.000.000 |
-| 2 | Doanh thu dự án chưa VAT | 300.000.000 / 1,10 | 272.727.273 |
-| 3 | Chi phí lương nhân sự | Tổng quỹ lương Gross | 129.210.000 |
-| 4 | Chi phí bảo hiểm doanh nghiệp giả định | 21,5% × (3) | 27.780.150 |
-| 5 | Chi phí dự phòng rủi ro & bảo hành | Theo Risk trong bảng phân công | 22.138.272 |
-| 6 | Chi phí vận hành, hạ tầng & quản lý | Server, môi trường test, domain, quản lý | 15.489.366 |
-| 7 | Tổng chi phí dự án | (3) + (4) + (5) + (6) | 194.617.788 |
-| 8 | Lợi nhuận trước thuế (EBT) | (2) − (7) | 78.109.485 |
-| 9 | Thuế thu nhập doanh nghiệp giả định | 15% × (8) | 11.716.423 |
-| 10 | Lợi nhuận ròng dự kiến | (8) − (9) | 66.393.062 |
-| - | Biên lợi nhuận ròng | 66.393.062 / 300.000.000 | 22,13% |
+| 1 | Tổng giá trị hợp đồng | Giá trọn gói đã gồm VAT | 300.000.000 |
+| 2 | Doanh thu dự án chưa VAT | ROUND(300.000.000 / 1,10) | 272.727.273 |
+| 3 | Chi phí lương nhân sự | SUM(Gross 8 vai trò) | 126.490.000 |
+| 4 | Chi phí BH DN giả định | ROUND(21,5% × (3)) | 27.195.350 |
+| 5 | Chi phí dự phòng rủi ro & bảo hành | Giữ giả định ngân sách trước đây; cần đối soát định mức V3-01 | 22.138.272 |
+| 6 | Chi phí vận hành, hạ tầng & quản lý | Giữ giả định ngân sách trước đây; cần đối soát định mức V3-01 | 15.489.366 |
+| 7 | Tổng chi phí dự án | (3) + (4) + (5) + (6) | 191.312.988 |
+| 8 | Lợi nhuận trước thuế (EBT) | (2) − (7) | 81.414.285 |
+| 9 | Thuế TNDN giả định | ROUND(15% × (8)) | 12.212.143 |
+| 10 | Lợi nhuận ròng dự kiến | (8) − (9) | 69.202.142 |
+| — | Biên lợi nhuận ròng | (10) / (1) | 23,07% |
 
 ## 4. KẾT QUẢ CUỐI CÙNG
 
@@ -64,23 +61,19 @@ Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04
 | :--- | ---: |
 | Giá hợp đồng | 300.000.000 |
 | Doanh thu chưa VAT | 272.727.273 |
-| Chi phí nhân sự | 129.210.000 |
-| Bảo hiểm doanh nghiệp | 27.780.150 |
+| Chi phí nhân sự Gross | 126.490.000 |
+| BH DN giả định | 27.195.350 |
 | Dự phòng rủi ro & bảo hành | 22.138.272 |
 | Vận hành + hạ tầng + quản lý | 15.489.366 |
-| **Tổng chi phí** | **194.617.788** |
-| **EBT** | **78.109.485** |
-| Thuế thu nhập doanh nghiệp giả định 15% | 11.716.423 |
-| **Lợi nhuận ròng** | **66.393.062** |
-| **Biên lợi nhuận ròng** | **22,13%** |
+| **Tổng chi phí** | **191.312.988** |
+| **EBT** | **81.414.285** |
+| Thuế TNDN giả định 15% | 12.212.143 |
+| **Lợi nhuận ròng** | **69.202.142** |
+| **Biên lợi nhuận ròng** | **23,07%** |
 
+## 5. CĂN CỨ ĐỒNG BỘ V1-01
 
-
-## 5. ĐIỀU CHỈNH ĐƯỢC DUYỆT — V2-02
-
-- **Phạm vi:** giao diện, biểu mẫu, nhãn và thông báo hệ thống song ngữ Việt/Anh; giữ nguyên nội dung người dùng nhập; không mở rộng Email/file xuất.
-- **Tăng giờ kế hoạch:** BA +4h (174→178), Dev 1 +12h (120→132), QA 1 +8h (85→93), tổng +24h (886→910).
-- **Chi phí Gross tăng:** 2.720.000 VNĐ; bảo hiểm DN giả định 21,5% tăng 584.800 VNĐ; tổng chi phí nhân sự tăng 3.304.800 VNĐ.
-- **Giá hợp đồng giữ nguyên:** 300.000.000 VNĐ đã gồm VAT. Dự phòng rủi ro/bảo hành 22.138.272 VNĐ và vận hành 15.489.366 VNĐ được **giữ nguyên tạm thời**, chưa chứng minh cơ sở định mức và cần rà soát riêng theo V3-01.
-- **Tính toán:** EBT = 272.727.273 − 194.617.788 = 78.109.485 VNĐ; thuế TNDN **giả định** 15% = 11.716.423 VNĐ (làm tròn); lợi nhuận ròng = 66.393.062 VNĐ. Các mức thuế chỉ là giả định tài chính trong hồ sơ, không phải xác nhận nghĩa vụ thuế thực tế.
-- **Kiểm soát:** số giờ là effort dự toán, chưa ghi nhận thực tế; chưa chốt lịch triển khai chi tiết và chưa đồng bộ file Excel.
+- Baseline **886h = 712h WBS + 174h BA**. Trong đó M01–M14 chiếm **450h** (398h WBS + 52h BA), công việc chung **436h** (314h WBS + 122h BA).
+- M14: **8h Dev 1 điều chuyển từ M13**, không tăng giờ BA/QA. M13 còn 36h; cả hai được báo giá chung Q-13 **28.000.000đ**.
+- Báo giá 300.000.000đ được phân bổ theo **trọng số lương trực tiếp module** và quy tắc làm tròn công bố tại [Bao-gia-cho-khach.md](Bao-gia-cho-khach.md). **Chi phí lương toàn dự án** tại đây bao gồm cả công việc chung, khác với trọng số lương trực tiếp trong bảng báo giá.
+- **Lưu ý đối soát:** Các tổng giờ theo từng vai trò là baseline kế hoạch; cần kiểm tra lại phân bổ cá nhân trên file Excel gốc. Dự phòng và vận hành đang giữ giả định cũ, chưa xác minh định mức chi tiết.
