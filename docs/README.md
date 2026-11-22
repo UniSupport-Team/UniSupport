@@ -2,6 +2,17 @@
 
 ---
 
+## Thứ tự đọc khuyến nghị
+
+1. **Bối cảnh và bài toán khách hàng:** [Kế hoạch quản lý sản phẩm — Mục 1.2](08-project/QL-san-pham.md#12-vấn-đề-cần-giải-quyết), sau đó [Tổng quan sản phẩm](01-product/README.md).
+2. **Phạm vi và mục tiêu hiện hành:** [Bản điều chỉnh Proposal (baseline MS-00–MS-04)](08-project/Dieu-chinh-proposal.md), [Danh sách phân hệ](03-modules/README.md). [Proposal ban đầu](08-project/Proposal.md) chỉ là **tài liệu lịch sử**, không dùng thay baseline hiện hành.
+3. **Nghiệp vụ và yêu cầu:** [Domain](02-domain/README.md), [PRD từng module](03-modules/README.md), [NFR](05-non-functional-requirements/README.md).
+4. **Kế hoạch thực hiện:** [Master Schedule](08-project/Master-schedule.md), [Báo giá](08-project/Bao-gia-cho-khach.md), [Ngân sách nhân sự](08-project/Ngan-sach-nhan-su.md).
+5. **Kiểm chứng và truy vết:** [Kịch bản kiểm thử](06-acceptance/test-scenarios.md), [Ma trận truy vết](06-acceptance/traceability-matrix.md), [GitHub Issues](https://github.com/UniSupport-Team/UniSupport/issues).
+6. **Điều hành và bàn giao:** [Sổ rủi ro](08-project/risk-register.md), [Chất lượng](08-project/QL-chat-luong.md), [Điều phối](08-project/Dieuphoi-Giamsat.md), [Lịch sử tài liệu gửi khách](08-project/sent/README.md).
+
+---
+
 ## Cấu trúc tài liệu
 
 ```
