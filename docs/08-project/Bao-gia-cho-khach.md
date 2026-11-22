@@ -37,13 +37,13 @@
 | 14 | **`Q-14`** | `M14` | Quản lý đa ngôn ngữ (8h Dev 1 chuyển từ M13; không tăng giá) | 8 h | 0 h | **8 h** | **0 ₫ (trọn gói)** |
 | **-** | **TỔNG CỘNG** | **14 MODULES** | **Toàn bộ hệ thống UniSupport** | **712 h** | **174 h** | **886 h** | **300.000.000 ₫** |
 
-> **Kiểm tra đối soát (Phương án A):** ✅ Khớp đúng ngân sách: **300.000.000 ₫** (100%) | Khớp đúng nỗ lực: **910h Effort** (732h WBS + 178h BA).
+> **Kiểm tra đối soát (Phương án A):** ✅ Khớp đúng ngân sách: **300.000.000 ₫** (100%) | Khớp đúng nỗ lực: **886h Effort** (712h WBS + 174h BA).
 >
 > 📌 **NGUYÊN TẮC XÁC ĐỊNH & PHÂN BỔ GIỜ CÔNG VÀ LƯƠNG NHÂN SỰ:**
-> 1. **Đơn giá lương:** Trích xuất từ bảng *'PHÂN CHIA GIỜ CÔNG CHI TIẾT'*: PM 200.000 đ/h, BA 160.000 đ/h, Senior Dev 240.000 đ/h, Junior Devs (Dev 1, Dev 2, Dev 3) 90.000 đ/h, QA/QC 125.000 đ/h. Tổng quỹ lương Gross của dự án sau V2-02 (910h) là 129.210.000 VNĐ.
+> 1. **Đơn giá lương:** Trích xuất từ bảng *'PHÂN CHIA GIỜ CÔNG CHI TIẾT'*: PM 200.000 đ/h, BA 160.000 đ/h, Senior Dev 240.000 đ/h, Junior Devs (Dev 1, Dev 2, Dev 3) 90.000 đ/h, QA/QC 125.000 đ/h. Tổng quỹ lương Gross cần đối soát lại theo baseline 886h; số liệu 910h cũ không còn hiệu lực.
 > 2. **Nhân sự module:** Từng module được gán đúng nhân sự đảm nhận: Senior phụ trách chính các module phức tạp, nền tảng (M01, M02, M03, M04, M05, M06, M11); Junior Devs phụ trách triển khai chi tiết; BA tham gia xuyên suốt mọi module. Các module thuần Junior không tính lương Senior.
 > 3. **Định giá phân bổ (Phương án A):** Ngân sách 300.000.000 VNĐ được tái phân bổ tập trung trọng số lớn vào các module cốt lõi xử lý Ticket của Mốc 2 (M05–M11 chiếm ~60% ngân sách và effort). Chi phí từng module phân bổ theo tỷ trọng nỗ lực thực tế kết hợp hệ số nghiệp vụ: $\text{Thành tiền} = \text{Tỷ trọng nỗ lực \& độ phức tạp} \times 300.000.000\text{ VNĐ}$, đảm bảo khớp đúng 300.000.000 VNĐ.
-> 4. **Quy mô nỗ lực:** Nỗ lực phát triển trực tiếp 13 module M01–M13 là 450h; cộng M14 24h thành 474h module (398h Dev + 52h BA). Phần công việc chung theo baseline trước V2-02 (436h) (PM 72h, QA/QC 170h, kiến trúc & nền tảng 72h, nghiệm thu & bàn giao 122h BA) được phân bổ theo tỷ trọng nỗ lực kỹ thuật, và module M14 24h được theo dõi trong MS-03; tổng baseline mới 732h WBS, 178h BA (910h effort). Lưu ý các giờ phân bổ theo module ở Q-01–Q-13 chưa khớp Master Schedule; cần đối soát riêng theo V1-01, không xem bảng phân bổ này là đã được kiểm toán.
+> 4. **Quy mô nỗ lực:** Nỗ lực 14 module theo Master Schedule là 450h; công việc chung 436h; tổng 886h. Bảng phân bổ Q-01–Q-13 cần đối soát riêng với WBS; không coi các dòng này là số giờ đã kiểm toán.
 >
 > **Quyền lợi của khách hàng:** Khách hàng được kiểm tra và xác nhận sản phẩm bàn giao trước khi thực hiện thanh toán theo từng đợt, căn cứ trên phạm vi và tiêu chí đã được hai bên thống nhất.
 
@@ -107,24 +107,13 @@ Mức giá 300.000.000 VNĐ đã bao gồm VAT. Các nghĩa vụ thuế và trá
 * Báo giá này được sử dụng cùng với Proposal và các tài liệu được hai bên xác nhận để làm cơ sở triển khai dự án.
 
 
-## Phụ lục V2-02 — Đối soát phạm vi giao diện song ngữ (chưa điều chỉnh giá)
+## Phụ lục V2-02 — M14 Quản lý đa ngôn ngữ
 
-Phạm vi đã xác nhận: giao diện, biểu mẫu và thông báo hệ thống bằng tiếng Việt/Anh, không dịch nội dung người dùng nhập; không bao gồm Email hay nội dung file báo cáo xuất ra. Tham chiếu `NFR-I18N-01` và `TC-I18N-01`–`TC-I18N-05`.
+**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
 
-Theo bảng ước lượng tại `Master-schedule.md`, phần việc này **dự kiến thêm 24h** (BA 4h, Junior Dev 12h, QA 8h), **đã được duyệt và cộng vào baseline 910h**. Theo đơn giá nhân sự trong `Ngan-sach-nhan-su.md`, chi phí Gross tăng thêm theo baseline mới là `4 × 160.000 + 12 × 90.000 + 8 × 125.000 = 2.720.000 VNĐ`; cộng bảo hiểm DN giả định 21,5% là `3.304.800 VNĐ`. Đây là **chi phí nội bộ ước tính**, không phải giá bán/VAT và không tự động làm tăng báo giá. **Đã chốt** giữ tổng giá khách hàng **300.000.000 VNĐ**; phần chi phí tăng được hấp thụ vào biên lợi nhuận dự kiến. Đây là module M14 `Q-14 / M14`, không phát sinh đợt thanh toán mới. Bảng giá module Q-01–Q-13 giữ nguyên số tiền, còn mâu thuẫn giờ phân bổ với WBS được ghi nhận để xử lý ở V1-01.
-
-
-### Ghi chú đối soát V1-04 — hồ sơ mô phỏng
-
-Các PDF trong [`sent/`](sent/README.md) chỉ là tài liệu **mô phỏng quy trình gửi khách**, không phải bằng chứng giao dịch hay ngày gửi thật. Mốc thương mại được gọi thống nhất `MS-00` (tạm ứng khi ký/khởi động) và `MS-04` (tất toán khi nghiệm thu bàn giao); tỷ lệ thanh toán **70%/30%**, tổng giá **300.000.000 VNĐ** giữ nguyên. Ngày hiệu lực/đã gửi của PDF chưa xác minh. Bản PDF cũ cần xuất lại nếu nhóm muốn bản mô phỏng phản ánh baseline 910h.
+**Q-14 / M14:** 8h Dev 1, 0h BA, giá riêng 0đ (nằm trong hợp đồng trọn gói). Không phát sinh đợt thanh toán mới. Các PDF đã gửi/mô phỏng trong `sent/` không tự động được cập nhật bởi thay đổi này.
 
 
-**Quyết định M14 (thay thế Q-I18N):** 24h đa ngôn ngữ được đưa vào **module M14 tại MS-03**, mã báo giá **Q-14**, giá riêng **0đ do đã nằm trong hợp đồng trọn gói**. Không cộng 24h lần hai, giữ **910h** và **300 triệu đồng**. Tổng công việc chung vẫn 436h; tổng giờ 14 module 474h.
+### Baseline M13/M14 có hiệu lực
 
-
-### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
-
-**Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
-
-
-> **Quyết định mới nhất — thay thế phương án 24h:** M14 sử dụng **8h Dev 1 điều chuyển từ M13**, không thêm BA/QA hoặc 24h trước đó. M13 còn **36h** (BA 4h, Dev 2 12h, Dev 3 20h); M14 **8h Dev 1**, cùng triển khai **23–27/11/2026** trong MS-03. Tổng dự án **886h** (712h WBS + 174h BA), giá **300.000.000đ**. Mọi bảng/ghi chú cũ về M14 24h, baseline 910h không còn hiệu lực; Excel bản chốt 886h là cơ sở đối soát. Đây là phân bổ kế hoạch, không phải giờ đã thực hiện.
+**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
