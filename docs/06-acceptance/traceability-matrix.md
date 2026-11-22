@@ -120,3 +120,8 @@
 | `NFR-I18N-01` | Giữ ngôn ngữ, giữ nội dung nhập và biểu mẫu; bao phủ 4 vai trò | `TC-I18N-02`, `TC-I18N-03`, `TC-I18N-04`, `TC-I18N-05` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03 (16/11–04/12/2026); ngày làm việc chờ xếp lịch | `Q-14 / M14` (24h, MS-03; không tăng giá bán) |
 
 > Task V2-02 là tài liệu trên nhánh `fix-final`, chưa phải GitHub Issue được tạo; không ghi Issue ID chưa tồn tại. Test cases chưa được thực thi.
+
+
+### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
+
+**Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
