@@ -23,7 +23,7 @@
 | **MS-00 — Khởi động** | Tuần 1–3 | `INF-01` | 1 hạ tầng |
 | **MS-01 — Nền tảng** | Tuần 4–6 | `M01`, `M02`, `M03` | 11 FR |
 | **MS-02 — Ticket và Phân hệ sinh viên** | Tuần 7–11 | `M04`, `M05`, `M06`, `M07`, `M08`, `M09`, `M10`, `M11` | 21 FR |
-| **MS-03 — Giám sát Dashboard** | Tuần 12–14 | `M12`, `M13` | 8 FR |
+| **MS-03 — Giám sát Dashboard & Đa ngôn ngữ** | Tuần 12–14 | `M12`, `M13`, `M14` | 9 FR |
 | **MS-04 — Bàn giao dự án** | Tuần 15–16 | Nghiệm thu, tài liệu và bàn giao | — |
 
 ---
@@ -113,7 +113,7 @@
 
 ### MS-03 — GIÁM SÁT VÀ DASHBOARD
 
-#### M12 và M13 — Giám sát tiến độ, dashboard và báo cáo
+#### M12–M14 — Giám sát tiến độ, dashboard, báo cáo và đa ngôn ngữ
 
 * **[M12-giam-sat-tien-do/](M12-giam-sat-tien-do/) — [M12] Theo dõi tiến độ (4 FR)** ([prd.md](M12-giam-sat-tien-do/prd.md) | [Giam-sat-tien-do.md](M12-giam-sat-tien-do/Giam-sat-tien-do.md))
 
@@ -127,3 +127,6 @@
   * `[M13-02]` Hiển thị dữ liệu thống kê đúng theo quyền của Trưởng phòng và Admin
   * `[M13-03]` Xuất báo cáo số liệu ra file Excel và PDF
   * `[M13-04]` Thống kê điểm đánh giá hài lòng và hiệu suất làm việc của nhân viên
+* **[M14-quan-ly-da-ngon-ngu/](M14-quan-ly-da-ngon-ngu/) — [M14] Quản lý đa ngôn ngữ (1 FR)** ([prd.md](M14-quan-ly-da-ngon-ngu/prd.md))
+
+  * `[M14-01]` Chuyển đổi giao diện giữa tiếng Việt và tiếng Anh, không cần đăng nhập lại; 8h Dev 1 trong MS-03, báo giá chung Q-13 với M13.
