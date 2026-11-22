@@ -46,3 +46,8 @@ Toàn bộ **24h** thuộc **MS-03 (16/11–04/12/2026)**: BA 4h, Dev 1 12h, QA 
 
 
 **Phân công song song MS-03:** M13 do Dev 2 (20h), Dev 3 (20h), BA (4h); M14 do Dev 1 (12h), BA (4h), QA 1 (8h). Hai module cùng thuộc MS-03 và có thời gian triển khai chồng lấn, không đổi tổng effort 910h hoặc giá hợp đồng 300 triệu.
+
+
+### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
+
+**Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
