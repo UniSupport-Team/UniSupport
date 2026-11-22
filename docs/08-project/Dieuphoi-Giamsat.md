@@ -43,6 +43,9 @@ Báo cáo tuần dùng để đối soát tiến độ thực tế với kế ho
 - **Tần suất:** Cuối tuần (trước 17:00 Thứ Sáu).
 - **Thành phần tham dự:** Toàn bộ thành viên tham gia trong dự án.
 - **Hình thức:** Đăng tải lên hệ thống GitHub Issues / GitHub Projects và gửi email tóm tắt.
+- **Người lập và gửi:** Project Manager (PM), tổng hợp cập nhật của Developers và QA/QC.
+- **Người nhận:** Ban quản lý dự án và đại diện khách hàng (đối với bản tổng hợp tiến độ/những quyết định cần xác nhận).
+- **Ngưỡng báo cáo vượt cấp (escalation):** PM báo ngay khi phát hiện nguy cơ trễ mốc đã cam kết, vượt ngân sách được duyệt, lỗi P0/P1 ảnh hưởng nghiệm thu, hoặc rủi ro bảo mật; các thay đổi phạm vi/chi phí/tiến độ phải đi theo quy trình Change Request tại Mục 3.4. Đây là ngưỡng quản trị đề xuất, cần được nhóm phê duyệt trước khi coi là cam kết chính thức.
 
 **Cấu trúc báo cáo tuần:**
 
