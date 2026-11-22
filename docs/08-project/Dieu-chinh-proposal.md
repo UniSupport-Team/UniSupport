@@ -39,3 +39,20 @@ Lộ trình triển khai được tái cấu trúc thành 5 giai đoạn chính 
 
 ## 5. KẾT LUẬN
 Bản cập nhật Proposal này được thực hiện nhằm hướng tới mục tiêu tối ưu hóa chất lượng sản phẩm đầu ra và giảm thiểu rủi ro phát sinh trong quá trình phối hợp. Việc gom nhóm các công việc thành các giai đoạn lớn không chỉ giúp kiểm soát chất lượng chặt chẽ mà còn tối ưu hóa thời gian thực thi của đội ngũ. Kính mong Ban Giám hiệu xem xét và thông qua sự điều chỉnh này để dự án UniSupport tiếp tục được triển khai một cách an toàn, chuyên nghiệp và thuận lợi nhất.
+
+### Kế hoạch tích hợp Q-I18N theo milestone (V2-02)
+
+
+**Phân bổ Q-I18N theo milestone đã duyệt:**
+
+| Mốc | Công việc | BA | Dev 1 | QA 1 | Tổng |
+|---|---|---:|---:|---:|---:|
+| MS-01 | Từ điển Việt/Anh, bộ chuyển ngôn ngữ dùng chung | 4h | 4h | 0h | 8h |
+| MS-02 | Tích hợp giao diện Ticket và các module ở MS-02 | 0h | 6h | 0h | 6h |
+| MS-03 | Hoàn thiện M12–M13, rà soát M01–M13 | 0h | 2h | 0h | 2h |
+| MS-04 | QA hồi quy 4 vai trò, kiểm tra TC-I18N-01–05 trước nghiệm thu | 0h | 0h | 8h | 8h |
+| **Tổng** | **Hạng mục xuyên 13 module** | **4h** | **12h** | **8h** | **24h** |
+
+Đây là phân bổ effort theo mốc, **chưa ấn định ngày làm việc cụ thể và chưa xác nhận đã thực hiện**. Giữ nguyên 910h, 300 triệu đồng và hạn các milestone; cần kiểm tra tải nguồn lực khi xếp lịch.
+
+Q-I18N là hạng mục chung, không tạo module M14 hoặc milestone mới. Chi tiết tại [Master Schedule](Master-schedule.md) và [Task V2-02](tasks/V2-02-bilingual-ui.md).
