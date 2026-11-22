@@ -110,3 +110,13 @@
 | `INF-01` | Thiết lập cơ sở hạ tầng và môi trường triển khai hệ thống UniSupport | [#156](https://github.com/UniSupport-Team/UniSupport/issues/156) | `MS-00` | Phân bổ vào `Q-01`–`Q-13` (72h nền tảng) |
 | `Docs-01` | Hoàn thiện các tài liệu mô tả hệ thống và sổ tay hướng dẫn sử dụng | [#170](https://github.com/UniSupport-Team/UniSupport/issues/170) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
 | `Docs-02` | Tạo dữ liệu mẫu và chuẩn bị kịch bản để chạy thử nghiệm thu dự án (UAT) | [#169](https://github.com/UniSupport-Team/UniSupport/issues/169) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
+
+
+### 2.5. Yêu cầu xuyên module — đa ngôn ngữ Việt/Anh (V2-02)
+
+| Mã AC / NFR | Mô tả | Kịch bản kiểm thử | Task triển khai | Milestone | Hạng mục báo giá |
+|---|---|---|---|---|---|
+| `FR-M01-01/AC-I18N-01`, `NFR-I18N-01` | Đăng nhập Việt/Anh, lỗi validation và xác thực giữ nguyên nghiệp vụ | `TC-I18N-01`, `TC-I18N-02` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | Xuyên MS-01–MS-04, lịch chi tiết chờ PM chốt | `Q-I18N` (24h, không tăng giá bán) |
+| `NFR-I18N-01` | Giữ ngôn ngữ, giữ nội dung nhập và biểu mẫu; bao phủ 4 vai trò | `TC-I18N-02`, `TC-I18N-03`, `TC-I18N-04`, `TC-I18N-05` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | Xuyên MS-01–MS-04, lịch chi tiết chờ PM chốt | `Q-I18N` (24h, không tăng giá bán) |
+
+> Task V2-02 là tài liệu trên nhánh `fix-final`, chưa phải GitHub Issue được tạo; không ghi Issue ID chưa tồn tại. Test cases chưa được thực thi.
