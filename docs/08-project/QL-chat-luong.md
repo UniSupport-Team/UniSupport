@@ -30,7 +30,7 @@ Mục tiêu là xác định tiêu chuẩn chất lượng, cách đo, người 
 
 **Mã mức lỗi chính thức:** `P0`, `P1`, `P2`, `P3` theo [Kế hoạch quản lý sản phẩm — bảng điều kiện release](QL-san-pham.md). Tên cũ `Critical/High/Medium/Low` chỉ được dùng để giải thích tương ứng `P0/P1/P2/P3`, không tạo thêm thang mức lỗi độc lập. QC ghi mã P trong Defect Log, Dev ghi mã P khi sửa, PM dùng mã P để quyết định nghiệm thu.
 
-**Chưa chốt:** Bảng thời gian xử lý sự cố trong [Điều phối và giám sát](Dieuphoi-Giamsat.md#33-thông-báo-và-xử-lý-sự-cố-khẩn-cấp) có **3 mức** (Critical/Major/Minor) trong khi thang lỗi có **4 mức**. Không thể tự quy đổi cả 4 mức mà vẫn bảo toàn thời hạn phản hồi/khắc phục; cần quyết định riêng trước khi tuyên bố SLA lỗi đã đồng bộ. Các cam kết thời gian cũ tạm giữ nguyên trong bảng lịch sử cho tới khi được duyệt.
+**SLA đã duyệt V1-09:** P0 phản hồi 15 phút, khắc phục 2–4 giờ; P1 phản hồi 1 giờ, khắc phục 8–12 giờ; P2 phản hồi 4 giờ, khắc phục 24–48 giờ; P3 phản hồi 1 ngày làm việc, khắc phục theo kế hoạch phát hành tiếp theo. Bảng chính thức và cách theo dõi xem [Điều phối và giám sát](Dieuphoi-Giamsat.md). **Không nghiệm thu khi còn P0/P1 mở, không ngoại lệ bằng workaround.** Đây là SLA lỗi kỹ thuật, khác SLA Ticket nghiệp vụ.
 
 ## 2. Đảm bảo chất lượng (Quality Assurance – Do)
 
