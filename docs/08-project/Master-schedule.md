@@ -37,7 +37,8 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 | | | Test QA/QC (Đợt 4) | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2, BA | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(7/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1, BA | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2, BA | 25h | 10h | **35h** |
-| **TỔNG CỘNG** | **Toàn dự án** | **22 Hạng mục công việc** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
+| | | **V2-02: Hoàn thiện giao diện Việt/Anh** | Theo lịch tích hợp được nhóm xác nhận | Theo lịch tích hợp được nhóm xác nhận | Phân bổ trong 16 tuần, chưa chốt ngày | BA, Dev 1, QA 1 | 20h | 4h | **24h** |
+| **TỔNG CỘNG** | **Toàn dự án** | **23 Hạng mục công việc** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **732h** | **178h** | **910h** |
 
 ### Phân tích chuỗi quan hệ phụ thuộc kỹ thuật & luồng nghiệp vụ (Work Dependency Matrix)
 
@@ -145,18 +146,19 @@ Bảng theo dõi các phiên bản điều chỉnh đường cơ sở (Baseline)
 | :---: | :---: | :---: | :--- | :--- |
 | **`v1.0`** | 01/09/2026 | Nhóm 4 (Group 4) | Thiết lập Master Schedule ban đầu gồm 16 tuần triển khai tuần tự theo từng module. | Kế hoạch khởi động dự án theo [Proposal.md](Proposal.md). |
 | **`v2.0`** | 31/10/2026 | Project Manager | Tái cơ cấu toàn bộ tiến độ thành 5 cột mốc tích hợp (`MS-00` đến `MS-04`); bố trí 4 đợt kiểm thử QA/QC sớm và gối đầu (overlap) 3 ngày (12/10–14/10) giữa MS-01 và MS-02 cho module `M04`. | Tối ưu luồng công việc, giảm thời gian chờ và đưa khách hàng vào kiểm thử sớm; phê duyệt tại [Dieu-chinh-proposal.md](Dieu-chinh-proposal.md). |
+| **`v2.2`** | 22/11/2026 | Nhóm 4 — theo phê duyệt phạm vi V2-02 | Bổ sung 24h giao diện Việt/Anh, tổng 910h; giữ giá hợp đồng 300 triệu. | Người dùng xác nhận V2-02; chờ PM chốt lịch triển khai chi tiết và cập nhật Excel. |
 | **`v2.1`** | 15/11/2026 | Project Manager | Chuẩn hóa bảng tiến độ chi tiết và phân công nhân sự khớp 100% với `Master Schedule.xlsx` (Sheet 2): hiển thị minh bạch 174h BA theo từng task (tổng 886h = 712h WBS + 174h BA); chuẩn hóa nhân sự thực tế tại M01 (Senior, Dev 2), M02 (Senior, Dev 1), M07 (Dev 1, Dev 3), M10 (Dev 2, Dev 3) và bổ sung BA vào các đợt QA/QC, Nghiệm thu. | Kết quả rà soát đối soát kế hoạch giữa Master-schedule.md và Master Schedule.xlsx. |
 
 
-### Hạng mục bổ sung cần định mức — V2-02: đa ngôn ngữ giao diện
+### Hạng mục đã duyệt effort — V2-02: đa ngôn ngữ giao diện
 
 Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu mẫu, nhãn, thông báo hệ thống và validation trên cả 4 vai trò; giữ nguyên nội dung người dùng nhập. **Không bao gồm** dịch tự động nội dung Ticket, Email hay file báo cáo xuất ra.
 
-| Công việc | Vai trò dự kiến | Giờ đề xuất (chưa duyệt) | Điều kiện hoàn tất |
+| Công việc | Vai trò dự kiến | Giờ được duyệt | Điều kiện hoàn tất |
 |---|---|---:|---|
-| Rà soát chuỗi giao diện và đặc tả từ điển `vi`/`en` | BA | 4h | Danh sách màn hình/chuỗi cần dịch |
-| Hoàn thiện tích hợp ngôn ngữ trên các màn hình và validation | Junior Developer | 12h | Không còn chuỗi giao diện bỏ sót trong phạm vi |
-| Kiểm thử 4 vai trò, lưu lựa chọn và bảo toàn dữ liệu | QA/QC | 8h | `TC-I18N-01`–`TC-I18N-05` có kết quả |
-| **Tổng đề xuất** | | **24h** | **Chưa cộng vào baseline 886h** |
+| Rà soát chuỗi giao diện và đặc tả từ điển `vi`/`en` | BA (4h) | 4h | Danh sách màn hình/chuỗi cần dịch |
+| Hoàn thiện tích hợp ngôn ngữ trên các màn hình và validation | Dev 1 | 12h | Không còn chuỗi giao diện bỏ sót trong phạm vi |
+| Kiểm thử 4 vai trò, lưu lựa chọn và bảo toàn dữ liệu | QA 1 | 8h | `TC-I18N-01`–`TC-I18N-05` có kết quả |
+| **Tổng đề xuất** | | **24h** | **Đã cộng vào baseline 910h** |
 
-**Tác động kế hoạch:** 24h là *ước lượng sơ bộ*, không phải giờ đã thực hiện. Nếu bổ sung toàn phần, baseline dự kiến thành **910h** (886h + 24h). Phải chốt nguồn giờ (tăng effort hay điều chuyển từ hạng mục khác), người thực hiện, lịch và tác động ngân sách trước khi sửa bảng tổng WBS, báo giá và file Excel. Chưa thay đổi tổng giá hợp đồng 300.000.000 VNĐ.
+**Phê duyệt V2-02:** tăng effort baseline từ **886h lên 910h** (WBS 712h → 732h; BA 174h → 178h), giữ nguyên giá hợp đồng **300.000.000 VNĐ**. Phân bổ 4h BA, 12h Dev 1, 8h QA 1; đây là giờ kế hoạch, **chưa phải giờ thực hiện**. Ngày bắt đầu/kết thúc riêng cần PM chốt theo năng lực thực tế; chưa khẳng định có thể hoàn thành trong lịch 16 tuần nếu chưa kiểm tra tải nguồn lực. File Excel chưa được đồng bộ, không dùng file Excel cũ làm baseline mới.
