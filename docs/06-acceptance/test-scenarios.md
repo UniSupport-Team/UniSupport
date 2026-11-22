@@ -16,11 +16,11 @@
 | **M04** | Quản lý Danh mục & SLA | `MS-02` | 5 | 7 | 12 | Dự kiến |
 | **M05** | Khởi tạo Ticket | `MS-02` | 6 | 12 | 18 | Dự kiến |
 | **M06** | Tiếp nhận Ticket & Đua lệnh | `MS-02` | 5 | 9 | 14 | Dự kiến |
+| **M07** | Điều phối & Re-assign | `MS-02` | 6 | 9 | 15 | Dự kiến |
 | **M08** | Xử lý & Yêu cầu bổ sung | `MS-02` | 8 | 12 | 20 | Dự kiến |
 | **M09** | Trả kết quả xử lý | `MS-02` | 5 | 7 | 12 | Dự kiến |
 | **M10** | Theo dõi & Nộp bổ sung | `MS-02` | 6 | 10 | 16 | Dự kiến |
 | **M11** | Đánh giá CSAT & Auto-close | `MS-02` | 4 | 6 | 10 | Dự kiến |
-| **M07** | Điều phối & Re-assign | `MS-02` | 6 | 9 | 15 | Dự kiến |
 | **M12** | Giám sát tiến độ & Cảnh báo SLA | `MS-03` | 6 | 8 | 14 | Dự kiến |
 | **M13** | Dashboard & Báo cáo | `MS-03` | 6 | 6 | 12 | Dự kiến |
 | **M14** | Chuyển đổi ngôn ngữ Việt/Anh | `MS-03` | 2 | 0 | 2 | Dự kiến |
