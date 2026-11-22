@@ -20,6 +20,8 @@ Việc hỗ trợ sinh viên hiện tại thông qua nhiều kênh riêng lẻ (
 
 ## 2. Đo lường sản phẩm & Cam kết dịch vụ (SLA)
 
+> **Phân biệt SLA:** Chỉ số tại mục này là **SLA Ticket nghiệp vụ**. **SLA phản hồi/khắc phục lỗi kỹ thuật P0–P3** được quy định riêng tại [Điều phối và giám sát](Dieuphoi-Giamsat.md); không dùng thời hạn của một loại để thay thế loại còn lại.
+
 Bộ chỉ số dưới đây dùng để đo lường mức độ thành công của sản phẩm trong thực tế. Hệ thống chỉ được đánh giá là hiệu quả nếu đạt được các mục tiêu (Target) đề ra.
 
 | **Nhóm** | **Chỉ số đo lường** | **Công thức / Cách đo** | **Mục tiêu kỳ vọng (Target/SLA)** | **Tần suất theo dõi** | **Người theo dõi** |
@@ -42,7 +44,7 @@ Hệ thống bắt buộc phải trải qua kiểm thử QC/UAT và thỏa mãn 
 | **Mức độ lỗi** | **Mô tả tính chất** | **Tiêu chuẩn nghiệm thu để Ra mắt (Release Criteria)** | **Quy trình xử lý tiếp theo** |
 |:---|:---|:---|:---|
 | **P0 (Critical)** | Lỗi hệ thống, sập dịch vụ, hỏng luồng cốt lõi (đăng nhập, tạo đơn) | Bắt buộc = 0 lỗi. Tuyệt đối không được phép tồn đọng bất kỳ lỗi P0 nào. | Kích hoạt Hotfix khẩn cấp theo Quy trình Quản lý Chất lượng. |
-| **P1 (High)** | Lỗi chức năng quan trọng (điều phối, thông báo, phân quyền) | Bắt buộc = 0 lỗi. (Trường hợp ngoại lệ phải có giải pháp Workaround được duyệt). | Sửa lỗi trong đợt phát hành, QA re-test 100%. |
+| **P1 (High)** | Lỗi chức năng quan trọng (điều phối, thông báo, phân quyền) | Bắt buộc = 0 lỗi P1 mở trước nghiệm thu; **không có ngoại lệ nghiệm thu bằng workaround**. | Sửa lỗi trong đợt phát hành, QA re-test 100%. |
 | **P2 (Medium)** | Lỗi giao diện nhỏ, tính năng phụ, hiển thị chưa chuẩn | Chấp nhận < 5 lỗi. | Đưa vào Product Backlog xử lý ở phiên bản tiếp theo. |
 | **P3 (Low)** | Cải tiến UI/UX nhỏ, tối ưu hóa câu chữ | Không giới hạn số lượng. | Chuyển vào Feedback Log để đánh giá ưu tiên sau. |
 
