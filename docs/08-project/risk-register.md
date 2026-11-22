@@ -22,3 +22,16 @@
 | **`R-08`** | **Lộ lọt thông tin cá nhân của sinh viên** | `QL-san-pham.md` (Mục 3.2) | *(Chờ nhóm chốt tại OQ-02)* | **Rất cao** — Vi phạm bảo mật và quy định an toàn thông tin | *(Chờ nhóm chốt tại OQ-02)* | Chỉ hiển thị thông tin cần thiết phục vụ xử lý đơn; ẩn danh dữ liệu xuất báo cáo; mã hóa thông tin trong CSDL và kiểm soát RBAC (`NFR-SEC-01..05`). | Đang theo dõi |
 | **`R-09`** | **Hệ thống quá tải vào thời điểm cao điểm (đầu học kỳ, kỳ thi)** | `QL-san-pham.md` (Mục 3.2) | *(Chờ nhóm chốt tại OQ-02)* | **Cao** — Gián đoạn dịch vụ hoặc phản hồi chậm | *(Chờ nhóm chốt tại OQ-02)* | Tối ưu hóa tài nguyên máy chủ, câu truy vấn CSDL và bộ nhớ đệm (Caching). | Đang theo dõi |
 | **`R-10`** | **Sinh viên gửi nhầm phòng ban hoặc tạo đơn rác** | `QL-san-pham.md` (Mục 3.2) | *(Chờ nhóm chốt tại OQ-02)* | **Trung bình** — Mất thời gian phân loại lại của nhân viên | Admin, Nhân viên | Cung cấp tùy chọn mục "Khác" (`FR-M05-01`) về hàng chờ Admin phân loại (`FR-M11-01`) và luồng báo sai phòng ban (`FR-M07-04`, `FR-M11-02`). | Đang theo dõi |
+
+
+## 2. Quy trình hoàn thiện đánh giá rủi ro (V1-07)
+
+**Trạng thái:** Bảng R-01–R-10 ở Mục 1 là danh mục đã nhận diện; **chưa phải bảng chấm điểm rủi ro hoàn tất**. Việc gắn xác suất và một owner chịu trách nhiệm cho mỗi rủi ro vẫn chờ nhóm quyết định tại [OQ-02](open-questions.md). Không coi cụm “Đang theo dõi” là bằng chứng rủi ro đã được lượng hóa.
+
+1. **PM chủ trì rà soát:** lần lượt R-01 đến R-10 cùng Dev, QA/QC và đại diện nghiệp vụ liên quan; ghi lý do và bằng chứng đánh giá.
+2. **Chốt thang đo:** nhóm thống nhất một thang xác suất (ví dụ Thấp / Trung bình / Cao) và định nghĩa rõ từng mức trước khi điền giá trị. Ví dụ chỉ là lựa chọn thảo luận, **chưa được phê duyệt**.
+3. **Chỉ định một owner chính:** mỗi R-xx cần đúng một đầu mối chịu trách nhiệm theo dõi, có thể có nhiều vai trò phối hợp. Các ô “Dev, QC” hoặc “QC, PM” hiện chỉ mô tả nhóm phối hợp, chưa phải owner duy nhất đã chốt.
+4. **Xác nhận mức tác động và phương án:** đối chiếu FR/NFR/AC, khả năng phát hiện, biện pháp phòng ngừa, phương án ứng phó, nguồn lực và quỹ dự phòng nếu có.
+5. **Lưu dấu vết:** ghi ngày đánh giá, người duyệt, mức xác suất, owner, trạng thái và liên kết issue/biên bản; cập nhật đồng thời OQ-02. Không tự sử dụng quỹ dự phòng 22.138.272 VNĐ khi chưa có phê duyệt theo quy trình CR.
+
+**Điều kiện đóng V1-07:** tất cả 10 rủi ro có xác suất theo thang đã duyệt, tác động, một owner chính, phương án xử lý và trạng thái; các liên kết tới open-questions.md hoạt động. Hiện **mới hoàn thành phần khôi phục liên kết và quy trình đánh giá**, chưa đạt điều kiện đóng toàn bộ V1-07.
