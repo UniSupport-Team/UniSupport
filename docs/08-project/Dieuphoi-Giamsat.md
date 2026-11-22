@@ -69,7 +69,7 @@ Báo cáo cảnh báo được phát hành đột xuất khi phát sinh sự c�
 - **Thời điểm phát hành:** Đột xuất, ngay khi phát hiện sự cố (trong vòng 15-60 phút tùy mức độ SLA).
 - **Quy trình xử lý báo cáo cảnh báo:**
   - **Ghi nhận & Thông báo:** Thành viên phát hiện thông báo ngay trên kênh chung (Slack).
-  - **Đánh giá tác động:** PM đánh giá mức độ ảnh hưởng (Critical, Major, Minor) và gửi thông báo khẩn cho Ban quản lý.
+  - **Đánh giá tác động:** PM ghi nhận **mức lỗi P0–P3** theo [Kế hoạch quản lý chất lượng](QL-chat-luong.md#14-phân-loại-lỗi-thống-nhất-v1-09) và gửi thông báo khẩn cho Ban quản lý theo mức ảnh hưởng; bảng thời gian xử lý ba mức bên dưới đang chờ quyết định quy đổi SLA.
   - **Đề xuất giải pháp:** Lập phương án khắc phục khẩn cấp và xin phê duyệt nguồn lực ứng phó.
 
 ### 2.5. Báo cáo tổng kết dự án (Project Closure Report)
@@ -117,7 +117,9 @@ Quy định này giúp duy trì tính linh hoạt trong giao tiếp nhưng vẫn
 4. **Cập nhật tình hình:** Người phụ trách cập nhật tiến độ xử lý và kết quả trên kênh chung.
 5. **Ghi nhận sự cố:** Nội dung sự cố, quá trình xử lý và kết quả cuối cùng được lưu lại trên công cụ quản lý dự án.
 
-**Thời gian cam kết xử lý sự cố (SLA):**
+**Thời gian xử lý sự cố theo bảng 3 mức lịch sử (chưa quy đổi sang P0–P3):**
+
+> **Lưu ý V1-09:** Bảng dưới giữ nguyên thời hạn đã ghi trước đây, **không phải** thang phân loại lỗi chính thức. Không được tự áp `Major` cho P1 hay P2 hoặc `Minor` cho P2 hay P3 khi nhóm chưa duyệt bảng quy đổi bốn mức. Mọi Defect Log mới dùng P0–P3; thời hạn cho từng P đang chờ phê duyệt.
 
 | Mức độ | Mô tả | Thời gian phản hồi | Thời gian khắc phục |
 |---|---|---|---|
