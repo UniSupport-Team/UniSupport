@@ -34,15 +34,17 @@
 | 11 | **`Q-11`** | `M11` | Điều phối Ticket | 46 h | 11 h | **57 h** | 19.500.000 ₫ |
 | 12 | **`Q-12`** | `M12` | Giám sát tiến độ | 58 h | 15 h | **73 h** | 24.500.000 ₫ |
 | 13 | **`Q-13`** | `M13 + M14` | Dashboard & Báo cáo; Quản lý đa ngôn ngữ Việt/Anh | 40 h | 4 h | **44 h** | **28.000.000 ₫ (giá chung M13/M14)** |
-| **-** | **TỔNG CỘNG** | **14 MODULES / 13 HẠNG MỤC BÁO GIÁ** | **Toàn bộ hệ thống UniSupport** | **712 h** | **174 h** | **886 h** | **300.000.000 ₫** |
+| **-** | **TỔNG TOÀN DỰ ÁN*** | **14 MODULES / 13 HẠNG MỤC BÁO GIÁ** | **Bao gồm công việc chung ngoài module** | **712 h** | **174 h** | **886 h** | **300.000.000 ₫** |
+
+*Giờ ở dòng tổng là baseline toàn dự án, **không phải tổng cộng các dòng giờ phân bổ Q-01–Q-13**. Giá tiền của 13 hạng mục cộng đúng 300.000.000đ.*
 
 > **Đối soát thương mại:** Tổng giá hợp đồng giữ **300.000.000 ₫**. **Baseline tiến độ:** 886h (712h WBS + 174h BA) theo Master Schedule; các dòng giờ báo giá khác chưa được đối soát đầy đủ với baseline.
 
- > **Ghi chú Q-13:** Giá **28.000.000đ** bao gồm cả M13 (36h: Dev 2 12h, Dev 3 20h, BA 4h) và M14 (8h Dev 1). M14 có PRD và tiến độ riêng nhưng **không có dòng báo giá Q-14 hoặc khoản thu riêng**. Cả hai triển khai 23–27/11/2026 trong MS-03. Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md).
+> **Ghi chú Q-13:** Giá **28.000.000đ** bao gồm cả M13 (36h: Dev 2 12h, Dev 3 20h, BA 4h) và M14 (8h Dev 1). M14 có PRD và tiến độ riêng nhưng **không có dòng báo giá Q-14 hoặc khoản thu riêng**. Cả hai triển khai 23–27/11/2026 trong MS-03. Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md).
 >
 > 📌 **NGUYÊN TẮC XÁC ĐỊNH & PHÂN BỔ GIỜ CÔNG VÀ LƯƠNG NHÂN SỰ:**
 > 1. **Đơn giá lương:** Trích xuất từ bảng *'PHÂN CHIA GIỜ CÔNG CHI TIẾT'*: PM 200.000 đ/h, BA 160.000 đ/h, Senior Dev 240.000 đ/h, Junior Devs (Dev 1, Dev 2, Dev 3) 90.000 đ/h, QA/QC 125.000 đ/h. Tổng quỹ lương Gross cần đối soát lại theo baseline 886h; số liệu 910h cũ không còn hiệu lực.
-> 2. **Nhân sự module:** Từng module được gán đúng nhân sự đảm nhận: Senior phụ trách chính các module phức tạp, nền tảng (M01, M02, M03, M04, M05, M06, M11); Junior Devs phụ trách triển khai chi tiết; BA tham gia xuyên suốt mọi module. Các module thuần Junior không tính lương Senior.
+> 2. **Nhân sự module:** Từng module được gán đúng nhân sự đảm nhận: Senior phụ trách chính các module phức tạp, nền tảng (M01, M02, M03, M04, M05, M06, M11); Junior Devs phụ trách triển khai chi tiết; BA được phân bổ theo kế hoạch từng module; riêng M14 không có BA riêng. Các module thuần Junior không tính lương Senior.
 > 3. **Định giá phân bổ (Phương án A):** Ngân sách 300.000.000 VNĐ được tái phân bổ tập trung trọng số lớn vào các module cốt lõi xử lý Ticket của Mốc 2 (M05–M11 chiếm ~60% ngân sách và effort). Chi phí từng module phân bổ theo tỷ trọng nỗ lực thực tế kết hợp hệ số nghiệp vụ: $\text{Thành tiền} = \text{Tỷ trọng nỗ lực \& độ phức tạp} \times 300.000.000\text{ VNĐ}$, đảm bảo khớp đúng 300.000.000 VNĐ.
 > 4. **Quy mô nỗ lực:** Master Schedule phân bổ 450h cho 14 module và 436h công việc chung, tổng 886h. Bảng báo giá thể hiện **13 hạng mục thương mại cho 14 module**, trong đó Q-13 gộp M13/M14. Các số giờ ở Q-01–Q-12 vẫn là phân bổ báo giá lịch sử, chưa được đối soát để cộng thành tổng WBS; **không dùng phép cộng cột giờ của bảng giá làm bằng chứng khớp 886h**.
 >
