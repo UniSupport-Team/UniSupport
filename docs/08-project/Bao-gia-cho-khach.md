@@ -38,6 +38,8 @@
 | **-** | **TỔNG CỘNG** | **14 MODULES** | **Toàn bộ hệ thống UniSupport** | **712 h** | **174 h** | **886 h** | **300.000.000 ₫** |
 
 > **Kiểm tra đối soát (Phương án A):** ✅ Khớp đúng ngân sách: **300.000.000 ₫** (100%) | Khớp đúng nỗ lực: **886h Effort** (712h WBS + 174h BA).
+
+> **Ghi chú Q-14:** M14 có 1 FR / 2 AC, 8h Dev 1 điều chuyển từ M13, BA/QA riêng 0h. Không cộng thêm giờ hoặc tiền; thực hiện trong MS-03 (23–27/11/2026). Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md).
 >
 > 📌 **NGUYÊN TẮC XÁC ĐỊNH & PHÂN BỔ GIỜ CÔNG VÀ LƯƠNG NHÂN SỰ:**
 > 1. **Đơn giá lương:** Trích xuất từ bảng *'PHÂN CHIA GIỜ CÔNG CHI TIẾT'*: PM 200.000 đ/h, BA 160.000 đ/h, Senior Dev 240.000 đ/h, Junior Devs (Dev 1, Dev 2, Dev 3) 90.000 đ/h, QA/QC 125.000 đ/h. Tổng quỹ lương Gross cần đối soát lại theo baseline 886h; số liệu 910h cũ không còn hiệu lực.
@@ -106,14 +108,3 @@ Mức giá 300.000.000 VNĐ đã bao gồm VAT. Các nghĩa vụ thuế và trá
 * Báo giá có hiệu lực trong vòng 30 ngày kể từ ngày phát hành.
 * Báo giá này được sử dụng cùng với Proposal và các tài liệu được hai bên xác nhận để làm cơ sở triển khai dự án.
 
-
-## Phụ lục V2-02 — M14 Quản lý đa ngôn ngữ
-
-**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
-
-**Q-14 / M14:** 8h Dev 1, 0h BA, giá riêng 0đ (nằm trong hợp đồng trọn gói). Không phát sinh đợt thanh toán mới. Các PDF đã gửi/mô phỏng trong `sent/` không tự động được cập nhật bởi thay đổi này.
-
-
-### Baseline M13/M14 có hiệu lực
-
-**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
