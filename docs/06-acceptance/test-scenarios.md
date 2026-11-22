@@ -149,3 +149,16 @@
 | `TC-M13-E02` | `FR-M13-01/AC-01`, `NFR-PERF-02` | Lọc Dashboard với khoảng thời gian không có dữ liệu | Boundary | Chọn khoảng thời gian Từ ngày - Đến ngày trong quá khứ chưa có phát sinh đơn | Các widget hiển thị 0 đơn, biểu đồ hiển thị trạng thái Empty State sạch sẽ, phản hồi $\le 2.000\text{ms}$. | Không |
 | `TC-M13-M03` | `FR-M13-03/AC-01`, `NFR-PERF-02` | Xuất báo cáo số liệu ra file Excel (`.xlsx`) và PDF (`.pdf`) | Main | Lọc danh sách báo cáo và bấm "Xuất báo cáo Excel" / "Xuất file PDF" | Tải xuống tệp `.xlsx`/`.pdf` thành công trong $\le 2.000\text{ms}$, dữ liệu trong tệp khớp 100% với bảng lọc trên màn hình. | Có |
 | `TC-M13-M04` | `FR-M13-04/AC-01` | Thống kê điểm CSAT trung bình và hiệu suất KPI nhân viên | Main / Boundary | Xem báo cáo nhân sự có cả đơn chấm sao và đơn đóng tự động (`rating = null`) | Tính đúng tỷ lệ hoàn thành SLA và trung bình CSAT chỉ trên các đơn có đánh giá thực tế; hiển thị `"N/A"` nếu chưa có đánh giá. | Có |
+
+
+## Kiểm thử đa ngôn ngữ — V2-02 (bổ sung vào phạm vi, chưa xác nhận đã chạy)
+
+| Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
+|---|---|---|---|---|---|---|
+| `TC-I18N-01` | `NFR-I18N-01`, `FR-M01-01/AC-I18N-01` | Chuyển ngôn ngữ trên trang đăng nhập | UI | Chọn `EN`, rồi `VI` | Tiêu đề, nhãn trường, nút và lỗi validation chuyển đúng ngôn ngữ, không thay đổi cơ chế xác thực | Có |
+| `TC-I18N-02` | `NFR-I18N-01` | Giữ ngôn ngữ khi điều hướng và tải lại | UI | Chọn `EN`, chuyển giữa các trang theo vai trò và reload | Ngôn ngữ đã chọn được giữ; không tự trở về tiếng Việt | Có |
+| `TC-I18N-03` | `NFR-I18N-01` | Không dịch nội dung do người dùng nhập | Regression | Nhập tiêu đề/nội dung Ticket bằng tiếng Việt rồi chuyển `EN` | Tiêu đề, mô tả, trao đổi và ghi chú của người dùng giữ nguyên dữ liệu gốc | Có |
+| `TC-I18N-04` | `NFR-I18N-01` | Kiểm tra nhãn và thông báo trên 4 vai trò | UI | Duyệt màn hình Student, Staff, Manager, Admin ở `vi` và `en` | Menu, biểu mẫu, nhãn trạng thái, thông báo thành công/thất bại và validation đều hiển thị đúng ngôn ngữ | Có |
+| `TC-I18N-05` | `NFR-I18N-01` | Giữ dữ liệu biểu mẫu khi đổi ngôn ngữ | Boundary | Điền dở biểu mẫu tạo Ticket, đổi `VI` ↔ `EN` | Không xóa hoặc sửa các giá trị đã nhập; các nhãn và lỗi hiển thị theo ngôn ngữ mới | Có |
+
+> **Trạng thái:** Đây là kịch bản dự kiến để nghiệm thu, chưa có bằng chứng thực thi hoặc kết quả Pass/Fail. Không bao gồm dịch tự động Email, báo cáo xuất file hoặc nội dung người dùng nhập.
