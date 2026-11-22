@@ -146,3 +146,17 @@ Bảng theo dõi các phiên bản điều chỉnh đường cơ sở (Baseline)
 | **`v1.0`** | 01/09/2026 | Nhóm 4 (Group 4) | Thiết lập Master Schedule ban đầu gồm 16 tuần triển khai tuần tự theo từng module. | Kế hoạch khởi động dự án theo [Proposal.md](Proposal.md). |
 | **`v2.0`** | 31/10/2026 | Project Manager | Tái cơ cấu toàn bộ tiến độ thành 5 cột mốc tích hợp (`MS-00` đến `MS-04`); bố trí 4 đợt kiểm thử QA/QC sớm và gối đầu (overlap) 3 ngày (12/10–14/10) giữa MS-01 và MS-02 cho module `M04`. | Tối ưu luồng công việc, giảm thời gian chờ và đưa khách hàng vào kiểm thử sớm; phê duyệt tại [Dieu-chinh-proposal.md](Dieu-chinh-proposal.md). |
 | **`v2.1`** | 15/11/2026 | Project Manager | Chuẩn hóa bảng tiến độ chi tiết và phân công nhân sự khớp 100% với `Master Schedule.xlsx` (Sheet 2): hiển thị minh bạch 174h BA theo từng task (tổng 886h = 712h WBS + 174h BA); chuẩn hóa nhân sự thực tế tại M01 (Senior, Dev 2), M02 (Senior, Dev 1), M07 (Dev 1, Dev 3), M10 (Dev 2, Dev 3) và bổ sung BA vào các đợt QA/QC, Nghiệm thu. | Kết quả rà soát đối soát kế hoạch giữa Master-schedule.md và Master Schedule.xlsx. |
+
+
+### Hạng mục bổ sung cần định mức — V2-02: đa ngôn ngữ giao diện
+
+Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu mẫu, nhãn, thông báo hệ thống và validation trên cả 4 vai trò; giữ nguyên nội dung người dùng nhập. **Không bao gồm** dịch tự động nội dung Ticket, Email hay file báo cáo xuất ra.
+
+| Công việc | Vai trò dự kiến | Giờ đề xuất (chưa duyệt) | Điều kiện hoàn tất |
+|---|---|---:|---|
+| Rà soát chuỗi giao diện và đặc tả từ điển `vi`/`en` | BA | 4h | Danh sách màn hình/chuỗi cần dịch |
+| Hoàn thiện tích hợp ngôn ngữ trên các màn hình và validation | Junior Developer | 12h | Không còn chuỗi giao diện bỏ sót trong phạm vi |
+| Kiểm thử 4 vai trò, lưu lựa chọn và bảo toàn dữ liệu | QA/QC | 8h | `TC-I18N-01`–`TC-I18N-05` có kết quả |
+| **Tổng đề xuất** | | **24h** | **Chưa cộng vào baseline 886h** |
+
+**Tác động kế hoạch:** 24h là *ước lượng sơ bộ*, không phải giờ đã thực hiện. Nếu bổ sung toàn phần, baseline dự kiến thành **910h** (886h + 24h). Phải chốt nguồn giờ (tăng effort hay điều chuyển từ hạng mục khác), người thực hiện, lịch và tác động ngân sách trước khi sửa bảng tổng WBS, báo giá và file Excel. Chưa thay đổi tổng giá hợp đồng 300.000.000 VNĐ.
