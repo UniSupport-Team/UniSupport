@@ -14,7 +14,7 @@ Mục tiêu là xác định tiêu chuẩn chất lượng, cách đo, người 
 |----------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | **Trước phát triển (DoR)** | FR/AC rõ, không mâu thuẫn; có dữ liệu, luồng ngoại lệ và bên liên quan | PM xác nhận phạm vi/ưu tiên; QA rà soát tài liệu; QC xác nhận khả năng kiểm thử; Dev làm rõ điểm triển khai; biên bản review |
 | **Trong phát triển**       | Có review thay đổi, kiểm tra phù hợp và ghi nhận kết quả               | Dev cung cấp pull request/commit và kết quả kiểm tra; QA theo dõi checklist quy trình                                        |
-| **Trước nghiệm thu (DoD)** | AC được kiểm chứng; test trọng yếu đạt; không còn lỗi Critical/High mở | QC cung cấp RTM, test report và defect log; PM đối chiếu phạm vi; bên nghiệm thu xác nhận theo kế hoạch                      |
+| **Trước nghiệm thu (DoD)** | AC được kiểm chứng; test trọng yếu đạt; không còn lỗi P0/P1 mở | QC cung cấp RTM, test report và defect log; PM đối chiếu phạm vi; bên nghiệm thu xác nhận theo kế hoạch                      |
 
 ### 1.3. Chỉ số đo lường
 
@@ -25,6 +25,12 @@ Mục tiêu là xác định tiêu chuẩn chất lượng, cách đo, người 
 | **Mật độ lỗi**           | Số lỗi được xác nhận / đơn vị quy mô đã chọn (ví dụ mỗi 100 test case); phải dùng cùng mẫu số khi so sánh các đợt.          | Theo dõi xu hướng qua từng đợt                          |
 | **Thời gian xử lý lỗi**  | Thời gian trung bình từ lúc ghi nhận lỗi đến khi QC xác minh kết quả sửa; báo cáo theo mức độ lỗi khi dữ liệu cho phép.     | Theo dõi theo mức độ; thống nhất cách tính trước khi đo |
 | **First Pass Yield**     | Số hạng mục đạt ở lần kiểm tra đầu / tổng hạng mục được kiểm tra lần đầu × 100%.                                            | Theo dõi cải thiện qua các đợt                          |
+
+### 1.4. Phân loại lỗi thống nhất (V1-09)
+
+**Mã mức lỗi chính thức:** `P0`, `P1`, `P2`, `P3` theo [Kế hoạch quản lý sản phẩm — bảng điều kiện release](QL-san-pham.md). Tên cũ `Critical/High/Medium/Low` chỉ được dùng để giải thích tương ứng `P0/P1/P2/P3`, không tạo thêm thang mức lỗi độc lập. QC ghi mã P trong Defect Log, Dev ghi mã P khi sửa, PM dùng mã P để quyết định nghiệm thu.
+
+**Chưa chốt:** Bảng thời gian xử lý sự cố trong [Điều phối và giám sát](Dieuphoi-Giamsat.md#33-thông-báo-và-xử-lý-sự-cố-khẩn-cấp) có **3 mức** (Critical/Major/Minor) trong khi thang lỗi có **4 mức**. Không thể tự quy đổi cả 4 mức mà vẫn bảo toàn thời hạn phản hồi/khắc phục; cần quyết định riêng trước khi tuyên bố SLA lỗi đã đồng bộ. Các cam kết thời gian cũ tạm giữ nguyên trong bảng lịch sử cho tới khi được duyệt.
 
 ## 2. Đảm bảo chất lượng (Quality Assurance – Do)
 
@@ -109,7 +115,7 @@ Thực hiện trên bản build đủ ổn định trước UAT hoặc bàn giao
 
 **Kịch bản:** PM và QC chuẩn bị kịch bản dựa trên AC; người dùng/bên nghiệm thu thực hiện các thao tác theo vai trò trong PRD.
 
-**Điều kiện nghiệm thu:** Không còn lỗi Critical/High mở, các luồng trọng yếu đạt và có quyết định nghiệm thu chính thức từ bên nghiệm thu.
+**Điều kiện nghiệm thu:** Không còn lỗi P0/P1 mở, các luồng trọng yếu đạt và có quyết định nghiệm thu chính thức từ bên nghiệm thu.
 
 ### 3.4. Thang điểm đánh giá chất lượng
 
@@ -134,7 +140,7 @@ Thang đánh giá thống nhất với Kế hoạch quản lý sản phẩm:
 
 > **Dưới 60:** Chưa đạt
 
-Dù tổng điểm đạt ngưỡng, không kết luận nghiệm thu nếu còn lỗi Critical/High mở hoặc luồng trọng yếu chưa đạt. Điều kiện này là cổng nghiệm thu bắt buộc, độc lập với tổng điểm.
+Dù tổng điểm đạt ngưỡng, không kết luận nghiệm thu nếu còn lỗi P0/P1 mở hoặc luồng trọng yếu chưa đạt. Điều kiện này là cổng nghiệm thu bắt buộc, độc lập với tổng điểm.
 
 ### 3.5. Tiêu chí phi chức năng cần kiểm chứng
 
@@ -144,7 +150,7 @@ Dù tổng điểm đạt ngưỡng, không kết luận nghiệm thu nếu còn
 | **Khả năng tiếp cận**   | Kiểm tra thao tác bàn phím, nhãn trường nhập, độ tương phản và thông báo lỗi dễ hiểu; mục tiêu Accessibility ≥90 là đề xuất                      | Checklist thao tác và báo cáo công cụ; xác nhận trang/phạm vi đo trước khi áp dụng |
 | **SEO**                 | Với trang công khai có yêu cầu SEO: title, mô tả và heading phù hợp; mục tiêu SEO ≥90 là đề xuất. Trang đăng nhập/nội bộ không mặc định phải SEO | Báo cáo công cụ và checklist trên các trang đã thống nhất                          |
 | **Mã nguồn dễ bảo trì** | Tên gọi rõ ràng, không hardcode bí mật, có review trước khi hợp nhất và hạn chế lỗi critical / high                                              | Pull request và checklist review                                                   |
-| **Thời gian phản hồi**  | Trung bình dưới 2 giây theo kịch bản và điều kiện tải đã thống nhất                                                                              | Log đo, mô tả kịch bản, môi trường và kết quả                                      |
+| **Thời gian phản hồi**  | API thông thường ≤ 500ms theo `NFR-PERF-01`; API báo cáo/Dashboard ≤ 2.000ms theo `NFR-PERF-02`, mỗi loại theo điều kiện tải đã quy định                                                                              | Log đo, mô tả kịch bản, môi trường và kết quả                                      |
 
 Các ngưỡng định lượng là đề xuất cho đến khi nhóm và bên nghiệm thu xác nhận trang, thiết bị, môi trường, kịch bản tải và phương pháp đo. Không dùng một kết quả đơn lẻ để khẳng định mọi chức năng đều đạt hiệu năng.
 
@@ -164,9 +170,9 @@ Các ngưỡng định lượng là đề xuất cho đến khi nhóm và bên n
 
 - Thay đổi mã nguồn đã được review; unit/integration test áp dụng đã chạy và có bằng chứng.
 
-- Test case thuộc phạm vi hạng mục đã có kết quả; không còn lỗi Critical/High mở.
+- Test case thuộc phạm vi hạng mục đã có kết quả; không còn lỗi P0/P1 mở.
 
-- Lỗi Medium/Low còn tồn tại phải được ghi nhận ảnh hưởng và có quyết định xử lý của bên có thẩm quyền trước nghiệm thu.
+- Lỗi P2/P3 còn tồn tại phải được ghi nhận ảnh hưởng và có quyết định xử lý của bên có thẩm quyền trước nghiệm thu.
 
 - Đã kiểm tra quyền truy cập và dữ liệu của các vai trò liên quan.
 
