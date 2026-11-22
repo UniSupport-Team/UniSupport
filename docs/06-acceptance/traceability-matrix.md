@@ -103,16 +103,8 @@
 | `FR-M13-03/AC-01` | Xuất báo cáo ra file Excel/PDF đầy đủ dữ liệu | `TC-M13-M03` | [#168](https://github.com/UniSupport-Team/UniSupport/issues/168) ([#206](https://github.com/UniSupport-Team/UniSupport/issues/206)) | `MS-03` | Q-13 (M13) |
 | `FR-M13-04/AC-01` | Thống kê điểm CSAT và KPI hiệu suất nhân viên | `TC-M13-M04` | [#168](https://github.com/UniSupport-Team/UniSupport/issues/168) ([#207](https://github.com/UniSupport-Team/UniSupport/issues/207)) | `MS-03` | Q-13 (M13) |
 
-#### M14 — Quản lý đa ngôn ngữ Việt/Anh (MS-03)
-
-| Mã AC | Mô tả tóm tắt (từ PRD) | Kịch bản kiểm tra dự kiến | Tài liệu task | Milestone | Báo giá |
-|---|---|---|---|---|---|
-| `FR-M14-01/AC-01` | Người dùng có thể chọn tiếng Việt hoặc tiếng Anh | Chọn từng ngôn ngữ và quan sát giao diện | [V2-02](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03, 23–27/11/2026 | Q-13 (M13 + M14), 28.000.000đ chung; M14 8h Dev 1 |
-| `FR-M14-01/AC-02` | Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại | Đổi ngôn ngữ trong phiên đăng nhập hiện tại | [V2-02](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03, 23–27/11/2026 | Q-13 (M13 + M14), 28.000.000đ chung; M14 8h Dev 1 |
-
-> Chưa có bằng chứng kiểm thử hoặc GitHub Issue M14 chính thức. Không bao gồm yêu cầu ghi nhớ ngôn ngữ sau tải lại trang.
-
-
+| `FR-M14-01/AC-01` | Người dùng có thể chọn tiếng Việt hoặc tiếng Anh | Chưa có mã TC chính thức; kiểm tra lựa chọn Việt/Anh | [#211](https://github.com/UniSupport-Team/UniSupport/issues/211) ([#212](https://github.com/UniSupport-Team/UniSupport/issues/212)) | `MS-03` | Q-13 (M13 + M14) |
+| `FR-M14-01/AC-02` | Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại | Chưa có mã TC chính thức; kiểm tra đổi ngôn ngữ trong phiên đăng nhập | [#211](https://github.com/UniSupport-Team/UniSupport/issues/211) ([#212](https://github.com/UniSupport-Team/UniSupport/issues/212)) | `MS-03` | Q-13 (M13 + M14) |
 
 ### 2.4. Hạng mục Hạ tầng & Bàn giao (`MS-00`, `MS-04`)
 
