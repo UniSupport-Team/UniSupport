@@ -22,7 +22,7 @@ Lộ trình triển khai được tái cấu trúc thành 5 giai đoạn chính 
 | **MS-00 – Khởi động** | Tuần 1 – 3<br>*(01/09 – 18/09)* | - Khảo sát quy trình nghiệp vụ & hoàn thiện tài liệu đặc tả yêu cầu.<br>- Thiết kế kiến trúc tổng thể, cơ sở dữ liệu và khởi tạo hạ tầng kỹ thuật (`INF-01`).<br>- Hoàn thiện bản mẫu giao diện tương tác (**Interactive Prototype**) cho cả 4 vai trò để khách hàng duyệt luồng màn hình và khóa phạm vi thiết kế.<br>*(Lưu ý: Module M01 bắt đầu triển khai từ MS-01)*. |
 | **MS-01 – Nền tảng** | Tuần 4 – 6<br>*(21/09 – 14/10)* | - Phát triển phân hệ nền tảng: Đăng nhập & Xác thực (`M01`), Vai trò & Phân quyền (`M02`), Quản lý tài khoản (`M03`).<br>- **Kiểm thử & Khách hàng test (08/10 – 14/10):** QA/QC thực hiện kiểm thử Đợt 1 và phối hợp khách hàng trực tiếp dùng thử, nghiệm thu sơ bộ giai đoạn nền tảng. |
 | **MS-02 – Ticket và Phân hệ sinh viên** | Tuần 7 – 11<br>*(12/10 – 13/11)* | - Khởi động Module `M04` (Quản lý danh mục) từ **12/10**, gối đầu (overlap) có chủ đích 3 ngày (12/10 – 14/10) với giai đoạn kiểm thử MS-01 để tối ưu thời gian chờ.<br>- Triển khai trọn vẹn quy trình vòng đời Ticket (`M04`–`M11`) và phân hệ sinh viên.<br>- Kiểm thử QA/QC Đợt 2 & Đợt 3. |
-| **MS-03 – Giám sát Dashboard** | Tuần 12 – 14<br>*(16/11 – 04/12)* | - Giám sát tiến độ và cảnh báo chậm hạn SLA thời gian thực (`M12`).<br>- Dashboard thống kê và xuất báo cáo điều hành dành cho cấp quản lý (`M13`).<br>- Kiểm thử QA/QC Đợt 4. |
+| **MS-03 – Giám sát Dashboard** | Tuần 12 – 14<br>*(16/11 – 04/12)* | - Giám sát tiến độ và cảnh báo chậm hạn SLA thời gian thực (`M12`).<br>- Dashboard thống kê và xuất báo cáo điều hành dành cho cấp quản lý (`M13`).<br>- Quản lý đa ngôn ngữ Việt/Anh (`M14`, 24h), hoàn thành và kiểm thử trong MS-03.<br>- Kiểm thử QA/QC Đợt 4. |
 | **MS-04 – Bàn giao dự án** | Tuần 15 – 16<br>*(07/12 – 18/12)* | - Kiểm thử nghiệm thu người dùng toàn diện (UAT toàn trình).<br>- Đóng gói sản phẩm, hoàn thiện bộ tài liệu kỹ thuật & tài liệu hướng dẫn vận hành.<br>- Chuyển giao hệ thống chính thức lên môi trường Production và ký biên bản bàn giao. |
 
 ### Cơ chế nghiệm thu tại Mốc khởi động (MS-00) và Kế hoạch gối đầu (Overlap):
@@ -40,19 +40,6 @@ Lộ trình triển khai được tái cấu trúc thành 5 giai đoạn chính 
 ## 5. KẾT LUẬN
 Bản cập nhật Proposal này được thực hiện nhằm hướng tới mục tiêu tối ưu hóa chất lượng sản phẩm đầu ra và giảm thiểu rủi ro phát sinh trong quá trình phối hợp. Việc gom nhóm các công việc thành các giai đoạn lớn không chỉ giúp kiểm soát chất lượng chặt chẽ mà còn tối ưu hóa thời gian thực thi của đội ngũ. Kính mong Ban Giám hiệu xem xét và thông qua sự điều chỉnh này để dự án UniSupport tiếp tục được triển khai một cách an toàn, chuyên nghiệp và thuận lợi nhất.
 
-### Kế hoạch tích hợp Q-I18N theo milestone (V2-02)
+### M14 — Quản lý đa ngôn ngữ tại MS-03 (V2-02)
 
-
-**Phân bổ Q-I18N theo milestone đã duyệt:**
-
-| Mốc | Công việc | BA | Dev 1 | QA 1 | Tổng |
-|---|---|---:|---:|---:|---:|
-| MS-01 | Từ điển Việt/Anh, bộ chuyển ngôn ngữ dùng chung | 4h | 4h | 0h | 8h |
-| MS-02 | Tích hợp giao diện Ticket và các module ở MS-02 | 0h | 6h | 0h | 6h |
-| MS-03 | Hoàn thiện M12–M13, rà soát M01–M13 | 0h | 2h | 0h | 2h |
-| MS-04 | QA hồi quy 4 vai trò, kiểm tra TC-I18N-01–05 trước nghiệm thu | 0h | 0h | 8h | 8h |
-| **Tổng** | **Hạng mục xuyên 13 module** | **4h** | **12h** | **8h** | **24h** |
-
-Đây là phân bổ effort theo mốc, **chưa ấn định ngày làm việc cụ thể và chưa xác nhận đã thực hiện**. Giữ nguyên 910h, 300 triệu đồng và hạn các milestone; cần kiểm tra tải nguồn lực khi xếp lịch.
-
-Q-I18N là hạng mục chung, không tạo module M14 hoặc milestone mới. Chi tiết tại [Master Schedule](Master-schedule.md) và [Task V2-02](tasks/V2-02-bilingual-ui.md).
+Toàn bộ **24h** thuộc **MS-03 (16/11–04/12/2026)**: BA 4h, Dev 1 12h, QA 1 8h. M14 là module thứ 14, cung cấp chuyển ngôn ngữ Việt/Anh cho giao diện M01–M13, nghiệm thu trong MS-03. Không phân bổ I18N ở các mốc khác, không tạo milestone mới, không đổi tổng 910h và giá 300 triệu. Ngày làm việc chi tiết trong MS-03 chờ xếp lịch.
