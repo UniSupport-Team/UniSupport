@@ -11,40 +11,30 @@
 
 ---
 
-## 2. Bảng báo giá chi tiết theo module (Hệ thống UniSupport)
+## 2. Bảng báo giá theo hạng mục
 
-**Giá hợp đồng cố định:** 300.000.000đ (đã bao gồm VAT). **Baseline:** 886h = 712h WBS + 174h BA, trong đó **450h thuộc M01–M14** và **436h công việc chung** (khởi động, QA/QC, nghiệm thu, bàn giao). Giá từng dòng là giá thương mại phân bổ **toàn bộ hợp đồng**, không phải chỉ là lương của module.
+Dự án gồm **14 module**, được báo giá theo **13 hạng mục** vì M13 và M14 sử dụng chung một mức giá. Giá đã bao gồm chi phí phát triển, quản lý, kiểm thử và bàn giao; **không phát sinh khoản thu riêng cho công việc chung**.
 
-| STT | Mã báo giá | Mã module | Tên Module / Chức năng | WBS module | BA module | Effort module | Chi phí nhân sự trực tiếp dùng làm trọng số | Thành tiền (VNĐ) |
-| :---: | :---: | :---: | :--- | ---: | ---: | ---: | ---: | ---: |
-| 1 | **`Q-01`** | `M01` | Đăng nhập & xác thực | 40h | 4h | **44h** | 7.240.000 | **36.900.000 ₫** |
-| 2 | **`Q-02`** | `M02` | Vai trò & Phân quyền | 40h | 4h | **44h** | 7.240.000 | **36.900.000 ₫** |
-| 3 | **`Q-03`** | `M03` | Quản lý tài khoản | 36h | 4h | **40h** | 5.680.000 | **28.900.000 ₫** |
-| 4 | **`Q-04`** | `M04` | Quản lý danh mục | 36h | 4h | **40h** | 5.680.000 | **28.900.000 ₫** |
-| 5 | **`Q-05`** | `M05` | Khởi tạo Ticket | 36h | 4h | **40h** | 5.680.000 | **28.900.000 ₫** |
-| 6 | **`Q-06`** | `M06` | Tiếp nhận Ticket | 36h | 4h | **40h** | 5.680.000 | **28.900.000 ₫** |
-| 7 | **`Q-07`** | `M07` | Xử lý & Bổ sung | 16h | 4h | **20h** | 2.080.000 | **10.600.000 ₫** |
-| 8 | **`Q-08`** | `M08` | Trả kết quả | 24h | 4h | **28h** | 2.800.000 | **14.300.000 ₫** |
-| 9 | **`Q-09`** | `M09` | Theo dõi & Bổ sung | 24h | 4h | **28h** | 2.800.000 | **14.300.000 ₫** |
-| 10 | **`Q-10`** | `M10` | Kết quả & Đánh giá | 12h | 4h | **16h** | 1.720.000 | **8.800.000 ₫** |
-| 11 | **`Q-11`** | `M11` | Điều phối Ticket | 18h | 4h | **22h** | 2.560.000 | **13.000.000 ₫** |
-| 12 | **`Q-12`** | `M12` | Giám sát tiến độ | 40h | 4h | **44h** | 4.240.000 | **21.600.000 ₫** |
-| 13 | **`Q-13`** | `M13 + M14` | Dashboard & Báo cáo; Quản lý đa ngôn ngữ Việt/Anh | 40h | 4h | **44h** | 4.240.000 | **28.000.000 ₫** |
-| **—** | **TỔNG MODULE** | **14 module / 13 dòng** | **Giờ thực hiện module** | **398h** | **52h** | **450h** | **57.640.000** | **300.000.000 ₫** |
-| — | **CÔNG VIỆC CHUNG** | — | Khởi động, kiểm thử, nghiệm thu và bàn giao (đã bao gồm trong giá hợp đồng) | **314h** | **122h** | **436h** | *Tính trong ngân sách nhân sự toàn dự án* | **Không thu thêm** |
-| **—** | **TỔNG EFFORT DỰ ÁN** | **14 module** | **Baseline Master Schedule** | **712h** | **174h** | **886h** | — | **300.000.000 ₫** |
+| STT | Module | Hạng mục triển khai | Giờ thực hiện | Thành tiền (VNĐ) |
+| :---: | :---: | :--- | ---: | ---: |
+| 1 | `M01` | Đăng nhập & xác thực | **44h** | **36.900.000 ₫** |
+| 2 | `M02` | Vai trò & Phân quyền | **44h** | **36.900.000 ₫** |
+| 3 | `M03` | Quản lý tài khoản | **40h** | **28.900.000 ₫** |
+| 4 | `M04` | Quản lý danh mục | **40h** | **28.900.000 ₫** |
+| 5 | `M05` | Khởi tạo Ticket | **40h** | **28.900.000 ₫** |
+| 6 | `M06` | Tiếp nhận Ticket | **40h** | **28.900.000 ₫** |
+| 7 | `M07` | Xử lý & Bổ sung | **20h** | **10.600.000 ₫** |
+| 8 | `M08` | Trả kết quả | **28h** | **14.300.000 ₫** |
+| 9 | `M09` | Theo dõi & Bổ sung | **28h** | **14.300.000 ₫** |
+| 10 | `M10` | Kết quả & Đánh giá | **16h** | **8.800.000 ₫** |
+| 11 | `M11` | Điều phối Ticket | **22h** | **13.000.000 ₫** |
+| 12 | `M12` | Giám sát tiến độ | **44h** | **21.600.000 ₫** |
+| 13 | `M13 + M14` | Dashboard & Báo cáo; Quản lý đa ngôn ngữ Việt/Anh | **44h** | **28.000.000 ₫** |
+| | | **TỔNG GIÁ TRỊ HỢP ĐỒNG (đã gồm VAT)** | | **300.000.000 ₫** |
 
-### 2.1. Công thức định giá và cách tự tính lại
+**Ghi chú:** M13 và M14 có yêu cầu, tiến độ riêng nhưng được tính **chung 28.000.000đ**. Tổng nguồn lực dự kiến của dự án là **886 giờ**, gồm **450 giờ phát triển module** và **436 giờ cho công việc chung** (khởi động, kiểm thử, nghiệm thu và bàn giao). Các giờ công việc chung **đã nằm trong giá trên**, không cộng tiền lần nữa.
 
-1. **Chi phí nhân sự trực tiếp module** `C_i = Senior_i × 240.000 + (Dev1_i + Dev2_i + Dev3_i) × 90.000 + BA_i × 160.000` (VNĐ). Các giờ theo đúng phân công từng task tại [Master Schedule](Master-schedule.md); PM/QA thuộc phần công việc chung, không cộng trùng vào module.
-2. **Giá chung Q-13** (M13 + M14) được chốt thương mại ở **28.000.000đ**. Tổng effort Q-13 = M13 (32h WBS + 4h BA) + M14 (8h WBS) = **44h**.
-3. **Quỹ giá còn lại** cho Q-01–Q-12: `300.000.000 − 28.000.000 = 272.000.000đ`.
-4. **Giá Q-01–Q-11:** `ROUND((272.000.000 × C_i / SUM(C_01:C_12)) / 100.000, 0) × 100.000` (làm tròn đến 100.000đ). **Giá Q-12:** `272.000.000 − SUM(Giá Q-01:Q-11)` để loại sai lệch làm tròn. **Tổng trọng số C_01:C_12 = 53.400.000đ**.
-5. **Kiểm tra:** `SUM(Giá Q-01:Q-13) = 300.000.000đ`; `SUM(WBS module) = 398h`, `SUM(BA module) = 52h`; cộng công việc chung 314h WBS + 122h BA = **886h**.
-
-**Ví dụ kiểm tra Q-01:** Senior 20h, Dev 2 20h, BA 4h → `C_01 = 20×240.000 + 20×90.000 + 4×160.000 = 7.240.000đ`; giá Q-01 = `ROUND((272.000.000 × 7.240.000 / 53.400.000) / 100.000, 0) × 100.000 = 36.900.000đ`.
-
-> **Phân biệt giá và chi phí:** Trọng số lương trực tiếp dùng để phân bổ **giá trọn gói**, trong đó đã tính đến 436h công việc chung, vận hành, dự phòng, bảo hiểm và biên lợi nhuận; **không** có nghĩa giá bán bằng lương trực tiếp. Phương pháp này là quy tắc phân bổ thương mại được chốt cho V1-01, không phải chứng cứ giá từng module do khách hàng phê duyệt lại.
+> Bảng tính giá chi tiết, đơn giá nhân sự và cách phân bổ 300 triệu theo từng module được lưu tại [Ngân sách nhân sự – phụ lục đối soát V1-01](Ngan-sach-nhan-su.md) để nhóm quản lý nội bộ.
 
 ## 3. Điều kiện thanh toán
 Về phương thức thanh toán thương mại, dự án áp dụng cơ chế 02 đợt thanh toán (tỷ lệ 70% – 30%) nhằm đảm bảo nguồn kinh phí vận hành, hạ tầng và chi trả lương cho đội ngũ nhân sự ngay từ khi khởi động dự án:
@@ -56,7 +46,7 @@ Về phương thức thanh toán thương mại, dự án áp dụng cơ chế 0
 | **TỔNG CỘNG** | **Toàn dự án** | **Hoàn thành nghĩa vụ thanh toán hợp đồng** | **100%** | **300.000.000** |
 
 > **Nguyên tắc phân biệt giữa Báo giá hạng mục và Điều kiện thanh toán:**
-> - Bảng tại **Mục 2** (`Q-01` đến `Q-13`) là bảng **báo giá chi tiết theo từng module chức năng bàn giao**, xác định giá trị kinh tế của từng phân hệ tương ứng với khối lượng giờ công (effort) và độ phức tạp kỹ thuật thực tế.
+> - Bảng tại **Mục 2** (`Q-01` đến `Q-13`) là bảng **báo giá chi tiết theo từng module chức năng bàn giao**, thể hiện giá thương mại đã phân bổ cho các hạng mục bàn giao; tổng giá đã bao gồm công việc chung của dự án.
 > - Bảng tại **Mục 3** quy định **lịch trình dòng tiền thanh toán thực tế** giữa hai bên: Áp dụng cơ chế tạm ứng 70% tại MS-00 để đơn vị triển khai chủ động dòng tiền chi trả đội ngũ, tránh rủi ro đứt gãy tài chính trong suốt 14 tuần phát triển. Khách hàng giữ lại 30% để thanh toán tại MS-04 khi nghiệm thu toàn trình.
 
 ---
