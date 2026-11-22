@@ -107,7 +107,8 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 * **Các công việc chính:**
   * **M12: Giám sát tiến độ (16/11 – 20/11):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng màn hình tracking SLA, cảnh báo ticket quá hạn (Dev 1 12h, Dev 2 20h, Dev 3 8h, BA 4h = 44h).
   * **M13: Dashboard & Báo cáo (23/11 – 27/11):** Dev 2 12h, Dev 3 20h, BA 4h = 36h.
-  * **M14: Quản lý đa ngôn ngữ (23/11 – 27/11):** Dev 1 8h, 1 FR / 2 AC, triển khai song song M13.\n  * **Test QA/QC Đợt 4 (30/11 – 04/12):** PM, QA 1, QA 2 và BA kiểm thử tính chính xác của số liệu và độ ổn định báo cáo (PM 4h, QA 1 20h, QA 2 20h, BA 24h = 68h).
+  * **M14: Quản lý đa ngôn ngữ (23/11 – 27/11):** Dev 1 8h, 1 FR / 2 AC, triển khai song song M13.
+  * **Test QA/QC Đợt 4 (30/11 – 04/12):** PM, QA 1, QA 2 và BA kiểm thử tính chính xác của số liệu và độ ổn định báo cáo (PM 4h, QA 1 20h, QA 2 20h, BA 24h = 68h).
 
 ### 5. Mốc 4: Bàn giao dự án (07/12/2026 – 18/12/2026)
 * **Mục tiêu:** Nghiệm thu toàn diện và chuyển giao chính thức hệ thống vào vận hành.
@@ -129,7 +130,7 @@ Dự án được tổ chức theo 5 cột mốc tuần tự (`MS-00` $\rightarr
 | **`MS-00`** | Tuần 1–3<br>*(01/09 – 18/09)* | 88h | 32h | **120h** | — | **Đầu ra & Nghiệm thu:** Bàn giao hồ sơ khảo sát & đặc tả yêu cầu, thiết kế kiến trúc/CSDL, hạ tầng Staging (`INF-01`) và **bản demo UI tương tác chạy được trên trình duyệt**. Khách hàng tự mở demo, chọn một trong 4 vai trò, bấm các nút điều hướng/đăng nhập mô phỏng/tạo Ticket mô phỏng/xem chi tiết/quay lại và chuyển ngôn ngữ Việt–Anh; màn hình hiển thị phản hồi bằng **dữ liệu giả lập**. **Không kết nối API/CSDL, không xác thực hay xử lý Ticket thật, không lưu dữ liệu sau khi tải lại trang**. Nghiệm thu MS-00 bằng checklist thao tác và biên bản phản hồi, **không coi đây là nghiệm thu chức năng M01–M13**. *(M01 bắt đầu phát triển thật từ MS-01.)*. |
 | **`MS-01`** | Tuần 4–6<br>*(21/09 – 14/10)* | 160h | 32h | **192h** | `MS-00` | **Phần mềm chạy được:** Phân hệ Xác thực (`M01`), Phân quyền RBAC (`M02`) và Quản lý tài khoản (`M03`).<br>**Khách hàng kiểm thử (08/10 – 14/10):** Khách hàng trực tiếp dùng thử và nghiệm thu sơ bộ giai đoạn nền tảng: đăng nhập 4 tài khoản vai trò (`Student`, `Staff`, `Manager`, `Admin`), thử nghiệm đổi mật khẩu lần đầu, khóa tài khoản khi nhập sai 5 lần, bật/tắt quyền động và import danh sách tài khoản bằng file Excel. |
 | **`MS-02`** | Tuần 7–11<br>*(12/10 – 13/11)* | 290h | 56h | **346h** | `MS-01` | **Phần mềm chạy được:** Trọn vẹn vòng đời xử lý Ticket (`M04` đến `M11`). Khởi động từ 12/10 với `M04`, gối đầu (overlap) có chủ đích 3 ngày (12/10 – 14/10) với giai đoạn test MS-01 để tối ưu thời gian chờ.<br>**Cách khách hàng tự dùng thử:** Khách hàng tự thực hiện luồng khép kín: Cấu hình danh mục & SLA (`M04`) $\rightarrow$ Sinh viên tạo đơn & đính kèm file (`M05`) $\rightarrow$ Nhân viên tiếp nhận (`M06`) / Admin & Trưởng phòng điều phối (`M11`) $\rightarrow$ Nhân viên xử lý, yêu cầu bổ sung 3 ngày làm việc (`M07`) và trả kết quả (`M08`) $\rightarrow$ Sinh viên theo dõi, nộp bổ sung (`M09`) và đánh giá CSAT 1–5 sao (`M10`). |
-| **`MS-03`** | Tuần 12–14<br>*(16/11 – 04/12)* | 124h | 32h | **156h** | `MS-02` | **Phần mềm chạy được:** Giám sát tiến độ (`M12`), Dashboard & Báo cáo (`M13`) và Quản lý đa ngôn ngữ (`M14`, 24h, Việt/Anh trên M01–M13).<br>**Cách khách hàng tự dùng thử:** Trưởng phòng và Ban Giám hiệu truy cập Dashboard xem biểu đồ thống kê thời gian thực, kiểm tra cảnh báo tô đỏ với các đơn quá hạn SLA, tra cứu đơn toàn trường và tải xuống báo cáo định dạng Excel/PDF. |
+| **`MS-03`** | Tuần 12–14<br>*(16/11 – 04/12)* | 124h | 32h | **156h** | `MS-02` | **Phần mềm chạy được:** Giám sát tiến độ (`M12`), Dashboard & Báo cáo (`M13`) và Quản lý đa ngôn ngữ (`M14`, 8h Dev 1, chuyển ngôn ngữ Việt/Anh).<br>**Cách khách hàng tự dùng thử:** Trưởng phòng và Ban Giám hiệu truy cập Dashboard xem biểu đồ thống kê thời gian thực, kiểm tra cảnh báo tô đỏ với các đơn quá hạn SLA, tra cứu đơn toàn trường và tải xuống báo cáo định dạng Excel/PDF. |
 | **`MS-04`** | Tuần 15–16<br>*(07/12 – 18/12)* | 50h | 22h | **72h** | `MS-03` | **Phần mềm chạy được:** Bản phát hành hoàn chỉnh (Release Candidate / Production) tích hợp toàn bộ 14 phân hệ (`M01`–`M14`) kèm dữ liệu mẫu nghiệm thu (`Docs-02`) và bộ tài liệu hướng dẫn (`Docs-01`).<br>**Cách khách hàng tự dùng thử:** Khách hàng thực hiện kiểm thử nghiệm thu người dùng (UAT) toàn trình trên hệ thống hoàn chỉnh theo tiêu chuẩn tại [Proposal.md — Mục 8.2](Proposal.md#82-nghiệm-thu) và ký biên bản bàn giao chính thức. |
 
 ### 2. Phân bổ giờ công Kiểm thử (Test / Regression) và Sửa lỗi
@@ -150,44 +151,11 @@ Bảng theo dõi các phiên bản điều chỉnh đường cơ sở (Baseline)
 | :---: | :---: | :---: | :--- | :--- |
 | **`v1.0`** | 01/09/2026 | Nhóm 4 (Group 4) | Thiết lập Master Schedule ban đầu gồm 16 tuần triển khai tuần tự theo từng module. | Kế hoạch khởi động dự án theo [Proposal.md](Proposal.md). |
 | **`v2.0`** | 31/10/2026 | Project Manager | Tái cơ cấu toàn bộ tiến độ thành 5 cột mốc tích hợp (`MS-00` đến `MS-04`); bố trí 4 đợt kiểm thử QA/QC sớm và gối đầu (overlap) 3 ngày (12/10–14/10) giữa MS-01 và MS-02 cho module `M04`. | Tối ưu luồng công việc, giảm thời gian chờ và đưa khách hàng vào kiểm thử sớm; phê duyệt tại [Dieu-chinh-proposal.md](Dieu-chinh-proposal.md). |
-| **`v2.2`** | 22/11/2026 | Nhóm 4 — theo phê duyệt phạm vi V2-02 | Bổ sung 24h giao diện Việt/Anh, tổng 910h; giữ giá hợp đồng 300 triệu. | Người dùng xác nhận V2-02; chờ PM chốt lịch triển khai chi tiết và cập nhật Excel. |
-| **`v2.1`** | 15/11/2026 | Project Manager | Chuẩn hóa bảng tiến độ chi tiết và phân công nhân sự khớp 100% với `Master Schedule.xlsx` (Sheet 2): hiển thị minh bạch 174h BA theo từng task (tổng 886h = 712h WBS + 174h BA); chuẩn hóa nhân sự thực tế tại M01 (Senior, Dev 2), M02 (Senior, Dev 1), M07 (Dev 1, Dev 3), M10 (Dev 2, Dev 3) và bổ sung BA vào các đợt QA/QC, Nghiệm thu. | Kết quả rà soát đối soát kế hoạch giữa Master-schedule.md và Master Schedule.xlsx. |
+| **`v2.2`** | 22/11/2026 | Nhóm 4 | Chốt M14: 1 FR / 2 AC, 8h Dev 1 điều chuyển từ M13, tổng dự án 886h, giá 300 triệu. | Áp dụng trên nhánh fix-final; chưa xác nhận hoàn thành. |
 
+### Phạm vi M14 hiện hành
 
-### Hạng mục đã duyệt effort — V2-02: đa ngôn ngữ giao diện
-
-Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu mẫu, nhãn, thông báo hệ thống và validation trên cả 4 vai trò; giữ nguyên nội dung người dùng nhập. **Không bao gồm** dịch tự động nội dung Ticket, Email hay file báo cáo xuất ra.
-
-| Công việc | Vai trò dự kiến | Giờ được duyệt | Điều kiện hoàn tất |
-|---|---|---:|---|
-| Rà soát chuỗi giao diện và đặc tả từ điển `vi`/`en` | BA (4h) | 4h | Danh sách màn hình/chuỗi cần dịch |
-| Hoàn thiện tích hợp ngôn ngữ trên các màn hình và validation | Dev 1 | 12h | Không còn chuỗi giao diện bỏ sót trong phạm vi |
-| Kiểm thử 4 vai trò, lưu lựa chọn và bảo toàn dữ liệu | QA 1 | 8h | `TC-I18N-01`–`TC-I18N-05` có kết quả |
-| **Tổng đề xuất** | | **24h** | **Đã cộng vào baseline 910h** |
-
-**Phê duyệt V2-02:** tăng effort baseline từ **886h lên 910h** (WBS 712h → 732h; BA 174h → 178h), giữ nguyên giá hợp đồng **300.000.000 VNĐ**. Phân bổ 4h BA, 12h Dev 1, 8h QA 1; đây là giờ kế hoạch, **chưa phải giờ thực hiện**. Ngày bắt đầu/kết thúc riêng cần PM chốt theo năng lực thực tế; chưa khẳng định có thể hoàn thành trong lịch 16 tuần nếu chưa kiểm tra tải nguồn lực. File Excel chưa được đồng bộ, không dùng file Excel cũ làm baseline mới.
-
-
-### Phụ lục V2-02 — Hạng mục chung M14 / Q-14 (không phải module M14)
-
-- **Phân loại:** `M14 / Q-14` là hạng mục xuyên 13 module M01–M13, bổ sung module thứ 14, không thay đổi số milestone.
-- **Phạm vi:** Giao diện, menu, biểu mẫu, thông báo hệ thống và validation Việt/Anh của 4 vai trò; không dịch nội dung người dùng nhập, email hoặc file báo cáo xuất.
-- **Nỗ lực đã duyệt:** BA **4h**, Dev 1 **12h**, QA 1 **8h** = **24h**, đã tính trong **910h**; không cộng thêm lần thứ hai. Tổng giá hợp đồng vẫn **300.000.000 VNĐ**.
-- **Tích hợp:** Thiết kế dùng chung khi triển khai M01 và áp dụng dần trên M02–M13; kiểm thử hồi quy các màn hình theo từng đợt QA, xác nhận cuối trước nghiệm thu. Đây là **định hướng phụ thuộc**, **không phải ngày bắt đầu/kết thúc được duyệt**. Toàn bộ 24h đã được duyệt thuộc MS-03; ngày làm việc cụ thể vẫn chờ xếp lịch và không tự dịch chuyển mốc.
-- **Truy vết:** [Task V2-02](tasks/V2-02-bilingual-ui.md), `NFR-I18N-01`, `TC-I18N-01`–`TC-I18N-05`, [Báo giá M14 / Q-14](Bao-gia-cho-khach.md) và [ma trận truy vết](../06-acceptance/traceability-matrix.md).
-- **Đối soát V1-01/V1-08:** Giờ công các module Q-01–Q-13 trong báo giá và workbook Excel vẫn cần đối chiếu với Master Schedule; không coi hai vấn đề này đã hoàn tất.
-
-
-**Quyết định mới M14:** Thay thế phương án Q-I18N xuyên milestone: toàn bộ BA 4h, Dev 1 12h, QA 1 8h được thực hiện trong MS-03 (16/11–04/12/2026), không tăng 910h hay giá 300 triệu. Các mô tả phân bổ xuyên mốc trước đây là lịch sử, không còn hiệu lực.
-
-
-### Phân công song song M13 và M14 tại MS-03 (đã duyệt)
-
-- **M13 – Dashboard & Báo cáo:** Dev 2 **20h**, Dev 3 **20h**, BA **4h** = **44h**. Không phân công Dev 1 cho M13.
-- **M14 – Quản lý đa ngôn ngữ:** Dev 1 **12h**, BA **4h**, QA 1 **8h** = **24h**.
-- **Song song:** M13 dự kiến 23–27/11/2026; M14 trong khung MS-03 16/11–04/12/2026, chồng lấn M13. Ngày làm việc riêng M14 chưa chốt; không tự suy ra Dev 1 làm đủ 12h trong tuần 23–27/11.
-- **Tổng:** không tăng effort 910h, không thay đổi 300 triệu hoặc hạn MS-03. Điều chỉnh phân công 8h Dev 1 trước đây của M13 sang Dev 3; Dev 2 giữ 20h.
-
+Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md) và [task V2-02](tasks/V2-02-bilingual-ui.md). Mọi ước lượng +24h và 910h trước đó đã bị thay thế.
 
 ### Baseline M13/M14 có hiệu lực
 
