@@ -34,8 +34,8 @@
 | 11 | **`Q-11`** | `M11` | Điều phối Ticket | 46 h | 11 h | **57 h** | 19.500.000 ₫ |
 | 12 | **`Q-12`** | `M12` | Giám sát tiến độ | 58 h | 15 h | **73 h** | 24.500.000 ₫ |
 | 13 | **`Q-13`** | `M13` | Dashboard & Báo cáo | 65 h | 19 h | **84 h** | 28.000.000 ₫ |
-| 14 | **`Q-14`** | `M14` | Giao diện song ngữ Việt/Anh (điều chuyển 8h Dev 1 từ M13) | 8 h | 0 h | **8 h** | **0 ₫ (đã nằm trong giá trọn gói)** |
-| **-** | **TỔNG CỘNG** | **14 MODULES** | **Toàn bộ hệ thống UniSupport** | **732 h** | **178 h** | **910 h** | **300.000.000 ₫** |
+| 14 | **`Q-14`** | `M14` | Quản lý đa ngôn ngữ (8h Dev 1 chuyển từ M13; không tăng giá) | 8 h | 0 h | **8 h** | **0 ₫ (trọn gói)** |
+| **-** | **TỔNG CỘNG** | **14 MODULES** | **Toàn bộ hệ thống UniSupport** | **712 h** | **174 h** | **886 h** | **300.000.000 ₫** |
 
 > **Kiểm tra đối soát (Phương án A):** ✅ Khớp đúng ngân sách: **300.000.000 ₫** (100%) | Khớp đúng nỗ lực: **910h Effort** (732h WBS + 178h BA).
 >
@@ -125,3 +125,6 @@ Các PDF trong [`sent/`](sent/README.md) chỉ là tài liệu **mô phỏng quy
 ### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
 
 **Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
+
+
+> **Quyết định mới nhất — thay thế phương án 24h:** M14 sử dụng **8h Dev 1 điều chuyển từ M13**, không thêm BA/QA hoặc 24h trước đó. M13 còn **36h** (BA 4h, Dev 2 12h, Dev 3 20h); M14 **8h Dev 1**, cùng triển khai **23–27/11/2026** trong MS-03. Tổng dự án **886h** (712h WBS + 174h BA), giá **300.000.000đ**. Mọi bảng/ghi chú cũ về M14 24h, baseline 910h không còn hiệu lực; Excel bản chốt 886h là cơ sở đối soát. Đây là phân bổ kế hoạch, không phải giờ đã thực hiện.
