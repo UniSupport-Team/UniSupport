@@ -112,19 +112,16 @@
 | `Docs-02` | Tạo dữ liệu mẫu và chuẩn bị kịch bản để chạy thử nghiệm thu dự án (UAT) | [#169](https://github.com/UniSupport-Team/UniSupport/issues/169) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
 
 
-### 2.5. M14 — Quản lý đa ngôn ngữ Việt/Anh (V2-02, MS-03)
+### 2.5. M14 — Quản lý đa ngôn ngữ Việt/Anh (MS-03)
 
-| Mã AC / NFR | Mô tả | Kịch bản kiểm thử | Task triển khai | Milestone | Hạng mục báo giá |
+| Mã AC | Mô tả tóm tắt (từ PRD) | Kịch bản kiểm tra dự kiến | Tài liệu task | Milestone | Báo giá |
 |---|---|---|---|---|---|
-| `FR-M01-01/AC-I18N-01`, `NFR-I18N-01` | Đăng nhập Việt/Anh, lỗi validation và xác thực giữ nguyên nghiệp vụ | `TC-I18N-01`, `TC-I18N-02` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03 (16/11–04/12/2026); ngày làm việc chờ xếp lịch | `Q-14 / M14` (24h, MS-03; không tăng giá bán) |
-| `NFR-I18N-01` | Giữ ngôn ngữ, giữ nội dung nhập và biểu mẫu; bao phủ 4 vai trò | `TC-I18N-02`, `TC-I18N-03`, `TC-I18N-04`, `TC-I18N-05` | [V2-02 bilingual UI](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03 (16/11–04/12/2026); ngày làm việc chờ xếp lịch | `Q-14 / M14` (24h, MS-03; không tăng giá bán) |
+| `FR-M14-01/AC-01` | Người dùng có thể chọn tiếng Việt hoặc tiếng Anh | Chọn từng ngôn ngữ và quan sát giao diện | [V2-02](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03, 23–27/11/2026 | Q-14, 8h Dev 1, 0đ thêm |
+| `FR-M14-01/AC-02` | Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại | Đổi ngôn ngữ trong phiên đăng nhập hiện tại | [V2-02](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03, 23–27/11/2026 | Q-14, 8h Dev 1, 0đ thêm |
 
-> Task V2-02 là tài liệu trên nhánh `fix-final`, chưa phải GitHub Issue được tạo; không ghi Issue ID chưa tồn tại. Test cases chưa được thực thi.
-
-
-### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
-
-**Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
+> Chưa có bằng chứng kiểm thử hoặc GitHub Issue M14 chính thức. Không bao gồm yêu cầu ghi nhớ ngôn ngữ sau tải lại trang.
 
 
-> **Quyết định mới nhất — thay thế phương án 24h:** M14 sử dụng **8h Dev 1 điều chuyển từ M13**, không thêm BA/QA hoặc 24h trước đó. M13 còn **36h** (BA 4h, Dev 2 12h, Dev 3 20h); M14 **8h Dev 1**, cùng triển khai **23–27/11/2026** trong MS-03. Tổng dự án **886h** (712h WBS + 174h BA), giá **300.000.000đ**. Mọi bảng/ghi chú cũ về M14 24h, baseline 910h không còn hiệu lực; Excel bản chốt 886h là cơ sở đối soát. Đây là phân bổ kế hoạch, không phải giờ đã thực hiện.
+### Baseline M13/M14 có hiệu lực
+
+**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
