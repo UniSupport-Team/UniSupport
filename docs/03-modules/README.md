@@ -8,7 +8,7 @@
 >
 > - **MS-00 — Khởi động:** khảo sát, đặc tả, thiết kế, database và nền tảng (`INF-01`).
 > - **MS-01 — Nền tảng:** `M01`, `M02`, `M03`.
-> - **MS-02 — Ticket và Phân hệ sinh viên:** `M04` đến `M07`.
+> - **MS-02 — Ticket và Phân hệ sinh viên:** `M04` đến `M11`.
 > - **MS-03 — Giám sát Dashboard:** `M12`, `M13`.
 > - **MS-04 — Bàn giao dự án:** nghiệm thu, chuẩn bị tài liệu và bàn giao.
 >
@@ -22,7 +22,7 @@
 | :--- | :---: | :--- | :---: |
 | **MS-00 — Khởi động** | Tuần 1–3 | `INF-01` | 1 hạ tầng |
 | **MS-01 — Nền tảng** | Tuần 4–6 | `M01`, `M02`, `M03` | 11 FR |
-| **MS-02 — Ticket và Phân hệ sinh viên** | Tuần 7–11 | `M04`, `M05`, `M06`, `M08`, `M09`, `M10`, `M11`, `M07` | 21 FR |
+| **MS-02 — Ticket và Phân hệ sinh viên** | Tuần 7–11 | `M04`, `M05`, `M06`, `M07`, `M08`, `M09`, `M10`, `M11` | 21 FR |
 | **MS-03 — Giám sát Dashboard** | Tuần 12–14 | `M12`, `M13` | 8 FR |
 | **MS-04 — Bàn giao dự án** | Tuần 15–16 | Nghiệm thu, tài liệu và bàn giao | — |
 
