@@ -89,7 +89,7 @@
 | `FR-M11-02/AC-01` | Admin điều chuyển đơn bị báo sai phòng ban và lưu lịch sử | `TC-M11-M02` | [#162](https://github.com/UniSupport-Team/UniSupport/issues/162) ([#185](https://github.com/UniSupport-Team/UniSupport/issues/185)) | `MS-02` | Q-11 (M11) |
 | `FR-M11-03/AC-01` | Trưởng phòng phân công / Re-assign nhân viên trong phòng ban | `TC-M11-N01`, `TC-M11-E02` | [#162](https://github.com/UniSupport-Team/UniSupport/issues/162) ([#186](https://github.com/UniSupport-Team/UniSupport/issues/186)) | `MS-02` | Q-11 (M11) |
 
-### 2.3. MS-03 — Giám sát Dashboard (`M12`, `M13`)
+### 2.3. MS-03 — Giám sát Dashboard và đa ngôn ngữ (`M12`, `M13`, `M14`)
 
 | Mã AC | Mô tả tóm tắt (từ PRD) | Kịch bản Test (`test-scenarios.md`) | Parent Task (GitHub Issue) | Milestone | Hạng mục Báo giá |
 | :--- | :--- | :--- | :---: | :---: | :---: |
@@ -103,16 +103,7 @@
 | `FR-M13-03/AC-01` | Xuất báo cáo ra file Excel/PDF đầy đủ dữ liệu | `TC-M13-M03` | [#168](https://github.com/UniSupport-Team/UniSupport/issues/168) ([#206](https://github.com/UniSupport-Team/UniSupport/issues/206)) | `MS-03` | Q-13 (M13) |
 | `FR-M13-04/AC-01` | Thống kê điểm CSAT và KPI hiệu suất nhân viên | `TC-M13-M04` | [#168](https://github.com/UniSupport-Team/UniSupport/issues/168) ([#207](https://github.com/UniSupport-Team/UniSupport/issues/207)) | `MS-03` | Q-13 (M13) |
 
-### 2.4. Hạng mục Hạ tầng & Bàn giao (`MS-00`, `MS-04`)
-
-| Mã hạng mục | Mô tả công việc | Parent Task (GitHub Issue) | Milestone | Hạng mục Báo giá |
-| :--- | :--- | :---: | :---: | :---: |
-| `INF-01` | Thiết lập cơ sở hạ tầng và môi trường triển khai hệ thống UniSupport | [#156](https://github.com/UniSupport-Team/UniSupport/issues/156) | `MS-00` | Phân bổ vào `Q-01`–`Q-13` (72h nền tảng) |
-| `Docs-01` | Hoàn thiện các tài liệu mô tả hệ thống và sổ tay hướng dẫn sử dụng | [#170](https://github.com/UniSupport-Team/UniSupport/issues/170) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
-| `Docs-02` | Tạo dữ liệu mẫu và chuẩn bị kịch bản để chạy thử nghiệm thu dự án (UAT) | [#169](https://github.com/UniSupport-Team/UniSupport/issues/169) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
-
-
-### 2.5. M14 — Quản lý đa ngôn ngữ Việt/Anh (MS-03)
+#### M14 — Quản lý đa ngôn ngữ Việt/Anh (MS-03)
 
 | Mã AC | Mô tả tóm tắt (từ PRD) | Kịch bản kiểm tra dự kiến | Tài liệu task | Milestone | Báo giá |
 |---|---|---|---|---|---|
@@ -122,6 +113,12 @@
 > Chưa có bằng chứng kiểm thử hoặc GitHub Issue M14 chính thức. Không bao gồm yêu cầu ghi nhớ ngôn ngữ sau tải lại trang.
 
 
-### Baseline M13/M14 có hiệu lực
 
-**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
+### 2.4. Hạng mục Hạ tầng & Bàn giao (`MS-00`, `MS-04`)
+
+| Mã hạng mục | Mô tả công việc | Parent Task (GitHub Issue) | Milestone | Hạng mục Báo giá |
+| :--- | :--- | :---: | :---: | :---: |
+| `INF-01` | Thiết lập cơ sở hạ tầng và môi trường triển khai hệ thống UniSupport | [#156](https://github.com/UniSupport-Team/UniSupport/issues/156) | `MS-00` | Phân bổ vào `Q-01`–`Q-13` (72h nền tảng) |
+| `Docs-01` | Hoàn thiện các tài liệu mô tả hệ thống và sổ tay hướng dẫn sử dụng | [#170](https://github.com/UniSupport-Team/UniSupport/issues/170) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
+| `Docs-02` | Tạo dữ liệu mẫu và chuẩn bị kịch bản để chạy thử nghiệm thu dự án (UAT) | [#169](https://github.com/UniSupport-Team/UniSupport/issues/169) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
+
