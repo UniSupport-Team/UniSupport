@@ -20,6 +20,7 @@
 | **`NFR-INT-01`** | **Toàn vẹn dữ liệu** | Bất biến trạng thái đơn đã đóng | Ticket ở trạng thái `CLOSED` không được phép chỉnh sửa (`No Reopen`) | Gọi API `PUT/PATCH` cập nhật ticket đã đóng (kỳ vọng `400 Bad Request`) |
 | **`NFR-INT-02`** | **Toàn vẹn dữ liệu** | Ràng buộc hoàn tất đơn | Bắt buộc có `resolution_notes` (Min 10 ký tự) khi chuyển sang `RESOLVED` | Gửi request hoàn tất không có ghi chú (kỳ vọng `422 Unprocessable Entity`) |
 | **`NFR-INT-03`** | **Toàn vẹn dữ liệu** | Kiểm soát xung đột tương tranh | Chặn 2 nhân viên cùng nhận 1 đơn tại cùng thời điểm (Race Condition) | Gửi 2 request claim đồng thời (1 thành công `200`, 1 bị chặn `409 Conflict`) |
+| **`NFR-I18N-01`** | **Đa ngôn ngữ giao diện** | Giao diện, biểu mẫu, nhãn trạng thái, thông báo hệ thống và thông báo validation hỗ trợ `vi` và `en` | Người dùng chuyển Việt/Anh mà không mất dữ liệu nhập; ngôn ngữ được giữ khi chuyển trang/tải lại; nội dung do người dùng nhập không tự dịch | Kiểm thử `TC-I18N-01` đến `TC-I18N-05` trên 4 vai trò |
 | **`NFR-AVAIL-01`** | **Tính sẵn sàng** | Thời gian hoạt động hệ thống | Uptime $\ge$ 99% trong khung giờ hành chính (08:00 – 17:00 các ngày làm việc) | Nhật ký giám sát Server / Uptime Monitoring |
 
 ---
