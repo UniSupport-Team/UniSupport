@@ -54,13 +54,13 @@ Về phương thức thanh toán thương mại, dự án áp dụng cơ chế 0
 
 | Đợt thanh toán | Cột mốc áp dụng | Điều kiện kích hoạt thanh toán | Tỷ lệ | Giá trị thanh toán (VNĐ) |
 | :--- | :--- | :--- | :---: | ---: |
-| **Đợt 1 (Tạm ứng khởi động)** | **Mốc 0 (Khởi động)**<br>*(Tuần 1)* | Khách hàng thực hiện thanh toán tạm ứng ngay sau khi ký kết thỏa thuận hợp đồng và chính thức khởi động dự án để bảo đảm nguồn ngân sách thực thi, thiết lập hạ tầng Staging và chi trả lương nhân sự. | 70% | **210.000.000** |
-| **Đợt 2 (Tất toán bàn giao)** | **Mốc 4 (Bàn giao)**<br>*(Tuần 15–16)* | Thanh toán toàn bộ giá trị còn lại sau khi hoàn tất kiểm thử nghiệm thu người dùng (UAT), bàn giao đầy đủ bộ mã nguồn, tài liệu hướng dẫn và ký biên bản bàn giao chính thức. | 30% | **90.000.000** |
+| **Đợt 1 (Tạm ứng khởi động)** | **MS-00 (Khởi động)**<br>*(Tuần 1–3; tạm ứng khi ký/khởi động)* | Khách hàng thực hiện thanh toán tạm ứng ngay sau khi ký kết thỏa thuận hợp đồng và chính thức khởi động dự án để bảo đảm nguồn ngân sách thực thi, thiết lập hạ tầng Staging và chi trả lương nhân sự. | 70% | **210.000.000** |
+| **Đợt 2 (Tất toán bàn giao)** | **MS-04 (Bàn giao)**<br>*(Tuần 15–16)* | Thanh toán toàn bộ giá trị còn lại sau khi hoàn tất kiểm thử nghiệm thu người dùng (UAT), bàn giao đầy đủ bộ mã nguồn, tài liệu hướng dẫn và ký biên bản bàn giao chính thức. | 30% | **90.000.000** |
 | **TỔNG CỘNG** | **Toàn dự án** | **Hoàn thành nghĩa vụ thanh toán hợp đồng** | **100%** | **300.000.000** |
 
 > **Nguyên tắc phân biệt giữa Báo giá hạng mục và Điều kiện thanh toán:**
 > - Bảng tại **Mục 2** (`Q-01` đến `Q-13`) là bảng **báo giá chi tiết theo từng module chức năng bàn giao**, xác định giá trị kinh tế của từng phân hệ tương ứng với khối lượng giờ công (effort) và độ phức tạp kỹ thuật thực tế.
-> - Bảng tại **Mục 3** quy định **lịch trình dòng tiền thanh toán thực tế** giữa hai bên: Áp dụng cơ chế tạm ứng 70% tại Mốc 0 để đơn vị triển khai chủ động dòng tiền chi trả đội ngũ, tránh rủi ro đứt gãy tài chính trong suốt 14 tuần phát triển. Khách hàng giữ lại 30% để thanh toán tại Mốc 4 khi nghiệm thu toàn trình.
+> - Bảng tại **Mục 3** quy định **lịch trình dòng tiền thanh toán thực tế** giữa hai bên: Áp dụng cơ chế tạm ứng 70% tại MS-00 để đơn vị triển khai chủ động dòng tiền chi trả đội ngũ, tránh rủi ro đứt gãy tài chính trong suốt 14 tuần phát triển. Khách hàng giữ lại 30% để thanh toán tại MS-04 khi nghiệm thu toàn trình.
 
 ---
 
@@ -72,7 +72,7 @@ Về phương thức thanh toán thương mại, dự án áp dụng cơ chế 0
 * Về phạm vi chức năng và yêu cầu, căn cứ theo Proposal/phiên bản tài liệu được hai bên xác nhận.
 
 ### 4.2. Chốt phạm vi
-Phạm vi dự án được xác nhận tại Mốc 1 và là cơ sở để triển khai các giai đoạn tiếp theo. Sau khi phạm vi được chốt, các yêu cầu phát sinh hoặc thay đổi so với phạm vi đã xác nhận sẽ được đánh giá riêng về:
+Phạm vi thiết kế được khách hàng xác nhận qua demo UI tại **MS-00**; các chức năng nghiệp vụ thật tiếp tục được kiểm thử và xác nhận tại **MS-01–MS-04** và là cơ sở để triển khai các giai đoạn tiếp theo. Sau khi phạm vi được chốt, các yêu cầu phát sinh hoặc thay đổi so với phạm vi đã xác nhận sẽ được đánh giá riêng về:
 * Ảnh hưởng đến thời gian.
 * Ảnh hưởng đến nguồn lực.
 * Ảnh hưởng đến chi phí.
@@ -112,3 +112,8 @@ Mức giá 300.000.000 VNĐ đã bao gồm VAT. Các nghĩa vụ thuế và trá
 Phạm vi đã xác nhận: giao diện, biểu mẫu và thông báo hệ thống bằng tiếng Việt/Anh, không dịch nội dung người dùng nhập; không bao gồm Email hay nội dung file báo cáo xuất ra. Tham chiếu `NFR-I18N-01` và `TC-I18N-01`–`TC-I18N-05`.
 
 Theo bảng ước lượng tại `Master-schedule.md`, phần việc này **dự kiến thêm 24h** (BA 4h, Junior Dev 12h, QA 8h), **đã được duyệt và cộng vào baseline 910h**. Theo đơn giá nhân sự trong `Ngan-sach-nhan-su.md`, chi phí Gross tăng thêm theo baseline mới là `4 × 160.000 + 12 × 90.000 + 8 × 125.000 = 2.720.000 VNĐ`; cộng bảo hiểm DN giả định 21,5% là `3.304.800 VNĐ`. Đây là **chi phí nội bộ ước tính**, không phải giá bán/VAT và không tự động làm tăng báo giá. **Đã chốt** giữ tổng giá khách hàng **300.000.000 VNĐ**; phần chi phí tăng được hấp thụ vào biên lợi nhuận dự kiến. Đây là khoản effort xuyên module `Q-I18N`, không phát sinh đợt thanh toán mới. Bảng giá module Q-01–Q-13 giữ nguyên số tiền, còn mâu thuẫn giờ phân bổ với WBS được ghi nhận để xử lý ở V1-01.
+
+
+### Ghi chú đối soát V1-04 — hồ sơ mô phỏng
+
+Các PDF trong [`sent/`](sent/README.md) chỉ là tài liệu **mô phỏng quy trình gửi khách**, không phải bằng chứng giao dịch hay ngày gửi thật. Mốc thương mại được gọi thống nhất `MS-00` (tạm ứng khi ký/khởi động) và `MS-04` (tất toán khi nghiệm thu bàn giao); tỷ lệ thanh toán **70%/30%**, tổng giá **300.000.000 VNĐ** giữ nguyên. Ngày hiệu lực/đã gửi của PDF chưa xác minh. Bản PDF cũ cần xuất lại nếu nhóm muốn bản mô phỏng phản ánh baseline 910h.
