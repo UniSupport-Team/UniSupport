@@ -34,7 +34,7 @@
 | 11 | **`Q-11`** | `M11` | Điều phối Ticket | 46 h | 11 h | **57 h** | 19.500.000 ₫ |
 | 12 | **`Q-12`** | `M12` | Giám sát tiến độ | 58 h | 15 h | **73 h** | 24.500.000 ₫ |
 | 13 | **`Q-13`** | `M13` | Dashboard & Báo cáo | 65 h | 19 h | **84 h** | 28.000.000 ₫ |
-| 14 | **`Q-14`** | `M14` | Giao diện song ngữ Việt/Anh (xuyên 13 module; không tính thêm giá bán) | 20 h | 4 h | **24 h** | **0 ₫ (đã nằm trong giá trọn gói)** |
+| 14 | **`Q-14`** | `M14` | Giao diện song ngữ Việt/Anh (điều chuyển 8h Dev 1 từ M13) | 8 h | 0 h | **8 h** | **0 ₫ (đã nằm trong giá trọn gói)** |
 | **-** | **TỔNG CỘNG** | **14 MODULES** | **Toàn bộ hệ thống UniSupport** | **732 h** | **178 h** | **910 h** | **300.000.000 ₫** |
 
 > **Kiểm tra đối soát (Phương án A):** ✅ Khớp đúng ngân sách: **300.000.000 ₫** (100%) | Khớp đúng nỗ lực: **910h Effort** (732h WBS + 178h BA).
@@ -120,3 +120,8 @@ Các PDF trong [`sent/`](sent/README.md) chỉ là tài liệu **mô phỏng quy
 
 
 **Quyết định M14 (thay thế Q-I18N):** 24h đa ngôn ngữ được đưa vào **module M14 tại MS-03**, mã báo giá **Q-14**, giá riêng **0đ do đã nằm trong hợp đồng trọn gói**. Không cộng 24h lần hai, giữ **910h** và **300 triệu đồng**. Tổng công việc chung vẫn 436h; tổng giờ 14 module 474h.
+
+
+### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
+
+**Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
