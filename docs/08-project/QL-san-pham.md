@@ -131,7 +131,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 
 | Giai đoạn | Hạng mục trọng tâm | Nội dung thực hiện | Điều kiện chuyển giao (Exit Criteria) |
 |:---|:---|:---|:---|
-| **Giai đoạn 1 (Hiện tại: 16 tuần)** | **Triển khai Hệ thống Cốt lõi (Web Platform)** | Triển khai 13 module chức năng (M01–M13) theo cam kết PRD; hoàn thành nghiệm thu UAT với Ban Giám hiệu. | - 100% test case P0 và P1 đạt nghiệm thu (0 lỗi tồn đọng).<br>- Tỷ lệ hoàn tất xử lý đạt chuẩn cam kết SLA (> 90%). |
+| **Giai đoạn 1 (Hiện tại: 16 tuần)** | **Triển khai Hệ thống Cốt lõi (Web Platform)** | Triển khai 14 module chức năng (M01–M14) theo cam kết PRD; hoàn thành nghiệm thu UAT với Ban Giám hiệu. | - 100% test case P0 và P1 đạt nghiệm thu (0 lỗi tồn đọng).<br>- Tỷ lệ hoàn tất xử lý đạt chuẩn cam kết SLA (> 90%). |
 | **Giai đoạn 2 (Sau bàn giao: 3–6 tháng)** | **Tối ưu hóa Vận hành & Trải nghiệm** | Tiếp nhận phản hồi thực tế; phát hành tính năng FAQ Hub; bảo hành và tinh chỉnh luồng giao diện sinh viên. | - Hệ thống vận hành liên tục không có sự cố P0 trong 60 ngày.<br>- Điểm đánh giá mức độ hài lòng (CSAT) duy trì > 4.0/5.0. |
 | **Giai đoạn 3 (Dài hạn: 1–2 năm)** | **Mở rộng Hệ sinh thái & Mobile** | Phát triển ứng dụng di động (iOS/Android); tích hợp API đào tạo và ứng dụng AI tự động hóa. | - Tỷ lệ người dùng truy cập từ thiết bị di động đạt > 70% tổng traffic (đo lường bằng GA4/Clarity).<br>- Có biên bản nghiệm thu tích hợp kỹ thuật với phòng CNTT nhà trường. |
 
