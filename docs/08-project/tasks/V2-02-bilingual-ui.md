@@ -27,3 +27,6 @@
 
 
 **Quyết định thay thế lịch cũ:** M14 là module thứ 14; BA 4h, Dev 1 12h, QA 1 8h đều nằm trong MS-03, không làm I18N tại MS-01/MS-02/MS-04. Các bảng phân bổ cũ nếu còn xuất hiện trong lịch sử phải hiểu là phương án đã thay thế.
+
+
+**Phối hợp MS-03:** M14 do Dev 1 thực hiện 12h, độc lập với M13 do Dev 2 (20h) và Dev 3 (20h) phụ trách. Hai module chạy song song; BA tham gia mỗi module 4h, QA 1 thực hiện 8h kiểm thử M14. Không thay đổi 24h M14.
