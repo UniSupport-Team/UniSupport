@@ -104,3 +104,10 @@ Mức giá 300.000.000 VNĐ đã bao gồm VAT. Các nghĩa vụ thuế và trá
 ## 6. Hiệu lực báo giá
 * Báo giá có hiệu lực trong vòng 30 ngày kể từ ngày phát hành.
 * Báo giá này được sử dụng cùng với Proposal và các tài liệu được hai bên xác nhận để làm cơ sở triển khai dự án.
+
+
+## Phụ lục V2-02 — Đối soát phạm vi giao diện song ngữ (chưa điều chỉnh giá)
+
+Phạm vi đã xác nhận: giao diện, biểu mẫu và thông báo hệ thống bằng tiếng Việt/Anh, không dịch nội dung người dùng nhập; không bao gồm Email hay nội dung file báo cáo xuất ra. Tham chiếu `NFR-I18N-01` và `TC-I18N-01`–`TC-I18N-05`.
+
+Theo bảng ước lượng tại `Master-schedule.md`, phần việc này **dự kiến thêm 24h** (BA 4h, Junior Dev 12h, QA 8h), **chưa được duyệt để cộng vào 886h**. Theo đơn giá nhân sự trong `Ngan-sach-nhan-su.md`, chi phí Gross tăng thêm nếu tính ngoài baseline là `4 × 160.000 + 12 × 90.000 + 8 × 125.000 = 2.720.000 VNĐ`; cộng bảo hiểm DN giả định 21,5% là `3.304.800 VNĐ`. Đây là **chi phí nội bộ ước tính**, không phải giá bán/VAT và không tự động làm tăng báo giá. Tổng giá khách hàng **vẫn giữ 300.000.000 VNĐ** cho tới khi nhóm duyệt phương án điều chuyển effort hoặc điều chỉnh ngân sách.
