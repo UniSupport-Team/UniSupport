@@ -1,3 +1,5 @@
+> ⚠️ **TÀI LIỆU LỊCH SỬ — KHÔNG DÙNG LÀM TASK HIỆN HÀNH.** Bảng dưới đây giữ nguyên để đối chiếu lịch sử, có mã module M07–M11 và số issue cũ, **không phản ánh GitHub Issues hiện tại**. Tra task thực tế tại [GitHub Issues](https://github.com/UniSupport-Team/UniSupport/issues), [danh sách module](docs/03-modules/README.md) và [ma trận truy vết](docs/06-acceptance/traceability-matrix.md). Baseline hiện hành: **M01–M14, 886h, MS-00–MS-04**. Không sao chép số issue trong tài liệu này vào báo cáo hoặc PR.
+
 Dưới đây là **toàn bộ 2 bảng hoàn chỉnh từ đầu đến cuối**, trong đó số liệu effort của `Docs-01` và `Docs-02` tại Bảng 1 đã được **sửa trực tiếp thành 35h và 37h (tổng đúng 72h của MS-04)**, triệt tiêu hoàn toàn con số `122h` cũ:
 
 ---
