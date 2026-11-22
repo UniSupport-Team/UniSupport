@@ -47,7 +47,7 @@
 
 ---
 
-## 4. Phân hệ M05, M06, M07, M08 — Vòng đời Xử lý Ticket (`/api/v1/tickets`)
+## 4. Phân hệ M05, M06, M08, M09 — Vòng đời Xử lý Ticket (`/api/v1/tickets`)
 
 | Method | Endpoint | Mô tả | Quyền truy cập | Request Body / Params | Response Status |
 |---|---|---|---|---|---|
@@ -56,29 +56,29 @@
 | `GET` | `/api/v1/tickets` | Lấy danh sách Ticket (tự động filter theo Role và Department) | All Roles | Query: `?status=...&page=1&limit=20&search=...` | `200 OK` |
 | `GET` | `/api/v1/tickets/{id}` | Xem chi tiết Ticket, tài liệu đính kèm & timeline | All Roles (có quyền) | Path param: `id` | `200 OK` |
 | `POST` | `/api/v1/tickets/{id}/claim` | Nhân viên bấm nhận xử lý đơn (M06, Concurrency control) | `STAFF` | None | `200 OK` (409 Conflict nếu đã có người nhận) |
-| `POST` | `/api/v1/tickets/{id}/progress` | Cập nhật tiến độ / ghi chú nội bộ (M07) | `STAFF` (Assignee) | `{ note: "Đang in bảng điểm...", is_internal: true }` | `200 OK` |
-| `POST` | `/api/v1/tickets/{id}/request-supplement` | Nhân viên yêu cầu bổ sung thông tin (M07, đếm ngược 3 ngày LV, max 1 lần) | `STAFF` (Assignee) | `{ content: "Vui lòng đính kèm ảnh chụp CCCD..." }` | `200 OK` (400 nếu đã gửi yêu cầu trước đó) |
-| `POST` | `/api/v1/tickets/{id}/return-to-admin` | Nhân viên trả đơn sai phòng ban từ `In Progress` về `New`, xóa Assignee, đổi danh mục thành "Khác", chuyển hàng chờ Admin, giữ mã và lịch sử (M07) | `STAFF` (Assignee) | `{ reason: "Đơn thuộc Phòng Đào tạo xử lý" }` | `200 OK` (400 nếu trạng thái không hợp lệ) |
-| `POST` | `/api/v1/tickets/{id}/resolve` | Nhân viên hoàn tất đơn & trả kết quả giải quyết (M08) | `STAFF` (Assignee) | `{ resolution_notes: "...", attachment_ids: [...] }` | `200 OK` |
+| `POST` | `/api/v1/tickets/{id}/progress` | Cập nhật tiến độ / ghi chú nội bộ (M08) | `STAFF` (Assignee) | `{ note: "Đang in bảng điểm...", is_internal: true }` | `200 OK` |
+| `POST` | `/api/v1/tickets/{id}/request-supplement` | Nhân viên yêu cầu bổ sung thông tin (M08, đếm ngược 3 ngày LV, max 1 lần) | `STAFF` (Assignee) | `{ content: "Vui lòng đính kèm ảnh chụp CCCD..." }` | `200 OK` (400 nếu đã gửi yêu cầu trước đó) |
+| `POST` | `/api/v1/tickets/{id}/return-to-admin` | Nhân viên trả đơn sai phòng ban từ `In Progress` về `New`, xóa Assignee, đổi danh mục thành "Khác", chuyển hàng chờ Admin, giữ mã và lịch sử (M08) | `STAFF` (Assignee) | `{ reason: "Đơn thuộc Phòng Đào tạo xử lý" }` | `200 OK` (400 nếu trạng thái không hợp lệ) |
+| `POST` | `/api/v1/tickets/{id}/resolve` | Nhân viên hoàn tất đơn & trả kết quả giải quyết (M09) | `STAFF` (Assignee) | `{ resolution_notes: "...", attachment_ids: [...] }` | `200 OK` |
 
 ---
 
-## 5. Phân hệ M09, M10 — Phân hệ Sinh viên Bổ sung & Đánh giá
+## 5. Phân hệ M10, M11 — Phân hệ Sinh viên Bổ sung & Đánh giá
 
 | Method | Endpoint | Mô tả | Quyền truy cập | Request Body | Response Status |
 |---|---|---|---|---|---|
-| `GET` | `/api/v1/student/tickets` | Sinh viên xem danh sách các đơn cá nhân đã tạo (M09) | `STUDENT` | Query: `?status=...` | `200 OK` |
-| `POST` | `/api/v1/tickets/{id}/submit-supplement` | Sinh viên gửi tài liệu/thông tin bổ sung (M09, chuyển lại `In Progress`) | `STUDENT` (Owner) | `{ content: "Em đã bổ sung file...", attachment_ids: [...] }` | `200 OK` (400 nếu status != PENDING hoặc quá hạn) |
-| `POST` | `/api/v1/tickets/{id}/feedback` | Sinh viên đánh giá chất lượng phục vụ 1–5 sao (M10, đóng đơn vĩnh viễn) | `STUDENT` (Owner) | `{ rating: 5, comment: "Xử lý rất nhanh" }` | `200 OK` (400 nếu đơn đã đóng hoặc auto_closed) |
+| `GET` | `/api/v1/student/tickets` | Sinh viên xem danh sách các đơn cá nhân đã tạo (M10) | `STUDENT` | Query: `?status=...` | `200 OK` |
+| `POST` | `/api/v1/tickets/{id}/submit-supplement` | Sinh viên gửi tài liệu/thông tin bổ sung (M10, chuyển lại `In Progress`) | `STUDENT` (Owner) | `{ content: "Em đã bổ sung file...", attachment_ids: [...] }` | `200 OK` (400 nếu status != PENDING hoặc quá hạn) |
+| `POST` | `/api/v1/tickets/{id}/feedback` | Sinh viên đánh giá chất lượng phục vụ 1–5 sao (M11, đóng đơn vĩnh viễn) | `STUDENT` (Owner) | `{ rating: 5, comment: "Xử lý rất nhanh" }` | `200 OK` (400 nếu đơn đã đóng hoặc auto_closed) |
 
 ---
 
-## 6. Phân hệ M11, M12, M13 — Điều phối, Cảnh báo SLA & Báo cáo Thống kê
+## 6. Phân hệ M07, M12, M13 — Điều phối, Cảnh báo SLA & Báo cáo Thống kê
 
 | Method | Endpoint | Mô tả | Quyền truy cập | Request Body / Params | Response Status |
 |---|---|---|---|---|---|
-| `POST` | `/api/v1/admin/tickets/{id}/dispatch` | Admin điều phối đơn gửi nhầm/sai mục về đúng phòng ban (M11) | `ADMIN` | `{ department_id, category_id, note }` | `200 OK` |
-| `POST` | `/api/v1/manager/tickets/{id}/assign` | Trưởng phòng phân công `New` hoặc gán lại `In Progress` trong phòng ban; mỗi Ticket một Assignee (M11) | `MANAGER` | `{ assignee_id: "staff-uuid-...", note: "..." }` | `200 OK` (409 nếu đã bị nhận/trạng thái thay đổi) |
+| `POST` | `/api/v1/admin/tickets/{id}/dispatch` | Admin điều phối đơn gửi nhầm/sai mục về đúng phòng ban (M07) | `ADMIN` | `{ department_id, category_id, note }` | `200 OK` |
+| `POST` | `/api/v1/manager/tickets/{id}/assign` | Trưởng phòng phân công `New` hoặc gán lại `In Progress` trong phòng ban; mỗi Ticket một Assignee (M07) | `MANAGER` | `{ assignee_id: "staff-uuid-...", note: "..." }` | `200 OK` (409 nếu đã bị nhận/trạng thái thay đổi) |
 | `GET` | `/api/v1/manager/sla-alerts` | Danh sách các đơn sắp hết hạn hoặc đã vi phạm SLA (M12) | `MANAGER`, `ADMIN` | Query: `?department_id=...` | `200 OK` |
 | `GET` | `/api/v1/reports/overview` | Báo cáo tổng quan số lượng ticket theo trạng thái (M13) | `MANAGER`, `ADMIN` | Query: `?from_date=...&to_date=...` | `200 OK` |
 | `GET` | `/api/v1/reports/staff-performance` | Thống kê hiệu suất xử lý và điểm CSAT theo từng nhân viên (M13) | `MANAGER`, `ADMIN` | Query: `?department_id=...&from_date=...` | `200 OK` |

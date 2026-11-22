@@ -1,6 +1,6 @@
 # 4. PHÂN HỆ QUẢN LÝ / TRƯỞNG PHÒNG (MANAGER WORKFLOWS)
 
-> **Ánh xạ Phân hệ:** [M04-quan-ly-danh-muc](../03-modules/M04-quan-ly-danh-muc/), [M11-quan-ly-dieu-phoi](../03-modules/M11-quan-ly-dieu-phoi/), [M12-giam-sat-tien-do](../03-modules/M12-giam-sat-tien-do/), [M13-dashboard-bao-cao](../03-modules/M13-dashboard-bao-cao/)
+> **Ánh xạ Phân hệ:** [M04-quan-ly-danh-muc](../03-modules/M04-quan-ly-danh-muc/), [M07-quan-ly-dieu-phoi](../03-modules/M07-quan-ly-dieu-phoi/), [M12-giam-sat-tien-do](../03-modules/M12-giam-sat-tien-do/), [M13-dashboard-bao-cao](../03-modules/M13-dashboard-bao-cao/)
 
 ---
 
@@ -28,7 +28,7 @@ graph TD
 ### QL-02 — Phân công nhanh
 
 * **Tác nhân:** Quản lý phòng ban.
-* **Ánh xạ Module:** [M11-quan-ly-dieu-phoi](../03-modules/M11-quan-ly-dieu-phoi/) (`[FR-M11-03]`)
+* **Ánh xạ Module:** [M07-quan-ly-dieu-phoi](../03-modules/M07-quan-ly-dieu-phoi/) (`[FR-M07-03]`)
 * **Luồng chính:**
   1. Mở danh sách Ticket thuộc phòng ban ở trạng thái `New` (phân công mới) hoặc `In Progress` (phân công lại).
   2. Chọn Ticket cần điều phối, bấm **Phân công** (`Assign / Re-assign`).
