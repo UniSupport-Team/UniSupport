@@ -1,6 +1,6 @@
-# PHÂN HỆ: M07 — XỬ LÝ & BỔ SUNG (PROCESS & EXCHANGE)
+# PHÂN HỆ: M08 — XỬ LÝ & BỔ SUNG (PROCESS & EXCHANGE)
 
-## [FR-M07-01] Nhân viên cập nhật tiến độ, ghi chú và lưu lịch sử xử lý đơn
+## [FR-M08-01] Nhân viên cập nhật tiến độ, ghi chú và lưu lịch sử xử lý đơn
 
 **Mô tả:** Nhân viên phụ trách cập nhật tiến độ xử lý công việc chuyên môn, nhập ghi chú nội bộ và theo dõi dòng thời gian lịch sử thao tác (Audit Trail) của Ticket.
 
@@ -47,7 +47,7 @@
 
 ---
 
-## [FR-M07-02] Nhân viên xem lại danh sách lịch sử các đơn mình đã xử lý
+## [FR-M08-02] Nhân viên xem lại danh sách lịch sử các đơn mình đã xử lý
 
 **Mô tả:** Nhân viên tra cứu, tìm kiếm và xem lại danh sách các Ticket mình đã từng tiếp nhận, xử lý hoặc giải quyết trong quá khứ kèm theo điểm đánh giá mức độ hài lòng (CSAT) từ Sinh viên.
 
@@ -90,7 +90,7 @@
 
 ---
 
-## [FR-M07-03] Nhân viên yêu cầu sinh viên bổ sung hồ sơ và bắt đầu đếm ngược 3 ngày làm việc
+## [FR-M08-03] Nhân viên yêu cầu sinh viên bổ sung hồ sơ và bắt đầu đếm ngược 3 ngày làm việc
 
 **Mô tả:** Khi hồ sơ chưa đủ điều kiện xử lý, Nhân viên gửi yêu cầu Sinh viên bổ sung thêm thông tin/giấy tờ còn thiếu, hệ thống chuyển đơn sang trạng thái `Chờ bổ sung` và kích hoạt đồng hồ đếm ngược 3 ngày làm việc.
 
@@ -116,7 +116,7 @@
 4. Hệ thống kiểm tra nội dung (không được để trống).
 5. Chuyển trạng thái Ticket sang `Chờ bổ sung` (`Pending`).
 6. Kích hoạt bộ đếm ngược thời gian 3 ngày làm việc (không tính Thứ 7, Chủ nhật và ngày lễ).
-7. Phát thông báo cho Sinh viên để sinh viên vào nộp bổ sung ở Module M09.
+7. Phát thông báo cho Sinh viên để sinh viên vào nộp bổ sung ở Module M10.
 8. *(Quy tắc tự động đóng)*: Nếu quá **3 ngày làm việc** (không tính Thứ 7, Chủ Nhật và ngày Lễ) mà Sinh viên không nộp bổ sung, hệ thống tự động chuyển đơn sang trạng thái `Closed`, đánh dấu `auto_closed = true` và ghi nhận lý do đóng tự động vào lịch sử Ticket.
 
 **Alternative / Error Flows:**
@@ -145,7 +145,7 @@
 
 ---
 
-## [FR-M07-04] Nhân viên báo cáo và trả lại đơn do bị gửi sai phòng ban
+## [FR-M08-04] Nhân viên báo cáo và trả lại đơn do bị gửi sai phòng ban
 
 **Mô tả:** Khi phát hiện Ticket không thuộc thẩm quyền chuyên môn của phòng ban mình, Nhân viên thực hiện báo cáo và chuyển trả đơn về cho Admin để điều chuyển sang phòng ban khác.
 
@@ -169,13 +169,13 @@
 3. Bấm “Xác nhận chuyển trả”.
 4. Hệ thống làm trống tên nhân viên phụ trách cũ.
 5. Đổi danh mục Ticket thành "Khác", đưa phòng ban về trạng thái chưa xác định trong thời gian chờ Admin phân loại; mã Ticket giữ nguyên.
-6. Đưa trạng thái Ticket về `Chưa tiếp nhận` (`New`) và đẩy vào Hàng chờ điều chuyển của Admin ở Module M11.
+6. Đưa trạng thái Ticket về `Chưa tiếp nhận` (`New`) và đẩy vào Hàng chờ điều chuyển của Admin ở Module M07.
 7. Lưu toàn bộ lý do chuyển trả vào lịch sử luân chuyển của đơn.
 
 **Business Rules (Quy tắc nghiệp vụ):**
 
 * **BR-01:** Bắt buộc phải nhập Lý do chuyển trả làm cơ sở để Admin phân tích và định tuyến lại đơn.
-* **BR-02 (Nghiệm thu đồng bộ MS-02):** Luồng Admin tiếp nhận và điều chuyển đơn sai phòng ban (`FR-M11-02`) phải được nghiệm thu cùng tính năng chuyển trả ở M07 trong MS-02 để tránh đơn bị kẹt ở hàng chờ Admin.
+* **BR-02 (Nghiệm thu đồng bộ MS-02):** Luồng Admin tiếp nhận và điều chuyển đơn sai phòng ban (`FR-M07-02`) phải được nghiệm thu cùng tính năng chuyển trả ở M08 trong MS-02 để tránh đơn bị kẹt ở hàng chờ Admin.
 * **BR-03:** Đây là chuyển đổi ngoại lệ `In Progress` $\rightarrow$ `New` đã được quy định trong Domain, không áp dụng cho Ticket `Pending`, `Resolved` hoặc `Closed`.
 
 **Alternative / Error Flows (Luồng rẽ nhánh / Xử lý lỗi):**

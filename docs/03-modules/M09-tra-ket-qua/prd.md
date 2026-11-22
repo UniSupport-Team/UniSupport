@@ -1,6 +1,6 @@
-# PHÂN HỆ: M08 — TRẢ KẾT QUẢ (TICKET RESULTS)
+# PHÂN HỆ: M09 — TRẢ KẾT QUẢ (TICKET RESULTS)
 
-## [FR-M08-01] Nhân viên nhập kết quả giải quyết và đính kèm tệp trả lời
+## [FR-M09-01] Nhân viên nhập kết quả giải quyết và đính kèm tệp trả lời
 
 **Mô tả:** Nhân viên nhập văn bản giải trình kết quả xử lý (Resolution Notes) và đính kèm tệp văn bản trả lời chính thức cho Sinh viên.
 
@@ -48,7 +48,7 @@
 
 ---
 
-## [FR-M08-02] Hoàn thành đơn và tự động gửi thông báo kết quả cho sinh viên
+## [FR-M09-02] Hoàn thành đơn và tự động gửi thông báo kết quả cho sinh viên
 
 **Mô tả:** Hệ thống cập nhật trạng thái đơn thành `Đã giải quyết` (`Resolved`), ghi nhận mốc thời gian hoàn tất và tự động gửi thông báo kết quả cho Sinh viên.
 
@@ -56,7 +56,7 @@
 
 **Actor:** Hệ thống, Nhân viên hỗ trợ
 
-**Preconditions (Điều kiện tiên quyết):** Đã hoàn tất bước nhập kết quả ở FR-M08-01.
+**Preconditions (Điều kiện tiên quyết):** Đã hoàn tất bước nhập kết quả ở FR-M09-01.
 
 **Dữ liệu đầu vào / Thông tin sử dụng (Data Fields):**
 
@@ -70,7 +70,7 @@
 1. Sau khi nhân viên bấm xác nhận hoàn thành, hệ thống cập nhật trạng thái đơn thành `Đã giải quyết` (`Resolved`).
 2. Ghi nhận thời gian hoàn thành để làm căn cứ tính toán chỉ số SLA xử lý.
 3. Hệ thống tự động kích hoạt thông báo gửi đến tài khoản của Sinh viên tạo đơn với nội dung: *"Yêu cầu [Mã Ticket] của bạn đã được giải quyết. Vui lòng xem kết quả và đánh giá chất lượng"*.
-4. Giao diện của Sinh viên mở ra phần đánh giá mức độ hài lòng ở Module M10.
+4. Giao diện của Sinh viên mở ra phần đánh giá mức độ hài lòng ở Module M11.
 
 **Business Rules (Quy tắc nghiệp vụ):**
 

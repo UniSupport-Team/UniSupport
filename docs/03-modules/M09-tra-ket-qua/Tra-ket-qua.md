@@ -1,10 +1,10 @@
-﻿# TÀI LIỆU QUY TRÌNH — M09: Theo dõi & Bổ sung thông tin (Ticket Tracking & Supplement)
+﻿# TÀI LIỆU QUY TRÌNH — M09: Trả kết quả — Nhân viên (Ticket Results)
 
 ## 1. Thông tin Phân hệ
 * **Mã Phân hệ:** M09
-* **Tên Phân hệ:** M09: Theo dõi & Bổ sung thông tin (Ticket Tracking & Supplement)
+* **Tên Phân hệ:** M09: Trả kết quả — Nhân viên (Ticket Results)
 * **Mốc triển khai (Milestone): MS-02
-* **Đối tượng phụ trách:** Sinh viên
+* **Đối tượng phụ trách:** Nhân viên
 * **Tài liệu Đặc tả Chi tiết (PRD FR):** [prd.md](prd.md)
 
 ---

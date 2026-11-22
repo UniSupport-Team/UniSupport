@@ -1,8 +1,8 @@
-﻿# TÀI LIỆU QUY TRÌNH — M08: Trả kết quả — Nhân viên (Ticket Results)
+﻿# TÀI LIỆU QUY TRÌNH — M08: Xử lý & Trao đổi — Nhân viên (Process & Exchange)
 
 ## 1. Thông tin Phân hệ
 * **Mã Phân hệ:** M08
-* **Tên Phân hệ:** M08: Trả kết quả — Nhân viên (Ticket Results)
+* **Tên Phân hệ:** M08: Xử lý & Trao đổi — Nhân viên (Process & Exchange)
 * **Mốc triển khai (Milestone): MS-02
 * **Đối tượng phụ trách:** Nhân viên
 * **Tài liệu Đặc tả Chi tiết (PRD FR):** [prd.md](prd.md)

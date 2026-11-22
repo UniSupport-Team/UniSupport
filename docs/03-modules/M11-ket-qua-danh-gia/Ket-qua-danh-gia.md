@@ -1,10 +1,10 @@
-﻿# TÀI LIỆU QUY TRÌNH — M11: Quản lý & Điều phối Ticket (Routing & Dispatch)
+﻿# TÀI LIỆU QUY TRÌNH — M11: Kết quả & Đánh giá (Results & Feedback)
 
 ## 1. Thông tin Phân hệ
 * **Mã Phân hệ:** M11
-* **Tên Phân hệ:** M11: Quản lý & Điều phối Ticket (Routing & Dispatch)
+* **Tên Phân hệ:** M11: Kết quả & Đánh giá (Results & Feedback)
 * **Mốc triển khai (Milestone): MS-02
-* **Đối tượng phụ trách:** Quản lý, Admin
+* **Đối tượng phụ trách:** Sinh viên
 * **Tài liệu Đặc tả Chi tiết (PRD FR):** [prd.md](prd.md)
 
 ---

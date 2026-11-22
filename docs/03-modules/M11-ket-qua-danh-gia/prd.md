@@ -1,6 +1,6 @@
-# PHÂN HỆ: M10 — KẾT QUẢ & ĐÁNH GIÁ (RESULTS & FEEDBACK)
+# PHÂN HỆ: M11 — KẾT QUẢ & ĐÁNH GIÁ (RESULTS & FEEDBACK)
 
-## [FR-M10-01] Sinh viên xem kết quả giải quyết và tải tệp trả lời
+## [FR-M11-01] Sinh viên xem kết quả giải quyết và tải tệp trả lời
 
 **Mô tả:** Sinh viên xem văn bản giải trình kết quả (Resolution Notes) từ Nhân viên và tải về các tệp tài liệu văn bản trả lời khi đơn ở trạng thái Đã giải quyết.
 
@@ -41,7 +41,7 @@
 
 ---
 
-## [FR-M10-02] Sinh viên đánh giá độ hài lòng từ 1 đến 5 sao, nhận xét và đóng đơn
+## [FR-M11-02] Sinh viên đánh giá độ hài lòng từ 1 đến 5 sao, nhận xét và đóng đơn
 
 **Mô tả:** Sinh viên chấm điểm đánh giá chất lượng phục vụ từ 1 đến 5 sao, viết nhận xét góp ý tùy chọn và xác nhận đóng đơn vĩnh viễn.
 
@@ -90,7 +90,7 @@
 
 ---
 
-## [FR-M10-03] Hệ thống tự động đóng đơn nếu sinh viên không đánh giá sau 3 ngày làm việc
+## [FR-M11-03] Hệ thống tự động đóng đơn nếu sinh viên không đánh giá sau 3 ngày làm việc
 
 **Mô tả:** Sau 3 ngày làm việc (không tính Thứ 7, Chủ nhật và ngày lễ) tính từ thời điểm Ticket chuyển sang trạng thái Đã giải quyết mà Sinh viên không thực hiện đánh giá, hệ thống sẽ tự động chuyển trạng thái đơn sang Đã đóng.
 

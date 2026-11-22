@@ -1,6 +1,6 @@
-# PHÂN HỆ: M11 — ĐIỀU PHỐI (ROUTING & DISPATCH)
+# PHÂN HỆ: M07 — ĐIỀU PHỐI (ROUTING & DISPATCH)
 
-## [FR-M11-01] Admin phân loại và chuyển các đơn mục 'Khác' về đúng phòng ban
+## [FR-M07-01] Admin phân loại và chuyển các đơn mục 'Khác' về đúng phòng ban
 
 **Mô tả:** Admin mở Hàng chờ các Ticket thuộc danh mục "Khác" do Sinh viên gửi, đọc nội dung yêu cầu và thực hiện phân loại, định tuyến đơn về đúng phòng ban chuyên trách.
 
@@ -47,15 +47,15 @@
 
 ---
 
-## [FR-M11-02] Admin chuyển lại các đơn bị báo sai phòng ban về đúng nơi
+## [FR-M07-02] Admin chuyển lại các đơn bị báo sai phòng ban về đúng nơi
 
-**Mô tả:** Admin tiếp nhận các Ticket do Nhân viên báo cáo sai phòng ban chuyển về (`M07-04`), xem xét lý do chuyển trả và điều chuyển đơn sang phòng ban chuyên trách mới.
+**Mô tả:** Admin tiếp nhận các Ticket do Nhân viên báo cáo sai phòng ban chuyển về (`M08-04`), xem xét lý do chuyển trả và điều chuyển đơn sang phòng ban chuyên trách mới.
 
 **Priority:** High (Nghiệp vụ xử lý đơn báo sai phòng ban, khép kín quy trình luân chuyển đơn).
 
 **Actor:** Quản trị viên (Admin)
 
-**Preconditions (Điều kiện tiên quyết):** Ticket được chuyển về từ chức năng báo sai phòng ban M07-04.
+**Preconditions (Điều kiện tiên quyết):** Ticket được chuyển về từ chức năng báo sai phòng ban M08-04.
 
 **Dữ liệu đầu vào / Thông tin sử dụng (Data Fields):**
 
@@ -77,7 +77,7 @@
 
 **Business Rules (Quy tắc nghiệp vụ):**
 
-* **BR-01 (Nghiệm thu đồng bộ MS-02):** Tính năng cốt lõi này được nghiệm thu cùng `FR-M07-04` trong MS-02 để đảm bảo quy trình luân chuyển đơn không bị đứt gãy.
+* **BR-01 (Nghiệm thu đồng bộ MS-02):** Tính năng cốt lõi này được nghiệm thu cùng `FR-M08-04` trong MS-02 để đảm bảo quy trình luân chuyển đơn không bị đứt gãy.
 
 **Alternative / Error Flows (Luồng rẽ nhánh / Xử lý lỗi):**
 
@@ -93,7 +93,7 @@
 
 ---
 
-## [FR-M11-03] Trưởng phòng phân công người xử lý đơn trong nội bộ phòng ban
+## [FR-M07-03] Trưởng phòng phân công người xử lý đơn trong nội bộ phòng ban
 
 **Mô tả:** Trưởng phòng (Quản lý) chủ động gán đơn mới hoặc phân công lại (Re-assign) Ticket cho các Nhân viên thuộc nội bộ phòng ban của mình.
 
