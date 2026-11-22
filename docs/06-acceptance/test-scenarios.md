@@ -2,7 +2,7 @@
 
 > **Dự án:** UniSupport — Nền tảng Tiếp nhận và Hỗ trợ Thủ tục Hành chính Sinh viên  
 > **Phiên bản:** 2.1 (QA/QC Test Engineering Specification — Đồng bộ mã AC & Baseline `MS-00..MS-04`)  
-> **Phạm vi kế hoạch:** 13 Phân hệ (M01 đến M13), bao gồm **Happy Path**, **Negative Cases**, **Boundary Cases** và **Security/Concurrency**. Bảng số lượng bên dưới là phân bổ dự kiến; các bảng chi tiết liệt kê kịch bản tiêu biểu có ánh xạ trực tiếp đến từng Tiêu chí nghiệm thu (`AC-xx`) của PRD.
+> **Phạm vi kế hoạch:** 14 Phân hệ (M01 đến M14), bao gồm **Happy Path**, **Negative Cases**, **Boundary Cases** và **Security/Concurrency**. Bảng số lượng bên dưới là phân bổ dự kiến; các bảng chi tiết liệt kê kịch bản tiêu biểu có ánh xạ trực tiếp đến từng Tiêu chí nghiệm thu (`AC-xx`) của PRD.
 
 ---
 
@@ -23,7 +23,8 @@
 | **M11** | Điều phối & Re-assign | `MS-02` | 6 | 9 | 15 | Dự kiến |
 | **M12** | Giám sát tiến độ & Cảnh báo SLA | `MS-03` | 6 | 8 | 14 | Dự kiến |
 | **M13** | Dashboard & Báo cáo | `MS-03` | 6 | 6 | 12 | Dự kiến |
-| | **TỔNG DỰ KIẾN** | | **72** | **108** | **180** | **Chưa xác nhận đầy đủ/đã chạy** |
+| **M14** | Chuyển đổi ngôn ngữ Việt/Anh | `MS-03` | 2 | 0 | 2 | Dự kiến |
+| | **TỔNG DỰ KIẾN** | | **74** | **108** | **182** | **Chưa xác nhận đầy đủ/đã chạy** |
 
 ---
 
@@ -151,14 +152,11 @@
 | `TC-M13-M04` | `FR-M13-04/AC-01` | Thống kê điểm CSAT trung bình và hiệu suất KPI nhân viên | Main / Boundary | Xem báo cáo nhân sự có cả đơn chấm sao và đơn đóng tự động (`rating = null`) | Tính đúng tỷ lệ hoàn thành SLA và trung bình CSAT chỉ trên các đơn có đánh giá thực tế; hiển thị `"N/A"` nếu chưa có đánh giá. | Có |
 
 
-## Kiểm thử đa ngôn ngữ — V2-02 (bổ sung vào phạm vi, chưa xác nhận đã chạy)
+### 2.14. Phân hệ M14 — Chuyển đổi ngôn ngữ Việt/Anh (`MS-03`)
 
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|---|---|---|---|---|
-| `TC-I18N-01` | `NFR-I18N-01`, `FR-M01-01/AC-I18N-01` | Chuyển ngôn ngữ trên trang đăng nhập | UI | Chọn `EN`, rồi `VI` | Tiêu đề, nhãn trường, nút và lỗi validation chuyển đúng ngôn ngữ, không thay đổi cơ chế xác thực | Có |
-| `TC-I18N-02` | `NFR-I18N-01` | Giữ ngôn ngữ khi điều hướng và tải lại | UI | Chọn `EN`, chuyển giữa các trang theo vai trò và reload | Ngôn ngữ đã chọn được giữ; không tự trở về tiếng Việt | Có |
-| `TC-I18N-03` | `NFR-I18N-01` | Không dịch nội dung do người dùng nhập | Regression | Nhập tiêu đề/nội dung Ticket bằng tiếng Việt rồi chuyển `EN` | Tiêu đề, mô tả, trao đổi và ghi chú của người dùng giữ nguyên dữ liệu gốc | Có |
-| `TC-I18N-04` | `NFR-I18N-01` | Kiểm tra nhãn và thông báo trên 4 vai trò | UI | Duyệt màn hình Student, Staff, Manager, Admin ở `vi` và `en` | Menu, biểu mẫu, nhãn trạng thái, thông báo thành công/thất bại và validation đều hiển thị đúng ngôn ngữ | Có |
-| `TC-I18N-05` | `NFR-I18N-01` | Giữ dữ liệu biểu mẫu khi đổi ngôn ngữ | Boundary | Điền dở biểu mẫu tạo Ticket, đổi `VI` ↔ `EN` | Không xóa hoặc sửa các giá trị đã nhập; các nhãn và lỗi hiển thị theo ngôn ngữ mới | Có |
+| `TC-M14-M01` | `FR-M14-01/AC-01` | Chọn ngôn ngữ tiếng Việt hoặc tiếng Anh | Main | Mở giao diện, lần lượt chọn tiếng Việt và tiếng Anh | Người dùng chọn được một trong hai ngôn ngữ; giao diện phản hồi theo lựa chọn | Có |
+| `TC-M14-M02` | `FR-M14-01/AC-02` | Chuyển ngôn ngữ trong phiên đăng nhập hiện tại | Main | Đăng nhập, đổi ngôn ngữ từ Việt sang Anh và ngược lại | Giao diện cập nhật ngôn ngữ mà không yêu cầu đăng nhập lại | Có |
 
-> **Trạng thái:** Đây là kịch bản dự kiến để nghiệm thu, chưa có bằng chứng thực thi hoặc kết quả Pass/Fail. Không bao gồm dịch tự động Email, báo cáo xuất file hoặc nội dung người dùng nhập.
+> **Trạng thái:** Hai kịch bản M14 là kế hoạch kiểm thử, chưa có kết quả thực thi. Không đặt thêm yêu cầu ghi nhớ ngôn ngữ sau khi tải lại trang hoặc các yêu cầu ngoài hai AC đã chốt.
