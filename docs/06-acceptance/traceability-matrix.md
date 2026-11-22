@@ -107,8 +107,8 @@
 
 | Mã AC | Mô tả tóm tắt (từ PRD) | Kịch bản kiểm tra dự kiến | Tài liệu task | Milestone | Báo giá |
 |---|---|---|---|---|---|
-| `FR-M14-01/AC-01` | Người dùng có thể chọn tiếng Việt hoặc tiếng Anh | Chọn từng ngôn ngữ và quan sát giao diện | [V2-02](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03, 23–27/11/2026 | Q-14, 8h Dev 1, 0đ thêm |
-| `FR-M14-01/AC-02` | Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại | Đổi ngôn ngữ trong phiên đăng nhập hiện tại | [V2-02](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03, 23–27/11/2026 | Q-14, 8h Dev 1, 0đ thêm |
+| `FR-M14-01/AC-01` | Người dùng có thể chọn tiếng Việt hoặc tiếng Anh | Chọn từng ngôn ngữ và quan sát giao diện | [V2-02](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03, 23–27/11/2026 | Q-13 (M13 + M14), 28.000.000đ chung; M14 8h Dev 1 |
+| `FR-M14-01/AC-02` | Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại | Đổi ngôn ngữ trong phiên đăng nhập hiện tại | [V2-02](../08-project/tasks/V2-02-bilingual-ui.md) | MS-03, 23–27/11/2026 | Q-13 (M13 + M14), 28.000.000đ chung; M14 8h Dev 1 |
 
 > Chưa có bằng chứng kiểm thử hoặc GitHub Issue M14 chính thức. Không bao gồm yêu cầu ghi nhớ ngôn ngữ sau tải lại trang.
 
