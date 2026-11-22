@@ -9,7 +9,7 @@
 > - **MS-00 — Khởi động:** khảo sát, đặc tả, thiết kế, database và nền tảng (`INF-01`).
 > - **MS-01 — Nền tảng:** `M01`, `M02`, `M03`.
 > - **MS-02 — Ticket và Phân hệ sinh viên:** `M04` đến `M11`.
-> - **MS-03 — Giám sát Dashboard:** `M12`, `M13`.
+> - **MS-03 — Giám sát Dashboard & Đa ngôn ngữ:** `M12`, `M13`, `M14`.
 > - **MS-04 — Bàn giao dự án:** nghiệm thu, chuẩn bị tài liệu và bàn giao.
 >
 > **Nguyên tắc cốt lõi:** phạm vi và thời gian của milestone lấy theo baseline hiện hành; các module bên dưới là nơi gốc của FR.
