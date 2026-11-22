@@ -37,8 +37,17 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 | | | Test QA/QC (Đợt 4) | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2, BA | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(7/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1, BA | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2, BA | 25h | 10h | **35h** |
-| **Xuyên MS-01–MS-04 (chưa chốt lịch cụ thể)** | **Hạng mục chung** | **Q-I18N / V2-02: Giao diện Việt/Anh xuyên 13 module** | Chờ nhóm chốt ngày | Chờ nhóm chốt ngày | Không tạo milestone mới | BA, Dev 1, QA 1 | 20h | 4h | **24h** |
-| **TỔNG CỘNG** | **Toàn dự án** | **23 Hạng mục công việc** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **732h** | **178h** | **910h** |
+| **TỔNG CỘNG** | **Toàn dự án** | **22 hạng mục theo milestone + 1 hạng mục chung** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **732h** | **178h** | **910h** |
+
+### Công việc xuyên suốt dự án (không thuộc riêng MS-04)
+
+Hạng mục **Q-I18N / V2-02** được tích hợp dần trong các module từ **MS-01 đến MS-04**, **không phải công việc bắt đầu sau MS-04**, và không tạo module M14 hoặc milestone mới. Lịch ngày bắt đầu/kết thúc cụ thể vẫn chờ nhóm xác nhận.
+
+| Mã hạng mục | Phạm vi | Giai đoạn tích hợp | Phụ trách | WBS | BA | Tổng effort |
+|---|---|---|---|---:|---:|---:|
+| **Q-I18N / V2-02** | Giao diện Việt/Anh xuyên 13 module | **MS-01–MS-04** (chưa chốt ngày chi tiết) | BA, Dev 1, QA 1 | **20h** (Dev 1: 12h; QA 1: 8h) | **4h** | **24h** |
+
+**Nguyên tắc cộng giờ:** Bảng tiến độ chính phía trên gồm **22 hạng mục theo milestone**; cộng **1 hạng mục chung Q-I18N = 23 hạng mục**, tổng **732h WBS + 178h BA = 910h**. Không cộng 24h lần thứ hai và không gán toàn bộ effort I18N vào MS-04.
 
 ### Phân tích chuỗi quan hệ phụ thuộc kỹ thuật & luồng nghiệp vụ (Work Dependency Matrix)
 
