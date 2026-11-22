@@ -33,11 +33,11 @@ docs/
 │   ├── M04-quan-ly-danh-muc/
 │   ├── M05-khoi-tao-ticket/
 │   ├── M06-tiep-nhan-ticket/
-│   ├── M07-xu-ly-trao-doi/
-│   ├── M08-tra-ket-qua/
-│   ├── M09-theo-doi-bo-sung/
-│   ├── M10-ket-qua-danh-gia/
-│   ├── M11-quan-ly-dieu-phoi/
+│   ├── M08-xu-ly-trao-doi/
+│   ├── M09-tra-ket-qua/
+│   ├── M10-theo-doi-bo-sung/
+│   ├── M11-ket-qua-danh-gia/
+│   ├── M07-quan-ly-dieu-phoi/
 │   ├── M12-giam-sat-tien-do/
 │   └── M13-dashboard-bao-cao/
 ├── 04-workflows/            # Luồng quy trình nghiệp vụ

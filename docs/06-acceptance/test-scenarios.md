@@ -16,11 +16,11 @@
 | **M04** | Quản lý Danh mục & SLA | `MS-02` | 5 | 7 | 12 | Dự kiến |
 | **M05** | Khởi tạo Ticket | `MS-02` | 6 | 12 | 18 | Dự kiến |
 | **M06** | Tiếp nhận Ticket & Đua lệnh | `MS-02` | 5 | 9 | 14 | Dự kiến |
-| **M07** | Xử lý & Yêu cầu bổ sung | `MS-02` | 8 | 12 | 20 | Dự kiến |
-| **M08** | Trả kết quả xử lý | `MS-02` | 5 | 7 | 12 | Dự kiến |
-| **M09** | Theo dõi & Nộp bổ sung | `MS-02` | 6 | 10 | 16 | Dự kiến |
-| **M10** | Đánh giá CSAT & Auto-close | `MS-02` | 4 | 6 | 10 | Dự kiến |
-| **M11** | Điều phối & Re-assign | `MS-02` | 6 | 9 | 15 | Dự kiến |
+| **M08** | Xử lý & Yêu cầu bổ sung | `MS-02` | 8 | 12 | 20 | Dự kiến |
+| **M09** | Trả kết quả xử lý | `MS-02` | 5 | 7 | 12 | Dự kiến |
+| **M10** | Theo dõi & Nộp bổ sung | `MS-02` | 6 | 10 | 16 | Dự kiến |
+| **M11** | Đánh giá CSAT & Auto-close | `MS-02` | 4 | 6 | 10 | Dự kiến |
+| **M07** | Điều phối & Re-assign | `MS-02` | 6 | 9 | 15 | Dự kiến |
 | **M12** | Giám sát tiến độ & Cảnh báo SLA | `MS-03` | 6 | 8 | 14 | Dự kiến |
 | **M13** | Dashboard & Báo cáo | `MS-03` | 6 | 6 | 12 | Dự kiến |
 | **M14** | Chuyển đổi ngôn ngữ Việt/Anh | `MS-03` | 2 | 0 | 2 | Dự kiến |
@@ -93,46 +93,46 @@
 
 ---
 
-### 2.4. Phân hệ M07 & M09 — Xử lý, Yêu cầu Bổ sung hồ sơ & Theo dõi (`MS-02`)
+### 2.4. Phân hệ M08 & M10 — Xử lý, Yêu cầu Bổ sung hồ sơ & Theo dõi (`MS-02`)
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|:---:|---|---|---|:---:|
-| `TC-M07-M01` | `FR-M07-01/AC-01` | Nhân viên phụ trách cập nhật tiến độ công khai (`is_internal = false`) | Main | Assignee nhập nội dung tiến độ công khai và bấm lưu | Lưu vào timeline lịch sử và hiển thị công khai cho cả Sinh viên và Quản lý; chặn `403` nếu không phải Assignee. | Có |
-| `TC-M07-M02` | `FR-M07-01/AC-02` | Nhân viên cập nhật ghi chú nội bộ (`is_internal = true`) | Security / Main | Assignee nhập ghi chú với cờ `is_internal = true`; Sinh viên mở xem chi tiết Ticket | Ghi chú hiển thị cho Nhân viên và Trưởng phòng nhưng hoàn toàn không trả về trong API/giao diện của Sinh viên. | Có |
-| `TC-M07-M03` | `FR-M07-02/AC-01` | Nhân viên xem danh sách lịch sử các đơn mình đã xử lý | Main | Nhân viên mở menu "Lịch sử xử lý" và lọc theo thời gian/mã Ticket | Hiển thị đúng các đơn nhân viên đó từng phụ trách (`Resolved`, `Closed`, `Reassigned`) kèm Audit Trail và CSAT. | Không |
-| `TC-M07-N01` | `FR-M07-03/AC-03` | **Nhân viên yêu cầu bổ sung lần thứ 2 cho cùng 1 đơn** | **Negative / BR-3** | Bấm yêu cầu bổ sung khi `supplement_count = 1` | Nút chức năng bị ẩn/disable trên UI, API trả về `400 Bad Request` ("Mỗi ticket chỉ được yêu cầu bổ sung tối đa 1 lần"). | Có |
-| `TC-M07-E02` | `FR-M07-03/AC-01` | Gửi yêu cầu bổ sung hợp lệ vào chiều Thứ Sáu và kiểm tra bỏ trống | Boundary / Business Days | Nhập nội dung $\ge 10$ ký tự lúc 16:30 Thứ Sáu (và thử gửi rỗng) | Chặn nếu nội dung rỗng; khi hợp lệ chuyển sang `Pending`, hạn chót 3 ngày làm việc rơi vào 16:30 Thứ Tư tuần sau. | Có |
-| `TC-M07-E03` | `FR-M07-03/AC-02` | **Quá hạn 3 ngày làm việc mà sinh viên không bổ sung** | **Automation / Timeout** | Background worker quét ticket Pending quá deadline | Ticket tự động chuyển sang `Closed`, gán `auto_closed = true`, `closed_reason = "TIMEOUT_PENDING"`, khóa chức năng nộp bổ sung. | Có |
-| `TC-M07-M04` | `FR-M07-04/AC-01` | Nhân viên báo sai phòng ban kèm lý do chuyển trả về Admin | Main / Negative | Đơn đang `In Progress`, nhập lý do chuyển trả (và thử bỏ trống lý do) | Chặn nếu trống lý do; khi hợp lệ thì xóa Assignee, đổi danh mục sang "Khác" và đưa về Hàng chờ Admin ở trạng thái `New`. | Có |
-| `TC-M09-M01` | `FR-M09-01/AC-01` | Sinh viên xem danh sách và chi tiết Ticket cá nhân đã gửi | Main / RBAC | Sinh viên mở "Yêu cầu của tôi" và thử truy cập URL đơn của sinh viên khác | Hiển thị đúng danh sách đơn của chính sinh viên đó kèm trạng thái thực; trả về `403 Forbidden` nếu xem đơn người khác. | Có |
-| `TC-M09-M02` | `FR-M09-01/AC-02` | Sinh viên tìm kiếm và lọc Ticket theo trạng thái | Main | Nhập mã Ticket hoặc chọn lọc trạng thái `Đang xử lý` / `Chờ bổ sung` | Trả về chính xác các đơn khớp điều kiện lọc; hiển thị thông báo rỗng nếu không có đơn. | Không |
-| `TC-M09-M03` | `FR-M09-02/AC-01` | Sinh viên nộp bổ sung hồ sơ hợp lệ khi đơn đang `Pending` | Main | Nhập nội dung giải trình $\ge 5$ ký tự và đính kèm tệp hợp lệ trước hạn 3 ngày làm việc | Dừng bộ đếm ngược, chuyển đơn về `In Progress`, giữ nguyên Mã Ticket và Nhân viên phụ trách cũ, phát thông báo cho nhân viên. | Có |
-| `TC-M09-N04` | `FR-M09-02/AC-01`, `NFR-INT-01` | Sinh viên bấm gửi bổ sung sau khi đơn đã bị Auto-close | Negative | Sinh viên submit form bổ sung chậm sau hạn chót | Trả về `400 Bad Request` ("Đơn đã bị đóng do quá hạn bổ sung, vui lòng tạo đơn mới"). | Có |
+| `TC-M08-M01` | `FR-M08-01/AC-01` | Nhân viên phụ trách cập nhật tiến độ công khai (`is_internal = false`) | Main | Assignee nhập nội dung tiến độ công khai và bấm lưu | Lưu vào timeline lịch sử và hiển thị công khai cho cả Sinh viên và Quản lý; chặn `403` nếu không phải Assignee. | Có |
+| `TC-M08-M02` | `FR-M08-01/AC-02` | Nhân viên cập nhật ghi chú nội bộ (`is_internal = true`) | Security / Main | Assignee nhập ghi chú với cờ `is_internal = true`; Sinh viên mở xem chi tiết Ticket | Ghi chú hiển thị cho Nhân viên và Trưởng phòng nhưng hoàn toàn không trả về trong API/giao diện của Sinh viên. | Có |
+| `TC-M08-M03` | `FR-M08-02/AC-01` | Nhân viên xem danh sách lịch sử các đơn mình đã xử lý | Main | Nhân viên mở menu "Lịch sử xử lý" và lọc theo thời gian/mã Ticket | Hiển thị đúng các đơn nhân viên đó từng phụ trách (`Resolved`, `Closed`, `Reassigned`) kèm Audit Trail và CSAT. | Không |
+| `TC-M08-N01` | `FR-M08-03/AC-03` | **Nhân viên yêu cầu bổ sung lần thứ 2 cho cùng 1 đơn** | **Negative / BR-3** | Bấm yêu cầu bổ sung khi `supplement_count = 1` | Nút chức năng bị ẩn/disable trên UI, API trả về `400 Bad Request` ("Mỗi ticket chỉ được yêu cầu bổ sung tối đa 1 lần"). | Có |
+| `TC-M08-E02` | `FR-M08-03/AC-01` | Gửi yêu cầu bổ sung hợp lệ vào chiều Thứ Sáu và kiểm tra bỏ trống | Boundary / Business Days | Nhập nội dung $\ge 10$ ký tự lúc 16:30 Thứ Sáu (và thử gửi rỗng) | Chặn nếu nội dung rỗng; khi hợp lệ chuyển sang `Pending`, hạn chót 3 ngày làm việc rơi vào 16:30 Thứ Tư tuần sau. | Có |
+| `TC-M08-E03` | `FR-M08-03/AC-02` | **Quá hạn 3 ngày làm việc mà sinh viên không bổ sung** | **Automation / Timeout** | Background worker quét ticket Pending quá deadline | Ticket tự động chuyển sang `Closed`, gán `auto_closed = true`, `closed_reason = "TIMEOUT_PENDING"`, khóa chức năng nộp bổ sung. | Có |
+| `TC-M08-M04` | `FR-M08-04/AC-01` | Nhân viên báo sai phòng ban kèm lý do chuyển trả về Admin | Main / Negative | Đơn đang `In Progress`, nhập lý do chuyển trả (và thử bỏ trống lý do) | Chặn nếu trống lý do; khi hợp lệ thì xóa Assignee, đổi danh mục sang "Khác" và đưa về Hàng chờ Admin ở trạng thái `New`. | Có |
+| `TC-M10-M01` | `FR-M10-01/AC-01` | Sinh viên xem danh sách và chi tiết Ticket cá nhân đã gửi | Main / RBAC | Sinh viên mở "Yêu cầu của tôi" và thử truy cập URL đơn của sinh viên khác | Hiển thị đúng danh sách đơn của chính sinh viên đó kèm trạng thái thực; trả về `403 Forbidden` nếu xem đơn người khác. | Có |
+| `TC-M10-M02` | `FR-M10-01/AC-02` | Sinh viên tìm kiếm và lọc Ticket theo trạng thái | Main | Nhập mã Ticket hoặc chọn lọc trạng thái `Đang xử lý` / `Chờ bổ sung` | Trả về chính xác các đơn khớp điều kiện lọc; hiển thị thông báo rỗng nếu không có đơn. | Không |
+| `TC-M10-M03` | `FR-M10-02/AC-01` | Sinh viên nộp bổ sung hồ sơ hợp lệ khi đơn đang `Pending` | Main | Nhập nội dung giải trình $\ge 5$ ký tự và đính kèm tệp hợp lệ trước hạn 3 ngày làm việc | Dừng bộ đếm ngược, chuyển đơn về `In Progress`, giữ nguyên Mã Ticket và Nhân viên phụ trách cũ, phát thông báo cho nhân viên. | Có |
+| `TC-M10-N04` | `FR-M10-02/AC-01`, `NFR-INT-01` | Sinh viên bấm gửi bổ sung sau khi đơn đã bị Auto-close | Negative | Sinh viên submit form bổ sung chậm sau hạn chót | Trả về `400 Bad Request` ("Đơn đã bị đóng do quá hạn bổ sung, vui lòng tạo đơn mới"). | Có |
 
 ---
 
-### 2.5. Phân hệ M08 & M10 — Trả kết quả & Đánh giá CSAT (`MS-02`)
+### 2.5. Phân hệ M09 & M11 — Trả kết quả & Đánh giá CSAT (`MS-02`)
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|:---:|---|---|---|:---:|
-| `TC-M08-M01` | `FR-M08-01/AC-01` | Nhân viên nhập kết quả giải quyết và đính kèm tệp trả lời hợp lệ | Main | Nhập `Resolution Notes` ($\ge 10$ ký tự) và đính kèm file PDF trả lời $\le 5\text{MB}$ | Hệ thống lưu thành công nội dung giải trình và tệp đính kèm kết quả vào CSDL. | Có |
-| `TC-M08-N01` | `FR-M08-01/AC-02`, `NFR-INT-02` | Hoàn tất đơn nhưng để trống `Resolution Notes` | Negative / BR-5 | Bấm "Trả kết quả" nhưng không nhập nội dung giải trình | Hệ thống chặn submit (`422 Unprocessable Entity`), báo lỗi bắt buộc nhập nội dung kết quả (Min 10 ký tự). | Có |
-| `TC-M08-N02` | `FR-M08-01/AC-03`, `NFR-PERF-03` | Đính kèm tệp kết quả vượt quá 5MB hoặc sai định dạng | Negative | Nhân viên tải lên tệp trả lời nặng 6MB hoặc định dạng `.exe`/`.zip` | Hệ thống chặn tải file, hiển thị cảnh báo lỗi cụ thể và không cho phép hoàn thành đơn. | Có |
-| `TC-M08-M02` | `FR-M08-02/AC-01` | Hoàn thành đơn chuyển sang `Resolved` và gửi 1 thông báo duy nhất | Main | Nhân viên xác nhận hoàn thành (kể cả bấm đúp 2 lần liên tiếp) | Đơn chuyển sang `Resolved`, ghi nhận `resolved_at` và chỉ phát đúng 1 thông báo kết quả duy nhất cho sinh viên. | Có |
-| `TC-M10-M01` | `FR-M10-01/AC-01` | Sinh viên xem nội dung kết quả giải quyết và tải tệp trả lời | Main | Sinh viên mở Ticket ở trạng thái `Resolved` và nhấn tải tệp đính kèm | Hiển thị rõ `Resolution Notes` và tải xuống tệp trả lời thành công; ẩn kết quả nếu đơn chưa `Resolved`. | Có |
-| `TC-M10-M02` | `FR-M10-02/AC-01` | Sinh viên chấm điểm 1–5 sao, nhận xét và đóng đơn thành công | Main | Chọn mức 5 sao, nhập nhận xét và bấm "Gửi đánh giá & Đóng đơn" | Lưu điểm CSAT gắn với nhân viên xử lý, chuyển trạng thái đơn sang `Closed` (đóng vĩnh viễn). | Có |
-| `TC-M10-N01` | `FR-M10-02/AC-02` | Sinh viên bấm gửi đánh giá khi chưa chọn số sao | Negative | Để trống số sao và nhấn nút gửi đánh giá | Hệ thống chặn gửi và hiển thị thông báo yêu cầu bắt buộc chọn từ 1 đến 5 sao. | Không |
-| `TC-M10-N02` | `FR-M10-02/AC-01`, `NFR-INT-01` | Sinh viên đánh giá lại lần 2 cho đơn đã đánh giá | Negative | Gửi `POST /api/v1/tickets/{id}/feedback` lần 2 | Trả về `409 Conflict`, thông báo "Bạn đã gửi đánh giá cho đơn này rồi". | Không |
-| `TC-M10-E03` | `FR-M10-02/AC-01` | Đánh giá sao khi đơn bị đóng tự động do quá hạn Pending | Negative / Edge | Gọi API feedback trên ticket có `auto_closed = true` và `closed_reason = TIMEOUT_PENDING` | Trả về `400 Bad Request` ("Đơn tự động đóng do quá hạn không áp dụng đánh giá CSAT"). | Không |
-| `TC-M10-E04` | `FR-M10-03/AC-01` | Tự động đóng đơn sau 3 ngày làm việc ở `Resolved` không đánh giá | Automation / Timeout | Ticket ở `Resolved` quá 3 ngày làm việc (bỏ qua Thứ 7, CN, ngày lễ) | Tác vụ ngầm chuyển đơn sang `Closed` (`auto_closed = true`, `rating = null`, không tính vào CSAT) và khóa form đánh giá. | Có |
+| `TC-M09-M01` | `FR-M09-01/AC-01` | Nhân viên nhập kết quả giải quyết và đính kèm tệp trả lời hợp lệ | Main | Nhập `Resolution Notes` ($\ge 10$ ký tự) và đính kèm file PDF trả lời $\le 5\text{MB}$ | Hệ thống lưu thành công nội dung giải trình và tệp đính kèm kết quả vào CSDL. | Có |
+| `TC-M09-N01` | `FR-M09-01/AC-02`, `NFR-INT-02` | Hoàn tất đơn nhưng để trống `Resolution Notes` | Negative / BR-5 | Bấm "Trả kết quả" nhưng không nhập nội dung giải trình | Hệ thống chặn submit (`422 Unprocessable Entity`), báo lỗi bắt buộc nhập nội dung kết quả (Min 10 ký tự). | Có |
+| `TC-M09-N02` | `FR-M09-01/AC-03`, `NFR-PERF-03` | Đính kèm tệp kết quả vượt quá 5MB hoặc sai định dạng | Negative | Nhân viên tải lên tệp trả lời nặng 6MB hoặc định dạng `.exe`/`.zip` | Hệ thống chặn tải file, hiển thị cảnh báo lỗi cụ thể và không cho phép hoàn thành đơn. | Có |
+| `TC-M09-M02` | `FR-M09-02/AC-01` | Hoàn thành đơn chuyển sang `Resolved` và gửi 1 thông báo duy nhất | Main | Nhân viên xác nhận hoàn thành (kể cả bấm đúp 2 lần liên tiếp) | Đơn chuyển sang `Resolved`, ghi nhận `resolved_at` và chỉ phát đúng 1 thông báo kết quả duy nhất cho sinh viên. | Có |
+| `TC-M11-M01` | `FR-M11-01/AC-01` | Sinh viên xem nội dung kết quả giải quyết và tải tệp trả lời | Main | Sinh viên mở Ticket ở trạng thái `Resolved` và nhấn tải tệp đính kèm | Hiển thị rõ `Resolution Notes` và tải xuống tệp trả lời thành công; ẩn kết quả nếu đơn chưa `Resolved`. | Có |
+| `TC-M11-M02` | `FR-M11-02/AC-01` | Sinh viên chấm điểm 1–5 sao, nhận xét và đóng đơn thành công | Main | Chọn mức 5 sao, nhập nhận xét và bấm "Gửi đánh giá & Đóng đơn" | Lưu điểm CSAT gắn với nhân viên xử lý, chuyển trạng thái đơn sang `Closed` (đóng vĩnh viễn). | Có |
+| `TC-M11-N01` | `FR-M11-02/AC-02` | Sinh viên bấm gửi đánh giá khi chưa chọn số sao | Negative | Để trống số sao và nhấn nút gửi đánh giá | Hệ thống chặn gửi và hiển thị thông báo yêu cầu bắt buộc chọn từ 1 đến 5 sao. | Không |
+| `TC-M11-N02` | `FR-M11-02/AC-01`, `NFR-INT-01` | Sinh viên đánh giá lại lần 2 cho đơn đã đánh giá | Negative | Gửi `POST /api/v1/tickets/{id}/feedback` lần 2 | Trả về `409 Conflict`, thông báo "Bạn đã gửi đánh giá cho đơn này rồi". | Không |
+| `TC-M11-E03` | `FR-M11-02/AC-01` | Đánh giá sao khi đơn bị đóng tự động do quá hạn Pending | Negative / Edge | Gọi API feedback trên ticket có `auto_closed = true` và `closed_reason = TIMEOUT_PENDING` | Trả về `400 Bad Request` ("Đơn tự động đóng do quá hạn không áp dụng đánh giá CSAT"). | Không |
+| `TC-M11-E04` | `FR-M11-03/AC-01` | Tự động đóng đơn sau 3 ngày làm việc ở `Resolved` không đánh giá | Automation / Timeout | Ticket ở `Resolved` quá 3 ngày làm việc (bỏ qua Thứ 7, CN, ngày lễ) | Tác vụ ngầm chuyển đơn sang `Closed` (`auto_closed = true`, `rating = null`, không tính vào CSAT) và khóa form đánh giá. | Có |
 
 ---
 
-### 2.6. Phân hệ M11 — Phân công & Re-assign (`MS-02`)
+### 2.6. Phân hệ M07 — Phân công & Re-assign (`MS-02`)
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|:---:|---|---|---|:---:|
-| `TC-M11-M01` | `FR-M11-01/AC-01` | Admin phân loại đơn mục "Khác" về đúng phòng ban đích | Main | Admin mở đơn mục "Khác", chọn Phòng ban đích và Danh mục chuẩn tương ứng | Cập nhật phòng ban/danh mục, giữ nguyên mã Ticket và đưa đơn vào Hàng chờ phòng ban đích ở trạng thái `New`. | Có |
-| `TC-M11-M02` | `FR-M11-02/AC-01` | Admin điều chuyển đơn bị nhân viên báo sai phòng ban | Main | Admin xem lý do chuyển trả từ `M07-04`, chọn Phòng ban và Danh mục mới | Xóa Assignee cũ, chuyển đơn về Hàng chờ phòng ban mới ở trạng thái `New` và bảo toàn lịch sử luân chuyển. | Có |
-| `TC-M11-N01` | `FR-M11-03/AC-01`, `NFR-SEC-05` | Trưởng phòng phân công cho Nhân viên không thuộc phòng ban mình (`E-01`) | Negative / Security | Chọn Assignee ID là nhân viên thuộc phòng ban khác | Backend từ chối với mã `403 Forbidden` và giữ nguyên người phụ trách hiện tại. | Có |
-| `TC-M11-E02` | `FR-M11-03/AC-01` | **Trưởng phòng Re-assign đơn đang `In Progress` từ NV A sang NV B** | **Main / Re-assign Flow** | Quản lý chọn đổi Assignee cho đơn đang xử lý | Đơn được chuyển giao thành công sang NV B, lưu lịch sử log rõ ràng ai đã điều chuyển, và hệ thống bắn thông báo In-app ngay lập tức cho NV B (Trigger #7). | Có |
+| `TC-M07-M01` | `FR-M07-01/AC-01` | Admin phân loại đơn mục "Khác" về đúng phòng ban đích | Main | Admin mở đơn mục "Khác", chọn Phòng ban đích và Danh mục chuẩn tương ứng | Cập nhật phòng ban/danh mục, giữ nguyên mã Ticket và đưa đơn vào Hàng chờ phòng ban đích ở trạng thái `New`. | Có |
+| `TC-M07-M02` | `FR-M07-02/AC-01` | Admin điều chuyển đơn bị nhân viên báo sai phòng ban | Main | Admin xem lý do chuyển trả từ `M08-04`, chọn Phòng ban và Danh mục mới | Xóa Assignee cũ, chuyển đơn về Hàng chờ phòng ban mới ở trạng thái `New` và bảo toàn lịch sử luân chuyển. | Có |
+| `TC-M07-N01` | `FR-M07-03/AC-01`, `NFR-SEC-05` | Trưởng phòng phân công cho Nhân viên không thuộc phòng ban mình (`E-01`) | Negative / Security | Chọn Assignee ID là nhân viên thuộc phòng ban khác | Backend từ chối với mã `403 Forbidden` và giữ nguyên người phụ trách hiện tại. | Có |
+| `TC-M07-E02` | `FR-M07-03/AC-01` | **Trưởng phòng Re-assign đơn đang `In Progress` từ NV A sang NV B** | **Main / Re-assign Flow** | Quản lý chọn đổi Assignee cho đơn đang xử lý | Đơn được chuyển giao thành công sang NV B, lưu lịch sử log rõ ràng ai đã điều chuyển, và hệ thống bắn thông báo In-app ngay lập tức cho NV B (Trigger #7). | Có |
 
 ---
 
