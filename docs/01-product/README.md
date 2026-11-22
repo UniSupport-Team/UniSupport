@@ -3,6 +3,10 @@
 ## 1. Tổng quan
 **UniSupport** là hệ thống trực tuyến giúp Đại học Aurora tập trung toàn bộ thắc mắc và yêu cầu của sinh viên về một nền tảng duy nhất. Hệ thống giúp sinh viên dễ dàng gửi và theo dõi tiến độ, đồng thời giúp các phòng ban tiếp nhận và xử lý công việc nhanh chóng, không bị thất lạc thông tin. 
 
+### Bài toán thực tế của khách hàng
+
+Sinh viên chưa có một kênh thống nhất để gửi yêu cầu và biết tiến độ; các phòng ban nhận yêu cầu phân tán, khó điều phối và kiểm soát thời hạn; nhà trường thiếu báo cáo tổng hợp về hiệu quả hỗ trợ. Nguồn mô tả và mục tiêu đo lường: [QL-san-pham.md — Mục 1.2–2](../08-project/QL-san-pham.md#12-vấn-đề-cần-giải-quyết). Đây là mô tả vấn đề nghiệp vụ, không phải kết quả khảo sát mới.
+
 ## 2. Đối tượng sử dụng (Actors)
 * **Sinh viên (Student):** Gửi yêu cầu hỗ trợ, theo dõi tiến độ, bổ sung thông tin khi cần và đánh giá chất lượng (1–5 sao) sau khi hoàn tất.
 * **Nhân viên hỗ trợ (Staff):** Tiếp nhận, xử lý, trao đổi thông tin với sinh viên và cập nhật kết quả giải quyết theo phân công của phòng ban.
