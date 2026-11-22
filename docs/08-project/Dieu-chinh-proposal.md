@@ -43,3 +43,6 @@ Bản cập nhật Proposal này được thực hiện nhằm hướng tới m�
 ### M14 — Quản lý đa ngôn ngữ tại MS-03 (V2-02)
 
 Toàn bộ **24h** thuộc **MS-03 (16/11–04/12/2026)**: BA 4h, Dev 1 12h, QA 1 8h. M14 là module thứ 14, cung cấp chuyển ngôn ngữ Việt/Anh cho giao diện M01–M13, nghiệm thu trong MS-03. Không phân bổ I18N ở các mốc khác, không tạo milestone mới, không đổi tổng 910h và giá 300 triệu. Ngày làm việc chi tiết trong MS-03 chờ xếp lịch.
+
+
+**Phân công song song MS-03:** M13 do Dev 2 (20h), Dev 3 (20h), BA (4h); M14 do Dev 1 (12h), BA (4h), QA 1 (8h). Hai module cùng thuộc MS-03 và có thời gian triển khai chồng lấn, không đổi tổng effort 910h hoặc giá hợp đồng 300 triệu.
