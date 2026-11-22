@@ -96,7 +96,7 @@ docs/
 | Đối tượng | Định dạng mã | Nơi gốc (Source of Truth) | Liên kết phải ghi |
 | :--- | :--- | :--- | :--- |
 | **Module** | `M01` – `M14` | `docs/03-modules/README.md` | Milestone `MS-xx` |
-| **Yêu cầu chức năng (FR)** | `FR-M01-01` .. `FR-M13-04` | `docs/03-modules/Mxx-.../prd.md` | Actor, Priority, BR, E, AC |
+| **Yêu cầu chức năng (FR)** | `FR-M01-01` .. `FR-M14-01` | `docs/03-modules/Mxx-.../prd.md` | Actor, Priority, BR, E, AC |
 | **Tiêu chí nghiệm thu (AC)** | `FR-Mxx-yy/AC-zz` | `docs/03-modules/Mxx-.../prd.md` | — |
 | **Yêu cầu phi chức năng (NFR)** | `NFR-SEC-01`, `NFR-PERF-01`... | `docs/05-non-functional-requirements/README.md` | Ngưỡng cam kết & cách đo |
 | **Kịch bản kiểm thử (Test)** | `TC-M01-N01`... | `docs/06-acceptance/test-scenarios.md` | Mã `AC` hoặc `NFR` được kiểm |
