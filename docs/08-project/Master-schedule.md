@@ -37,30 +37,20 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 | | | Test QA/QC (Đợt 4) | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2, BA | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(7/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1, BA | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2, BA | 25h | 10h | **35h** |
-| **TỔNG CỘNG** | **Toàn dự án** | **22 hạng mục theo milestone + 1 hạng mục chung** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **732h** | **178h** | **910h** |
+| **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục theo milestone** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **732h** | **178h** | **910h** |
 
-### Công việc xuyên suốt dự án (không thuộc riêng MS-04)
+### Module M14 thuộc MS-03 (24h; không tạo milestone mới)
 
-Hạng mục **Q-I18N / V2-02** được tích hợp dần trong các module từ **MS-01 đến MS-04**, **không phải công việc bắt đầu sau MS-04**, và không tạo module M14 hoặc milestone mới. Phân bổ theo milestone đã được duyệt; ngày làm việc cụ thể vẫn chờ xếp lịch.
+**M14 – Quản lý đa ngôn ngữ** là module thứ 14, toàn bộ 24h thuộc MS-03 (16/11–04/12/2026), không có công việc I18N tại MS-01, MS-02 hoặc MS-04. Ngày làm việc cụ thể trong MS-03 chưa ấn định.
 
 | Mã hạng mục | Phạm vi | Giai đoạn tích hợp | Phụ trách | WBS | BA | Tổng effort |
 |---|---|---|---|---:|---:|---:|
-| **Q-I18N / V2-02** | Giao diện Việt/Anh xuyên 13 module | **MS-01–MS-04** (đã duyệt phân bổ theo mốc) | BA, Dev 1, QA 1 | **20h** (Dev 1: 12h; QA 1: 8h) | **4h** | **24h** |
+| **M14 / Q-14** | Giao diện Việt/Anh M01–M13 | **MS-03 (16/11–04/12)** | BA, Dev 1, QA 1 | **20h** (Dev 1: 12h; QA 1: 8h) | **4h** | **24h** |
 
 
-**Phân bổ Q-I18N theo milestone đã duyệt:**
+**Phân bổ M14 tại MS-03 đã duyệt:** BA 4h (từ điển Việt/Anh), Dev 1 12h (tích hợp chuyển ngôn ngữ M01–M13), QA 1 8h (kiểm thử 4 vai trò và TC-I18N-01–05). **Tổng 24h chỉ thuộc MS-03, 16/11–04/12/2026; ngày làm việc cụ thể chưa ấn định.**
 
-| Mốc | Công việc | BA | Dev 1 | QA 1 | Tổng |
-|---|---|---:|---:|---:|---:|
-| MS-01 | Từ điển Việt/Anh, bộ chuyển ngôn ngữ dùng chung | 4h | 4h | 0h | 8h |
-| MS-02 | Tích hợp giao diện Ticket và các module ở MS-02 | 0h | 6h | 0h | 6h |
-| MS-03 | Hoàn thiện M12–M13, rà soát M01–M13 | 0h | 2h | 0h | 2h |
-| MS-04 | QA hồi quy 4 vai trò, kiểm tra TC-I18N-01–05 trước nghiệm thu | 0h | 0h | 8h | 8h |
-| **Tổng** | **Hạng mục xuyên 13 module** | **4h** | **12h** | **8h** | **24h** |
-
-Đây là phân bổ effort theo mốc, **chưa ấn định ngày làm việc cụ thể và chưa xác nhận đã thực hiện**. Giữ nguyên 910h, 300 triệu đồng và hạn các milestone; cần kiểm tra tải nguồn lực khi xếp lịch.
-
-**Nguyên tắc cộng giờ:** Bảng tiến độ chính phía trên gồm **22 hạng mục theo milestone**; cộng **1 hạng mục chung Q-I18N = 23 hạng mục**, tổng **732h WBS + 178h BA = 910h**. Không cộng 24h lần thứ hai và không gán toàn bộ effort I18N vào MS-04.
+**Nguyên tắc cộng giờ:** Bảng tiến độ chính phía trên gồm **23 hạng mục theo milestone**, gồm **M14 = 24h**, tổng **732h WBS + 178h BA = 910h**. Không cộng 24h lần thứ hai và không gán toàn bộ effort I18N vào MS-04.
 
 ### Phân tích chuỗi quan hệ phụ thuộc kỹ thuật & luồng nghiệp vụ (Work Dependency Matrix)
 
@@ -133,7 +123,7 @@ Hạng mục **Q-I18N / V2-02** được tích hợp dần trong các module t�
   * **Nghiệm thu (07/12 – 11/12):** PM phối hợp cùng QA 1, BA và khách hàng rà soát tài liệu, checklist nghiệm thu UAT (PM 20h, QA 1 5h, BA 12h = 37h).
   * **Bàn giao chính thức (14/12 – 18/12):** PM, QA 2 và BA thực hiện bàn giao môi trường Production, bàn giao mã nguồn, tài liệu hướng dẫn và đóng dự án (PM 20h, QA 2 5h, BA 10h = 35h).
 
-> *(Ghi chú: Baseline hiện hành **178h BA**, gồm 174h trước V2-02 và 4h BA cho `Q-I18N`. File `Master Schedule.xlsx` chưa được xác nhận đồng bộ với baseline 910h; không dùng bảng Excel cũ để kết luận số giờ đã khớp.)*
+> *(Ghi chú: Baseline hiện hành **178h BA**, gồm 174h trước V2-02 và 4h BA cho `M14 / Q-14`. File `Master Schedule.xlsx` chưa được xác nhận đồng bộ với baseline 910h; không dùng bảng Excel cũ để kết luận số giờ đã khớp.)*
 
 ---
 
@@ -147,8 +137,8 @@ Dự án được tổ chức theo 5 cột mốc tuần tự (`MS-00` $\rightarr
 | **`MS-00`** | Tuần 1–3<br>*(01/09 – 18/09)* | 88h | 32h | **120h** | — | **Đầu ra & Nghiệm thu:** Bàn giao hồ sơ khảo sát & đặc tả yêu cầu, thiết kế kiến trúc/CSDL, hạ tầng Staging (`INF-01`) và **bản demo UI tương tác chạy được trên trình duyệt**. Khách hàng tự mở demo, chọn một trong 4 vai trò, bấm các nút điều hướng/đăng nhập mô phỏng/tạo Ticket mô phỏng/xem chi tiết/quay lại và chuyển ngôn ngữ Việt–Anh; màn hình hiển thị phản hồi bằng **dữ liệu giả lập**. **Không kết nối API/CSDL, không xác thực hay xử lý Ticket thật, không lưu dữ liệu sau khi tải lại trang**. Nghiệm thu MS-00 bằng checklist thao tác và biên bản phản hồi, **không coi đây là nghiệm thu chức năng M01–M13**. *(M01 bắt đầu phát triển thật từ MS-01.)*. |
 | **`MS-01`** | Tuần 4–6<br>*(21/09 – 14/10)* | 160h | 32h | **192h** | `MS-00` | **Phần mềm chạy được:** Phân hệ Xác thực (`M01`), Phân quyền RBAC (`M02`) và Quản lý tài khoản (`M03`).<br>**Khách hàng kiểm thử (08/10 – 14/10):** Khách hàng trực tiếp dùng thử và nghiệm thu sơ bộ giai đoạn nền tảng: đăng nhập 4 tài khoản vai trò (`Student`, `Staff`, `Manager`, `Admin`), thử nghiệm đổi mật khẩu lần đầu, khóa tài khoản khi nhập sai 5 lần, bật/tắt quyền động và import danh sách tài khoản bằng file Excel. |
 | **`MS-02`** | Tuần 7–11<br>*(12/10 – 13/11)* | 290h | 56h | **346h** | `MS-01` | **Phần mềm chạy được:** Trọn vẹn vòng đời xử lý Ticket (`M04` đến `M11`). Khởi động từ 12/10 với `M04`, gối đầu (overlap) có chủ đích 3 ngày (12/10 – 14/10) với giai đoạn test MS-01 để tối ưu thời gian chờ.<br>**Cách khách hàng tự dùng thử:** Khách hàng tự thực hiện luồng khép kín: Cấu hình danh mục & SLA (`M04`) $\rightarrow$ Sinh viên tạo đơn & đính kèm file (`M05`) $\rightarrow$ Nhân viên tiếp nhận (`M06`) / Admin & Trưởng phòng điều phối (`M11`) $\rightarrow$ Nhân viên xử lý, yêu cầu bổ sung 3 ngày làm việc (`M07`) và trả kết quả (`M08`) $\rightarrow$ Sinh viên theo dõi, nộp bổ sung (`M09`) và đánh giá CSAT 1–5 sao (`M10`). |
-| **`MS-03`** | Tuần 12–14<br>*(16/11 – 04/12)* | 124h | 32h | **156h** | `MS-02` | **Phần mềm chạy được:** Phân hệ Giám sát tiến độ (`M12`) và Dashboard & Báo cáo (`M13`).<br>**Cách khách hàng tự dùng thử:** Trưởng phòng và Ban Giám hiệu truy cập Dashboard xem biểu đồ thống kê thời gian thực, kiểm tra cảnh báo tô đỏ với các đơn quá hạn SLA, tra cứu đơn toàn trường và tải xuống báo cáo định dạng Excel/PDF. |
-| **`MS-04`** | Tuần 15–16<br>*(07/12 – 18/12)* | 50h | 22h | **72h** | `MS-03` | **Phần mềm chạy được:** Bản phát hành hoàn chỉnh (Release Candidate / Production) tích hợp toàn bộ 13 phân hệ (`M01`–`M13`) kèm dữ liệu mẫu nghiệm thu (`Docs-02`) và bộ tài liệu hướng dẫn (`Docs-01`).<br>**Cách khách hàng tự dùng thử:** Khách hàng thực hiện kiểm thử nghiệm thu người dùng (UAT) toàn trình trên hệ thống hoàn chỉnh theo tiêu chuẩn tại [Proposal.md — Mục 8.2](Proposal.md#82-nghiệm-thu) và ký biên bản bàn giao chính thức. |
+| **`MS-03`** | Tuần 12–14<br>*(16/11 – 04/12)* | 124h | 32h | **180h** | `MS-02` | **Phần mềm chạy được:** Giám sát tiến độ (`M12`), Dashboard & Báo cáo (`M13`) và Quản lý đa ngôn ngữ (`M14`, 24h, Việt/Anh trên M01–M13).<br>**Cách khách hàng tự dùng thử:** Trưởng phòng và Ban Giám hiệu truy cập Dashboard xem biểu đồ thống kê thời gian thực, kiểm tra cảnh báo tô đỏ với các đơn quá hạn SLA, tra cứu đơn toàn trường và tải xuống báo cáo định dạng Excel/PDF. |
+| **`MS-04`** | Tuần 15–16<br>*(07/12 – 18/12)* | 50h | 22h | **72h** | `MS-03` | **Phần mềm chạy được:** Bản phát hành hoàn chỉnh (Release Candidate / Production) tích hợp toàn bộ 14 phân hệ (`M01`–`M14`) kèm dữ liệu mẫu nghiệm thu (`Docs-02`) và bộ tài liệu hướng dẫn (`Docs-01`).<br>**Cách khách hàng tự dùng thử:** Khách hàng thực hiện kiểm thử nghiệm thu người dùng (UAT) toàn trình trên hệ thống hoàn chỉnh theo tiêu chuẩn tại [Proposal.md — Mục 8.2](Proposal.md#82-nghiệm-thu) và ký biên bản bàn giao chính thức. |
 
 ### 2. Phân bổ giờ công Kiểm thử (Test / Regression) và Sửa lỗi
 * **Kiểm thử theo từng mốc:** Thay vì dồn toàn bộ kiểm thử về cuối dự án, kế hoạch bố trí **04 đợt Test QA/QC độc lập** ngay trong từng mốc phát triển: Đợt 1 tại `MS-01` (44h Dev/QA + 20h BA = 64h), Đợt 2 và Đợt 3 tại `MS-02` (56h + 56h = 112h), Đợt 4 tại `MS-03` (44h Dev/QA + 24h BA = 68h), cùng giai đoạn Nghiệm thu & Bàn giao tại `MS-04` (50h Dev/QA + 22h BA = 72h). Việc kiểm thử hồi quy (Regression Test) và sửa lỗi được thực hiện cuốn chiếu trước khi đóng từng mốc theo quy định tại [QL-chat-luong.md](QL-chat-luong.md).
@@ -186,11 +176,14 @@ Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu m
 **Phê duyệt V2-02:** tăng effort baseline từ **886h lên 910h** (WBS 712h → 732h; BA 174h → 178h), giữ nguyên giá hợp đồng **300.000.000 VNĐ**. Phân bổ 4h BA, 12h Dev 1, 8h QA 1; đây là giờ kế hoạch, **chưa phải giờ thực hiện**. Ngày bắt đầu/kết thúc riêng cần PM chốt theo năng lực thực tế; chưa khẳng định có thể hoàn thành trong lịch 16 tuần nếu chưa kiểm tra tải nguồn lực. File Excel chưa được đồng bộ, không dùng file Excel cũ làm baseline mới.
 
 
-### Phụ lục V2-02 — Hạng mục chung Q-I18N (không phải module M14)
+### Phụ lục V2-02 — Hạng mục chung M14 / Q-14 (không phải module M14)
 
-- **Phân loại:** `Q-I18N` là hạng mục xuyên 13 module M01–M13, không bổ sung module thứ 14, không thay đổi số milestone.
+- **Phân loại:** `M14 / Q-14` là hạng mục xuyên 13 module M01–M13, bổ sung module thứ 14, không thay đổi số milestone.
 - **Phạm vi:** Giao diện, menu, biểu mẫu, thông báo hệ thống và validation Việt/Anh của 4 vai trò; không dịch nội dung người dùng nhập, email hoặc file báo cáo xuất.
 - **Nỗ lực đã duyệt:** BA **4h**, Dev 1 **12h**, QA 1 **8h** = **24h**, đã tính trong **910h**; không cộng thêm lần thứ hai. Tổng giá hợp đồng vẫn **300.000.000 VNĐ**.
-- **Tích hợp:** Thiết kế dùng chung khi triển khai M01 và áp dụng dần trên M02–M13; kiểm thử hồi quy các màn hình theo từng đợt QA, xác nhận cuối trước nghiệm thu. Đây là **định hướng phụ thuộc**, **không phải ngày bắt đầu/kết thúc được duyệt**. Phân bổ effort theo MS-01–MS-04 đã được duyệt; ngày làm việc cụ thể vẫn chờ xếp lịch và không tự dịch chuyển mốc.
-- **Truy vết:** [Task V2-02](tasks/V2-02-bilingual-ui.md), `NFR-I18N-01`, `TC-I18N-01`–`TC-I18N-05`, [Báo giá Q-I18N](Bao-gia-cho-khach.md) và [ma trận truy vết](../06-acceptance/traceability-matrix.md).
+- **Tích hợp:** Thiết kế dùng chung khi triển khai M01 và áp dụng dần trên M02–M13; kiểm thử hồi quy các màn hình theo từng đợt QA, xác nhận cuối trước nghiệm thu. Đây là **định hướng phụ thuộc**, **không phải ngày bắt đầu/kết thúc được duyệt**. Toàn bộ 24h đã được duyệt thuộc MS-03; ngày làm việc cụ thể vẫn chờ xếp lịch và không tự dịch chuyển mốc.
+- **Truy vết:** [Task V2-02](tasks/V2-02-bilingual-ui.md), `NFR-I18N-01`, `TC-I18N-01`–`TC-I18N-05`, [Báo giá M14 / Q-14](Bao-gia-cho-khach.md) và [ma trận truy vết](../06-acceptance/traceability-matrix.md).
 - **Đối soát V1-01/V1-08:** Giờ công các module Q-01–Q-13 trong báo giá và workbook Excel vẫn cần đối chiếu với Master Schedule; không coi hai vấn đề này đã hoàn tất.
+
+
+**Quyết định mới M14:** Thay thế phương án Q-I18N xuyên milestone: toàn bộ BA 4h, Dev 1 12h, QA 1 8h được thực hiện trong MS-03 (16/11–04/12/2026), không tăng 910h hay giá 300 triệu. Các mô tả phân bổ xuyên mốc trước đây là lịch sử, không còn hiệu lực.
