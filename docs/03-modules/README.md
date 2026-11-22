@@ -2,7 +2,7 @@
 
 > **Baseline milestone hiện hành:** [Báo cáo điều chỉnh kế hoạch triển khai](../08-project/Dieu-chinh-proposal.md), gồm `MS-00` đến `MS-04`.
 >
-> **Quy mô hệ thống:** 5 milestone • 14 module (`M01`–`M14`) • 40 FR trong PRD + 1 task hạ tầng (`INF-01`) • 4 vai trò. Số GitHub Issue thực tế phải đối chiếu trên công cụ quản lý, không suy ra từ tổng FR.
+> **Quy mô hệ thống:** 5 milestone • 14 module (`M01`–`M14`) • 41 FR trong PRD (40 FR M01–M13 + 1 FR M14) + 1 task hạ tầng (`INF-01`) • 4 vai trò. Số GitHub Issue thực tế phải đối chiếu trên công cụ quản lý, không suy ra từ tổng FR.
 >
 > **Phân bổ module theo baseline:**
 >
