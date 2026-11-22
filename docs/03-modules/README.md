@@ -74,12 +74,18 @@
   * `[M05-02]` Nhập thông tin, đính kèm file và gửi Ticket
   * `[M05-03]` Sinh viên chỉnh sửa Tiêu đề, Nội dung và tệp đính kèm khi đơn chưa được tiếp nhận (trạng thái New)
 
-#### M06, M08, M09 và M07 — Tiếp nhận, xử lý, trả kết quả và điều phối
+#### M06–M09 — Tiếp nhận, điều phối, xử lý và trả kết quả
 
 * **[M06-tiep-nhan-ticket/](M06-tiep-nhan-ticket/) — [M06] Tiếp nhận Ticket (2 FR)** ([prd.md](M06-tiep-nhan-ticket/prd.md) | [Tiep-nhan-ticket.md](M06-tiep-nhan-ticket/Tiep-nhan-ticket.md))
 
   * `[M06-01]` Nhân viên xem danh sách đơn mới của phòng ban
   * `[M06-02]` Nhân viên nhận xử lý đơn và hệ thống chặn lỗi hai người nhận cùng một đơn
+* **[M07-quan-ly-dieu-phoi/](M07-quan-ly-dieu-phoi/) — [M07] Điều phối (3 FR)** ([prd.md](M07-quan-ly-dieu-phoi/prd.md) | [Quan-ly-dieu-phoi.md](M07-quan-ly-dieu-phoi/Quan-ly-dieu-phoi.md))
+
+  * `[M07-01]` Admin phân loại và chuyển các đơn mục 'Khác' về đúng phòng ban
+  * `[M07-02]` Admin chuyển lại các đơn bị báo sai phòng ban về đúng nơi
+  * `[M07-03]` Trưởng phòng phân công người xử lý đơn trong nội bộ phòng ban
+
 * **[M08-xu-ly-trao-doi/](M08-xu-ly-trao-doi/) — [M08] Xử lý & Bổ sung (4 FR)** ([prd.md](M08-xu-ly-trao-doi/prd.md) | [Xu-ly-trao-doi.md](M08-xu-ly-trao-doi/Xu-ly-trao-doi.md))
 
   * `[M08-01]` Nhân viên cập nhật tiến độ, ghi chú và lưu lịch sử xử lý đơn
@@ -90,11 +96,6 @@
 
   * `[M09-01]` Nhân viên nhập kết quả giải quyết và đính kèm tệp trả lời
   * `[M09-02]` Hoàn thành đơn và tự động gửi thông báo kết quả cho sinh viên
-* **[M07-quan-ly-dieu-phoi/](M07-quan-ly-dieu-phoi/) — [M07] Điều phối (3 FR)** ([prd.md](M07-quan-ly-dieu-phoi/prd.md) | [Quan-ly-dieu-phoi.md](M07-quan-ly-dieu-phoi/Quan-ly-dieu-phoi.md))
-
-  * `[M07-01]` Admin phân loại và chuyển các đơn mục 'Khác' về đúng phòng ban
-  * `[M07-02]` Admin chuyển lại các đơn bị báo sai phòng ban về đúng nơi
-  * `[M07-03]` Trưởng phòng phân công người xử lý đơn trong nội bộ phòng ban
 
 #### M10 và M11 — Theo dõi, bổ sung, kết quả và đánh giá
 
