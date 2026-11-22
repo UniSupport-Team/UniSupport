@@ -45,12 +45,12 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 
 | Mã hạng mục | Phạm vi | Giai đoạn tích hợp | Phụ trách | WBS | BA | Tổng effort |
 |---|---|---|---|---:|---:|---:|
-| **M14 / Q-14** | Giao diện Việt/Anh M01–M13 | **MS-03 (16/11–04/12)** | BA, Dev 1, QA 1 | **20h** (Dev 1: 12h; QA 1: 8h) | **4h** | **24h** |
+| **M14 / Q-14** | Giao diện Việt/Anh M01–M13 | **MS-03 (23–27/11)** | Dev 1 | **8h** (Dev 1 điều chuyển từ M13) | **0h** | **8h** |
 
 
 **Phân bổ M14 tại MS-03 đã duyệt:** BA 4h (từ điển Việt/Anh), Dev 1 12h (tích hợp chuyển ngôn ngữ M01–M13), QA 1 8h (kiểm thử 4 vai trò và TC-I18N-01–05). **Tổng 24h chỉ thuộc MS-03, 16/11–04/12/2026; ngày làm việc cụ thể chưa ấn định.**
 
-**Nguyên tắc cộng giờ:** Bảng tiến độ chính phía trên gồm **23 hạng mục theo milestone**, gồm **M14 = 24h**, tổng **732h WBS + 178h BA = 910h**. Không cộng 24h lần thứ hai và không gán toàn bộ effort I18N vào MS-04.
+**Nguyên tắc cộng giờ:** Bảng tiến độ chính phía trên gồm **23 hạng mục theo milestone**, gồm **M14 = 24h**, tổng **712h WBS + 174h BA = 886h**. Không cộng 24h lần thứ hai và không gán toàn bộ effort I18N vào MS-04.
 
 ### Phân tích chuỗi quan hệ phụ thuộc kỹ thuật & luồng nghiệp vụ (Work Dependency Matrix)
 
@@ -200,3 +200,6 @@ Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu m
 ### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
 
 **Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
+
+
+> **Quyết định mới nhất — thay thế phương án 24h:** M14 sử dụng **8h Dev 1 điều chuyển từ M13**, không thêm BA/QA hoặc 24h trước đó. M13 còn **36h** (BA 4h, Dev 2 12h, Dev 3 20h); M14 **8h Dev 1**, cùng triển khai **23–27/11/2026** trong MS-03. Tổng dự án **886h** (712h WBS + 174h BA), giá **300.000.000đ**. Mọi bảng/ghi chú cũ về M14 24h, baseline 910h không còn hiệu lực; Excel bản chốt 886h là cơ sở đối soát. Đây là phân bổ kế hoạch, không phải giờ đã thực hiện.
