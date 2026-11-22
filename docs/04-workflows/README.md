@@ -1,7 +1,7 @@
 ﻿# TÀI LIỆU LUỒNG QUY TRÌNH NGHIỆP VỤ (FUNCTIONAL WORKFLOWS PRD)
 
 > **Dự án:** UniSupport — System Helpdesk & Support
-> **Ánh xạ Phân hệ:** Phân hệ M01 đến M13 (3 Giai đoạn triển khai)
+> **Ánh xạ Phân hệ:** Phân hệ M01 đến M14 (MS-01 đến MS-03; M14 thuộc MS-03)
 > **Tác nhân:** Sinh viên, Nhân viên, Quản lý (Trưởng phòng), Admin
 
 ---
