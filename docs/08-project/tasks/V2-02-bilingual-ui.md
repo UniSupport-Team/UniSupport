@@ -1,4 +1,4 @@
-# TASK V2-02 — Hoàn thiện giao diện Việt/Anh (đã duyệt effort và phân bổ milestone)
+# TASK V2-02 / M14 — Quản lý đa ngôn ngữ (MS-03)
 
 **Nhánh tài liệu:** `fix-final`  
 **Nguồn:** Feedback V2-02; `NFR-I18N-01`; `FR-M01-01/AC-I18N-01`  
@@ -13,17 +13,7 @@
 
 ## Kế hoạch triển khai được duyệt
 
-**Phân bổ Q-I18N theo milestone đã duyệt:**
-
-| Mốc | Công việc | BA | Dev 1 | QA 1 | Tổng |
-|---|---|---:|---:|---:|---:|
-| MS-01 | Từ điển Việt/Anh, bộ chuyển ngôn ngữ dùng chung | 4h | 4h | 0h | 8h |
-| MS-02 | Tích hợp giao diện Ticket và các module ở MS-02 | 0h | 6h | 0h | 6h |
-| MS-03 | Hoàn thiện M12–M13, rà soát M01–M13 | 0h | 2h | 0h | 2h |
-| MS-04 | QA hồi quy 4 vai trò, kiểm tra TC-I18N-01–05 trước nghiệm thu | 0h | 0h | 8h | 8h |
-| **Tổng** | **Hạng mục xuyên 13 module** | **4h** | **12h** | **8h** | **24h** |
-
-Đây là phân bổ effort theo mốc, **chưa ấn định ngày làm việc cụ thể và chưa xác nhận đã thực hiện**. Giữ nguyên 910h, 300 triệu đồng và hạn các milestone; cần kiểm tra tải nguồn lực khi xếp lịch.
+**Phân bổ M14 tại MS-03 đã duyệt:** BA 4h (từ điển Việt/Anh), Dev 1 12h (tích hợp chuyển ngôn ngữ M01–M13), QA 1 8h (kiểm thử 4 vai trò và TC-I18N-01–05). **Tổng 24h chỉ thuộc MS-03, 16/11–04/12/2026; ngày làm việc cụ thể chưa ấn định.**
 
 ## Điều kiện nghiệm thu
 
@@ -33,4 +23,7 @@
 - [ ] Không thay đổi quyền, mã lỗi API, quy trình Ticket hay phạm vi Email/báo cáo.
 - [ ] 5 test cases có kết quả thực thi; không tự đánh dấu Pass khi chưa chạy.
 
-**Effort đã duyệt:** +24h, baseline **886h → 910h**; hợp đồng vẫn **300 triệu đồng**. Phân bổ BA +4h, Dev 1 +12h, QA 1 +8h. Đã duyệt phân bổ effort theo milestone, chưa chốt ngày làm việc cụ thể hoặc ghi nhận kết quả kiểm thử. **Không tự tạo Issue trên main**: tài liệu task này nằm trên `fix-final` cho nhóm review trước khi đăng Issue chính thức.
+**Effort đã duyệt:** +24h, baseline **886h → 910h**; hợp đồng vẫn **300 triệu đồng**. Phân bổ BA +4h, Dev 1 +12h, QA 1 +8h. Toàn bộ 24h thuộc MS-03 (16/11–04/12/2026), chưa chốt ngày làm việc cụ thể hoặc ghi nhận kết quả kiểm thử. **Không tự tạo Issue trên main**: tài liệu task này nằm trên `fix-final` cho nhóm review trước khi đăng Issue chính thức.
+
+
+**Quyết định thay thế lịch cũ:** M14 là module thứ 14; BA 4h, Dev 1 12h, QA 1 8h đều nằm trong MS-03, không làm I18N tại MS-01/MS-02/MS-04. Các bảng phân bổ cũ nếu còn xuất hiện trong lịch sử phải hiểu là phương án đã thay thế.
