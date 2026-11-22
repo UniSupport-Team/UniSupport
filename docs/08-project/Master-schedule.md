@@ -33,24 +33,16 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 | | | M10: Kết quả & Đánh giá | 04/11/2026 | 05/11/2026 | 2 ngày | Dev 2, Dev 3, BA | 12h | 4h | **16h** |
 | | | Test QA/QC (Đợt 3) | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2, BA | 44h | 12h | **56h** |
 | **Mốc 3**<br>*(16/11 – 4/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3, BA | 40h | 4h | **44h** |
-| | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3, BA | 40h | 4h | **44h** |
+| | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3, BA | 32h | 4h | **36h** |\n| | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | 8h | 0h | **8h** |
 | | | Test QA/QC (Đợt 4) | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2, BA | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(7/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1, BA | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2, BA | 25h | 10h | **35h** |
-| **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục theo milestone** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **732h** | **178h** | **910h** |
+| **TỔNG CỘNG** | **Toàn dự án** | **24 hạng mục theo milestone** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
 
-### Module M14 thuộc MS-03 (24h; không tạo milestone mới)
+### Module M14 thuộc MS-03 (8h; không tạo milestone mới)
 
-**M14 – Quản lý đa ngôn ngữ** là module thứ 14, toàn bộ 24h thuộc MS-03 (16/11–04/12/2026), không có công việc I18N tại MS-01, MS-02 hoặc MS-04. Ngày làm việc cụ thể trong MS-03 chưa ấn định.
+**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
 
-| Mã hạng mục | Phạm vi | Giai đoạn tích hợp | Phụ trách | WBS | BA | Tổng effort |
-|---|---|---|---|---:|---:|---:|
-| **M14 / Q-14** | Giao diện Việt/Anh M01–M13 | **MS-03 (23–27/11)** | Dev 1 | **8h** (Dev 1 điều chuyển từ M13) | **0h** | **8h** |
-
-
-**Phân bổ M14 tại MS-03 đã duyệt:** BA 4h (từ điển Việt/Anh), Dev 1 12h (tích hợp chuyển ngôn ngữ M01–M13), QA 1 8h (kiểm thử 4 vai trò và TC-I18N-01–05). **Tổng 24h chỉ thuộc MS-03, 16/11–04/12/2026; ngày làm việc cụ thể chưa ấn định.**
-
-**Nguyên tắc cộng giờ:** Bảng tiến độ chính phía trên gồm **23 hạng mục theo milestone**, gồm **M14 = 24h**, tổng **712h WBS + 174h BA = 886h**. Không cộng 24h lần thứ hai và không gán toàn bộ effort I18N vào MS-04.
 
 ### Phân tích chuỗi quan hệ phụ thuộc kỹ thuật & luồng nghiệp vụ (Work Dependency Matrix)
 
@@ -114,8 +106,8 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 * **Mục tiêu:** Xây dựng hệ thống đo lường, phân tích hiệu suất và báo cáo dữ liệu quản trị.
 * **Các công việc chính:**
   * **M12: Giám sát tiến độ (16/11 – 20/11):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng màn hình tracking SLA, cảnh báo ticket quá hạn (Dev 1 12h, Dev 2 20h, Dev 3 8h, BA 4h = 44h).
-  * **M13: Dashboard & Báo cáo (23/11 – 27/11):** Dev 1, Dev 2, Dev 3 cùng BA lập trình biểu đồ thống kê, xuất báo cáo tổng hợp (Dev 1 8h, Dev 2 20h, Dev 3 12h, BA 4h = 44h).
-  * **Test QA/QC Đợt 4 (30/11 – 04/12):** PM, QA 1, QA 2 và BA kiểm thử tính chính xác của số liệu và độ ổn định báo cáo (PM 4h, QA 1 20h, QA 2 20h, BA 24h = 68h).
+  * **M13: Dashboard & Báo cáo (23/11 – 27/11):** Dev 2 12h, Dev 3 20h, BA 4h = 36h.
+  * **M14: Quản lý đa ngôn ngữ (23/11 – 27/11):** Dev 1 8h, 1 FR / 2 AC, triển khai song song M13.\n  * **Test QA/QC Đợt 4 (30/11 – 04/12):** PM, QA 1, QA 2 và BA kiểm thử tính chính xác của số liệu và độ ổn định báo cáo (PM 4h, QA 1 20h, QA 2 20h, BA 24h = 68h).
 
 ### 5. Mốc 4: Bàn giao dự án (07/12/2026 – 18/12/2026)
 * **Mục tiêu:** Nghiệm thu toàn diện và chuyển giao chính thức hệ thống vào vận hành.
@@ -123,7 +115,7 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
   * **Nghiệm thu (07/12 – 11/12):** PM phối hợp cùng QA 1, BA và khách hàng rà soát tài liệu, checklist nghiệm thu UAT (PM 20h, QA 1 5h, BA 12h = 37h).
   * **Bàn giao chính thức (14/12 – 18/12):** PM, QA 2 và BA thực hiện bàn giao môi trường Production, bàn giao mã nguồn, tài liệu hướng dẫn và đóng dự án (PM 20h, QA 2 5h, BA 10h = 35h).
 
-> *(Ghi chú: Baseline hiện hành **178h BA**, gồm 174h trước V2-02 và 4h BA cho `M14 / Q-14`. File `Master Schedule.xlsx` chưa được xác nhận đồng bộ với baseline 910h; không dùng bảng Excel cũ để kết luận số giờ đã khớp.)*
+> *(Ghi chú: Baseline hiện hành **174h BA**, tổng **886h**. Bảng Excel trong repository cần được đối chiếu riêng trước khi coi là đồng bộ.)*
 
 ---
 
@@ -197,9 +189,6 @@ Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu m
 - **Tổng:** không tăng effort 910h, không thay đổi 300 triệu hoặc hạn MS-03. Điều chỉnh phân công 8h Dev 1 trước đây của M13 sang Dev 3; Dev 2 giữ 20h.
 
 
-### Quyết định điều chỉnh mới nhất — M13/M14 (thay thế phân bổ 24h)
+### Baseline M13/M14 có hiệu lực
 
-**Baseline có hiệu lực: 886h; hợp đồng 300.000.000đ.** Trong MS-03, M13 gồm **BA 4h + Dev 2 12h + Dev 3 20h = 36h**; chuyển **8h Dev 1 từ M13 sang M14**, nên **M14 = Dev 1 8h, BA 0h, QA 0h**. M13 và M14 triển khai song song; tổng hai module **44h**, không cộng thêm 24h. Những đoạn cũ ghi M14 24h, 910h hoặc Q-I18N +24h là **lịch sử đã bị quyết định này thay thế**, không còn là baseline hiện hành. Không xác nhận đã thực thi hay kiểm thử.
-
-
-> **Quyết định mới nhất — thay thế phương án 24h:** M14 sử dụng **8h Dev 1 điều chuyển từ M13**, không thêm BA/QA hoặc 24h trước đó. M13 còn **36h** (BA 4h, Dev 2 12h, Dev 3 20h); M14 **8h Dev 1**, cùng triển khai **23–27/11/2026** trong MS-03. Tổng dự án **886h** (712h WBS + 174h BA), giá **300.000.000đ**. Mọi bảng/ghi chú cũ về M14 24h, baseline 910h không còn hiệu lực; Excel bản chốt 886h là cơ sở đối soát. Đây là phân bổ kế hoạch, không phải giờ đã thực hiện.
+**Phạm vi M14 đã chốt (22/11/2026):** Chỉ có **FR-M14-01 – Chuyển đổi ngôn ngữ** với **AC-01:** Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; **AC-02:** Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại. Không cam kết lưu ngôn ngữ sau khi tải lại trang. **Dev 1: 8h** điều chuyển từ M13; **BA/QA riêng: 0h**; thực hiện song song M13 trong **MS-03, 23–27/11/2026**. **M13: Dev 2 12h + Dev 3 20h + BA 4h = 36h**. Baseline **886h = 712h WBS + 174h BA**, giá hợp đồng **300.000.000đ**. Phương án M14 24h/910h đã hủy; không coi kế hoạch là bằng chứng hoàn thành.
