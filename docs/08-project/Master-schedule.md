@@ -41,11 +41,24 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 
 ### Công việc xuyên suốt dự án (không thuộc riêng MS-04)
 
-Hạng mục **Q-I18N / V2-02** được tích hợp dần trong các module từ **MS-01 đến MS-04**, **không phải công việc bắt đầu sau MS-04**, và không tạo module M14 hoặc milestone mới. Lịch ngày bắt đầu/kết thúc cụ thể vẫn chờ nhóm xác nhận.
+Hạng mục **Q-I18N / V2-02** được tích hợp dần trong các module từ **MS-01 đến MS-04**, **không phải công việc bắt đầu sau MS-04**, và không tạo module M14 hoặc milestone mới. Phân bổ theo milestone đã được duyệt; ngày làm việc cụ thể vẫn chờ xếp lịch.
 
 | Mã hạng mục | Phạm vi | Giai đoạn tích hợp | Phụ trách | WBS | BA | Tổng effort |
 |---|---|---|---|---:|---:|---:|
-| **Q-I18N / V2-02** | Giao diện Việt/Anh xuyên 13 module | **MS-01–MS-04** (chưa chốt ngày chi tiết) | BA, Dev 1, QA 1 | **20h** (Dev 1: 12h; QA 1: 8h) | **4h** | **24h** |
+| **Q-I18N / V2-02** | Giao diện Việt/Anh xuyên 13 module | **MS-01–MS-04** (đã duyệt phân bổ theo mốc) | BA, Dev 1, QA 1 | **20h** (Dev 1: 12h; QA 1: 8h) | **4h** | **24h** |
+
+
+**Phân bổ Q-I18N theo milestone đã duyệt:**
+
+| Mốc | Công việc | BA | Dev 1 | QA 1 | Tổng |
+|---|---|---:|---:|---:|---:|
+| MS-01 | Từ điển Việt/Anh, bộ chuyển ngôn ngữ dùng chung | 4h | 4h | 0h | 8h |
+| MS-02 | Tích hợp giao diện Ticket và các module ở MS-02 | 0h | 6h | 0h | 6h |
+| MS-03 | Hoàn thiện M12–M13, rà soát M01–M13 | 0h | 2h | 0h | 2h |
+| MS-04 | QA hồi quy 4 vai trò, kiểm tra TC-I18N-01–05 trước nghiệm thu | 0h | 0h | 8h | 8h |
+| **Tổng** | **Hạng mục xuyên 13 module** | **4h** | **12h** | **8h** | **24h** |
+
+Đây là phân bổ effort theo mốc, **chưa ấn định ngày làm việc cụ thể và chưa xác nhận đã thực hiện**. Giữ nguyên 910h, 300 triệu đồng và hạn các milestone; cần kiểm tra tải nguồn lực khi xếp lịch.
 
 **Nguyên tắc cộng giờ:** Bảng tiến độ chính phía trên gồm **22 hạng mục theo milestone**; cộng **1 hạng mục chung Q-I18N = 23 hạng mục**, tổng **732h WBS + 178h BA = 910h**. Không cộng 24h lần thứ hai và không gán toàn bộ effort I18N vào MS-04.
 
@@ -178,6 +191,6 @@ Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu m
 - **Phân loại:** `Q-I18N` là hạng mục xuyên 13 module M01–M13, không bổ sung module thứ 14, không thay đổi số milestone.
 - **Phạm vi:** Giao diện, menu, biểu mẫu, thông báo hệ thống và validation Việt/Anh của 4 vai trò; không dịch nội dung người dùng nhập, email hoặc file báo cáo xuất.
 - **Nỗ lực đã duyệt:** BA **4h**, Dev 1 **12h**, QA 1 **8h** = **24h**, đã tính trong **910h**; không cộng thêm lần thứ hai. Tổng giá hợp đồng vẫn **300.000.000 VNĐ**.
-- **Tích hợp:** Thiết kế dùng chung khi triển khai M01 và áp dụng dần trên M02–M13; kiểm thử hồi quy các màn hình theo từng đợt QA, xác nhận cuối trước nghiệm thu. Đây là **định hướng phụ thuộc**, **không phải ngày bắt đầu/kết thúc được duyệt**. Phân bổ ngày cụ thể vào MS-01–MS-04 vẫn chờ nhóm chốt và không tự dịch chuyển mốc.
+- **Tích hợp:** Thiết kế dùng chung khi triển khai M01 và áp dụng dần trên M02–M13; kiểm thử hồi quy các màn hình theo từng đợt QA, xác nhận cuối trước nghiệm thu. Đây là **định hướng phụ thuộc**, **không phải ngày bắt đầu/kết thúc được duyệt**. Phân bổ effort theo MS-01–MS-04 đã được duyệt; ngày làm việc cụ thể vẫn chờ xếp lịch và không tự dịch chuyển mốc.
 - **Truy vết:** [Task V2-02](tasks/V2-02-bilingual-ui.md), `NFR-I18N-01`, `TC-I18N-01`–`TC-I18N-05`, [Báo giá Q-I18N](Bao-gia-cho-khach.md) và [ma trận truy vết](../06-acceptance/traceability-matrix.md).
 - **Đối soát V1-01/V1-08:** Giờ công các module Q-01–Q-13 trong báo giá và workbook Excel vẫn cần đối chiếu với Master Schedule; không coi hai vấn đề này đã hoàn tất.
