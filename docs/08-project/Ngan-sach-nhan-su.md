@@ -77,3 +77,21 @@ Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04
 - M14: **8h Dev 1 điều chuyển từ M13**, không tăng giờ BA/QA. M13 còn 36h; cả hai được báo giá chung Q-13 **28.000.000đ**.
 - Báo giá 300.000.000đ được phân bổ theo **trọng số lương trực tiếp module** và quy tắc làm tròn công bố tại [Bao-gia-cho-khach.md](Bao-gia-cho-khach.md). **Chi phí lương toàn dự án** tại đây bao gồm cả công việc chung, khác với trọng số lương trực tiếp trong bảng báo giá.
 - **Lưu ý đối soát:** Các tổng giờ theo từng vai trò là baseline kế hoạch; cần kiểm tra lại phân bổ cá nhân trên file Excel gốc. Dự phòng và vận hành đang giữ giả định cũ, chưa xác minh định mức chi tiết.
+
+## 6. PHỤ LỤC ĐỐI SOÁT GIÁ THEO MODULE (V1-01 — NỘI BỘ)
+
+Phụ lục này phục vụ kiểm tra phép tính, **không phải nội dung trình bày trong báo giá khách hàng**.
+
+### Công thức phân bổ giá trọn gói
+
+1. **Chi phí nhân sự trực tiếp module** `C_i = Senior_i × 240.000 + (Dev1_i + Dev2_i + Dev3_i) × 90.000 + BA_i × 160.000` (VNĐ). Các giờ theo đúng phân công từng task tại [Master Schedule](Master-schedule.md); PM/QA thuộc phần công việc chung, không cộng trùng vào module.
+2. **Giá chung Q-13** (M13 + M14) được chốt thương mại ở **28.000.000đ**. Tổng effort Q-13 = M13 (32h WBS + 4h BA) + M14 (8h WBS) = **44h**.
+3. **Quỹ giá còn lại** cho Q-01–Q-12: `300.000.000 − 28.000.000 = 272.000.000đ`.
+4. **Giá Q-01–Q-11:** `ROUND((272.000.000 × C_i / SUM(C_01:C_12)) / 100.000, 0) × 100.000` (làm tròn đến 100.000đ). **Giá Q-12:** `272.000.000 − SUM(Giá Q-01:Q-11)` để loại sai lệch làm tròn. **Tổng trọng số C_01:C_12 = 53.400.000đ**.
+5. **Kiểm tra:** `SUM(Giá Q-01:Q-13) = 300.000.000đ`; `SUM(WBS module) = 398h`, `SUM(BA module) = 52h`; cộng công việc chung 314h WBS + 122h BA = **886h**.
+
+**Ví dụ kiểm tra Q-01:** Senior 20h, Dev 2 20h, BA 4h → `C_01 = 20×240.000 + 20×90.000 + 4×160.000 = 7.240.000đ`; giá Q-01 = `ROUND((272.000.000 × 7.240.000 / 53.400.000) / 100.000, 0) × 100.000 = 36.900.000đ`.
+
+> **Phân biệt giá và chi phí:** Trọng số lương trực tiếp dùng để phân bổ **giá trọn gói**, trong đó đã tính đến 436h công việc chung, vận hành, dự phòng, bảo hiểm và biên lợi nhuận; **không** có nghĩa giá bán bằng lương trực tiếp. Phương pháp này là quy tắc phân bổ thương mại được chốt cho V1-01, không phải chứng cứ giá từng module do khách hàng phê duyệt lại.
+
+
