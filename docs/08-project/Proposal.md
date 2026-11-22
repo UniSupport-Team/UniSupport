@@ -8,6 +8,10 @@
 
 ---
 
+## Bối cảnh vấn đề khách hàng (tham chiếu bản hiện hành)
+
+Aurora University đang tiếp nhận yêu cầu sinh viên qua nhiều kênh (học vụ, tài chính, IT, cơ sở vật chất, email, Zalo và trực tiếp). Sinh viên khó xác định đúng nơi liên hệ và theo dõi trạng thái; phòng ban khó phân loại, chống thất lạc và kiểm soát tiến độ; nhà trường thiếu dữ liệu tổng hợp để đánh giá chất lượng hỗ trợ. Đây là phần tóm tắt từ [Kế hoạch quản lý sản phẩm — Mục 1.2](QL-san-pham.md#12-vấn-đề-cần-giải-quyết), không phải khảo sát định lượng mới. Proposal này được giữ làm lịch sử; các thay đổi baseline xem [Điều chỉnh Proposal](Dieu-chinh-proposal.md).
+
 ## 1. Mục tiêu
 Xây dựng và triển khai nền tảng UniSupport nhằm đạt được các mục tiêu cốt lõi sau:
 - **Tập trung hóa quản lý:** Cung cấp kênh duy nhất để sinh viên gửi phản ánh/yêu cầu và theo dõi tiến độ xử lý minh bạch.
