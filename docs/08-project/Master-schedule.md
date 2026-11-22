@@ -33,7 +33,8 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 | | | M10: Kết quả & Đánh giá | 04/11/2026 | 05/11/2026 | 2 ngày | Dev 2, Dev 3, BA | 12h | 4h | **16h** |
 | | | Test QA/QC (Đợt 3) | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2, BA | 44h | 12h | **56h** |
 | **Mốc 3**<br>*(16/11 – 4/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3, BA | 40h | 4h | **44h** |
-| | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3, BA | 32h | 4h | **36h** |\n| | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | 8h | 0h | **8h** |
+| | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3, BA | 32h | 4h | **36h** |
+| | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | 8h | 0h | **8h** |
 | | | Test QA/QC (Đợt 4) | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2, BA | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(7/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1, BA | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2, BA | 25h | 10h | **35h** |
