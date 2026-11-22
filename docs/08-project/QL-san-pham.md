@@ -50,10 +50,10 @@ Hệ thống bắt buộc phải trải qua kiểm thử QC/UAT và thỏa mãn 
 
 | **Rủi ro dự kiến** | **Mức ảnh hưởng** | **Giải pháp phòng ngừa & Xử lý trên hệ thống** |
 |:---|:---:|:---|
-| **Phòng ban xử lý chậm/trễ hạn SLA** | Cao | Thiết lập cơ chế leo thang tự động (Auto-Escalation): Quá hạn 2h cảnh báo đỏ trên giao diện nhân viên; quá hạn 24h tự động gửi thông báo đến Trưởng phòng ban. |
+| **Phòng ban xử lý chậm/trễ hạn SLA** | Cao | Theo `FR-M12-02`: hiển thị cảnh báo vàng khi đạt ≥ 80% SLA; cảnh báo đỏ khi vượt 100% SLA hoặc Ticket `New` tồn đọng quá 4 giờ làm việc. Trưởng phòng và nhân viên xem cảnh báo để chủ động đôn đốc hoặc phân công lại. Chưa cam kết cơ chế gửi thông báo leo thang tự động sau 24 giờ. |
 | **Lộ lọt thông tin cá nhân của sinh viên** | Rất cao | Áp dụng che giấu danh tính (Data Anonymization): Chỉ hiển thị thông tin cần thiết phục vụ xử lý đơn. Dữ liệu xuất báo cáo được ẩn danh. Mã hóa thông tin cá nhân trong CSDL. |
 | **Hệ thống quá tải lúc cao điểm (Đầu kỳ, thi cử)** | Cao | Tối ưu hóa tài nguyên máy chủ: Thiết lập Auto-scaling trên nền tảng Cloud (Render/AWS). Tối ưu hóa truy vấn CSDL và bộ nhớ đệm (Caching). |
-| **Sinh viên gửi nhầm phòng ban hoặc tạo đơn rác** | Trung bình | Giao diện điều hướng theo loại thủ tục cụ thể thay vì phòng ban. Hệ thống tự động ánh xạ về phòng ban chuyên trách; đơn chưa rõ phân về hàng chờ Admin phân loại lại. |
+| **Sinh viên gửi nhầm phòng ban hoặc tạo đơn rác** | Trung bình | Theo `FR-M05-01`: sinh viên chọn Phòng ban tiếp nhận trước, sau đó chọn Danh mục thủ tục; nếu chưa xác định được phòng ban, chọn mục "Khác" để chuyển vào hàng chờ Admin phân loại. |
 
 ---
 
