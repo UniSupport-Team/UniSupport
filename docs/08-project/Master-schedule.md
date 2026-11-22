@@ -37,7 +37,7 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
 | | | Test QA/QC (Đợt 4) | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2, BA | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(7/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1, BA | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2, BA | 25h | 10h | **35h** |
-| | | **V2-02: Hoàn thiện giao diện Việt/Anh** | Theo lịch tích hợp được nhóm xác nhận | Theo lịch tích hợp được nhóm xác nhận | Phân bổ trong 16 tuần, chưa chốt ngày | BA, Dev 1, QA 1 | 20h | 4h | **24h** |
+| **Xuyên MS-01–MS-04 (chưa chốt lịch cụ thể)** | **Hạng mục chung** | **Q-I18N / V2-02: Giao diện Việt/Anh xuyên 13 module** | Chờ nhóm chốt ngày | Chờ nhóm chốt ngày | Không tạo milestone mới | BA, Dev 1, QA 1 | 20h | 4h | **24h** |
 | **TỔNG CỘNG** | **Toàn dự án** | **23 Hạng mục công việc** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **732h** | **178h** | **910h** |
 
 ### Phân tích chuỗi quan hệ phụ thuộc kỹ thuật & luồng nghiệp vụ (Work Dependency Matrix)
@@ -111,7 +111,7 @@ Dưới đây là bảng tổng hợp và mô tả chi tiết toàn bộ kế ho
   * **Nghiệm thu (07/12 – 11/12):** PM phối hợp cùng QA 1, BA và khách hàng rà soát tài liệu, checklist nghiệm thu UAT (PM 20h, QA 1 5h, BA 12h = 37h).
   * **Bàn giao chính thức (14/12 – 18/12):** PM, QA 2 và BA thực hiện bàn giao môi trường Production, bàn giao mã nguồn, tài liệu hướng dẫn và đóng dự án (PM 20h, QA 2 5h, BA 10h = 35h).
 
-> *(Ghi chú: Toàn bộ 174 giờ của vai trò Business Analyst (BA) được phân bổ chi tiết vào từng hạng mục công việc cụ thể như trên, khớp 100% với bảng phân chia giờ công tại Sheet 2 của Master Schedule.xlsx).*
+> *(Ghi chú: Baseline hiện hành **178h BA**, gồm 174h trước V2-02 và 4h BA cho `Q-I18N`. File `Master Schedule.xlsx` chưa được xác nhận đồng bộ với baseline 910h; không dùng bảng Excel cũ để kết luận số giờ đã khớp.)*
 
 ---
 
@@ -162,3 +162,13 @@ Phạm vi đã chốt: hỗ trợ `vi`/`en` cho toàn bộ giao diện, biểu m
 | **Tổng đề xuất** | | **24h** | **Đã cộng vào baseline 910h** |
 
 **Phê duyệt V2-02:** tăng effort baseline từ **886h lên 910h** (WBS 712h → 732h; BA 174h → 178h), giữ nguyên giá hợp đồng **300.000.000 VNĐ**. Phân bổ 4h BA, 12h Dev 1, 8h QA 1; đây là giờ kế hoạch, **chưa phải giờ thực hiện**. Ngày bắt đầu/kết thúc riêng cần PM chốt theo năng lực thực tế; chưa khẳng định có thể hoàn thành trong lịch 16 tuần nếu chưa kiểm tra tải nguồn lực. File Excel chưa được đồng bộ, không dùng file Excel cũ làm baseline mới.
+
+
+### Phụ lục V2-02 — Hạng mục chung Q-I18N (không phải module M14)
+
+- **Phân loại:** `Q-I18N` là hạng mục xuyên 13 module M01–M13, không bổ sung module thứ 14, không thay đổi số milestone.
+- **Phạm vi:** Giao diện, menu, biểu mẫu, thông báo hệ thống và validation Việt/Anh của 4 vai trò; không dịch nội dung người dùng nhập, email hoặc file báo cáo xuất.
+- **Nỗ lực đã duyệt:** BA **4h**, Dev 1 **12h**, QA 1 **8h** = **24h**, đã tính trong **910h**; không cộng thêm lần thứ hai. Tổng giá hợp đồng vẫn **300.000.000 VNĐ**.
+- **Tích hợp:** Thiết kế dùng chung khi triển khai M01 và áp dụng dần trên M02–M13; kiểm thử hồi quy các màn hình theo từng đợt QA, xác nhận cuối trước nghiệm thu. Đây là **định hướng phụ thuộc**, **không phải ngày bắt đầu/kết thúc được duyệt**. Phân bổ ngày cụ thể vào MS-01–MS-04 vẫn chờ nhóm chốt và không tự dịch chuyển mốc.
+- **Truy vết:** [Task V2-02](tasks/V2-02-bilingual-ui.md), `NFR-I18N-01`, `TC-I18N-01`–`TC-I18N-05`, [Báo giá Q-I18N](Bao-gia-cho-khach.md) và [ma trận truy vết](../06-acceptance/traceability-matrix.md).
+- **Đối soát V1-01/V1-08:** Giờ công các module Q-01–Q-13 trong báo giá và workbook Excel vẫn cần đối chiếu với Master Schedule; không coi hai vấn đề này đã hoàn tất.
