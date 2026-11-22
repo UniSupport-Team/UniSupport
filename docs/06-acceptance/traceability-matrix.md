@@ -11,7 +11,7 @@
 - **Kịch bản kiểm thử (`TC-Mxx-...`):** Nơi gốc tại [test-scenarios.md](test-scenarios.md) (mỗi `AC` đều có ít nhất một mã kịch bản kiểm thử cụ thể kiểm chứng).
 - **Parent Task (`#...`):** Nơi gốc trên GitHub Issues (khởi tạo theo mẫu `.github/ISSUE_TEMPLATE/1-parent-task.md`).
 - **Milestone (`MS-00` – `MS-04`):** Nơi gốc tại [Dieu-chinh-proposal.md](../08-project/Dieu-chinh-proposal.md) và [Master-schedule.md](../08-project/Master-schedule.md).
-- **Hạng mục báo giá:** Nơi gốc tại [Bao-gia-cho-khach.md](../08-project/Bao-gia-cho-khach.md) (gắn mã `Q-01` đến `Q-13` tương ứng với 13 phân hệ).
+- **Hạng mục báo giá:** Nơi gốc tại [Bao-gia-cho-khach.md](../08-project/Bao-gia-cho-khach.md) (gắn mã `Q-01` đến `Q-13` cho 14 phân hệ, trong đó M13/M14 gộp Q-13).
 
 ---
 
