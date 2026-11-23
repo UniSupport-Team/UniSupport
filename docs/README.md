@@ -2,6 +2,20 @@
 
 ---
 
+## Thứ tự đọc tài liệu đề xuất (Recommended Reading Order)
+
+Để nắm bắt toàn diện dự án từ bài toán, yêu cầu kỹ thuật đến phương án thực thi và quản lý, người mới (Khách hàng, Giảng viên, Developer, Tester) nên đọc tài liệu theo thứ tự sau:
+
+1. **Bài toán & Bối cảnh nghiệp vụ:** [08-project/QL-san-pham.md — Mục 1](08-project/QL-san-pham.md#1-tổng-quan-sản-phẩm) (Vấn đề cốt lõi của trường), [02-domain/tong-quan-domain.md](02-domain/tong-quan-domain.md) và [01-product/README.md](01-product/README.md).
+2. **Cam kết thương mại & Baseline hiện hành:** [08-project/Proposal.md](08-project/Proposal.md) (Mục tiêu, giải pháp, phạm vi làm/không làm), [08-project/Dieu-chinh-proposal.md](08-project/Dieu-chinh-proposal.md) (Baseline 5 mốc MS-00..MS-04) và [08-project/Bao-gia-cho-khach.md](08-project/Bao-gia-cho-khach.md).
+3. **Quy tắc nghiệp vụ & Quy trình vận hành:** [02-domain/quy-tac-nghiep-vu.md](02-domain/quy-tac-nghiep-vu.md) và chuỗi quy trình 4 vai trò tại [04-workflows/](04-workflows/).
+4. **Đặc tả yêu cầu chức năng (PRD) & Phi chức năng (NFR):** [03-modules/README.md](03-modules/README.md) (13 module M01–M13) và [05-non-functional-requirements/README.md](05-non-functional-requirements/README.md).
+5. **Kế hoạch triển khai & Nguồn lực:** [08-project/Master-schedule.md](08-project/Master-schedule.md), [08-project/Ngan-sach-nhan-su.md](08-project/Ngan-sach-nhan-su.md) và [08-project/team-charter.md](08-project/team-charter.md).
+6. **Kiểm soát chất lượng, Rủi ro & Quản trị:** [08-project/QL-chat-luong.md](08-project/QL-chat-luong.md), [08-project/risk-register.md](08-project/risk-register.md) và [08-project/Dieuphoi-Giamsat.md](08-project/Dieuphoi-Giamsat.md).
+7. **Kiểm thử & Truy vết nghiệm thu:** [06-acceptance/test-scenarios.md](06-acceptance/test-scenarios.md) và [06-acceptance/traceability-matrix.md](06-acceptance/traceability-matrix.md).
+
+---
+
 ## Cấu trúc tài liệu
 
 ```

@@ -73,7 +73,7 @@
 | `FR-M07-03/AC-01` | Yêu cầu bổ sung chuyển sang `Pending`, đếm ngược 3 ngày làm việc | `TC-M07-E02` | `#163` (`#189`) | `MS-02` | Q-07 (M07) |
 | `FR-M07-03/AC-02` | Quá 3 ngày làm việc không bổ sung tự động chuyển `Closed` | `TC-M07-E03` | `#163` (`#189`) | `MS-02` | Q-07 (M07) |
 | `FR-M07-03/AC-03` | Giới hạn yêu cầu bổ sung tối đa 1 lần cho mỗi Ticket | `TC-M07-N01` | `#163` (`#189`) | `MS-02` | Q-07 (M07) |
-| `FR-M07-04/AC-01` | Báo sai phòng ban kèm lý do chuyển về Hàng chờ Admin | `TC-M07-M04` | `#163` (`#190`) | `MS-02` | Q-07 (M07) |
+| `FR-M07-04/AC-01` | Báo sai phòng ban kèm lý do chuyển về Hàng chờ Admin | `TC-M07-M04`, `TC-M07-N02` | `#163` (`#190`) | `MS-02` | Q-07 (M07) |
 | `FR-M08-01/AC-01` | Lưu kết quả giải quyết và tệp đính kèm trả lời | `TC-M08-M01` | `#164` (`#193`) | `MS-02` | Q-08 (M08) |
 | `FR-M08-01/AC-02` | Để trống trường kết quả bị chặn hoàn thành | `TC-M08-N01` | `#164` (`#193`) | `MS-02` | Q-08 (M08) |
 | `FR-M08-01/AC-03` | Tải tệp kết quả > 5MB hoặc sai định dạng bị chặn và cảnh báo lỗi | `TC-M08-N02` | `#164` (`#193`) | `MS-02` | Q-08 (M08) |
@@ -81,11 +81,11 @@
 | `FR-M09-01/AC-01` | Hiển thị danh sách Ticket của sinh viên kèm trạng thái thực, chặn xem đơn người khác | `TC-M09-M01` | `#165` (`#195`) | `MS-02` | Q-09 (M09) |
 | `FR-M09-01/AC-02` | Tìm kiếm và lọc Ticket theo trạng thái | `TC-M09-M02` | `#165` (`#195`) | `MS-02` | Q-09 (M09) |
 | `FR-M09-02/AC-01` | Nộp bổ sung hợp lệ chuyển về `In Progress`, chặn nộp khi đã đóng | `TC-M09-M03`, `TC-M09-N04` | `#165` (`#196`) | `MS-02` | Q-09 (M09) |
-| `FR-M10-01/AC-01` | Xem văn bản kết quả xử lý và tải tệp đính kèm | `TC-M10-M01` | `#166` (`#197`) | `MS-02` | Q-10 (M10) |
+| `FR-M10-01/AC-01` | Xem văn bản kết quả xử lý và tải tệp đính kèm | `TC-M10-M01`, `TC-M10-E02` | `#166` (`#197`) | `MS-02` | Q-10 (M10) |
 | `FR-M10-02/AC-01` | Đánh giá CSAT 1–5 sao, chuyển trạng thái `Closed` và khóa vĩnh viễn | `TC-M10-M02`, `TC-M10-N02`, `TC-M10-E03` | `#166` (`#198`) | `MS-02` | Q-10 (M10) |
 | `FR-M10-02/AC-02` | Chưa chọn sao mà bấm gửi thì báo lỗi yêu cầu chọn sao | `TC-M10-N01` | `#166` (`#198`) | `MS-02` | Q-10 (M10) |
 | `FR-M10-03/AC-01` | Quá 3 ngày làm việc ở `Resolved` tự động chuyển `Closed` (`rating = null`) | `TC-M10-E04` | `#166` (`#199`) | `MS-02` | Q-10 (M10) |
-| `FR-M11-01/AC-01` | Admin phân loại đơn mục "Khác" về đúng phòng ban đích | `TC-M11-M01` | `#162` (`#184`) | `MS-02` | Q-11 (M11) |
+| `FR-M11-01/AC-01` | Admin phân loại đơn mục "Khác" về đúng phòng ban đích | `TC-M11-M01`, `TC-M11-N02` | `#162` (`#184`) | `MS-02` | Q-11 (M11) |
 | `FR-M11-02/AC-01` | Admin điều chuyển đơn bị báo sai phòng ban và lưu lịch sử | `TC-M11-M02` | `#162` (`#185`) | `MS-02` | Q-11 (M11) |
 | `FR-M11-03/AC-01` | Trưởng phòng phân công / Re-assign nhân viên trong phòng ban | `TC-M11-N01`, `TC-M11-E02` | `#162` (`#186`) | `MS-02` | Q-11 (M11) |
 
@@ -97,7 +97,7 @@
 | `FR-M12-02/AC-01` | Cảnh báo vàng khi chạm $\ge 80\%$ SLA và tô đỏ khi vượt SLA | `TC-M12-N01` | `#167` (`#201`) | `MS-03` | Q-12 (M12) |
 | `FR-M12-03/AC-01` | Admin xem danh sách phòng ban tồn đọng nhiều đơn nhất | `TC-M12-M02` | `#167` (`#202`) | `MS-03` | Q-12 (M12) |
 | `FR-M12-04/AC-01` | Admin tra cứu chi tiết mọi đơn trên toàn trường theo Mã Ticket | `TC-M12-M03` | `#167` (`#203`) | `MS-03` | Q-12 (M12) |
-| `FR-M13-01/AC-01` | Biểu đồ và thẻ chỉ số hiển thị số liệu theo mốc thời gian | `TC-M13-M01`, `TC-M13-E02` | `#168` (`#204`) | `MS-03` | Q-13 (M13) |
+| `FR-M13-01/AC-01` | Biểu đồ và thẻ chỉ số hiển thị số liệu theo mốc thời gian | `TC-M13-M01`, `TC-M13-E01`, `TC-M13-E02` | `#168` (`#204`) | `MS-03` | Q-13 (M13) |
 | `FR-M13-02/AC-01` | Trưởng phòng chỉ xem được thống kê thuộc phòng ban mình | `TC-M13-N01` | `#168` (`#205`) | `MS-03` | Q-13 (M13) |
 | `FR-M13-02/AC-02` | Admin xem được toàn bộ số liệu của tất cả phòng ban | `TC-M13-M02` | `#168` (`#205`) | `MS-03` | Q-13 (M13) |
 | `FR-M13-03/AC-01` | Xuất báo cáo ra file Excel/PDF đầy đủ dữ liệu | `TC-M13-M03` | `#168` (`#206`) | `MS-03` | Q-13 (M13) |
