@@ -4,7 +4,7 @@
 
 | Mã | Vấn đề cần chốt | Đề xuất cách xử lý | Trạng thái |
 |---|---|---|---|
-| OQ-02 | Xác suất xảy ra, owner duy nhất và trạng thái của R-01–R-10 | PM cùng QA/Dev đánh giá từng rủi ro theo thang thống nhất (ví dụ Thấp/Trung bình/Cao), chỉ định một owner chịu trách nhiệm và ghi ngày đánh giá; liên kết tới [Risk Register](risk-register.md) | Chờ nhóm duyệt |
+| OQ-02 | Xác suất xảy ra, owner duy nhất và trạng thái của R-01–R-10 | Đã hoàn thành đánh giá toàn bộ 10 rủi ro (R-01 đến R-10) theo thang Thấp/Trung bình/Cao và chỉ định rõ một Owner duy nhất chịu trách nhiệm tại [Risk Register](risk-register.md) ngày 24/11/2026. | Đã giải quyết |
 | OQ-07 | Người được phân công và người thay thế trong ban quản lý dự án | PM cập nhật vai trò và tên người phụ trách sau khi nhóm xác nhận | Chờ nhóm duyệt |
 | OQ-MS00 | MS-00 chưa có sản phẩm chạy được cho khách tự thử | Cần chốt phạm vi increment, effort, ngày bàn giao và phương án điều chỉnh kế hoạch/GitHub trước khi cam kết | Chờ nhóm duyệt |
 | OQ-SENT | Lịch sử bản PDF thực sự đã gửi khách và ngày gửi | Đối chiếu tên file, version, bằng chứng gửi; không suy đoán lịch sử | Chờ nhóm cung cấp |
