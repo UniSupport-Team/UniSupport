@@ -4,8 +4,8 @@
 * **Dự án:** UniSupport - Hệ thống quản lý hỗ trợ sinh viên
 * **Khách hàng:** Aurora University
 * **Đơn vị triển khai:** Tổ hợp Dự án UniSupport
-* **Thời gian dự kiến:** Khoảng 16 tuần
-* **Kinh phí:** 300.000.000 VNĐ (đã bao gồm VAT)
+* **Thời gian dự kiến:** Khoảng 16 tuần (`01/09/2026 – 18/12/2026`)
+* **Kinh phí:** `300.000.000 VNĐ` (đã bao gồm VAT)
 
 *Ghi chú: Mức 300.000.000 VNĐ là giá trị thương mại được xác định sau quá trình trao đổi và đàm phán giữa hai bên, đã bao gồm VAT và là tổng giá trị khách hàng phải thanh toán theo các điều kiện trong báo giá này.*
 
@@ -13,28 +13,28 @@
 
 ## 2. Bảng báo giá theo hạng mục
 
-Dự án gồm **14 module**, được báo giá theo **13 hạng mục** vì M13 và M14 sử dụng chung một mức giá. Giá đã bao gồm chi phí phát triển, quản lý, kiểm thử và bàn giao; **không phát sinh khoản thu riêng cho công việc chung**.
+Dự án gồm **14 module**, được báo giá theo **13 hạng mục** (`Q-01` đến `Q-13`) vì `M13` và `M14` sử dụng chung một mức giá. Giá đã bao gồm chi phí phát triển, quản lý, kiểm thử và bàn giao; **không phát sinh khoản thu riêng cho công việc chung**.
 
-| STT | Module | Hạng mục triển khai | Giờ thực hiện | Thành tiền (VNĐ) |
+| Mã hạng mục | Module | Hạng mục triển khai | Giờ thực hiện | Thành tiền (VNĐ) |
 | :---: | :---: | :--- | ---: | ---: |
-| 1 | `M01` | Đăng nhập & xác thực | **44h** | **36.900.000 ₫** |
-| 2 | `M02` | Vai trò & Phân quyền | **44h** | **36.900.000 ₫** |
-| 3 | `M03` | Quản lý tài khoản | **40h** | **28.900.000 ₫** |
-| 4 | `M04` | Quản lý danh mục | **40h** | **28.900.000 ₫** |
-| 5 | `M05` | Khởi tạo Ticket | **40h** | **28.900.000 ₫** |
-| 6 | `M06` | Tiếp nhận Ticket | **40h** | **28.900.000 ₫** |
-| 7 | `M07` | Điều phối Ticket | **22h** | **13.000.000 ₫** |
-| 8 | `M08` | Xử lý & Bổ sung | **20h** | **10.600.000 ₫** |
-| 9 | `M09` | Trả kết quả | **28h** | **14.300.000 ₫** |
-| 10 | `M10` | Theo dõi & Bổ sung | **28h** | **14.300.000 ₫** |
-| 11 | `M11` | Kết quả & Đánh giá | **16h** | **8.800.000 ₫** |
-| 12 | `M12` | Giám sát tiến độ | **44h** | **21.600.000 ₫** |
-| 13 | `M13 + M14` | Dashboard & Báo cáo; Quản lý đa ngôn ngữ Việt/Anh | **44h** | **28.000.000 ₫** |
-| | | **TỔNG GIÁ TRỊ HỢP ĐỒNG (đã gồm VAT)** | | **300.000.000 ₫** |
+| `Q-01` | `M01` | Đăng nhập & xác thực | **44h** | **36.900.000 ₫** |
+| `Q-02` | `M02` | Vai trò & Phân quyền | **44h** | **36.900.000 ₫** |
+| `Q-03` | `M03` | Quản lý tài khoản | **40h** | **28.900.000 ₫** |
+| `Q-04` | `M04` | Quản lý danh mục | **40h** | **28.900.000 ₫** |
+| `Q-05` | `M05` | Khởi tạo Ticket | **40h** | **28.900.000 ₫** |
+| `Q-06` | `M06` | Tiếp nhận Ticket | **40h** | **28.900.000 ₫** |
+| `Q-07` | `M07` | Điều phối Ticket | **22h** | **13.000.000 ₫** |
+| `Q-08` | `M08` | Xử lý & Bổ sung | **20h** | **10.600.000 ₫** |
+| `Q-09` | `M09` | Trả kết quả | **28h** | **14.300.000 ₫** |
+| `Q-10` | `M10` | Theo dõi & Bổ sung | **28h** | **14.300.000 ₫** |
+| `Q-11` | `M11` | Kết quả & Đánh giá | **16h** | **8.800.000 ₫** |
+| `Q-12` | `M12` | Giám sát tiến độ | **44h** | **21.600.000 ₫** |
+| `Q-13` | `M13 + M14` | Dashboard & Báo cáo; Quản lý đa ngôn ngữ Việt/Anh | **44h** | **28.000.000 ₫** |
+| | | **TỔNG GIÁ TRỊ HỢP ĐỒNG (đã gồm VAT)** | **450h** *(module)* | **300.000.000 ₫** |
 
-**Ghi chú:** M13 và M14 có yêu cầu, tiến độ riêng nhưng được tính **chung 28.000.000đ**. Tổng nguồn lực dự kiến của dự án là **886 giờ**, gồm **450 giờ phát triển module** và **436 giờ cho công việc chung** (khởi động, kiểm thử, nghiệm thu và bàn giao). Các giờ công việc chung **đã nằm trong giá trên**, không cộng tiền lần nữa.
+**Ghi chú:** `M13` (`36h`) và `M14` (`8h`) có yêu cầu, tiến độ riêng nhưng được tính **chung 28.000.000đ** (`44h`). Tổng nguồn lực dự kiến của toàn dự án là **886 giờ**, gồm **450 giờ phát triển module** (`398h WBS + 52h BA`) và **436 giờ cho công việc chung** (`314h WBS + 122h BA` cho khởi động, kiểm thử QA/QC, nghiệm thu và bàn giao). Các giờ công việc chung **đã nằm trong giá trên**, không cộng tiền lần nữa.
 
-> Bảng tính giá chi tiết, đơn giá nhân sự và cách phân bổ 300 triệu theo từng module được lưu tại [Ngân sách nhân sự](Ngan-sach-nhan-su.md) để nhóm quản lý nội bộ.
+> Bảng tính giá chi tiết, đơn giá nhân sự và cách phân bổ 300 triệu theo từng module được lưu tại [Ngân sách nhân sự](Ngan-sach-nhan-su.md) và `Master Schedule.xlsx` (sheet `BÁO GIÁ MODULES`) để nhóm quản lý nội bộ.
 
 ## 3. Điều kiện thanh toán
 Về phương thức thanh toán thương mại, dự án áp dụng cơ chế 02 đợt thanh toán (tỷ lệ 70% – 30%) nhằm đảm bảo nguồn kinh phí vận hành, hạ tầng và chi trả lương cho đội ngũ nhân sự ngay từ khi khởi động dự án:
@@ -47,7 +47,7 @@ Về phương thức thanh toán thương mại, dự án áp dụng cơ chế 0
 
 > **Nguyên tắc phân biệt giữa Báo giá hạng mục và Điều kiện thanh toán:**
 > - Bảng tại **Mục 2** (`Q-01` đến `Q-13`) là bảng **báo giá chi tiết theo từng module chức năng bàn giao**, thể hiện giá thương mại đã phân bổ cho các hạng mục bàn giao; tổng giá đã bao gồm công việc chung của dự án.
-> - Bảng tại **Mục 3** quy định **lịch trình dòng tiền thanh toán thực tế** giữa hai bên: Áp dụng cơ chế tạm ứng 70% tại MS-00 để đơn vị triển khai chủ động dòng tiền chi trả đội ngũ, tránh rủi ro đứt gãy tài chính trong kế hoạch 16 tuần (MS-00 đến MS-04). Khách hàng giữ lại 30% để thanh toán tại MS-04 khi nghiệm thu toàn trình.
+> - Bảng tại **Mục 3** quy định **lịch trình dòng tiền thanh toán thực tế** giữa hai bên: Áp dụng cơ chế tạm ứng 70% tại `MS-00` để đơn vị triển khai chủ động dòng tiền chi trả đội ngũ, tránh rủi ro đứt gãy tài chính trong kế hoạch 16 tuần (`MS-00` đến `MS-04`). Khách hàng giữ lại 30% để thanh toán tại `MS-04` khi nghiệm thu toàn trình.
 
 ---
 
@@ -71,7 +71,7 @@ Việc thực hiện thay đổi chỉ được tiến hành sau khi hai bên th
 * Trường hợp việc chậm cung cấp thông tin, dữ liệu, phản hồi hoặc điều kiện hạ tầng từ phía khách hàng ảnh hưởng trực tiếp đến tiến độ, thời gian thực hiện dự án sẽ được điều chỉnh tương ứng với thời gian bị ảnh hưởng.
 
 ### 4.4. Thuế
-Mức giá 300.000.000 VNĐ đã bao gồm VAT. Các nghĩa vụ thuế và trách nhiệm liên quan được thực hiện theo quy định pháp luật hiện hành.
+Mức giá `300.000.000 VNĐ` đã bao gồm VAT. Các nghĩa vụ thuế và trách nhiệm liên quan được thực hiện theo quy định pháp luật hiện hành.
 
 ---
 
@@ -92,4 +92,3 @@ Mức giá 300.000.000 VNĐ đã bao gồm VAT. Các nghĩa vụ thuế và trá
 ## 6. Hiệu lực báo giá
 * Báo giá có hiệu lực trong vòng 30 ngày kể từ ngày phát hành.
 * Báo giá này được sử dụng cùng với Proposal và các tài liệu được hai bên xác nhận để làm cơ sở triển khai dự án.
-
