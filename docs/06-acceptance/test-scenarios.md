@@ -169,4 +169,4 @@
 | `TC-M14-M01` | `FR-M14-01/AC-01` | Chọn ngôn ngữ tiếng Việt hoặc tiếng Anh | Main | Mở giao diện, lần lượt chọn tiếng Việt và tiếng Anh | Người dùng chọn được một trong hai ngôn ngữ; giao diện phản hồi theo lựa chọn | Có |
 | `TC-M14-M02` | `FR-M14-01/AC-02` | Chuyển ngôn ngữ trong phiên đăng nhập hiện tại | Main | Đăng nhập, đổi ngôn ngữ từ Việt sang Anh và ngược lại | Giao diện cập nhật ngôn ngữ mà không yêu cầu đăng nhập lại | Có |
 
-> **Trạng thái:** Hai kịch bản M14 là kế hoạch kiểm thử, chưa có kết quả thực thi. Không đặt thêm yêu cầu ghi nhớ ngôn ngữ sau khi tải lại trang hoặc các yêu cầu ngoài hai AC đã chốt.
+> **Phạm vi kiểm thử M14:** Kiểm chứng việc lựa chọn và chuyển đổi ngôn ngữ giao diện Việt/Anh trực tiếp trong phiên đăng nhập hiện tại theo đúng hai tiêu chí `FR-M14-01/AC-01` và `FR-M14-01/AC-02`.

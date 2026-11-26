@@ -26,11 +26,11 @@ Mục tiêu là xác định tiêu chuẩn chất lượng, cách đo, người 
 | **Thời gian xử lý lỗi**  | Thời gian trung bình từ lúc ghi nhận lỗi đến khi QC xác minh kết quả sửa; báo cáo theo mức độ lỗi khi dữ liệu cho phép.     | Theo dõi theo mức độ; thống nhất cách tính trước khi đo |
 | **First Pass Yield**     | Số hạng mục đạt ở lần kiểm tra đầu / tổng hạng mục được kiểm tra lần đầu × 100%.                                            | Theo dõi cải thiện qua các đợt                          |
 
-### 1.4. Phân loại lỗi thống nhất (V1-09)
+### 1.4. Phân loại lỗi thống nhất
 
 **Mã mức lỗi chính thức:** `P0`, `P1`, `P2`, `P3` theo [Kế hoạch quản lý sản phẩm — bảng điều kiện release](QL-san-pham.md). Tên cũ `Critical/High/Medium/Low` chỉ được dùng để giải thích tương ứng `P0/P1/P2/P3`, không tạo thêm thang mức lỗi độc lập. QC ghi mã P trong Defect Log, Dev ghi mã P khi sửa, PM dùng mã P để quyết định nghiệm thu.
 
-**SLA đã duyệt V1-09:** P0 phản hồi 15 phút, khắc phục 2–4 giờ; P1 phản hồi 1 giờ, khắc phục 8–12 giờ; P2 phản hồi 4 giờ, khắc phục 24–48 giờ; P3 phản hồi 1 ngày làm việc, khắc phục theo kế hoạch phát hành tiếp theo. Bảng chính thức và cách theo dõi xem [Điều phối và giám sát](Dieuphoi-Giamsat.md). **Không nghiệm thu khi còn P0/P1 mở, không ngoại lệ bằng workaround.** Đây là SLA lỗi kỹ thuật, khác SLA Ticket nghiệp vụ.
+**Thời hạn xử lý lỗi kỹ thuật (SLA):** P0 phản hồi 15 phút, khắc phục 2–4 giờ; P1 phản hồi 1 giờ, khắc phục 8–12 giờ; P2 phản hồi 4 giờ, khắc phục 24–48 giờ; P3 phản hồi 1 ngày làm việc, khắc phục theo kế hoạch phát hành tiếp theo. Bảng chính thức và cách theo dõi xem [Điều phối và giám sát](Dieuphoi-Giamsat.md). **Không nghiệm thu khi còn P0/P1 mở, không ngoại lệ bằng workaround.** Đây là SLA lỗi kỹ thuật, khác SLA Ticket nghiệp vụ.
 
 ## 2. Đảm bảo chất lượng (Quality Assurance – Do)
 

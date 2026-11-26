@@ -34,7 +34,7 @@ Dự án gồm **14 module**, được báo giá theo **13 hạng mục** vì M1
 
 **Ghi chú:** M13 và M14 có yêu cầu, tiến độ riêng nhưng được tính **chung 28.000.000đ**. Tổng nguồn lực dự kiến của dự án là **886 giờ**, gồm **450 giờ phát triển module** và **436 giờ cho công việc chung** (khởi động, kiểm thử, nghiệm thu và bàn giao). Các giờ công việc chung **đã nằm trong giá trên**, không cộng tiền lần nữa.
 
-> Bảng tính giá chi tiết, đơn giá nhân sự và cách phân bổ 300 triệu theo từng module được lưu tại [Ngân sách nhân sự – phụ lục đối soát V1-01](Ngan-sach-nhan-su.md) để nhóm quản lý nội bộ.
+> Bảng tính giá chi tiết, đơn giá nhân sự và cách phân bổ 300 triệu theo từng module được lưu tại [Ngân sách nhân sự](Ngan-sach-nhan-su.md) để nhóm quản lý nội bộ.
 
 ## 3. Điều kiện thanh toán
 Về phương thức thanh toán thương mại, dự án áp dụng cơ chế 02 đợt thanh toán (tỷ lệ 70% – 30%) nhằm đảm bảo nguồn kinh phí vận hành, hạ tầng và chi trả lương cho đội ngũ nhân sự ngay từ khi khởi động dự án:

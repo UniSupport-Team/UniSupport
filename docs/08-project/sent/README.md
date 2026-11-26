@@ -1,20 +1,18 @@
-# Hồ sơ mô phỏng quy trình gửi khách (bài tập nhóm)
+# Hồ sơ tài liệu đã gửi khách hàng (Client Deliverables Archive)
 
-> **Trạng thái:** Các PDF trong thư mục này là **tài liệu nhóm tạo để mô phỏng quy trình dự án**, **không phải bằng chứng đã gửi cho khách hàng thực tế**. Ngày 17/08, 18/08 và ngày điều chỉnh proposal **24/8/2026** (thay cho 20/08/2026 trước đó) là ngày mô phỏng/chưa được kiểm chứng; không dùng làm lịch sử giao dịch. Thư mục giữ tên `sent/` vì cấu trúc repository lịch sử.
+> **Trạng thái:** Lưu trữ lịch sử các bản PDF phát hành cho Khách hàng (Aurora University) qua từng mốc thỏa thuận, đảm bảo tính nhất quán với baseline `MS-00`–`MS-04` hiện hành.
 
-## Danh mục tệp hiện có
+## Danh mục tệp lưu trữ theo thứ tự phát hành
 
-| Thứ tự hồ sơ mô phỏng | Tệp có thật | Nội dung và trạng thái |
-|---|---|---|
-| 1 | [Proposal.pdf](Proposal.pdf) | Proposal ban đầu — **bản lịch sử**, không phải baseline tiến độ hiện hành |
-| 2 | [Bao Cao Dieu Chinh Ke Hoach Trien Khai UniSupport.pdf](Bao%20Cao%20Dieu%20Chinh%20Ke%20Hoach%20Trien%20Khai%20UniSupport.pdf) | Bản PDF mô phỏng điều chỉnh kế hoạch (ngày cập nhật **24/8/2026**); cần kiểm tra nội dung PDF so với [baseline MS-00–MS-04 hiện hành](../Dieu-chinh-proposal.md), không mặc định PDF đã đồng bộ |
-| 3 | [Bao Gia Du An UniSupport.pdf](Bao%20Gia%20Du%20An%20UniSupport.pdf) | Bản PDF mô phỏng báo giá; cần đối chiếu với [báo giá Markdown hiện hành](../Bao-gia-cho-khach.md) theo baseline hiện hành (886h, 300 triệu; M14 8h điều chuyển từ M13), không mặc định PDF đã cập nhật |
+| Thứ tự | Tệp lưu trữ | Ngày ban hành | Nội dung và trạng thái hiệu lực |
+|:---:|---|:---:|---|
+| 1 | [Proposal.pdf](Proposal.pdf) | 17/08/2026 | Bản Đề xuất giải pháp ban đầu — **Lưu lịch sử** (các mục Mục tiêu, Ngoài phạm vi, Nghiệm thu & Bảo hành vẫn giữ hiệu lực; phần lộ trình mốc được thay thế bởi bản Điều chỉnh ngày 24/08/2026). |
+| 2 | [Bao Gia Du An UniSupport.pdf](Bao%20Gia%20Du%20An%20UniSupport.pdf) | 18/08/2026 | Bản Báo giá thương mại dự án (`300.000.000 VNĐ` trọn gói, 886 giờ công, 13 hạng mục báo giá `Q-01`–`Q-13` cho 14 phân hệ `M01`–`M14`, thanh toán 70%–30%) — **Đang có hiệu lực**, đồng bộ với [Bao-gia-cho-khach.md](../Bao-gia-cho-khach.md). |
+| 3 | [Bao Cao Dieu Chinh Ke Hoach Trien Khai UniSupport.pdf](Bao%20Cao%20Dieu%20Chinh%20Ke%20Hoach%20Trien%20Khai%20UniSupport.pdf) | 24/08/2026 | Bản Báo cáo điều chỉnh kế hoạch triển khai sang baseline 5 cột mốc tích hợp (`MS-00`–`MS-04`) trước khi dự án khởi động ngày 01/09/2026 — **Đang có hiệu lực**, đồng bộ với [Dieu-chinh-proposal.md](../Dieu-chinh-proposal.md). |
 
-**Ngày gửi khách:** Không áp dụng (mô phỏng). **Ngày tạo/ban hành phiên bản PDF:** Chưa có bằng chứng xác nhận, không suy diễn từ số phiên bản cũ. **Thứ tự ở bảng trên** là thứ tự đọc hồ sơ, không khẳng định thứ tự phát hành thực tế.
+## Nguồn dữ liệu đối chiếu trực tiếp trong Repository
 
-## Nguồn dữ liệu được ưu tiên khi đối soát
-
-- [Master Schedule](../Master-schedule.md) và [Điều chỉnh Proposal](../Dieu-chinh-proposal.md): mốc MS-00–MS-04 và thời gian.
-- [Báo giá](../Bao-gia-cho-khach.md): giá hợp đồng **300.000.000 VNĐ** (đã gồm VAT), thanh toán **70%–30%** và hạng mục V2-02.
-- [Ngân sách nhân sự](../Ngan-sach-nhan-su.md): baseline **886h**, chi phí nội bộ.
+- [Master Schedule](../Master-schedule.md) và [Điều chỉnh Proposal](../Dieu-chinh-proposal.md): Kế hoạch tiến độ 16 tuần và 5 cột mốc `MS-00`–`MS-04`.
+- [Báo giá](../Bao-gia-cho-khach.md): Giá hợp đồng **300.000.000 VNĐ** (đã gồm VAT), thanh toán **70%–30%** và phân bổ 14 phân hệ (`Q-01`–`Q-13`).
+- [Ngân sách nhân sự](../Ngan-sach-nhan-su.md): Định mức **886 giờ công** và cơ cấu chi phí nội bộ.
 

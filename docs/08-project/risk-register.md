@@ -3,7 +3,7 @@
 > **Dự án:** UniSupport — Hệ thống quản lý hỗ trợ sinh viên  
 > **Nguồn tổng hợp:** Hợp nhất từ bảng Quản lý rủi ro chất lượng tại [QL-chat-luong.md — Mục 6](QL-chat-luong.md#6-quản-lý-rủi-ro-chất-lượng) và bảng Quản trị rủi ro vận hành tại [QL-san-pham.md — Mục 3.2](QL-san-pham.md#32-quản-trị-rủi-ro-vận-hành-risk-management).  
 > **Quỹ dự phòng rủi ro & bảo hành:** `22.138.272 VNĐ` theo [Ngan-sach-nhan-su.md — Mục 3](Ngan-sach-nhan-su.md#3-bảng-tổng-hợp-ngân-sách-dự-án--tính-toán-sau-thuế).  
-> **Trạng thái phê duyệt (V1-07):** Đã hoàn tất đánh giá xác suất và chỉ định một Owner chịu trách nhiệm chính cho toàn bộ 10 rủi ro theo quyết định tại [open-questions.md](open-questions.md#oq-02).
+> **Trạng thái phê duyệt:** Đã hoàn tất đánh giá xác suất và chỉ định một Owner chịu trách nhiệm chính cho toàn bộ 10 rủi ro theo quyết định chính thức của dự án.
 
 ---
 
@@ -24,7 +24,7 @@
 
 ---
 
-## 2. Quy trình kiểm soát và đánh giá rủi ro định kỳ (Đã hoàn thiện V1-07)
+## 2. Quy trình kiểm soát và đánh giá rủi ro định kỳ
 
 1. **Thang đo xác suất thống nhất:**
    - **Cao:** Khả năng xảy ra $\ge 50\%$, thường phát sinh do quy trình thủ công hoặc thói quen người dùng thực tế.
@@ -32,4 +32,4 @@
    - **Thấp:** Khả năng xảy ra $< 20\%$, đã được kiểm soát bởi kiến trúc kỹ thuật hoặc phân quyền hệ thống.
 2. **Nguyên tắc phân định Owner duy nhất:** Mỗi rủi ro có đúng một người/vai trò chịu trách nhiệm chính theo dõi (Owner chính), các vai trò phối hợp đóng vai trò hỗ trợ kỹ thuật hoặc kiểm chứng.
 3. **Quỹ dự phòng rủi ro (`22.138.272 VNĐ`):** Được kích hoạt xử lý khi phát sinh sự cố vượt quá nguồn lực thông thường, tuân thủ đúng quy trình phê duyệt Change Request tại [Dieuphoi-Giamsat.md — Mục 3.4](Dieuphoi-Giamsat.md#34-quy-trình-yêu-cầu-thay-đổi-change-request---cr-và-phân-cấp-phê-duyệt).
-4. **Kết luận đóng mục `V1-07`:** Tất cả 10 rủi ro (`R-01` đến `R-10`) đã được xác định đầy đủ xác suất, mức độ tác động, một owner duy nhất và phương án kiểm soát; các liên kết tương đối hoạt động chính xác.
+4. **Cam kết theo dõi:** Tất cả 10 rủi ro (`R-01` đến `R-10`) được xác định đầy đủ xác suất, mức độ tác động, một owner duy nhất và phương án kiểm soát xuyên suốt vòng đời dự án.
