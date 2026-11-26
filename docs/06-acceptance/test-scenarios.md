@@ -17,7 +17,7 @@
 | **M03** | Quản lý Tài khoản | `MS-01` | 6 / 9 (15) | 5 / 4 | 9 | 100% AC |
 | **M04** | Quản lý Danh mục & SLA | `MS-02` | 5 / 7 (12) | 3 / 2 | 5 | 100% AC |
 | **M05** | Khởi tạo Ticket | `MS-02` | 6 / 12 (18) | 3 / 7 | 10 | 100% AC |
-| **M06** | Tiếp nhận Ticket & Đua lệnh | `MS-02` | 5 / 9 (14) | 2 / 2 | 4 | 100% AC |
+| **M06** | Tiếp nhận Ticket & Tranh chấp đồng thời | `MS-02` | 5 / 9 (14) | 2 / 2 | 4 | 100% AC |
 | **M07** | Điều phối & Re-assign | `MS-02` | 6 / 9 (15) | 3 / 5 | 8 | 100% AC |
 | **M08** | Xử lý & Yêu cầu bổ sung | `MS-02` | 8 / 12 (20) | 4 / 6 | 10 | 100% AC |
 | **M09** | Trả kết quả xử lý | `MS-02` | 5 / 7 (12) | 2 / 3 | 5 | 100% AC |
@@ -89,7 +89,7 @@
 
 ---
 
-### 2.3. Phân hệ M06 — Tiếp nhận Ticket & Race Condition (Đua lệnh) (`MS-02`)
+### 2.3. Phân hệ M06 — Tiếp nhận Ticket & Tranh chấp đồng thời (Race Condition) (`MS-02`)
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|:---:|---|---|---|:---:|
 | `TC-M06-M01` | `FR-M06-01/AC-01` | Nhân viên xem danh sách đơn `New` thuộc phòng ban mình | Main / RBAC | Nhân viên phòng Đào tạo mở hộp thư tiếp nhận và lọc theo danh mục/SLA | Chỉ hiển thị các đơn `New` thuộc phòng Đào tạo; ẩn và chặn `403` với đơn của phòng khác. | Có |
@@ -104,7 +104,7 @@
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|---|---|---|---|---|
 | `TC-M07-M01` | `FR-M07-01/AC-01` | Admin phân loại đơn mục "Khác" về đúng phòng ban đích | Main | Admin mở đơn mục "Khác", chọn Phòng ban đích và Danh mục chuẩn tương ứng | Cập nhật phòng ban/danh mục, giữ nguyên mã Ticket và đưa đơn vào Hàng chờ phòng ban đích ở trạng thái `New`. | Có |
-| `TC-M07-N02` | `FR-M07-01/AC-01` | Admin phân loại đơn "Khác" nhưng bỏ trống Phòng ban hoặc Danh mục đích (`E-01`) | Negative / Validation | Admin mở đơn mục "Khác", nhấn lưu phân loại nhưng chưa chọn phòng ban hoặc danh mục đích | Hệ thống chặn lưu (`422 Unprocessable Entity`), hiển thị thông báo bắt buộc chọn đầy đủ Phòng ban và Danh mục hợp lệ. | Không |
+| `TC-M07-N02` | `FR-M07-01/AC-01` | Admin phân loại đơn "Khác" với dữ liệu thiếu hoặc không khớp (`E-01`, `E-02`) | Negative / Validation | (1) Bỏ trống phòng ban hoặc danh mục đích; (2) gửi cặp department_id và category_id không khớp | (1) Chặn lưu với `422 Unprocessable Entity`; (2) từ chối với `400 Bad Request`; không thay đổi Ticket. | Không |
 | `TC-M07-N03` | `FR-M07-01/AC-01` | Admin phân loại đơn "Khác" khi đơn đã được nhân viên tiếp nhận (`E-03`) | Negative / Concurrency | Admin phân loại đơn mục "Khác" nhưng đơn đó vừa được nhân viên claim sang `In Progress` | Hệ thống từ chối (`400 Bad Request`), thông báo *"Đơn đã được tiếp nhận xử lý, không thể phân loại lại"*. | Có |
 | `TC-M07-M02` | `FR-M07-02/AC-01` | Admin điều chuyển đơn bị nhân viên báo sai phòng ban | Main | Admin xem lý do chuyển trả từ `M08-04`, chọn Phòng ban và Danh mục mới | Xóa Assignee cũ, chuyển đơn về Hàng chờ phòng ban mới ở trạng thái `New` và bảo toàn lịch sử luân chuyển; Admin nhận thông báo In-app kèm lý do từ luồng chuyển trả, không gửi Quản lý. | Có |
 | `TC-M07-N04` | `FR-M07-02/AC-01` | Admin điều chuyển đơn báo sai phòng nhưng chưa chọn phòng ban mới (`E-01`) | Negative / Validation | Admin nhấn điều chuyển đơn từ `M08-04` nhưng chưa chọn Phòng ban đích mới | Hệ thống từ chối thao tác (`422 Unprocessable Entity`), yêu cầu chọn phòng ban chuyển tiếp. | Không |
@@ -150,8 +150,8 @@
 | `TC-M12-N02` | `FR-M12-01/AC-01`, `NFR-SEC-05` | Trưởng phòng xem tiến độ của phòng ban khác | Negative / Data Isolation | Trưởng phòng Dept A truy cập URL/API giám sát tiến độ của Dept B | Backend từ chối với mã `403 Forbidden`, chỉ hiển thị số liệu thuộc phòng ban phụ trách. | Có |
 | `TC-M12-M02` | `FR-M12-03/AC-01` | Admin theo dõi xếp hạng các phòng ban tồn đọng nhiều đơn nhất | Main / RBAC | Admin mở màn hình giám sát toàn trường (và thử truy cập bằng tài khoản `Manager`) | Hiển thị bảng xếp hạng phòng ban giảm dần theo số đơn tồn đọng/tỷ lệ quá hạn; chặn `403` nếu không phải Admin. | Có |
 | `TC-M12-M03` | `FR-M12-04/AC-01` | Admin tìm kiếm và tra cứu chi tiết Ticket xuyên phòng ban | Main | Admin nhập Mã Ticket bất kỳ trên công cụ `Global Ticket Search` | Hiển thị đầy đủ chi tiết và toàn bộ dòng thời gian Audit Trail của Ticket dù thuộc bất kỳ phòng ban nào. | Có |
-| `TC-M12-E04` | `FR-M12-04/AC-01` | Admin tra cứu mã Ticket không tồn tại trên hệ thống (`E-01`) | Negative / Boundary | Admin nhập mã Ticket không có thực (VD: `TICK-99999999-999`) vào Global Search | Hệ thống trả về `404 Not Found`, hiển thị thông báo "Không tìm thấy yêu cầu hỗ trợ nào khớp với mã tra cứu". | Không |
-| `TC-M12-E05` | `FR-M12-04/AC-01` | Admin tra cứu mã Ticket sai định dạng chuẩn (`E-03`) | Negative / Validation | Admin nhập chuỗi ký tự đặc biệt hoặc mã không theo cấu trúc `[MÃ]-[NGÀY]-[SỐ]` | Hệ thống hiển thị cảnh báo validation `422 Unprocessable Entity` ("Mã Ticket không đúng định dạng chuẩn"). | Không |
+| `TC-M12-E04` | `FR-M12-04/AC-01` | Admin tra cứu mã Ticket không tồn tại trên hệ thống (`E-01`) | Negative / Boundary | Chuẩn bị danh mục IT hợp lệ và xác nhận mã chưa tồn tại; Admin nhập mã Ticket (VD: `IT-20261123-9999`) vào Global Search | Hệ thống trả về `404 Not Found`, hiển thị thông báo "Không tìm thấy yêu cầu hỗ trợ nào khớp với mã tra cứu". | Không |
+| `TC-M12-E05` | `FR-M12-04/AC-01` | Tra cứu trái quyền hoặc mã Ticket sai định dạng (`E-02`, `E-03`) | Negative / RBAC / Validation | (1) Tài khoản Manager gọi API tra cứu toàn trường với mã hợp lệ; (2) Admin nhập mã sai cấu trúc `[MÃ]-[NGÀY]-[SỐ]` | (1) `403 Forbidden`, không trả dữ liệu; (2) `422 Unprocessable Entity` ("Mã Ticket không đúng định dạng chuẩn"). | Không |
 | `TC-M13-M01` | `FR-M13-01/AC-01`, `NFR-AVAIL-01` | Hiển thị thẻ chỉ số KPI và biểu đồ thống kê theo thời gian | Main | Mở Dashboard, lọc theo Tháng này | Hiển thị đúng 4 thẻ KPI (Tổng đơn, Đang xử lý, Hoàn thành, Quá hạn) và biểu đồ tròn có tổng tỷ lệ đúng `100.0%`. | Có |
 | `TC-M13-E01` | `FR-M13-01/AC-01` | Lọc Dashboard với khoảng thời gian không hợp lệ (Từ ngày > Đến ngày) (`E-01`) | Negative / Validation | Chọn ngày bắt đầu sau ngày kết thúc trên bộ lọc thời gian Dashboard | Hệ thống chặn submit, báo lỗi validation `422 Unprocessable Entity` ("Từ ngày không được lớn hơn Đến ngày") và yêu cầu chọn lại. | Có |
 | `TC-M13-N01` | `FR-M13-02/AC-01`, `NFR-SEC-05` | Trưởng phòng truy cập Dashboard số liệu toàn trường của Admin | Negative / RBAC | Token của Role `Manager` gọi API Dashboard tổng hợp toàn trường hoặc phòng khác | Trả về `403 Forbidden`, Trưởng phòng chỉ xem được dữ liệu thống kê thuộc phòng ban của mình. | Có |
@@ -166,7 +166,7 @@
 
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|---|---|---|---|---|
-| `TC-M14-M01` | `FR-M14-01/AC-01` | Chọn ngôn ngữ tiếng Việt hoặc tiếng Anh | Main | Mở giao diện, lần lượt chọn tiếng Việt và tiếng Anh | Người dùng chọn được một trong hai ngôn ngữ; giao diện, biểu mẫu và thông báo theo lựa chọn; dữ liệu nhập giữ nguyên | Có |
+| `TC-M14-M01` | `FR-M14-01/AC-01` | Chọn ngôn ngữ tiếng Việt hoặc tiếng Anh | Main | Mở giao diện, nhập dữ liệu mẫu vào biểu mẫu, lần lượt chọn Việt/Anh; kiểm tra nhãn, biểu mẫu, thông báo hệ thống và đối chiếu dữ liệu đã nhập | Người dùng chọn được một trong hai ngôn ngữ; giao diện, biểu mẫu và thông báo theo lựa chọn; dữ liệu nhập giữ nguyên | Có |
 | `TC-M14-M02` | `FR-M14-01/AC-02` | Chuyển ngôn ngữ trong phiên đăng nhập hiện tại | Main | Đăng nhập, đổi ngôn ngữ từ Việt sang Anh và ngược lại; thử lựa chọn không hợp lệ | Giao diện cập nhật ngôn ngữ mà không yêu cầu đăng nhập lại; lựa chọn không hợp lệ giữ nguyên ngôn ngữ | Có |
 
 > **Phạm vi kiểm thử M14:** Kiểm chứng việc lựa chọn và chuyển đổi ngôn ngữ giao diện Việt/Anh trực tiếp trong phiên đăng nhập hiện tại theo đúng hai tiêu chí `FR-M14-01/AC-01` và `FR-M14-01/AC-02`.
