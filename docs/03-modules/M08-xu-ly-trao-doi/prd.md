@@ -185,7 +185,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Khi đơn đang `In Progress`, nhân viên bấm chuyển trả kèm lý do hợp lệ $\rightarrow$ Đơn được gỡ khỏi phòng ban, xóa Assignee cũ, đổi danh mục sang "Khác", chuyển về Hàng chờ của Admin ở trạng thái `New` (`BR-02`); nếu bỏ trống lý do (`BR-01`, `E-01`) thì trả về `422 Unprocessable Entity`, nếu đơn đang ở `Pending`/`Resolved`/`Closed` (`BR-03`, `E-02`) thì trả về `400 Bad Request`.
+* **AC-01:** Khi đơn đang `In Progress`, nhân viên bấm chuyển trả kèm lý do hợp lệ $\rightarrow$ Đơn được gỡ khỏi phòng ban, xóa Assignee cũ, đổi danh mục sang "Khác", chuyển về Hàng chờ của Admin ở trạng thái `New` (`BR-02`) và phát thông báo In-app cho Admin kèm lý do chuyển trả; nếu bỏ trống lý do (`BR-01`, `E-01`) thì trả về `422 Unprocessable Entity`, nếu đơn đang ở `Pending`/`Resolved`/`Closed` (`BR-03`, `E-02`) thì trả về `400 Bad Request`.
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
