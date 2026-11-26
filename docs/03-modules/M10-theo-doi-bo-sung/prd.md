@@ -1,6 +1,6 @@
-# PHÂN HỆ: M09 — THEO DÕI & BỔ SUNG (TICKET TRACKING & SUPPLEMENT)
+# PHÂN HỆ: M10 — THEO DÕI & BỔ SUNG (TICKET TRACKING & SUPPLEMENT)
 
-## [FR-M09-01] Sinh viên xem, tìm kiếm và theo dõi các đơn mình đã gửi
+## [FR-M10-01] Sinh viên xem, tìm kiếm và theo dõi các đơn mình đã gửi
 
 **Mô tả:** Sinh viên truy cập màn hình cá nhân để xem danh sách toàn bộ yêu cầu đã gửi, tìm kiếm, lọc theo trạng thái và theo dõi chi tiết tiến độ xử lý theo thời gian thực.
 
@@ -25,7 +25,7 @@
 4. Sinh viên chọn một Ticket bất kỳ để mở xem chi tiết:
    - Thông tin yêu cầu ban đầu và các file đính kèm.
    - Trạng thái hiện tại và tiến độ công việc theo thời gian thực.
-   - Các mốc lịch sử trao đổi và phản hồi được phép hiển thị cho Sinh viên; không lộ ghi chú nội bộ chỉ dành cho Nhân viên/Quản lý tại M07.
+   - Các mốc lịch sử trao đổi và phản hồi được phép hiển thị cho Sinh viên; không lộ ghi chú nội bộ chỉ dành cho Nhân viên/Quản lý tại M08.
 
 **Business Rules (Quy tắc nghiệp vụ):**
 
@@ -47,7 +47,7 @@
 
 ---
 
-## [FR-M09-02] Sinh viên nộp bổ sung thông tin và giấy tờ theo yêu cầu
+## [FR-M10-02] Sinh viên nộp bổ sung thông tin và giấy tờ theo yêu cầu
 
 **Mô tả:** Khi đơn ở trạng thái Chờ bổ sung, Sinh viên nhập nội dung phản hồi và tải lên các tệp tài liệu minh chứng bổ sung theo yêu cầu của nhân viên.
 
@@ -94,6 +94,6 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Sinh viên nộp bổ sung hợp lệ khi đơn đang `Pending` $\rightarrow$ Đơn chuyển về `Đang xử lý` (`In Progress`), giữ nguyên Mã Ticket và Nhân viên phụ trách cũ (`BR-01`), hủy bộ đếm 3 ngày làm việc; nếu đơn đã đóng (`BR-02`, `E-01`) thì trả về `400 Bad Request`, nếu nội dung bổ sung $< 5$ ký tự hoặc tệp lỗi (`E-02`) thì trả về `422 Unprocessable Entity`.
+* **AC-01:** Sinh viên nộp bổ sung hợp lệ khi đơn đang `Pending` $\rightarrow$ Đơn chuyển về `Đang xử lý` (`In Progress`), giữ nguyên Mã Ticket và Nhân viên phụ trách cũ (`BR-01`), hủy bộ đếm 3 ngày làm việc và tự động phát thông báo In-app cho nhân viên phụ trách; nếu đơn đã đóng (`BR-02`, `E-01`) thì trả về `400 Bad Request`, nếu nội dung bổ sung $< 5$ ký tự hoặc tệp lỗi (`E-02`) thì trả về `422 Unprocessable Entity`.
 
 ---

@@ -38,6 +38,8 @@
 * **AC-03:** Màn hình Đăng nhập tuyệt đối không hiển thị nút “Đăng ký” (`BR-01`).
 * **AC-04:** Đăng nhập bằng tài khoản vừa được Admin đặt lại mật khẩu (`must_change_password = true`) $\rightarrow$ Bắt buộc chuyển sang màn hình đổi mật khẩu mới trước khi truy cập các chức năng khác (`BR-02`, liên kết `FR-M03-03` và `NFR-SEC-04`).
 
+**AC-I18N-01 (V2-02 — đa ngôn ngữ giao diện đăng nhập):** Người dùng chọn `VI` hoặc `EN` trên trang đăng nhập; nhãn trường, nút, thông báo validation/xác thực và hướng dẫn cố định hiển thị bằng ngôn ngữ được chọn, không làm thay đổi mã lỗi HTTP, quyền truy cập hay giá trị người dùng đã nhập. Ánh xạ kiểm thử: `TC-I18N-01`, `TC-I18N-02`.
+
 **Ví dụ Edge Case (Trường hợp biên):**
 * Người dùng dán Mã định danh có khoảng trắng ở đầu/cuối hoặc dài đúng 20 ký tự $\rightarrow$ Hệ thống tự động cắt khoảng trắng thừa (`trim`) và xác thực bình thường; nếu vượt quá 20 ký tự thì chặn nhập/báo lỗi định dạng.
 

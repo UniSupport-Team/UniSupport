@@ -1,6 +1,6 @@
 # 5. PHÂN HỆ QUẢN TRỊ VIÊN (ADMIN WORKFLOWS)
 
-> **Ánh xạ Phân hệ:** [M02-vai-tro-phan-quyen](../03-modules/M02-vai-tro-phan-quyen/), [M03-quan-ly-tai-khoan](../03-modules/M03-quan-ly-tai-khoan/), [M04-quan-ly-danh-muc](../03-modules/M04-quan-ly-danh-muc/), [M11-quan-ly-dieu-phoi](../03-modules/M11-quan-ly-dieu-phoi/), [M12-giam-sat-tien-do](../03-modules/M12-giam-sat-tien-do/), [M13-dashboard-bao-cao](../03-modules/M13-dashboard-bao-cao/)
+> **Ánh xạ Phân hệ:** [M02-vai-tro-phan-quyen](../03-modules/M02-vai-tro-phan-quyen/), [M03-quan-ly-tai-khoan](../03-modules/M03-quan-ly-tai-khoan/), [M04-quan-ly-danh-muc](../03-modules/M04-quan-ly-danh-muc/), [M07-quan-ly-dieu-phoi](../03-modules/M07-quan-ly-dieu-phoi/), [M12-giam-sat-tien-do](../03-modules/M12-giam-sat-tien-do/), [M13-dashboard-bao-cao](../03-modules/M13-dashboard-bao-cao/)
 
 ---
 
@@ -75,7 +75,7 @@ graph TD
 ### AD-04 — Phân loại Ticket "Khác"
 
 * **Tác nhân:** Admin hệ thống.
-* **Ánh xạ Module:** [M11-quan-ly-dieu-phoi](../03-modules/M11-quan-ly-dieu-phoi/) (`[FR-M11-01]`)
+* **Ánh xạ Module:** [M07-quan-ly-dieu-phoi](../03-modules/M07-quan-ly-dieu-phoi/) (`[FR-M07-01]`)
 * **Luồng chính:**
   1. Sinh viên khởi tạo đơn chọn danh mục **Khác**.
   2. Hệ thống chuyển đơn về Hàng chờ phân loại của Admin.
@@ -99,7 +99,7 @@ graph TD
 ### AD-05 — Điều chuyển Ticket sai phòng ban
 
 * **Tác nhân:** Admin hệ thống.
-* **Ánh xạ Module:** [M11-quan-ly-dieu-phoi](../03-modules/M11-quan-ly-dieu-phoi/) (`[FR-M11-02]`) *(Phần Core MVP được bóc tách triển khai và nghiệm thu ở Giai đoạn 1 đồng bộ với M07/NV-04)*
+* **Ánh xạ Module:** [M07-quan-ly-dieu-phoi](../03-modules/M07-quan-ly-dieu-phoi/) (`[FR-M07-02]`) *(Phần Core MVP được bóc tách triển khai và nghiệm thu ở Giai đoạn 1 đồng bộ với M08/NV-04)*
 * **Luồng chính:**
   1. Nhân viên chuyển trả đơn sai phòng ban về cho Admin.
   2. Đơn xuất hiện trong danh sách **Đơn sai phòng ban chờ điều chuyển** của Admin.

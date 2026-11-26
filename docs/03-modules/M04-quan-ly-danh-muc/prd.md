@@ -1,5 +1,7 @@
 # PHÂN HỆ: M04 — QUẢN LÝ DANH MỤC HỖ TRỢ (CATEGORY MANAGEMENT)
 
+SLA sử dụng giờ làm việc theo [quy tắc nghiệp vụ mục 7](../../02-domain/quy-tac-nghiep-vu.md). Giả định nhà trường cung cấp danh sách ngày lễ; nhóm triển khai khởi tạo `system_holidays`. Giao diện quản lý ngày lễ ngoài phạm vi hợp đồng.
+
 ## [FR-M04-01] Admin quản lý danh mục hỗ trợ chung của toàn trường
 
 **Mô tả:** Admin thiết lập, thêm mới, chỉnh sửa thông tin hoặc ẩn/hiện các danh mục hỗ trợ cấp trường và danh mục định tuyến dùng chung.
@@ -86,7 +88,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Trưởng phòng tạo/cập nhật danh mục chuyên môn của phòng mình thành công $\rightarrow$ Sinh viên chọn phòng ban này sẽ nhìn thấy danh mục và hướng dẫn giấy tờ tương ứng; hệ thống chặn (`403 Forbidden`) mọi thao tác xem/sửa danh mục của phòng ban khác (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Trưởng phòng tạo/cập nhật danh mục chuyên môn của phòng mình thành công $\rightarrow$ Sinh viên chọn phòng ban này sẽ nhìn thấy danh mục và hướng dẫn giấy tờ tương ứng; hệ thống chặn truy cập bằng mã lỗi `403 Forbidden` khi thao tác trên danh mục của phòng ban khác (`BR-01`, `E-01`); từ chối lưu và báo lỗi `409 Conflict` nếu trùng Mã danh mục hoặc `422 Unprocessable Entity` nếu thiếu trường bắt buộc hay SLA $\le 0$ (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

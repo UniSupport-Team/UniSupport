@@ -43,6 +43,9 @@ Báo cáo tuần dùng để đối soát tiến độ thực tế với kế ho
 - **Tần suất:** Cuối tuần (trước 17:00 Thứ Sáu).
 - **Thành phần tham dự:** Toàn bộ thành viên tham gia trong dự án.
 - **Hình thức:** Đăng tải lên hệ thống GitHub Issues / GitHub Projects và gửi email tóm tắt.
+- **Người lập và gửi:** Project Manager (PM), tổng hợp cập nhật của Developers và QA/QC.
+- **Người nhận:** Ban quản lý dự án và đại diện khách hàng (đối với bản tổng hợp tiến độ/những quyết định cần xác nhận).
+- **Ngưỡng báo cáo vượt cấp (escalation):** PM báo ngay khi phát hiện nguy cơ trễ mốc đã cam kết, vượt ngân sách được duyệt, lỗi P0/P1 ảnh hưởng nghiệm thu, hoặc rủi ro bảo mật; các thay đổi phạm vi/chi phí/tiến độ phải đi theo quy trình Change Request tại Mục 3.4. Đây là ngưỡng quản trị đề xuất, cần được nhóm phê duyệt trước khi coi là cam kết chính thức.
 
 **Cấu trúc báo cáo tuần:**
 
@@ -66,7 +69,7 @@ Báo cáo cảnh báo được phát hành đột xuất khi phát sinh sự c�
 - **Thời điểm phát hành:** Đột xuất, ngay khi phát hiện sự cố (trong vòng 15-60 phút tùy mức độ SLA).
 - **Quy trình xử lý báo cáo cảnh báo:**
   - **Ghi nhận & Thông báo:** Thành viên phát hiện thông báo ngay trên kênh chung (Slack).
-  - **Đánh giá tác động:** PM đánh giá mức độ ảnh hưởng (Critical, Major, Minor) và gửi thông báo khẩn cho Ban quản lý.
+  - **Đánh giá tác động:** PM ghi nhận **mức lỗi P0–P3** theo [Kế hoạch quản lý chất lượng](QL-chat-luong.md#14-phân-loại-lỗi-thống-nhất-v1-09) và gửi thông báo khẩn cho Ban quản lý theo mức ảnh hưởng; bảng thời gian xử lý ba mức bên dưới đang chờ quyết định quy đổi SLA.
   - **Đề xuất giải pháp:** Lập phương án khắc phục khẩn cấp và xin phê duyệt nguồn lực ứng phó.
 
 ### 2.5. Báo cáo tổng kết dự án (Project Closure Report)
@@ -114,13 +117,16 @@ Quy định này giúp duy trì tính linh hoạt trong giao tiếp nhưng vẫn
 4. **Cập nhật tình hình:** Người phụ trách cập nhật tiến độ xử lý và kết quả trên kênh chung.
 5. **Ghi nhận sự cố:** Nội dung sự cố, quá trình xử lý và kết quả cuối cùng được lưu lại trên công cụ quản lý dự án.
 
-**Thời gian cam kết xử lý sự cố (SLA):**
+**SLA xử lý lỗi kỹ thuật được duyệt (V1-09):** Áp dụng một thang mức lỗi chính thức **P0–P3**. Đây là thời gian phản hồi và khắc phục sự cố/lỗi kỹ thuật, **không thay thế SLA xử lý Ticket nghiệp vụ** tại [Kế hoạch sản phẩm](QL-san-pham.md).
 
-| Mức độ | Mô tả | Thời gian phản hồi | Thời gian khắc phục |
+| Mức lỗi | Tình huống điển hình | Thời gian phản hồi | Thời gian khắc phục |
 |---|---|---|---|
-| **Nghiêm trọng (Critical)** | Hệ thống ngừng hoạt động hoàn toàn, rò rỉ dữ liệu hoặc ảnh hưởng trực tiếp đến toàn bộ người dùng. | Trong vòng 15 phút | Trong vòng 2 - 4 giờ |
-| **Trung bình (Major)** | Tính năng chính bị lỗi nhưng có giải pháp tạm thời, hoặc ảnh hưởng đến một nhóm người dùng. | Trong vòng 1 giờ | Trong vòng 8 - 12 giờ |
-| **Thấp (Minor)** | Lỗi nhỏ về giao diện, hiển thị hoặc các vấn đề không ảnh hưởng đến hoạt động cốt lõi. | Trong vòng 4 giờ | Trong vòng 24 - 48 giờ |
+| **P0 – Critical** | Ngừng hệ thống, rò rỉ dữ liệu, luồng cốt lõi không sử dụng được | **Trong 15 phút** | **Trong 2–4 giờ** |
+| **P1 – High** | Chức năng quan trọng bị lỗi, ảnh hưởng đáng kể đến người dùng | **Trong 1 giờ** | **Trong 8–12 giờ** |
+| **P2 – Medium** | Lỗi chức năng phụ/giao diện không làm gián đoạn luồng cốt lõi | **Trong 4 giờ** | **Trong 24–48 giờ** |
+| **P3 – Low** | Sai khác nhỏ về UI/UX, câu chữ, cải tiến không khẩn cấp | **Trong 1 ngày làm việc** | **Theo kế hoạch phát hành tiếp theo** |
+
+**Nguyên tắc nghiệm thu:** Không nghiệm thu nếu còn **bất kỳ lỗi P0/P1 mở**, kể cả có workaround. P2/P3 còn tồn tại phải được ghi vào Defect Log và có quyết định xử lý theo quy trình nghiệm thu. QA/QC ghi thời điểm phát hiện, phản hồi, khắc phục và retest để đối chiếu SLA; PM theo dõi và báo cáo khi có nguy cơ trễ. Thời hạn P3 là thời hạn theo kế hoạch phát hành, không được tự diễn giải thành số giờ cố định.
 
 Việc thông báo trên kênh chung giúp các thành viên nắm bắt tình hình kịp thời và phối hợp xử lý thống nhất.
 

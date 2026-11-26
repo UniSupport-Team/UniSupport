@@ -25,7 +25,7 @@
 
 **Business Rules (Quy tắc nghiệp vụ):**
 
-* **BR-01:** Đơn chọn danh mục “Khác” sẽ được chuyển về Hàng chờ của Admin ở Module M11 để phân loại định tuyến.
+* **BR-01:** Đơn chọn danh mục “Khác” sẽ được chuyển về Hàng chờ của Admin ở Module M07 để phân loại định tuyến.
 
 **Alternative / Error Flows (Luồng rẽ nhánh / Xử lý lỗi):**
 

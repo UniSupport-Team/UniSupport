@@ -1,6 +1,6 @@
-# PHÂN HỆ: M10 — KẾT QUẢ & ĐÁNH GIÁ (RESULTS & FEEDBACK)
+# PHÂN HỆ: M11 — KẾT QUẢ & ĐÁNH GIÁ (RESULTS & FEEDBACK)
 
-## [FR-M10-01] Sinh viên xem kết quả giải quyết và tải tệp trả lời
+## [FR-M11-01] Sinh viên xem kết quả giải quyết và tải tệp trả lời
 
 **Mô tả:** Sinh viên xem văn bản giải trình kết quả (Resolution Notes) từ Nhân viên và tải về các tệp tài liệu văn bản trả lời khi đơn ở trạng thái Đã giải quyết.
 
@@ -33,7 +33,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Khi đơn ở trạng thái `Resolved` hoặc `Closed`, hiển thị đầy đủ văn bản `Resolution Notes` và tải xuống thành công các tệp trả lời đính kèm; ẩn khu vực kết quả nếu đơn chưa giải quyết xong (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Khi đơn ở trạng thái `Resolved` hoặc `Closed`, hiển thị đầy đủ văn bản `Resolution Notes` và tải xuống thành công các tệp trả lời đính kèm; ẩn khu vực kết quả nếu đơn chưa giải quyết xong (`BR-01`, `E-01`); nếu tệp đính kèm không tồn tại trên hệ thống lưu trữ $\rightarrow$ Hệ thống trả về mã lỗi `404 Not Found` và hiển thị thông báo lỗi thân thiện (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -41,7 +41,7 @@
 
 ---
 
-## [FR-M10-02] Sinh viên đánh giá độ hài lòng từ 1 đến 5 sao, nhận xét và đóng đơn
+## [FR-M11-02] Sinh viên đánh giá độ hài lòng từ 1 đến 5 sao, nhận xét và đóng đơn
 
 **Mô tả:** Sinh viên chấm điểm đánh giá chất lượng phục vụ từ 1 đến 5 sao, viết nhận xét góp ý tùy chọn và xác nhận đóng đơn vĩnh viễn.
 
@@ -90,9 +90,9 @@
 
 ---
 
-## [FR-M10-03] Hệ thống tự động đóng đơn nếu sinh viên không đánh giá sau 3 ngày làm việc
+## [FR-M11-03] Hệ thống tự động đóng đơn nếu sinh viên không đánh giá sau 3 ngày làm việc
 
-**Mô tả:** Sau 3 ngày làm việc (không tính Thứ 7, Chủ nhật và ngày lễ) tính từ thời điểm Ticket chuyển sang trạng thái Đã giải quyết mà Sinh viên không thực hiện đánh giá, hệ thống sẽ tự động chuyển trạng thái đơn sang Đã đóng.
+**Mô tả:** Bộ đếm đánh giá độc lập với SLA xử lý, áp dụng mục 7 [quy tắc nghiệp vụ](../../02-domain/quy-tac-nghiep-vu.md). Sau 3 ngày làm việc (không tính Thứ 7, Chủ nhật và ngày lễ) tính từ thời điểm Ticket chuyển sang trạng thái Đã giải quyết mà Sinh viên không thực hiện đánh giá, hệ thống sẽ tự động chuyển trạng thái đơn sang Đã đóng.
 
 **Priority:** Medium (Tác vụ ngầm dọn dẹp và kết thúc vòng đời các Ticket không có phản hồi đánh giá).
 
@@ -120,7 +120,7 @@
 
 **Business Rules (Quy tắc nghiệp vụ):**
 
-* **BR-01:** Các đơn bị đóng tự động do không đánh giá sau `Resolved` không có điểm số sao (Rating = null) và không tính vào CSAT. Việc đúng hay quá hạn SLA được xác định bằng thời điểm giải quyết `resolved_at` so với hạn xử lý, không mặc định mọi đơn tự đóng đều hoàn thành đúng hạn.
+* **BR-01:** Các đơn bị đóng tự động do không đánh giá sau `Resolved` không có điểm số sao (Rating = null) và không tính vào CSAT. Việc đúng hay quá hạn SLA được xác định bằng thời lượng SLA hợp lệ chốt tại `resolved_at` theo mục 7 quy tắc nghiệp vụ, không mặc định mọi đơn tự đóng đều hoàn thành đúng hạn.
 
 **Alternative / Error Flows (Luồng rẽ nhánh / Xử lý lỗi):**
 

@@ -12,7 +12,7 @@ Toàn bộ tài liệu quản lý dự án, đặc tả yêu cầu (PRD), thiế
 
 ### Truy cập nhanh các hạng mục cốt lõi:
 * **Tổng quan sản phẩm (Actors, Goals & Non-goals):** [docs/01-product/README.md](docs/01-product/README.md)
-* **Đặc tả 13 Module chức năng (`M01`–`M13`, 40 FR):** [docs/03-modules/README.md](docs/03-modules/README.md)
+* **Đặc tả 14 module chức năng (`M01`–`M14`, 41 FR):** [docs/03-modules/README.md](docs/03-modules/README.md)
 * **Yêu cầu phi chức năng (`NFR-SEC`, `NFR-PERF`, `NFR-INT`, `NFR-AVAIL`):** [docs/05-non-functional-requirements/README.md](docs/05-non-functional-requirements/README.md)
 * **Kịch bản kiểm thử & Ma trận truy vết (`RTM`):** [docs/06-acceptance/test-scenarios.md](docs/06-acceptance/test-scenarios.md) | [docs/06-acceptance/traceability-matrix.md](docs/06-acceptance/traceability-matrix.md)
 * **Proposal, Baseline Milestone (`MS-00`–`MS-04`) & Báo giá (`Q-01`–`Q-13`):** [docs/08-project/Proposal.md](docs/08-project/Proposal.md) | [docs/08-project/Dieu-chinh-proposal.md](docs/08-project/Dieu-chinh-proposal.md) | [docs/08-project/Bao-gia-cho-khach.md](docs/08-project/Bao-gia-cho-khach.md)

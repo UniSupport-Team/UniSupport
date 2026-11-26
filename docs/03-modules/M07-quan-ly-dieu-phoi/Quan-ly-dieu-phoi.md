@@ -1,10 +1,10 @@
-﻿# TÀI LIỆU QUY TRÌNH — M07: Xử lý & Trao đổi — Nhân viên (Process & Exchange)
+﻿# TÀI LIỆU QUY TRÌNH — M07: Quản lý & Điều phối Ticket (Routing & Dispatch)
 
 ## 1. Thông tin Phân hệ
 * **Mã Phân hệ:** M07
-* **Tên Phân hệ:** M07: Xử lý & Trao đổi — Nhân viên (Process & Exchange)
+* **Tên Phân hệ:** M07: Quản lý & Điều phối Ticket (Routing & Dispatch)
 * **Mốc triển khai (Milestone): MS-02
-* **Đối tượng phụ trách:** Nhân viên
+* **Đối tượng phụ trách:** Quản lý, Admin
 * **Tài liệu Đặc tả Chi tiết (PRD FR):** [prd.md](prd.md)
 
 ---

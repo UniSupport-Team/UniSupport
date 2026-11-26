@@ -1,6 +1,6 @@
 # 2. PHÂN HỆ SINH VIÊN (STUDENT WORKFLOWS)
 
-> **Ánh xạ Phân hệ:** [M05-khoi-tao-ticket](../03-modules/M05-khoi-tao-ticket/), [M09-theo-doi-bo-sung](../03-modules/M09-theo-doi-bo-sung/), [M10-ket-qua-danh-gia](../03-modules/M10-ket-qua-danh-gia/)
+> **Ánh xạ Phân hệ:** [M05-khoi-tao-ticket](../03-modules/M05-khoi-tao-ticket/), [M10-theo-doi-bo-sung](../03-modules/M10-theo-doi-bo-sung/), [M11-ket-qua-danh-gia](../03-modules/M11-ket-qua-danh-gia/)
 
 ---
 
@@ -42,7 +42,7 @@ graph TD
 
 * **Tác nhân:** Sinh viên.
 * **Tiền điều kiện:** Sinh viên có Ticket đã khởi tạo.
-* **Ánh xạ Module:** [M09-theo-doi-bo-sung](../03-modules/M09-theo-doi-bo-sung/) (`[FR-M09-01]`), [M05-khoi-tao-ticket](../03-modules/M05-khoi-tao-ticket/) (`[FR-M05-03]`)
+* **Ánh xạ Module:** [M10-theo-doi-bo-sung](../03-modules/M10-theo-doi-bo-sung/) (`[FR-M10-01]`), [M05-khoi-tao-ticket](../03-modules/M05-khoi-tao-ticket/) (`[FR-M05-03]`)
 * **Luồng chính:**
   1. Mở menu **Yêu cầu của tôi**.
   2. Hệ thống tải danh sách Ticket thuộc sở hữu của tài khoản hiện tại.
@@ -68,7 +68,7 @@ graph TD
 
 * **Tác nhân:** Sinh viên.
 * **Tiền điều kiện:** Ticket đang ở trạng thái **Chờ bổ sung** (`Pending`).
-* **Ánh xạ Module:** [M09-theo-doi-bo-sung](../03-modules/M09-theo-doi-bo-sung/) (`[FR-M09-02]`)
+* **Ánh xạ Module:** [M10-theo-doi-bo-sung](../03-modules/M10-theo-doi-bo-sung/) (`[FR-M10-02]`)
 * **Luồng chính:**
   1. Sinh viên nhận thông báo yêu cầu bổ sung từ Nhân viên.
   2. Mở Ticket, đọc nội dung yêu cầu cụ thể.
@@ -96,7 +96,7 @@ graph TD
 
 * **Tác nhân:** Sinh viên.
 * **Tiền điều kiện:** Ticket ở trạng thái **Đã giải quyết** (`Resolved`).
-* **Ánh xạ Module:** [M10-ket-qua-danh-gia](../03-modules/M10-ket-qua-danh-gia/) (`[FR-M10-01]`)
+* **Ánh xạ Module:** [M11-ket-qua-danh-gia](../03-modules/M11-ket-qua-danh-gia/) (`[FR-M11-01]`)
 * **Luồng chính:**
   1. Nhận thông báo có kết quả giải quyết từ hệ thống.
   2. Mở thông báo hoặc mở chi tiết Ticket từ danh sách.
@@ -121,7 +121,7 @@ graph TD
 
 * **Tác nhân:** Sinh viên.
 * **Tiền điều kiện:** Ticket ở trạng thái **Đã giải quyết** (`Resolved`).
-* **Ánh xạ Module:** [M10-ket-qua-danh-gia](../03-modules/M10-ket-qua-danh-gia/) (`[FR-M10-02]`, `[FR-M10-03]`)
+* **Ánh xạ Module:** [M11-ket-qua-danh-gia](../03-modules/M11-ket-qua-danh-gia/) (`[FR-M11-02]`, `[FR-M11-03]`)
 * **Luồng chính:**
   1. Mở Ticket đã hoàn thành và chọn **Đánh giá**.
   2. Giao diện hiển thị thang điểm 1–5 sao và ô nhập nhận xét/góp ý.

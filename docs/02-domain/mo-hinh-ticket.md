@@ -27,5 +27,7 @@ Theo dõi trạng thái xử lý của ticket và cam kết chất lượng dị
 *   **Thời gian tạo (Created At):** Mốc thời gian hệ thống ghi nhận ticket.
 *   **Thời gian cập nhật (Updated At):** Mốc thời gian gần nhất có sự thay đổi trạng thái, phản hồi hoặc cập nhật thông tin.
 
+* **Đồng hồ SLA:** Bắt đầu tại Created At, tạm dừng trong Pending, tiếp tục khi trở lại In Progress, dừng tại Resolved hoặc Closed theo [quy tắc nghiệp vụ mục 7](quy-tac-nghiep-vu.md#7-quy-tắc-tính-toán-thời-gian-time--sla-calculation-rules).
+
 ### 4. Kết quả giải quyết (Resolution Notes)
 *   Ghi nhận nội dung phản hồi, kết quả xử lý hoặc hướng dẫn cuối cùng từ nhân viên gửi cho sinh viên trước khi chuyển ticket sang trạng thái hoàn thành (`Resolved`).

@@ -17,6 +17,6 @@
 
 ## 2. Phân loại Mức độ Lỗi (Bug Severity)
 * **Critical (Blocker):** Crash hệ thống, mất dữ liệu, không đăng nhập được (M01, M05).
-* **High:** Không tiếp nhận hoặc chuyển Ticket sai luồng (M06, M07, M11).
-* **Medium:** Lỗi giao diện, hiển thị thông báo chưa khớp (M09, M10).
+* **High:** Không tiếp nhận hoặc chuyển Ticket sai luồng (M06, M08, M07).
+* **Medium:** Lỗi giao diện, hiển thị thông báo chưa khớp (M10, M11).
 * **Low:** Lỗi chính tả, căn chỉnh UI minor.

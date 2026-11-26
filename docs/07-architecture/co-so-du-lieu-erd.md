@@ -178,7 +178,7 @@ Khi Ticket còn `New`, sinh viên có thể thêm/xóa tệp đính kèm thuộc
 | `recipient_id` | `VARCHAR(36)` | `NOT NULL, FK(users.id)` | Người nhận theo ma trận thông báo |
 | `ticket_id` | `VARCHAR(36)` | `NULL, FK(tickets.id)` | Ticket liên quan để mở trực tiếp từ thông báo |
 | `event_code` | `VARCHAR(60)` | `NOT NULL` | Một trong các sự kiện đã thống nhất tại ma trận thông báo |
-| `event_key` | `VARCHAR(150)` | `NOT NULL` | Mã sự kiện duy nhất theo người nhận để tránh gửi lặp (đặc biệt kết quả M08/M10) |
+| `event_key` | `VARCHAR(150)` | `NOT NULL` | Mã sự kiện duy nhất theo người nhận để tránh gửi lặp (đặc biệt kết quả M09/M11) |
 | `content` | `TEXT` | `NOT NULL` | Nội dung thông báo |
 | `read_at` | `TIMESTAMP` | `NULL` | Thời điểm đánh dấu đã đọc |
 | `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` | Thời điểm phát sinh |

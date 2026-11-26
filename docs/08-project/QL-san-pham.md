@@ -20,6 +20,8 @@ Việc hỗ trợ sinh viên hiện tại thông qua nhiều kênh riêng lẻ (
 
 ## 2. Đo lường sản phẩm & Cam kết dịch vụ (SLA)
 
+> **Phân biệt SLA:** Chỉ số tại mục này là **SLA Ticket nghiệp vụ**. **SLA phản hồi/khắc phục lỗi kỹ thuật P0–P3** được quy định riêng tại [Điều phối và giám sát](Dieuphoi-Giamsat.md); không dùng thời hạn của một loại để thay thế loại còn lại.
+
 Bộ chỉ số dưới đây dùng để đo lường mức độ thành công của sản phẩm trong thực tế. Hệ thống chỉ được đánh giá là hiệu quả nếu đạt được các mục tiêu (Target) đề ra.
 
 | **Nhóm** | **Chỉ số đo lường** | **Công thức / Cách đo** | **Mục tiêu kỳ vọng (Target/SLA)** | **Tần suất theo dõi** | **Người theo dõi** |
@@ -42,7 +44,7 @@ Hệ thống bắt buộc phải trải qua kiểm thử QC/UAT và thỏa mãn 
 | **Mức độ lỗi** | **Mô tả tính chất** | **Tiêu chuẩn nghiệm thu để Ra mắt (Release Criteria)** | **Quy trình xử lý tiếp theo** |
 |:---|:---|:---|:---|
 | **P0 (Critical)** | Lỗi hệ thống, sập dịch vụ, hỏng luồng cốt lõi (đăng nhập, tạo đơn) | Bắt buộc = 0 lỗi. Tuyệt đối không được phép tồn đọng bất kỳ lỗi P0 nào. | Kích hoạt Hotfix khẩn cấp theo Quy trình Quản lý Chất lượng. |
-| **P1 (High)** | Lỗi chức năng quan trọng (điều phối, thông báo, phân quyền) | Bắt buộc = 0 lỗi. (Trường hợp ngoại lệ phải có giải pháp Workaround được duyệt). | Sửa lỗi trong đợt phát hành, QA re-test 100%. |
+| **P1 (High)** | Lỗi chức năng quan trọng (điều phối, thông báo, phân quyền) | Bắt buộc = 0 lỗi P1 mở trước nghiệm thu; **không có ngoại lệ nghiệm thu bằng workaround**. | Sửa lỗi trong đợt phát hành, QA re-test 100%. |
 | **P2 (Medium)** | Lỗi giao diện nhỏ, tính năng phụ, hiển thị chưa chuẩn | Chấp nhận < 5 lỗi. | Đưa vào Product Backlog xử lý ở phiên bản tiếp theo. |
 | **P3 (Low)** | Cải tiến UI/UX nhỏ, tối ưu hóa câu chữ | Không giới hạn số lượng. | Chuyển vào Feedback Log để đánh giá ưu tiên sau. |
 
@@ -50,10 +52,10 @@ Hệ thống bắt buộc phải trải qua kiểm thử QC/UAT và thỏa mãn 
 
 | **Rủi ro dự kiến** | **Mức ảnh hưởng** | **Giải pháp phòng ngừa & Xử lý trên hệ thống** |
 |:---|:---:|:---|
-| **Phòng ban xử lý chậm/trễ hạn SLA** | Cao | Thiết lập cơ chế leo thang tự động (Auto-Escalation): Quá hạn 2h cảnh báo đỏ trên giao diện nhân viên; quá hạn 24h tự động gửi thông báo đến Trưởng phòng ban. |
+| **Phòng ban xử lý chậm/trễ hạn SLA** | Cao | Theo `FR-M12-02`: hiển thị cảnh báo vàng khi đạt ≥ 80% SLA; cảnh báo đỏ khi vượt 100% SLA hoặc Ticket `New` tồn đọng quá 4 giờ làm việc. Trưởng phòng và nhân viên xem cảnh báo để chủ động đôn đốc hoặc phân công lại. Chưa cam kết cơ chế gửi thông báo leo thang tự động sau 24 giờ. |
 | **Lộ lọt thông tin cá nhân của sinh viên** | Rất cao | Áp dụng che giấu danh tính (Data Anonymization): Chỉ hiển thị thông tin cần thiết phục vụ xử lý đơn. Dữ liệu xuất báo cáo được ẩn danh. Mã hóa thông tin cá nhân trong CSDL. |
 | **Hệ thống quá tải lúc cao điểm (Đầu kỳ, thi cử)** | Cao | Tối ưu hóa tài nguyên máy chủ: Thiết lập Auto-scaling trên nền tảng Cloud (Render/AWS). Tối ưu hóa truy vấn CSDL và bộ nhớ đệm (Caching). |
-| **Sinh viên gửi nhầm phòng ban hoặc tạo đơn rác** | Trung bình | Giao diện điều hướng theo loại thủ tục cụ thể thay vì phòng ban. Hệ thống tự động ánh xạ về phòng ban chuyên trách; đơn chưa rõ phân về hàng chờ Admin phân loại lại. |
+| **Sinh viên gửi nhầm phòng ban hoặc tạo đơn rác** | Trung bình | Theo `FR-M05-01`: sinh viên chọn Phòng ban tiếp nhận trước, sau đó chọn Danh mục thủ tục; nếu chưa xác định được phòng ban, chọn mục "Khác" để chuyển vào hàng chờ Admin phân loại. |
 
 ---
 
@@ -114,7 +116,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 
 ### 6.1. Danh mục tính năng ưu tiên sau bàn giao (Product Backlog)
 
-> **Nguyên tắc ưu tiên:** Danh mục Backlog chỉ bao gồm các tính năng mở rộng nằm ngoài phạm vi 13 phân hệ cốt lõi đã cam kết bàn giao tại PRD. Thứ tự ưu tiên được sắp xếp dựa trên **Tác động tới trải nghiệm người dùng (Impact)** và **Hiệu quả giảm tải vận hành cho nhà trường (Value vs Effort)**.
+> **Nguyên tắc ưu tiên:** Danh mục Backlog chỉ bao gồm các tính năng mở rộng nằm ngoài phạm vi 14 phân hệ cốt lõi đã cam kết bàn giao tại PRD. Thứ tự ưu tiên được sắp xếp dựa trên **Tác động tới trải nghiệm người dùng (Impact)** và **Hiệu quả giảm tải vận hành cho nhà trường (Value vs Effort)**.
 
 | STT | Tính năng cải tiến (Feature) | Giá trị mang lại & Tác động | Độ ưu tiên | Trạng thái |
 |:---:|:---|:---|:---:|:---:|
@@ -129,7 +131,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 
 | Giai đoạn | Hạng mục trọng tâm | Nội dung thực hiện | Điều kiện chuyển giao (Exit Criteria) |
 |:---|:---|:---|:---|
-| **Giai đoạn 1 (Hiện tại: 16 tuần)** | **Triển khai Hệ thống Cốt lõi (Web Platform)** | Triển khai 13 module chức năng (M01–M13) theo cam kết PRD; hoàn thành nghiệm thu UAT với Ban Giám hiệu. | - 100% test case P0 và P1 đạt nghiệm thu (0 lỗi tồn đọng).<br>- Tỷ lệ hoàn tất xử lý đạt chuẩn cam kết SLA (> 90%). |
+| **Giai đoạn 1 (Hiện tại: 16 tuần)** | **Triển khai Hệ thống Cốt lõi (Web Platform)** | Triển khai 14 module chức năng (M01–M14) theo cam kết PRD; hoàn thành nghiệm thu UAT với Ban Giám hiệu. | - 100% test case P0 và P1 đạt nghiệm thu (0 lỗi tồn đọng).<br>- Tỷ lệ hoàn tất xử lý đạt chuẩn cam kết SLA (> 90%). |
 | **Giai đoạn 2 (Sau bàn giao: 3–6 tháng)** | **Tối ưu hóa Vận hành & Trải nghiệm** | Tiếp nhận phản hồi thực tế; phát hành tính năng FAQ Hub; bảo hành và tinh chỉnh luồng giao diện sinh viên. | - Hệ thống vận hành liên tục không có sự cố P0 trong 60 ngày.<br>- Điểm đánh giá mức độ hài lòng (CSAT) duy trì > 4.0/5.0. |
 | **Giai đoạn 3 (Dài hạn: 1–2 năm)** | **Mở rộng Hệ sinh thái & Mobile** | Phát triển ứng dụng di động (iOS/Android); tích hợp API đào tạo và ứng dụng AI tự động hóa. | - Tỷ lệ người dùng truy cập từ thiết bị di động đạt > 70% tổng traffic (đo lường bằng GA4/Clarity).<br>- Có biên bản nghiệm thu tích hợp kỹ thuật với phòng CNTT nhà trường. |
 
@@ -139,7 +141,9 @@ Nhằm đảm bảo tính kế thừa và quy trình vận hành nhất quán sa
 
 - **Ban Giám hiệu (Sponsor / Steering Committee):** Phê duyệt tầm nhìn chiến lược, định hướng mở rộng hệ sinh thái, phê duyệt ngân sách nâng cấp định kỳ và ra quyết định cuối cùng về các thay đổi chính sách vận hành cấp trường.
 - **Đại diện các Phòng ban (Business Owners / Key Users):** Đề xuất điều chỉnh hoặc bổ sung danh mục thủ tục thuộc thẩm quyền phụ trách; quản lý phân công nhân sự nội bộ và tham gia nghiệm thu tính năng mới liên quan đến đơn vị mình.
-- **Đội ngũ Kỹ thuật & Quản trị Hệ thống (IT & Product Owner):** Chịu trách nhiệm bảo trì hệ thống, giám sát an toàn thông tin, tiếp nhận và phân loại phản hồi, lập kế hoạch phát hành phiên bản mới và khắc phục sự cố kỹ thuật theo SLA.
+- **Product Owner (PO — đầu mối quản lý sản phẩm phía nhà trường):** Là vai trò nghiệp vụ được nhà trường chỉ định khi bàn giao; chịu trách nhiệm quản lý Product Backlog, xác nhận mức ưu tiên dựa trên KPI/CSAT và phản hồi người dùng, làm rõ yêu cầu với các phòng ban, đề xuất phạm vi phiên bản tiếp theo, phối hợp nghiệm thu nghiệp vụ và báo cáo định kỳ cho Ban Giám hiệu. PO **không tự phê duyệt** ngân sách, thay đổi chính sách cấp trường hoặc thay thế thẩm quyền của Sponsor. **Người đảm nhiệm cụ thể cần được nhà trường xác nhận tại bàn giao**; tài liệu này không mặc định đã bổ nhiệm.
+- **Đội ngũ Kỹ thuật & Quản trị Hệ thống (IT):** Chịu trách nhiệm vận hành hạ tầng, bảo trì hệ thống, giám sát an toàn thông tin, phân tích và khắc phục sự cố kỹ thuật theo SLA; phối hợp với PO để ước lượng công việc, lên lịch phát hành và xác nhận khả năng triển khai.
+- **Luồng quyết định sau bàn giao:** Người dùng/phòng ban gửi phản hồi → PO phân loại, đối chiếu KPI và ưu tiên backlog → IT đánh giá kỹ thuật, effort và rủi ro → Ban Giám hiệu phê duyệt khi phát sinh ngân sách/chính sách/phạm vi cam kết → PO và IT phối hợp nghiệm thu, cập nhật tài liệu và truyền thông phát hành. Quy trình Change Request hiện hành xem [Điều phối & Giám sát — Mục 3.4](Dieuphoi-Giamsat.md#34-quy-trình-yêu-cầu-thay-đổi-change-request---cr-và-phân-cấp-phê-duyệt).
 
 ---
 

@@ -35,7 +35,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị chính xác 4 thẻ chỉ số (Tổng đơn, Đang xử lý, Hoàn thành, Quá hạn SLA) và biểu đồ theo mốc thời gian đã chọn (tự làm mới mỗi 60 giây theo `BR-01`, tổng tỷ lệ tròn bằng 100% theo `BR-02`, hiển thị `0` nếu kỳ lọc trống theo `E-01`, `E-02`).
+* **AC-01:** Hiển thị chính xác 4 thẻ chỉ số (Tổng đơn, Đang xử lý, Hoàn thành, Quá hạn SLA) và biểu đồ theo mốc thời gian đã chọn (tự làm mới mỗi 60 giây theo `BR-01`, tổng tỷ lệ tròn bằng 100.0% theo `BR-02`); nếu chọn khoảng thời gian không hợp lệ (Từ ngày > Đến ngày) $\rightarrow$ Hệ thống chặn submit và trả về mã lỗi validation `422 Unprocessable Entity` (`E-01`); nếu kỳ lọc chưa có dữ liệu $\rightarrow$ Hiển thị các thẻ chỉ số bằng `0` và biểu đồ ở trạng thái trống (*Empty State*) không lỗi (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -118,7 +118,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Xuất file `.xlsx` hoặc `.pdf` tải về thành công (trong thời gian $\le 2.000\text{ms}$ theo `NFR-PERF-02`), chứa đầy đủ tiêu đề trường, ngày xuất và bảng số liệu khớp 100% với bộ lọc hiện tại trên màn hình (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Xuất file `.xlsx` hoặc `.pdf` tải về thành công (trong thời gian $\le 2.000\text{ms}$ theo `NFR-PERF-02`), chứa đầy đủ tiêu đề trường, ngày xuất và bảng số liệu khớp 100% với bộ lọc hiện tại trên màn hình (`BR-01`); nếu định dạng xuất khác `.xlsx` hoặc `.pdf` $\rightarrow$ Backend từ chối với mã lỗi `422 Unprocessable Entity` (`E-01`); nếu danh sách lọc có 0 bản ghi $\rightarrow$ Vẫn xuất tệp hợp lệ kèm dòng thông báo *"Không có dữ liệu phát sinh trong kỳ lọc"* (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -143,7 +143,7 @@
 - **Chỉ số hiệu suất nhân sự:**
   - Tên nhân viên.
   - Số lượng Ticket đã giải quyết.
-  - Tỷ lệ hoàn thành đúng hạn SLA (%).
+  - Tỷ lệ hoàn thành đúng hạn SLA (%): số đơn đã giải quyết đúng hạn / số đơn đã giải quyết trong phạm vi lọc × 100%; sử dụng thời lượng SLA chốt tại Resolved từ M12 theo [quy tắc nghiệp vụ mục 7](../../02-domain/quy-tac-nghiep-vu.md). Loại đơn tự đóng do không bổ sung; không phụ thuộc điểm CSAT. Nếu mẫu số bằng 0, hiển thị N/A.
   - Điểm CSAT trung bình của nhân viên đó.
   - Danh sách ý kiến nhận xét của sinh viên.
 

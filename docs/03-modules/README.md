@@ -2,14 +2,14 @@
 
 > **Baseline milestone hiện hành:** [Báo cáo điều chỉnh kế hoạch triển khai](../08-project/Dieu-chinh-proposal.md), gồm `MS-00` đến `MS-04`.
 >
-> **Quy mô hệ thống:** 5 milestone • 13 module thực thi (`M01`–`M13`) • 40 FR trong PRD + 1 task hạ tầng (`INF-01`) • 4 vai trò. Số GitHub Issue thực tế phải đối chiếu trên công cụ quản lý, không suy ra từ tổng FR.
+> **Quy mô hệ thống:** 5 milestone • 14 module (`M01`–`M14`) • 41 FR trong PRD (40 FR M01–M13 + 1 FR M14) + 1 task hạ tầng (`INF-01`) • 4 vai trò. Số GitHub Issue thực tế phải đối chiếu trên công cụ quản lý, không suy ra từ tổng FR.
 >
 > **Phân bổ module theo baseline:**
 >
 > - **MS-00 — Khởi động:** khảo sát, đặc tả, thiết kế, database và nền tảng (`INF-01`).
 > - **MS-01 — Nền tảng:** `M01`, `M02`, `M03`.
 > - **MS-02 — Ticket và Phân hệ sinh viên:** `M04` đến `M11`.
-> - **MS-03 — Giám sát Dashboard:** `M12`, `M13`.
+> - **MS-03 — Giám sát Dashboard & Đa ngôn ngữ:** `M12`, `M13`, `M14`.
 > - **MS-04 — Bàn giao dự án:** nghiệm thu, chuẩn bị tài liệu và bàn giao.
 >
 > **Nguyên tắc cốt lõi:** phạm vi và thời gian của milestone lấy theo baseline hiện hành; các module bên dưới là nơi gốc của FR.
@@ -23,7 +23,7 @@
 | **MS-00 — Khởi động** | Tuần 1–3 | `INF-01` | 1 hạ tầng |
 | **MS-01 — Nền tảng** | Tuần 4–6 | `M01`, `M02`, `M03` | 11 FR |
 | **MS-02 — Ticket và Phân hệ sinh viên** | Tuần 7–11 | `M04`, `M05`, `M06`, `M07`, `M08`, `M09`, `M10`, `M11` | 21 FR |
-| **MS-03 — Giám sát Dashboard** | Tuần 12–14 | `M12`, `M13` | 8 FR |
+| **MS-03 — Giám sát Dashboard & Đa ngôn ngữ** | Tuần 12–14 | `M12`, `M13`, `M14` | 9 FR |
 | **MS-04 — Bàn giao dự án** | Tuần 15–16 | Nghiệm thu, tài liệu và bàn giao | — |
 
 ---
@@ -74,45 +74,46 @@
   * `[M05-02]` Nhập thông tin, đính kèm file và gửi Ticket
   * `[M05-03]` Sinh viên chỉnh sửa Tiêu đề, Nội dung và tệp đính kèm khi đơn chưa được tiếp nhận (trạng thái New)
 
-#### M06, M07, M08 và M11 — Tiếp nhận, xử lý, trả kết quả và điều phối
+#### M06–M09 — Tiếp nhận, điều phối, xử lý và trả kết quả
 
 * **[M06-tiep-nhan-ticket/](M06-tiep-nhan-ticket/) — [M06] Tiếp nhận Ticket (2 FR)** ([prd.md](M06-tiep-nhan-ticket/prd.md) | [Tiep-nhan-ticket.md](M06-tiep-nhan-ticket/Tiep-nhan-ticket.md))
 
   * `[M06-01]` Nhân viên xem danh sách đơn mới của phòng ban
   * `[M06-02]` Nhân viên nhận xử lý đơn và hệ thống chặn lỗi hai người nhận cùng một đơn
-* **[M07-xu-ly-trao-doi/](M07-xu-ly-trao-doi/) — [M07] Xử lý & Bổ sung (4 FR)** ([prd.md](M07-xu-ly-trao-doi/prd.md) | [Xu-ly-trao-doi.md](M07-xu-ly-trao-doi/Xu-ly-trao-doi.md))
+* **[M07-quan-ly-dieu-phoi/](M07-quan-ly-dieu-phoi/) — [M07] Điều phối (3 FR)** ([prd.md](M07-quan-ly-dieu-phoi/prd.md) | [Quan-ly-dieu-phoi.md](M07-quan-ly-dieu-phoi/Quan-ly-dieu-phoi.md))
 
-  * `[M07-01]` Nhân viên cập nhật tiến độ, ghi chú và lưu lịch sử xử lý đơn
-  * `[M07-02]` Nhân viên xem lại danh sách lịch sử các đơn mình đã xử lý
-  * `[M07-03]` Nhân viên yêu cầu sinh viên bổ sung hồ sơ và bắt đầu đếm ngược 3 ngày làm việc
-  * `[M07-04]` Nhân viên báo cáo và trả lại đơn do bị gửi sai phòng ban
-* **[M08-tra-ket-qua/](M08-tra-ket-qua/) — [M08] Trả kết quả (2 FR)** ([prd.md](M08-tra-ket-qua/prd.md) | [Tra-ket-qua.md](M08-tra-ket-qua/Tra-ket-qua.md))
+  * `[M07-01]` Admin phân loại và chuyển các đơn mục 'Khác' về đúng phòng ban
+  * `[M07-02]` Admin chuyển lại các đơn bị báo sai phòng ban về đúng nơi
+  * `[M07-03]` Trưởng phòng phân công người xử lý đơn trong nội bộ phòng ban
 
-  * `[M08-01]` Nhân viên nhập kết quả giải quyết và đính kèm tệp trả lời
-  * `[M08-02]` Hoàn thành đơn và tự động gửi thông báo kết quả cho sinh viên
-* **[M11-quan-ly-dieu-phoi/](M11-quan-ly-dieu-phoi/) — [M11] Điều phối (3 FR)** ([prd.md](M11-quan-ly-dieu-phoi/prd.md) | [Quan-ly-dieu-phoi.md](M11-quan-ly-dieu-phoi/Quan-ly-dieu-phoi.md))
+* **[M08-xu-ly-trao-doi/](M08-xu-ly-trao-doi/) — [M08] Xử lý & Bổ sung (4 FR)** ([prd.md](M08-xu-ly-trao-doi/prd.md) | [Xu-ly-trao-doi.md](M08-xu-ly-trao-doi/Xu-ly-trao-doi.md))
 
-  * `[M11-01]` Admin phân loại và chuyển các đơn mục 'Khác' về đúng phòng ban
-  * `[M11-02]` Admin chuyển lại các đơn bị báo sai phòng ban về đúng nơi
-  * `[M11-03]` Trưởng phòng phân công người xử lý đơn trong nội bộ phòng ban
+  * `[M08-01]` Nhân viên cập nhật tiến độ, ghi chú và lưu lịch sử xử lý đơn
+  * `[M08-02]` Nhân viên xem lại danh sách lịch sử các đơn mình đã xử lý
+  * `[M08-03]` Nhân viên yêu cầu sinh viên bổ sung hồ sơ và bắt đầu đếm ngược 3 ngày làm việc
+  * `[M08-04]` Nhân viên báo cáo và trả lại đơn do bị gửi sai phòng ban
+* **[M09-tra-ket-qua/](M09-tra-ket-qua/) — [M09] Trả kết quả (2 FR)** ([prd.md](M09-tra-ket-qua/prd.md) | [Tra-ket-qua.md](M09-tra-ket-qua/Tra-ket-qua.md))
 
-#### M09 và M10 — Theo dõi, bổ sung, kết quả và đánh giá
+  * `[M09-01]` Nhân viên nhập kết quả giải quyết và đính kèm tệp trả lời
+  * `[M09-02]` Hoàn thành đơn và tự động gửi thông báo kết quả cho sinh viên
 
-* **[M09-theo-doi-bo-sung/](M09-theo-doi-bo-sung/) — [M09] Theo dõi & Bổ sung (2 FR)** ([prd.md](M09-theo-doi-bo-sung/prd.md) | [Theo-doi-bo-sung.md](M09-theo-doi-bo-sung/Theo-doi-bo-sung.md))
+#### M10 và M11 — Theo dõi, bổ sung, kết quả và đánh giá
 
-  * `[M09-01]` Sinh viên xem, tìm kiếm và theo dõi các đơn mình đã gửi
-  * `[M09-02]` Sinh viên nộp bổ sung thông tin và giấy tờ theo yêu cầu
-* **[M10-ket-qua-danh-gia/](M10-ket-qua-danh-gia/) — [M10] Kết quả & Đánh giá (3 FR)** ([prd.md](M10-ket-qua-danh-gia/prd.md) | [Ket-qua-danh-gia.md](M10-ket-qua-danh-gia/Ket-qua-danh-gia.md))
+* **[M10-theo-doi-bo-sung/](M10-theo-doi-bo-sung/) — [M10] Theo dõi & Bổ sung (2 FR)** ([prd.md](M10-theo-doi-bo-sung/prd.md) | [Theo-doi-bo-sung.md](M10-theo-doi-bo-sung/Theo-doi-bo-sung.md))
 
-  * `[M10-01]` Sinh viên xem kết quả giải quyết và tải tệp trả lời
-  * `[M10-02]` Sinh viên đánh giá độ hài lòng từ 1 đến 5 sao, nhận xét và đóng đơn
-  * `[M10-03]` Hệ thống tự động đóng đơn nếu sinh viên không đánh giá sau 3 ngày làm việc
+  * `[M10-01]` Sinh viên xem, tìm kiếm và theo dõi các đơn mình đã gửi
+  * `[M10-02]` Sinh viên nộp bổ sung thông tin và giấy tờ theo yêu cầu
+* **[M11-ket-qua-danh-gia/](M11-ket-qua-danh-gia/) — [M11] Kết quả & Đánh giá (3 FR)** ([prd.md](M11-ket-qua-danh-gia/prd.md) | [Ket-qua-danh-gia.md](M11-ket-qua-danh-gia/Ket-qua-danh-gia.md))
+
+  * `[M11-01]` Sinh viên xem kết quả giải quyết và tải tệp trả lời
+  * `[M11-02]` Sinh viên đánh giá độ hài lòng từ 1 đến 5 sao, nhận xét và đóng đơn
+  * `[M11-03]` Hệ thống tự động đóng đơn nếu sinh viên không đánh giá sau 3 ngày làm việc
 
 ---
 
 ### MS-03 — GIÁM SÁT VÀ DASHBOARD
 
-#### M12 và M13 — Giám sát tiến độ, dashboard và báo cáo
+#### M12–M14 — Giám sát tiến độ, dashboard, báo cáo và đa ngôn ngữ
 
 * **[M12-giam-sat-tien-do/](M12-giam-sat-tien-do/) — [M12] Theo dõi tiến độ (4 FR)** ([prd.md](M12-giam-sat-tien-do/prd.md) | [Giam-sat-tien-do.md](M12-giam-sat-tien-do/Giam-sat-tien-do.md))
 
@@ -126,3 +127,6 @@
   * `[M13-02]` Hiển thị dữ liệu thống kê đúng theo quyền của Trưởng phòng và Admin
   * `[M13-03]` Xuất báo cáo số liệu ra file Excel và PDF
   * `[M13-04]` Thống kê điểm đánh giá hài lòng và hiệu suất làm việc của nhân viên
+* **[M14-quan-ly-da-ngon-ngu/](M14-quan-ly-da-ngon-ngu/) — [M14] Quản lý đa ngôn ngữ (1 FR)** ([prd.md](M14-quan-ly-da-ngon-ngu/prd.md))
+
+  * `[M14-01]` Chuyển đổi giao diện giữa tiếng Việt và tiếng Anh, không cần đăng nhập lại; 8h Dev 1 trong MS-03, báo giá chung Q-13 với M13.
