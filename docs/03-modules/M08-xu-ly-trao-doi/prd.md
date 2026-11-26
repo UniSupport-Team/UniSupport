@@ -139,7 +139,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Nhập đủ nội dung ($\ge 10$ ký tự) và gửi yêu cầu bổ sung $\rightarrow$ Đơn chuyển sang trạng thái Chờ bổ sung (`Pending`) và hiển thị đếm ngược 3 ngày làm việc; nếu để trống nội dung thì chặn gửi (`BR-01`, `BR-02`, `E-02`).
+* **AC-01:** Nhập đủ nội dung ($\ge 10$ ký tự) và gửi yêu cầu bổ sung $\rightarrow$ Đơn chuyển sang trạng thái Chờ bổ sung (`Pending`), kích hoạt đếm ngược 3 ngày làm việc và tự động phát thông báo In-app cho Sinh viên yêu cầu bổ sung hồ sơ; nếu để trống nội dung hoặc $< 10$ ký tự thì trả về `422 Unprocessable Entity` (`BR-01`, `BR-02`, `E-02`).
 * **AC-02:** Quá 3 ngày làm việc Sinh viên không bổ sung $\rightarrow$ Đơn tự động chuyển sang `Closed` (`auto_closed = true`) và ghi nhận lý do đóng tự động (`BR-02`).
 * **AC-03:** Nhân viên đã gửi yêu cầu bổ sung 1 lần $\rightarrow$ Nút "Yêu cầu bổ sung" bị ẩn/khóa, gọi API trả về `400 Bad Request`, không cho phép gửi lần thứ hai (`BR-03`, `E-01`).
 

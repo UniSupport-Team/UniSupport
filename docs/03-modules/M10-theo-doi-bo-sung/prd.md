@@ -94,6 +94,6 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Sinh viên nộp bổ sung hợp lệ khi đơn đang `Pending` $\rightarrow$ Đơn chuyển về `Đang xử lý` (`In Progress`), giữ nguyên Mã Ticket và Nhân viên phụ trách cũ (`BR-01`), hủy bộ đếm 3 ngày làm việc; nếu đơn đã đóng (`BR-02`, `E-01`) thì trả về `400 Bad Request`, nếu nội dung bổ sung $< 5$ ký tự hoặc tệp lỗi (`E-02`) thì trả về `422 Unprocessable Entity`.
+* **AC-01:** Sinh viên nộp bổ sung hợp lệ khi đơn đang `Pending` $\rightarrow$ Đơn chuyển về `Đang xử lý` (`In Progress`), giữ nguyên Mã Ticket và Nhân viên phụ trách cũ (`BR-01`), hủy bộ đếm 3 ngày làm việc và tự động phát thông báo In-app cho nhân viên phụ trách; nếu đơn đã đóng (`BR-02`, `E-01`) thì trả về `400 Bad Request`, nếu nội dung bổ sung $< 5$ ký tự hoặc tệp lỗi (`E-02`) thì trả về `422 Unprocessable Entity`.
 
 ---

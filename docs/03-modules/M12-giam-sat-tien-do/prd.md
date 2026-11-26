@@ -78,7 +78,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Ticket chạm $\ge 80\%$ thời hạn SLA hiển thị cảnh báo vàng; Ticket đạt $100\%$ mốc SLA cam kết hoặc đơn `New` tồn đọng $> 4$ giờ làm việc lập tức hiển thị nhãn tô đỏ `Quá hạn SLA` kèm số giờ vượt quá (`BR-01`); ngay khi đơn được chuyển sang `Resolved` hoặc `Closed`, hệ thống chốt thời gian xử lý thực tế và tự động gỡ bỏ Ticket khỏi danh sách cảnh báo SLA thời gian thực (`E-01`).
+* **AC-01:** Ticket chạm $\ge 80\%$ thời hạn SLA hiển thị cảnh báo vàng; Ticket đạt $100\%$ mốc SLA cam kết hoặc đơn `New` tồn đọng $> 4$ giờ làm việc lập tức hiển thị nhãn tô đỏ `Quá hạn SLA` kèm số giờ vượt quá và phát thông báo In-app cảnh báo cho Trưởng phòng ban (`BR-01`); ngay khi đơn được chuyển sang `Resolved` hoặc `Closed`, hệ thống chốt thời gian xử lý thực tế và tự động gỡ bỏ Ticket khỏi danh sách cảnh báo SLA thời gian thực (`E-01`).
 
 * **AC-02:** SLA bắt đầu khi tạo đơn, không tính cuối tuần, ngày lễ và Pending; tiếp tục khi bổ sung thành công mà không reset. Tỷ lệ SLA = thời lượng hợp lệ / thời hạn cấu hình × 100%; cảnh báo vàng từ 80% đến dưới 100%, đỏ từ 100% (ưu tiên đỏ nếu New tồn đọng trên 4 giờ làm việc). Bộ đếm Pending độc lập với SLA.
 
