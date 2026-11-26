@@ -92,7 +92,7 @@
 
 ## [FR-M11-03] Hệ thống tự động đóng đơn nếu sinh viên không đánh giá sau 3 ngày làm việc
 
-**Mô tả:** Sau 3 ngày làm việc (không tính Thứ 7, Chủ nhật và ngày lễ) tính từ thời điểm Ticket chuyển sang trạng thái Đã giải quyết mà Sinh viên không thực hiện đánh giá, hệ thống sẽ tự động chuyển trạng thái đơn sang Đã đóng.
+**Mô tả:** Bộ đếm đánh giá độc lập với SLA xử lý, áp dụng mục 7 [quy tắc nghiệp vụ](../../02-domain/quy-tac-nghiep-vu.md). Sau 3 ngày làm việc (không tính Thứ 7, Chủ nhật và ngày lễ) tính từ thời điểm Ticket chuyển sang trạng thái Đã giải quyết mà Sinh viên không thực hiện đánh giá, hệ thống sẽ tự động chuyển trạng thái đơn sang Đã đóng.
 
 **Priority:** Medium (Tác vụ ngầm dọn dẹp và kết thúc vòng đời các Ticket không có phản hồi đánh giá).
 
@@ -120,7 +120,7 @@
 
 **Business Rules (Quy tắc nghiệp vụ):**
 
-* **BR-01:** Các đơn bị đóng tự động do không đánh giá sau `Resolved` không có điểm số sao (Rating = null) và không tính vào CSAT. Việc đúng hay quá hạn SLA được xác định bằng thời điểm giải quyết `resolved_at` so với hạn xử lý, không mặc định mọi đơn tự đóng đều hoàn thành đúng hạn.
+* **BR-01:** Các đơn bị đóng tự động do không đánh giá sau `Resolved` không có điểm số sao (Rating = null) và không tính vào CSAT. Việc đúng hay quá hạn SLA được xác định bằng thời lượng SLA hợp lệ chốt tại `resolved_at` theo mục 7 quy tắc nghiệp vụ, không mặc định mọi đơn tự đóng đều hoàn thành đúng hạn.
 
 **Alternative / Error Flows (Luồng rẽ nhánh / Xử lý lỗi):**
 
