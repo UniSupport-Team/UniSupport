@@ -36,10 +36,11 @@
 
 * **E-01 (Bỏ trống Phòng ban đích hoặc Danh mục mới):** Admin nhấn xác nhận phân loại khi chưa chọn đủ Phòng ban đích và Danh mục chuẩn $\rightarrow$ Hệ thống chặn lưu và báo lỗi `422 Unprocessable Entity`.
 * **E-02 (Danh mục không thuộc Phòng ban đích):** Gửi cặp `department_id` và `category_id` không khớp nhau $\rightarrow$ Backend từ chối với mã `400 Bad Request`.
+* **E-03 (Ticket đã được tiếp nhận):** Nếu Ticket không còn ở trạng thái `New` do đã được tiếp nhận, hệ thống từ chối với `400 Bad Request`.
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Admin chọn đủ Phòng ban đích và Danh mục hợp lệ $\rightarrow$ Ticket chuyển sang Hàng chờ của đúng phòng ban đích ở trạng thái Chưa tiếp nhận (`New`) và ghi log lịch sử (`BR-01`); nếu bỏ trống trường bắt buộc (`E-01`) trả về `422 Unprocessable Entity`, nếu danh mục không thuộc phòng ban đích (`E-02`) trả về `400 Bad Request`.
+* **AC-01:** Admin chọn đủ Phòng ban đích và Danh mục hợp lệ $\rightarrow$ Ticket chuyển sang Hàng chờ của đúng phòng ban đích ở trạng thái Chưa tiếp nhận (`New`) và ghi log lịch sử (`BR-01`); nếu bỏ trống trường bắt buộc (`E-01`) trả về `422 Unprocessable Entity`, nếu danh mục không thuộc phòng ban đích (`E-02`) trả về `400 Bad Request`; nếu Ticket đã được tiếp nhận (`E-03`) trả về `400 Bad Request`.
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -85,7 +86,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Admin chọn Phòng ban và Danh mục mới hợp lệ $\rightarrow$ Đơn chuyển về Hàng chờ của phòng ban mới ở trạng thái `New` (`assignee_id = null`) và lưu đầy đủ lịch sử lý do luân chuyển; từ chối thực hiện và trả về mã lỗi validation `422 Unprocessable Entity` nếu bỏ trống phòng ban hoặc danh mục đích (`BR-01`, `E-01`).
+* **AC-01:** Admin chọn Phòng ban và Danh mục mới hợp lệ $\rightarrow$ Đơn chuyển về Hàng chờ của phòng ban mới ở trạng thái `New` (`assignee_id = null`) và lưu đầy đủ lịch sử lý do luân chuyển; Admin nhận thông báo In-app kèm lý do chuyển trả từ FR-M08-04 để thực hiện điều chuyển, không phát thêm thông báo cho Quản lý; từ chối thực hiện và trả về mã lỗi validation `422 Unprocessable Entity` nếu bỏ trống phòng ban hoặc danh mục đích (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
