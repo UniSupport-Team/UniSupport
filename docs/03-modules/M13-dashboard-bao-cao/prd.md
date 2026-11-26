@@ -143,7 +143,7 @@
 - **Chỉ số hiệu suất nhân sự:**
   - Tên nhân viên.
   - Số lượng Ticket đã giải quyết.
-  - Tỷ lệ hoàn thành đúng hạn SLA (%).
+  - Tỷ lệ hoàn thành đúng hạn SLA (%): số đơn đã giải quyết đúng hạn / số đơn đã giải quyết trong phạm vi lọc × 100%; sử dụng thời lượng SLA chốt tại Resolved từ M12 theo [quy tắc nghiệp vụ mục 7](../../02-domain/quy-tac-nghiep-vu.md). Loại đơn tự đóng do không bổ sung; không phụ thuộc điểm CSAT. Nếu mẫu số bằng 0, hiển thị N/A.
   - Điểm CSAT trung bình của nhân viên đó.
   - Danh sách ý kiến nhận xét của sinh viên.
 
