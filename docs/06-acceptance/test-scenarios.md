@@ -159,7 +159,7 @@
 | `TC-M13-E02` | `FR-M13-01/AC-01`, `NFR-PERF-02` | Lọc Dashboard với khoảng thời gian không có dữ liệu | Boundary | Chọn khoảng thời gian Từ ngày - Đến ngày trong quá khứ chưa có phát sinh đơn | Các widget hiển thị 0 đơn, biểu đồ hiển thị trạng thái Empty State sạch sẽ, phản hồi $\le 2.000\text{ms}$. | Không |
 | `TC-M13-M03` | `FR-M13-03/AC-01`, `NFR-PERF-02` | Xuất báo cáo số liệu ra file Excel (`.xlsx`) và PDF (`.pdf`) | Main | Lọc danh sách báo cáo và bấm "Xuất báo cáo Excel" / "Xuất file PDF" | Tải xuống tệp `.xlsx`/`.pdf` thành công trong $\le 2.000\text{ms}$, dữ liệu trong tệp khớp 100% với bảng lọc trên màn hình. | Có |
 | `TC-M13-N02` | `FR-M13-03/AC-01` | Xuất báo cáo khi kỳ lọc không có dữ liệu phát sinh hoặc lỗi máy chủ (`E-01`, `E-02`) | Negative / Boundary | (1) Bấm xuất báo cáo kỳ không có đơn; (2) Máy chủ xuất file bị ngắt kết nối | (1) Thông báo "Không có dữ liệu để xuất file", không tạo file rỗng; (2) Trả về thông báo lỗi thân thiện, không sập trang. | Không |
-| `TC-M13-M04` | `FR-M13-04/AC-01` | Thống kê điểm CSAT trung bình và hiệu suất KPI nhân viên | Main / Boundary | Xem báo cáo nhân sự có cả đơn chấm sao và đơn đóng tự động (`rating = null`) | Tính đúng tỷ lệ hoàn thành SLA và trung bình CSAT chỉ trên các đơn có đánh giá thực tế; hiển thị `"N/A"` nếu chưa có đánh giá. | Có |
+| `TC-M13-M04` | `FR-M13-04/AC-01` | Thống kê CSAT và KPI SLA độc lập | Main / Boundary | 3 đơn đã giải quyết: 2 đúng hạn (1 có rating 5, 1 không đánh giá), 1 quá hạn (rating 3); thêm 1 đơn tự đóng do Pending | SLA đúng hạn 2/3 = 66,67%; CSAT (5+3)/2 = 4; đơn tự đóng Pending không tính vào hai chỉ số; N/A khi mẫu số tương ứng bằng 0. | Có |
 
 
 #### M14 — Chuyển đổi ngôn ngữ Việt/Anh (cùng MS-03)
