@@ -1,5 +1,7 @@
 # PHÂN HỆ: M04 — QUẢN LÝ DANH MỤC HỖ TRỢ (CATEGORY MANAGEMENT)
 
+SLA sử dụng giờ làm việc theo [quy tắc nghiệp vụ mục 7](../../02-domain/quy-tac-nghiep-vu.md). Giả định nhà trường cung cấp danh sách ngày lễ; nhóm triển khai khởi tạo `system_holidays`. Giao diện quản lý ngày lễ ngoài phạm vi hợp đồng.
+
 ## [FR-M04-01] Admin quản lý danh mục hỗ trợ chung của toàn trường
 
 **Mô tả:** Admin thiết lập, thêm mới, chỉnh sửa thông tin hoặc ẩn/hiện các danh mục hỗ trợ cấp trường và danh mục định tuyến dùng chung.
