@@ -38,7 +38,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị đúng và đầy đủ danh sách Ticket do chính sinh viên tạo kèm trạng thái thời gian thực (ẩn ghi chú nội bộ); chặn `403 Forbidden` nếu truy cập đơn của người khác (`BR-01`, `E-01`).
+* **AC-01:** Hiển thị đúng và đầy đủ danh sách Ticket do chính sinh viên tạo kèm trạng thái thời gian thực (ẩn ghi chú nội bộ); khi trạng thái thay đổi, Sinh viên nhận thông báo In-app mở chi tiết Ticket, không phát trùng thông báo kết quả; chặn `403 Forbidden` nếu truy cập đơn của người khác (`BR-01`, `E-01`).
 * **AC-02:** Tìm kiếm theo mã/tiêu đề và lọc theo 5 trạng thái trả về kết quả chính xác; hiển thị trạng thái rỗng nếu không có đơn khớp (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
