@@ -15,30 +15,25 @@
 
 Dự án gồm **14 module**, được báo giá theo **13 hạng mục** (`Q-01` đến `Q-13`) vì `M13` và `M14` sử dụng chung một mức giá. Giá đã bao gồm chi phí phát triển, quản lý, kiểm thử và bàn giao; **không phát sinh khoản thu riêng cho công việc chung**.
 
-Tôi không thể tạo hoặc tải xuống trực tiếp tệp `.md` vào máy của bạn, nhưng dưới đây là toàn bộ nội dung bảng **Báo giá chi tiết theo Module** từ sheet `BÁO GIÁ MODULES` đã được chuyển sang định dạng Markdown chuẩn. Bạn chỉ cần sao chép và lưu thành tệp `BAO-GIA-MODULES.md`:
 
-``` markdown
-# BẢNG BÁO GIÁ CHI TIẾT THEO MODULE (HỆ THỐNG UNISUPPORT)
-
-- **Dự án:** Hệ thống Quản lý và Tiếp nhận Hỗ trợ UniSupport
-- **Tổng ngân sách modules:** 300.000.000 VNĐ
+### 2.1. Bảng báo giá chi tiết theo module
 
 | STT | Mã báo giá | Mã module | Tên Module / Chức năng | Giờ WBS (h) | Giờ BA (h) | Tổng Effort (h) | Thành tiền (VNĐ) |
-| :---: | :---: | :---: | :--- | :---: | :---: | :---: | :---: |
-| 1 | Q-01 | M01 | Đăng nhập & xác thực | 40 h | 10 h | 50 h | 16.930.023 ₫ |
-| 2 | Q-02 | M02 | Vai trò & Phân quyền | 38 h | 9 h | 47 h | 15.914.221 ₫ |
-| 3 | Q-03 | M03 | Quản lý tài khoản | 40 h | 10 h | 50 h | 16.930.023 ₫ |
-| 4 | Q-04 | M04 | Quản lý danh mục | 42 h | 10 h | 52 h | 17.607.223 ₫ |
-| 5 | Q-05 | M05 | Khởi tạo Ticket | 82 h | 19 h | 101 h | 34.198.646 ₫ |
-| 6 | Q-06 | M06 | Tiếp nhận Ticket | 75 h | 17 h | 92 h | 31.151.242 ₫ |
-| 7 | Q-07 | M07 | Điều phối Ticket | 80 h | 19 h | 99 h | 33.521.445 ₫ |
-| 8 | Q-08 | M08 | Xử lý & Bổ sung | 62 h | 14 h | 76 h | 25.733.634 ₫ |
-| 9 | Q-09 | M09 | Trả kết quả | 50 h | 12 h | 62 h | 20.993.228 ₫ |
-| 10 | Q-10 | M10 | Theo dõi & Bổ sung | 34 h | 9 h | 43 h | 14.559.819 ₫ |
-| 11 | Q-11 | M11 | Kết quả & Đánh giá | 46 h | 11 h | 57 h | 19.300.226 ₫ |
-| 12 | Q-12 | M12 | Giám sát tiến độ | 58 h | 15 h | 73 h | 24.717.833 ₫ |
-| 13 | Q-13 | M13<br>M14 | Dashboard & Báo cáo<br>Quản lý đa ngôn ngữ | 65 h | 19 h | 84 h | 28.442.438 ₫ |
-| **TỔNG CỘNG (13 HẠNG MỤC / 14 MODULE)** | | | | **406 h** | **480 h** | **886 h** | **300.000.000 ₫** |
+| :---: | :---: | :---: | :--- | ---: | ---: | ---: | ---: |
+| 1 | Q-01 | M01 | Đăng nhập & xác thực | 40 | 10 | 50 | 16.930.023 |
+| 2 | Q-02 | M02 | Vai trò & Phân quyền | 38 | 9 | 47 | 15.914.221 |
+| 3 | Q-03 | M03 | Quản lý tài khoản | 40 | 10 | 50 | 16.930.023 |
+| 4 | Q-04 | M04 | Quản lý danh mục | 42 | 10 | 52 | 17.607.223 |
+| 5 | Q-05 | M05 | Khởi tạo Ticket | 82 | 19 | 101 | 34.198.646 |
+| 6 | Q-06 | M06 | Tiếp nhận Ticket | 75 | 17 | 92 | 31.151.242 |
+| 7 | Q-07 | M07 | Điều phối Ticket | 80 | 19 | 99 | 33.521.445 |
+| 8 | Q-08 | M08 | Xử lý & Bổ sung | 62 | 14 | 76 | 25.733.634 |
+| 9 | Q-09 | M09 | Trả kết quả | 50 | 12 | 62 | 20.993.228 |
+| 10 | Q-10 | M10 | Theo dõi & Bổ sung | 34 | 9 | 43 | 14.559.819 |
+| 11 | Q-11 | M11 | Kết quả & Đánh giá | 46 | 11 | 57 | 19.300.226 |
+| 12 | Q-12 | M12 | Giám sát tiến độ | 58 | 15 | 73 | 24.717.833 |
+| 13 | Q-13 | M13<br>M14 | Dashboard & Báo cáo<br>Quản lý đa ngôn ngữ | 65 | 19 | 84 | 28.442.438 |
+| | | | **TỔNG CỘNG (13 HẠNG MỤC / 14 MODULE)** | **406** | **480** | **886** | **300.000.000** |
 
 > **Ghi chú công thức:** Thành tiền = Giờ công × Đơn giá  
 > **Đơn giá** = Giá trị dự án / Tổng Effort = `338.600,4515` VNĐ/h
