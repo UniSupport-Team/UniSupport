@@ -86,7 +86,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Admin chọn Phòng ban và Danh mục mới hợp lệ $\rightarrow$ Đơn chuyển về Hàng chờ của phòng ban mới ở trạng thái `New` (`assignee_id = null`) và lưu đầy đủ lịch sử lý do luân chuyển; từ chối thực hiện và trả về mã lỗi validation `422 Unprocessable Entity` nếu bỏ trống phòng ban hoặc danh mục đích (`BR-01`, `E-01`).
+* **AC-01:** Admin chọn Phòng ban và Danh mục mới hợp lệ $\rightarrow$ Đơn chuyển về Hàng chờ của phòng ban mới ở trạng thái `New` (`assignee_id = null`) và lưu đầy đủ lịch sử lý do luân chuyển; Admin nhận thông báo In-app kèm lý do chuyển trả từ FR-M08-04 để thực hiện điều chuyển, không phát thêm thông báo cho Quản lý; từ chối thực hiện và trả về mã lỗi validation `422 Unprocessable Entity` nếu bỏ trống phòng ban hoặc danh mục đích (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
