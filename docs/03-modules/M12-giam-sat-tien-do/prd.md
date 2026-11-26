@@ -57,28 +57,30 @@
 **Dữ liệu đầu vào / Thông tin sử dụng (Data Fields):**
 
 - **Thời hạn SLA:** Số giờ xử lý cam kết theo danh mục dịch vụ.
-- **Thời gian đã trôi qua:** Tính từ lúc tạo đơn hoặc lúc tiếp nhận.
-- **Trạng thái cảnh báo:** Cảnh báo vàng (sắp quá hạn — khi thời gian xử lý đã chạm $\ge 80\%$ thời hạn SLA) / Cảnh báo đỏ (đã quá hạn SLA $> 100\%$ hoặc đơn `New` tồn đọng quá 4 giờ làm việc chưa được tiếp nhận).
+- **Thời gian đã trôi qua:** Tính từ lúc tạo đơn thành công, loại trừ Pending, cuối tuần và ngày lễ theo [quy tắc nghiệp vụ mục 7](../../02-domain/quy-tac-nghiep-vu.md).
+- **Trạng thái cảnh báo:** Cảnh báo vàng (sắp quá hạn — khi thời gian xử lý đã chạm $\ge 80\%$ thời hạn SLA) / Cảnh báo đỏ (đã quá hạn SLA $\ge 100\%$ hoặc đơn `New` tồn đọng quá 4 giờ làm việc chưa được tiếp nhận).
 
 **Luồng chính (Main Flow):**
 
 1. Tại danh sách đơn phòng ban hoặc màn hình giám sát, hệ thống liên tục tính toán thời gian xử lý thực tế so với mốc SLA cam kết.
-2. Khi thời gian xử lý đạt $\ge 80\%$ thời hạn SLA cam kết, hệ thống hiển thị nhãn cảnh báo vàng (`Sắp quá hạn SLA`). Với các đơn quá hạn đếm ngược 3 ngày làm việc bổ sung, đơn `New` chưa tiếp nhận quá 4 giờ làm việc, hoặc vượt $100\%$ thời gian SLA:
+2. Khi thời gian xử lý đạt $\ge 80\%$ thời hạn SLA cam kết, hệ thống hiển thị nhãn cảnh báo vàng (`Sắp quá hạn SLA`). Với các đơn quá hạn đếm ngược 3 ngày làm việc bổ sung, đơn `New` chưa tiếp nhận quá 4 giờ làm việc, hoặc đạt $100\%$ thời gian SLA:
    - Hệ thống tự động tô màu đỏ nổi bật trên dòng Ticket.
    - Hiển thị nhãn cảnh báo rõ ràng: `Quá hạn SLA` kèm số giờ vượt quá.
 3. Trưởng phòng và nhân viên nhấp vào nhãn cảnh báo để xem chi tiết và can thiệp kịp thời (phân công lại hoặc đôn đốc xử lý).
 
 **Business Rules (Quy tắc nghiệp vụ):**
 
-* **BR-01:** Mọi Ticket vượt quá thời hạn SLA quy định đều bắt buộc phải được đánh dấu cảnh báo đỏ trên giao diện quản trị.
+* **BR-01:** Mọi Ticket chưa kết thúc đạt hoặc vượt thời hạn SLA quy định đều bắt buộc phải được đánh dấu cảnh báo đỏ trên giao diện quản trị.
 
 **Alternative / Error Flows (Luồng rẽ nhánh / Xử lý lỗi):**
 
-* **E-01 (Ticket đã chuyển sang `Resolved` hoặc `Closed`):** Khi đơn được nhân viên giải quyết xong hoặc đóng lại $\rightarrow$ Hệ thống chốt thời gian thực tế tại thời điểm `resolved_at` và gỡ đơn khỏi danh sách cảnh báo tồn đọng đang hoạt động.
+* **E-01 (Ticket đã chuyển sang `Resolved` hoặc `Closed`):** Khi đơn được nhân viên giải quyết xong hoặc đóng lại $\rightarrow$ Hệ thống chốt thời gian thực tế tại `resolved_at` hoặc `closed_at` nếu chưa Resolved và gỡ đơn khỏi danh sách cảnh báo tồn đọng đang hoạt động.
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Ticket chạm $\ge 80\%$ thời hạn SLA hiển thị cảnh báo vàng; Ticket vượt $100\%$ mốc SLA cam kết hoặc đơn `New` tồn đọng $> 4$ giờ làm việc lập tức hiển thị nhãn tô đỏ `Quá hạn SLA` kèm số giờ vượt quá (`BR-01`); ngay khi đơn được chuyển sang `Resolved` hoặc `Closed`, hệ thống chốt thời gian xử lý thực tế và tự động gỡ bỏ Ticket khỏi danh sách cảnh báo SLA thời gian thực (`E-01`).
+* **AC-01:** Ticket chạm $\ge 80\%$ thời hạn SLA hiển thị cảnh báo vàng; Ticket đạt $100\%$ mốc SLA cam kết hoặc đơn `New` tồn đọng $> 4$ giờ làm việc lập tức hiển thị nhãn tô đỏ `Quá hạn SLA` kèm số giờ vượt quá (`BR-01`); ngay khi đơn được chuyển sang `Resolved` hoặc `Closed`, hệ thống chốt thời gian xử lý thực tế và tự động gỡ bỏ Ticket khỏi danh sách cảnh báo SLA thời gian thực (`E-01`).
+
+* **AC-02:** SLA bắt đầu khi tạo đơn, không tính cuối tuần, ngày lễ và Pending; tiếp tục khi bổ sung thành công mà không reset. Tỷ lệ SLA = thời lượng hợp lệ / thời hạn cấu hình × 100%; cảnh báo vàng từ 80% đến dưới 100%, đỏ từ 100% (ưu tiên đỏ nếu New tồn đọng trên 4 giờ làm việc). Bộ đếm Pending độc lập với SLA.
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
