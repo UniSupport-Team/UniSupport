@@ -4,7 +4,7 @@
 - **Tên dự án:** Hệ thống quản lý hỗ trợ sinh viên UniSupport.
 - **Khách hàng:** Ban Giám hiệu – Aurora University.
 - **Đơn vị triển khai:** Nhóm 4.
-- **Ngày cập nhật:** 31/10/2026.
+- **Ngày cập nhật:** 24/8/2026.
 
 ## 2. LÝ DO VÀ MỤC ĐÍCH ĐIỀU CHỈNH
 Việc điều chỉnh cấu trúc Timeline và các cột mốc (Milestone) trong Proposal nhằm mục đích tối ưu hóa chất lượng dự án và giảm thiểu tối đa các rủi ro trong quá trình triển khai. Sự phân bổ lại các giai đoạn giúp cấu trúc hóa khối lượng công việc rời rạc thành các nhóm liền mạch, từ đó đảm bảo quá trình kiểm soát chất lượng được thực hiện chặt chẽ tại từng mốc, đồng thời giúp Ban Giám hiệu thuận tiện hơn trong việc theo dõi, phối hợp và đánh giá dự án.
