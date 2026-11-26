@@ -103,8 +103,8 @@
 | `FR-M13-02/AC-02` | Admin xem được toàn bộ số liệu của tất cả phòng ban | `TC-M13-M02` | [#168](https://github.com/UniSupport-Team/UniSupport/issues/168) ([#205](https://github.com/UniSupport-Team/UniSupport/issues/205)) | `MS-03` | Q-13 (M13) |
 | `FR-M13-03/AC-01` | Xuất báo cáo ra file Excel/PDF đầy đủ dữ liệu | `TC-M13-M03`, `TC-M13-N02` | [#168](https://github.com/UniSupport-Team/UniSupport/issues/168) ([#206](https://github.com/UniSupport-Team/UniSupport/issues/206)) | `MS-03` | Q-13 (M13) |
 | `FR-M13-04/AC-01` | CSAT và tỷ lệ đúng hạn SLA tính độc lập theo M12 | `TC-M13-M04` | [#168](https://github.com/UniSupport-Team/UniSupport/issues/168) ([#207](https://github.com/UniSupport-Team/UniSupport/issues/207)) | `MS-03` | Q-13 (M13) |
-| `FR-M14-01/AC-01` | Người dùng có thể chọn tiếng Việt hoặc tiếng Anh | `TC-M14-M01` | [#211](https://github.com/UniSupport-Team/UniSupport/issues/211) ([#212](https://github.com/UniSupport-Team/UniSupport/issues/212)) | `MS-03` | Q-13 (M13 + M14) |
-| `FR-M14-01/AC-02` | Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại | `TC-M14-M02` | [#211](https://github.com/UniSupport-Team/UniSupport/issues/211) ([#212](https://github.com/UniSupport-Team/UniSupport/issues/212)) | `MS-03` | Q-13 (M13 + M14) |
+| `FR-M14-01/AC-01` | Chọn Việt/Anh cho giao diện, biểu mẫu và thông báo; giữ nguyên dữ liệu người dùng nhập | `TC-M14-M01` | [#211](https://github.com/UniSupport-Team/UniSupport/issues/211) ([#212](https://github.com/UniSupport-Team/UniSupport/issues/212)) | `MS-03` | Q-13 (M13 + M14) |
+| `FR-M14-01/AC-02` | Đổi ngôn ngữ không cần đăng nhập lại; lựa chọn không hợp lệ giữ nguyên ngôn ngữ | `TC-M14-M02` | [#211](https://github.com/UniSupport-Team/UniSupport/issues/211) ([#212](https://github.com/UniSupport-Team/UniSupport/issues/212)) | `MS-03` | Q-13 (M13 + M14) |
 
 ### 2.4. Hạng mục Hạ tầng & Bàn giao (`MS-00`, `MS-04`)
 
