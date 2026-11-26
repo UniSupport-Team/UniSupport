@@ -78,7 +78,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Ticket chạm $\ge 80\%$ thời hạn SLA hiển thị cảnh báo vàng; Ticket vượt $100\%$ mốc SLA cam kết hoặc đơn `New` tồn đọng $> 4$ giờ làm việc lập tức hiển thị nhãn tô đỏ `Quá hạn SLA` kèm số giờ vượt quá (`BR-01`, `E-01`).
+* **AC-01:** Ticket chạm $\ge 80\%$ thời hạn SLA hiển thị cảnh báo vàng; Ticket vượt $100\%$ mốc SLA cam kết hoặc đơn `New` tồn đọng $> 4$ giờ làm việc lập tức hiển thị nhãn tô đỏ `Quá hạn SLA` kèm số giờ vượt quá (`BR-01`); ngay khi đơn được chuyển sang `Resolved` hoặc `Closed`, hệ thống chốt thời gian xử lý thực tế và tự động gỡ bỏ Ticket khỏi danh sách cảnh báo SLA thời gian thực (`E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -162,7 +162,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Admin nhập đúng Mã Ticket hoặc thông tin sinh viên $\rightarrow$ Hiển thị đầy đủ chi tiết và lịch sử Audit Trail của Ticket dù đơn thuộc bất kỳ phòng ban nào; trả về thông báo rỗng nếu không khớp và chặn `403` với vai trò khác (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Admin nhập đúng Mã Ticket hoặc thông tin sinh viên $\rightarrow$ Hiển thị đầy đủ chi tiết và lịch sử Audit Trail của Ticket dù đơn thuộc bất kỳ phòng ban nào; trả về mã lỗi `404 Not Found` kèm thông báo rỗng nếu không tìm thấy Ticket khớp từ khóa (`E-01`); từ chối truy cập bằng mã `403 Forbidden` nếu vai trò không phải `Admin` (`BR-01`, `E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

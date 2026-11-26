@@ -38,7 +38,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Nhân viên phụ trách cập nhật tiến độ công khai hợp lệ (`is_internal = false`) $\rightarrow$ Lưu vào timeline và hiển thị cho cả Sinh viên và Quản lý; chặn cập nhật nếu không phải người phụ trách hoặc nội dung rỗng (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Nhân viên phụ trách cập nhật tiến độ công khai hợp lệ (`is_internal = false`) $\rightarrow$ Lưu vào timeline và hiển thị cho cả Sinh viên và Quản lý; từ chối với mã `403 Forbidden` nếu không phải người phụ trách (`BR-01`, `E-01`); chặn lưu và báo lỗi validation `422 Unprocessable Entity` nếu nội dung rỗng hoặc vượt quá 1.000 ký tự (`E-02`).
 * **AC-02:** Cập nhật ghi chú nội bộ (`is_internal = true`) $\rightarrow$ Lưu trữ chính xác trong timeline nội bộ; chỉ Nhân viên phòng ban và Trưởng phòng nhìn thấy, Sinh viên xem chi tiết Ticket hoàn toàn không thấy thông tin này (`BR-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
@@ -82,7 +82,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị đúng danh sách Ticket mà chính nhân viên đó đã từng xử lý kèm Mã Ticket, trạng thái/nhãn lịch sử (`Resolved`, `Closed`, `Reassigned`), Audit Trail và điểm đánh giá CSAT (1–5 sao) từ sinh viên; chặn xem đơn của người khác (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Hiển thị đúng danh sách Ticket mà chính nhân viên đó đã từng xử lý kèm Mã Ticket, trạng thái/nhãn lịch sử (`Resolved`, `Closed`, `Reassigned`), Audit Trail và điểm đánh giá CSAT (1–5 sao) từ sinh viên; từ chối truy cập bằng mã `403 Forbidden` nếu cố tình xem đơn của nhân viên khác (`BR-01`, `E-01`); hiển thị bảng rỗng và thông báo thân thiện mà không gây lỗi trang nếu khoảng thời gian lọc không có dữ liệu (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

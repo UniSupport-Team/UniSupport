@@ -33,7 +33,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Khi đơn ở trạng thái `Resolved` hoặc `Closed`, hiển thị đầy đủ văn bản `Resolution Notes` và tải xuống thành công các tệp trả lời đính kèm; ẩn khu vực kết quả nếu đơn chưa giải quyết xong (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Khi đơn ở trạng thái `Resolved` hoặc `Closed`, hiển thị đầy đủ văn bản `Resolution Notes` và tải xuống thành công các tệp trả lời đính kèm; ẩn khu vực kết quả nếu đơn chưa giải quyết xong (`BR-01`, `E-01`); nếu tệp đính kèm không tồn tại trên hệ thống lưu trữ $\rightarrow$ Hệ thống trả về mã lỗi `404 Not Found` và hiển thị thông báo lỗi thân thiện (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

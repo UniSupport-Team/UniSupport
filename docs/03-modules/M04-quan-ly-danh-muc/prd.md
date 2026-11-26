@@ -86,7 +86,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Trưởng phòng tạo/cập nhật danh mục chuyên môn của phòng mình thành công $\rightarrow$ Sinh viên chọn phòng ban này sẽ nhìn thấy danh mục và hướng dẫn giấy tờ tương ứng; hệ thống chặn (`403 Forbidden`) mọi thao tác xem/sửa danh mục của phòng ban khác (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Trưởng phòng tạo/cập nhật danh mục chuyên môn của phòng mình thành công $\rightarrow$ Sinh viên chọn phòng ban này sẽ nhìn thấy danh mục và hướng dẫn giấy tờ tương ứng; hệ thống chặn truy cập bằng mã lỗi `403 Forbidden` khi thao tác trên danh mục của phòng ban khác (`BR-01`, `E-01`); từ chối lưu và báo lỗi `409 Conflict` nếu trùng Mã danh mục hoặc `422 Unprocessable Entity` nếu thiếu trường bắt buộc hay SLA $\le 0$ (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

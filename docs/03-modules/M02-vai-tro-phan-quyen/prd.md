@@ -34,7 +34,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị chính xác danh sách 4 vai trò chuẩn kèm số lượng tài khoản trực thuộc; chặn mọi thao tác xóa hoặc đổi mã định danh vai trò cố định (`BR-01`, `E-01`, `E-02`).
+* **AC-01:** Hiển thị chính xác danh sách 4 vai trò chuẩn kèm số lượng tài khoản trực thuộc; chặn mọi thao tác xóa hoặc sửa đổi mã định danh vai trò cố định bằng mã lỗi `400 Bad Request` (`BR-01`, `E-01`); từ chối truy cập bằng mã `403 Forbidden` nếu người dùng không thuộc vai trò `Admin` (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -91,7 +91,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Bật/tắt quyền hạn thành công $\rightarrow$ Hệ thống áp dụng chính xác ngay ở request tiếp theo cho người dùng thuộc vai trò đó và kiểm tra đúng phạm vi dữ liệu (`BR-02`, `E-02`).
+* **AC-01:** Bật/tắt quyền hạn thành công $\rightarrow$ Hệ thống áp dụng chính xác ngay ở request tiếp theo cho người dùng thuộc vai trò đó và kiểm tra đúng phạm vi dữ liệu (`BR-02`); nếu payload cập nhật chứa mã vai trò hoặc mã quyền không hợp lệ $\rightarrow$ Backend từ chối với mã lỗi `422 Unprocessable Entity` (`E-02`).
 * **AC-02:** Khi Admin cố gắng bỏ chọn quyền Quản trị tài khoản hoặc Quản trị phân quyền đối với vai trò Admin $\rightarrow$ Hệ thống từ chối cập nhật, trả về lỗi `400 Bad Request` và hiển thị thông báo lỗi cấm tước quyền quản trị tối cao (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
