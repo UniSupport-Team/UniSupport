@@ -36,7 +36,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị chính xác bảng phân bổ khối lượng công việc của từng nhân viên thuộc phòng ban (gồm các cột: Tổng đơn đã nhận, `In Progress`, `Pending`, `Resolved`); chặn `403 Forbidden` nếu Trưởng phòng truy cập số liệu phòng ban khác (`BR-01`, `E-01`).
+* **AC-01:** (FR-M12-01/AC-01) Hiển thị chính xác bảng phân bổ khối lượng công việc của từng nhân viên thuộc phòng ban (gồm các cột: Tổng đơn đã nhận, `In Progress`, `Pending`, `Resolved`); chặn `403 Forbidden` nếu Trưởng phòng truy cập số liệu phòng ban khác (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -78,9 +78,9 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Ticket chạm $\ge 80\%$ thời hạn SLA hiển thị cảnh báo vàng; Ticket đạt $100\%$ mốc SLA cam kết hoặc đơn `New` tồn đọng $> 4$ giờ làm việc lập tức hiển thị nhãn tô đỏ `Quá hạn SLA` kèm số giờ vượt quá và phát thông báo In-app cảnh báo cho Trưởng phòng ban (`BR-01`); ngay khi đơn được chuyển sang `Resolved` hoặc `Closed`, hệ thống chốt thời gian xử lý thực tế và tự động gỡ bỏ Ticket khỏi danh sách cảnh báo SLA thời gian thực (`E-01`).
+* **AC-01:** (FR-M12-02/AC-01) Ticket chạm $\ge 80\%$ thời hạn SLA hiển thị cảnh báo vàng; Ticket đạt $100\%$ mốc SLA cam kết hoặc đơn `New` tồn đọng $> 4$ giờ làm việc lập tức hiển thị nhãn tô đỏ `Quá hạn SLA` kèm số giờ vượt quá và phát thông báo In-app cảnh báo cho Trưởng phòng ban (`BR-01`); ngay khi đơn được chuyển sang `Resolved` hoặc `Closed`, hệ thống chốt thời gian xử lý thực tế và tự động gỡ bỏ Ticket khỏi danh sách cảnh báo SLA thời gian thực (`E-01`).
 
-* **AC-02:** SLA bắt đầu khi tạo đơn, không tính cuối tuần, ngày lễ và Pending; tiếp tục khi bổ sung thành công mà không reset. Tỷ lệ SLA = thời lượng hợp lệ / thời hạn cấu hình × 100%; cảnh báo vàng từ 80% đến dưới 100%, đỏ từ 100% (ưu tiên đỏ nếu New tồn đọng trên 4 giờ làm việc). Bộ đếm Pending độc lập với SLA.
+* **AC-02:** (FR-M12-02/AC-02) SLA bắt đầu khi tạo đơn, không tính cuối tuần, ngày lễ và Pending; tiếp tục khi bổ sung thành công mà không reset. Tỷ lệ SLA = thời lượng hợp lệ / thời hạn cấu hình × 100%; cảnh báo vàng từ 80% đến dưới 100%, đỏ từ 100% (ưu tiên đỏ nếu New tồn đọng trên 4 giờ làm việc). Bộ đếm Pending độc lập với SLA.
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -120,7 +120,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị chính xác bảng xếp hạng các phòng ban giảm dần theo số lượng đơn tồn đọng và tỷ lệ quá hạn SLA trên toàn trường; chặn `403 Forbidden` đối với các vai trò ngoài Admin (`BR-01`, `E-01`).
+* **AC-01:** (FR-M12-03/AC-01) Hiển thị chính xác bảng xếp hạng các phòng ban giảm dần theo số lượng đơn tồn đọng và tỷ lệ quá hạn SLA trên toàn trường; chặn `403 Forbidden` đối với các vai trò ngoài Admin (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -165,7 +165,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Admin nhập đúng Mã Ticket hoặc thông tin sinh viên $\rightarrow$ Hiển thị đầy đủ chi tiết và lịch sử Audit Trail của Ticket dù đơn thuộc bất kỳ phòng ban nào; trả về mã lỗi `404 Not Found` kèm thông báo rỗng nếu không tìm thấy Ticket khớp từ khóa (`E-01`); từ chối truy cập bằng mã `403 Forbidden` nếu vai trò không phải `Admin` (`BR-01`, `E-02`); nếu mã Ticket sai định dạng (`E-03`) trả về `422 Unprocessable Entity`.
+* **AC-01:** (FR-M12-04/AC-01) Admin nhập đúng Mã Ticket hoặc thông tin sinh viên $\rightarrow$ Hiển thị đầy đủ chi tiết và lịch sử Audit Trail của Ticket dù đơn thuộc bất kỳ phòng ban nào; trả về mã lỗi `404 Not Found` kèm thông báo rỗng nếu không tìm thấy Ticket khớp từ khóa (`E-01`); từ chối truy cập bằng mã `403 Forbidden` nếu vai trò không phải `Admin` (`BR-01`, `E-02`); nếu mã Ticket sai định dạng (`E-03`) trả về `422 Unprocessable Entity`.
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

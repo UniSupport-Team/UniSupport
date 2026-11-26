@@ -35,8 +35,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Tìm kiếm theo Mã định danh hoặc Họ tên (không phân biệt hoa/thường, khớp chuỗi con theo `BR-02`) hiển thị chính xác tài khoản; nếu không có kết quả thì hiển thị thông báo rỗng (`E-01`).
-* **AC-02:** Lọc kết hợp theo Phòng ban/Vai trò/Trạng thái trả về đúng tập dữ liệu tương ứng, phân trang 20 bản ghi/trang và sắp xếp mới nhất lên đầu (`BR-01`).
+* **AC-01:** (FR-M03-01/AC-01) Tìm kiếm theo Mã định danh hoặc Họ tên (không phân biệt hoa/thường, khớp chuỗi con theo `BR-02`) hiển thị chính xác tài khoản; nếu không có kết quả thì hiển thị thông báo rỗng (`E-01`).
+* **AC-02:** (FR-M03-01/AC-02) Lọc kết hợp theo Phòng ban/Vai trò/Trạng thái trả về đúng tập dữ liệu tương ứng, phân trang 20 bản ghi/trang và sắp xếp mới nhất lên đầu (`BR-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -83,8 +83,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Nhập đủ thông tin hợp lệ $\rightarrow$ Tài khoản được tạo thành công (`Active`, `must_change_password = false`) và người dùng có thể đăng nhập ngay bằng mật khẩu mặc định (`DDMMYYYY`).
-* **AC-02:** Nhập trùng Mã định danh hoặc trùng Email (`BR-01`, `E-01`) trả về `409 Conflict`; thiếu Phòng ban với `Staff`/`Manager` hoặc sai định dạng Email (`E-02`) trả về `422 Unprocessable Entity` và chặn tạo mới.
+* **AC-01:** (FR-M03-02/AC-01) Nhập đủ thông tin hợp lệ $\rightarrow$ Tài khoản được tạo thành công (`Active`, `must_change_password = false`) và người dùng có thể đăng nhập ngay bằng mật khẩu mặc định (`DDMMYYYY`).
+* **AC-02:** (FR-M03-02/AC-02) Nhập trùng Mã định danh hoặc trùng Email (`BR-01`, `E-01`) trả về `409 Conflict`; thiếu Phòng ban với `Staff`/`Manager` hoặc sai định dạng Email (`E-02`) trả về `422 Unprocessable Entity` và chặn tạo mới.
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -128,9 +128,9 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Khóa tài khoản thường $\rightarrow$ Người dùng bị đăng xuất ngay lập tức và không thể đăng nhập lại; hệ thống chặn mọi thao tác xóa cứng tài khoản đã phát sinh Ticket hoặc khóa tài khoản Admin chính (`BR-01`, `BR-02`, `E-01`).
-* **AC-02:** Mở khóa tài khoản $\rightarrow$ Người dùng đăng nhập lại bình thường.
-* **AC-03:** Admin reset mật khẩu thành công $\rightarrow$ Người dùng đăng nhập bằng mật khẩu đặt lại (`must_change_password = true`) nhưng bắt buộc đổi mật khẩu mới trước khi dùng hệ thống.
+* **AC-01:** (FR-M03-03/AC-01) Khóa tài khoản thường $\rightarrow$ Người dùng bị đăng xuất ngay lập tức và không thể đăng nhập lại; hệ thống chặn mọi thao tác xóa cứng tài khoản đã phát sinh Ticket hoặc khóa tài khoản Admin chính (`BR-01`, `BR-02`, `E-01`).
+* **AC-02:** (FR-M03-03/AC-02) Mở khóa tài khoản $\rightarrow$ Người dùng đăng nhập lại bình thường.
+* **AC-03:** (FR-M03-03/AC-03) Admin reset mật khẩu thành công $\rightarrow$ Người dùng đăng nhập bằng mật khẩu đặt lại (`must_change_password = true`) nhưng bắt buộc đổi mật khẩu mới trước khi dùng hệ thống.
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -173,8 +173,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Tải file Excel hợp lệ $\rightarrow$ Khởi tạo tài khoản mới và cập nhật thông tin tài khoản đã tồn tại (giữ nguyên mật khẩu cũ) đúng theo danh sách.
-* **AC-02:** Hiển thị rõ số dòng thành công và số dòng thất bại kèm lý do lỗi (`E-02`); nếu file sai cấu trúc cột hoặc sai định dạng thì chặn toàn bộ tiến trình và cảnh báo lỗi (`BR-01`, `E-01`).
+* **AC-01:** (FR-M03-04/AC-01) Tải file Excel hợp lệ $\rightarrow$ Khởi tạo tài khoản mới và cập nhật thông tin tài khoản đã tồn tại (giữ nguyên mật khẩu cũ) đúng theo danh sách.
+* **AC-02:** (FR-M03-04/AC-02) Hiển thị rõ số dòng thành công và số dòng thất bại kèm lý do lỗi (`E-02`); nếu file sai cấu trúc cột hoặc sai định dạng thì chặn toàn bộ tiến trình và cảnh báo lỗi (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

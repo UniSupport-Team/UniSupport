@@ -38,8 +38,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Nhân viên phụ trách cập nhật tiến độ công khai hợp lệ (`is_internal = false`) $\rightarrow$ Lưu vào timeline và hiển thị cho cả Sinh viên và Quản lý; từ chối với mã `403 Forbidden` nếu không phải người phụ trách (`BR-01`, `E-01`); chặn lưu và báo lỗi validation `422 Unprocessable Entity` nếu nội dung rỗng hoặc vượt quá 1.000 ký tự (`E-02`).
-* **AC-02:** Cập nhật ghi chú nội bộ (`is_internal = true`) $\rightarrow$ Lưu trữ chính xác trong timeline nội bộ; chỉ Nhân viên phòng ban và Trưởng phòng nhìn thấy, Sinh viên xem chi tiết Ticket hoàn toàn không thấy thông tin này (`BR-01`).
+* **AC-01:** (FR-M08-01/AC-01) Nhân viên phụ trách cập nhật tiến độ công khai hợp lệ (`is_internal = false`) $\rightarrow$ Lưu vào timeline và hiển thị cho cả Sinh viên và Quản lý; từ chối với mã `403 Forbidden` nếu không phải người phụ trách (`BR-01`, `E-01`); chặn lưu và báo lỗi validation `422 Unprocessable Entity` nếu nội dung rỗng hoặc vượt quá 1.000 ký tự (`E-02`).
+* **AC-02:** (FR-M08-01/AC-02) Cập nhật ghi chú nội bộ (`is_internal = true`) $\rightarrow$ Lưu trữ chính xác trong timeline nội bộ; chỉ Nhân viên phòng ban và Trưởng phòng nhìn thấy, Sinh viên xem chi tiết Ticket hoàn toàn không thấy thông tin này (`BR-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -82,7 +82,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị đúng danh sách Ticket mà chính nhân viên đó đã từng xử lý kèm Mã Ticket, trạng thái/nhãn lịch sử (`Resolved`, `Closed`, `Reassigned`), Audit Trail và điểm đánh giá CSAT (1–5 sao) từ sinh viên; từ chối truy cập bằng mã `403 Forbidden` nếu cố tình xem đơn của nhân viên khác (`BR-01`, `E-01`); hiển thị bảng rỗng và thông báo thân thiện mà không gây lỗi trang nếu khoảng thời gian lọc không có dữ liệu (`E-02`).
+* **AC-01:** (FR-M08-02/AC-01) Hiển thị đúng danh sách Ticket mà chính nhân viên đó đã từng xử lý kèm Mã Ticket, trạng thái/nhãn lịch sử (`Resolved`, `Closed`, `Reassigned`), Audit Trail và điểm đánh giá CSAT (1–5 sao) từ sinh viên; từ chối truy cập bằng mã `403 Forbidden` nếu cố tình xem đơn của nhân viên khác (`BR-01`, `E-01`); hiển thị bảng rỗng và thông báo thân thiện mà không gây lỗi trang nếu khoảng thời gian lọc không có dữ liệu (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -139,9 +139,9 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Nhập đủ nội dung ($\ge 10$ ký tự) và gửi yêu cầu bổ sung $\rightarrow$ Đơn chuyển sang trạng thái Chờ bổ sung (`Pending`), kích hoạt đếm ngược 3 ngày làm việc và tự động phát thông báo In-app cho Sinh viên yêu cầu bổ sung hồ sơ; nếu để trống nội dung hoặc $< 10$ ký tự thì trả về `422 Unprocessable Entity` (`BR-01`, `BR-02`, `E-02`).
-* **AC-02:** Quá 3 ngày làm việc Sinh viên không bổ sung $\rightarrow$ Đơn tự động chuyển sang `Closed` (`auto_closed = true`) và ghi nhận lý do đóng tự động (`BR-02`).
-* **AC-03:** Nhân viên đã gửi yêu cầu bổ sung 1 lần $\rightarrow$ Nút "Yêu cầu bổ sung" bị ẩn/khóa, gọi API trả về `400 Bad Request`, không cho phép gửi lần thứ hai (`BR-03`, `E-01`).
+* **AC-01:** (FR-M08-03/AC-01) Nhập đủ nội dung ($\ge 10$ ký tự) và gửi yêu cầu bổ sung $\rightarrow$ Đơn chuyển sang trạng thái Chờ bổ sung (`Pending`), kích hoạt đếm ngược 3 ngày làm việc và tự động phát thông báo In-app cho Sinh viên yêu cầu bổ sung hồ sơ; nếu để trống nội dung hoặc $< 10$ ký tự thì trả về `422 Unprocessable Entity` (`BR-01`, `BR-02`, `E-02`).
+* **AC-02:** (FR-M08-03/AC-02) Quá 3 ngày làm việc Sinh viên không bổ sung $\rightarrow$ Đơn tự động chuyển sang `Closed` (`auto_closed = true`) và ghi nhận lý do đóng tự động (`BR-02`).
+* **AC-03:** (FR-M08-03/AC-03) Nhân viên đã gửi yêu cầu bổ sung 1 lần $\rightarrow$ Nút "Yêu cầu bổ sung" bị ẩn/khóa, gọi API trả về `400 Bad Request`, không cho phép gửi lần thứ hai (`BR-03`, `E-01`).
 
 ---
 
@@ -185,7 +185,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Khi đơn đang `In Progress`, nhân viên bấm chuyển trả kèm lý do hợp lệ $\rightarrow$ Đơn được gỡ khỏi phòng ban, xóa Assignee cũ, đổi danh mục sang "Khác", chuyển về Hàng chờ của Admin ở trạng thái `New` (`BR-02`) và phát thông báo In-app cho Admin kèm lý do chuyển trả; nếu bỏ trống lý do (`BR-01`, `E-01`) thì trả về `422 Unprocessable Entity`, nếu đơn đang ở `Pending`/`Resolved`/`Closed` (`BR-03`, `E-02`) thì trả về `400 Bad Request`.
+* **AC-01:** (FR-M08-04/AC-01) Khi đơn đang `In Progress`, nhân viên bấm chuyển trả kèm lý do hợp lệ $\rightarrow$ Đơn được gỡ khỏi phòng ban, xóa Assignee cũ, đổi danh mục sang "Khác", chuyển về Hàng chờ của Admin ở trạng thái `New` (`BR-02`) và phát thông báo In-app cho Admin kèm lý do chuyển trả; nếu bỏ trống lý do (`BR-01`, `E-01`) thì trả về `422 Unprocessable Entity`, nếu đơn đang ở `Pending`/`Resolved`/`Closed` (`BR-03`, `E-02`) thì trả về `400 Bad Request`.
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

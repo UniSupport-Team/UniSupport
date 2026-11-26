@@ -38,8 +38,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị đúng và đầy đủ danh sách Ticket do chính sinh viên tạo kèm trạng thái thời gian thực (ẩn ghi chú nội bộ); khi trạng thái thay đổi, Sinh viên nhận thông báo In-app mở chi tiết Ticket, không phát trùng thông báo kết quả; chặn `403 Forbidden` nếu truy cập đơn của người khác (`BR-01`, `E-01`).
-* **AC-02:** Tìm kiếm theo mã/tiêu đề và lọc theo 5 trạng thái trả về kết quả chính xác; hiển thị trạng thái rỗng nếu không có đơn khớp (`E-02`).
+* **AC-01:** (FR-M10-01/AC-01) Hiển thị đúng và đầy đủ danh sách Ticket do chính sinh viên tạo kèm trạng thái thời gian thực (ẩn ghi chú nội bộ); khi trạng thái thay đổi, Sinh viên nhận thông báo In-app mở chi tiết Ticket, không phát trùng thông báo kết quả; chặn `403 Forbidden` nếu truy cập đơn của người khác (`BR-01`, `E-01`).
+* **AC-02:** (FR-M10-01/AC-02) Tìm kiếm theo mã/tiêu đề và lọc theo 5 trạng thái trả về kết quả chính xác; hiển thị trạng thái rỗng nếu không có đơn khớp (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -94,6 +94,6 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Sinh viên nộp bổ sung hợp lệ khi đơn đang `Pending` $\rightarrow$ Đơn chuyển về `Đang xử lý` (`In Progress`), giữ nguyên Mã Ticket và Nhân viên phụ trách cũ (`BR-01`), hủy bộ đếm 3 ngày làm việc và tự động phát thông báo In-app cho nhân viên phụ trách; nếu đơn đã đóng (`BR-02`, `E-01`) thì trả về `400 Bad Request`, nếu nội dung bổ sung $< 5$ ký tự hoặc tệp lỗi (`E-02`) thì trả về `422 Unprocessable Entity`.
+* **AC-01:** (FR-M10-02/AC-01) Sinh viên nộp bổ sung hợp lệ khi đơn đang `Pending` $\rightarrow$ Đơn chuyển về `Đang xử lý` (`In Progress`), giữ nguyên Mã Ticket và Nhân viên phụ trách cũ (`BR-01`), hủy bộ đếm 3 ngày làm việc và tự động phát thông báo In-app cho nhân viên phụ trách; nếu đơn đã đóng (`BR-02`, `E-01`) thì trả về `400 Bad Request`, nếu nội dung bổ sung $< 5$ ký tự hoặc tệp lỗi (`E-02`) thì trả về `422 Unprocessable Entity`.
 
 ---

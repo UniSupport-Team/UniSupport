@@ -42,9 +42,9 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Nhập đủ nội dung và bấm xác nhận $\rightarrow$ Hệ thống lưu kết quả giải quyết và tệp đính kèm thành công.
-* **AC-02:** Để trống trường kết quả giải quyết hoặc nhập dưới 10 ký tự $\rightarrow$ Hệ thống chặn lưu, trả về mã lỗi `422 Unprocessable Entity` và thông báo bắt buộc nhập tối thiểu 10 ký tự (`BR-01`, `E-01`).
-* **AC-03:** Tải tệp kết quả vượt quá 5MB, sai định dạng cho phép hoặc vượt quá giới hạn 5 tệp $\rightarrow$ Hệ thống chặn tải lên, trả về mã lỗi `422 Unprocessable Entity` và hiển thị cảnh báo lỗi chi tiết (`E-02`).
+* **AC-01:** (FR-M09-01/AC-01) Nhập đủ nội dung và bấm xác nhận $\rightarrow$ Hệ thống lưu kết quả giải quyết và tệp đính kèm thành công.
+* **AC-02:** (FR-M09-01/AC-02) Để trống trường kết quả giải quyết hoặc nhập dưới 10 ký tự $\rightarrow$ Hệ thống chặn lưu, trả về mã lỗi `422 Unprocessable Entity` và thông báo bắt buộc nhập tối thiểu 10 ký tự (`BR-01`, `E-01`).
+* **AC-03:** (FR-M09-01/AC-03) Tải tệp kết quả vượt quá 5MB, sai định dạng cho phép hoặc vượt quá giới hạn 5 tệp $\rightarrow$ Hệ thống chặn tải lên, trả về mã lỗi `422 Unprocessable Entity` và hiển thị cảnh báo lỗi chi tiết (`E-02`).
 
 ---
 
@@ -82,7 +82,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Chuyển trạng thái đơn thành `Đã giải quyết` (`Resolved`), ghi nhận thời điểm `resolved_at` và phát chính xác 1 thông báo duy nhất tới sinh viên (`BR-01`, `E-01`).
+* **AC-01:** (FR-M09-02/AC-01) Chuyển trạng thái đơn thành `Đã giải quyết` (`Resolved`), ghi nhận thời điểm `resolved_at` và phát chính xác 1 thông báo duy nhất tới sinh viên (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

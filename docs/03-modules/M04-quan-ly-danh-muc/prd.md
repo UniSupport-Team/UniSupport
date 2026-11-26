@@ -41,9 +41,9 @@ SLA sử dụng giờ làm việc theo [quy tắc nghiệp vụ mục 7](../../0
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Admin tạo danh mục mới thành công $\rightarrow$ Danh mục này hiển thị cho Sinh viên lựa chọn khi gửi Ticket.
-* **AC-02:** Trùng Mã danh mục (`BR-02`, `E-01`) trả về `409 Conflict`; sai quy chuẩn mã 2–6 ký tự in hoa hoặc thời hạn SLA $\le 0$ (`E-02`) trả về `422 Unprocessable Entity` và không cho phép lưu.
-* **AC-03:** Khi Admin chuyển trạng thái hiển thị của danh mục sang Tắt (`false`) $\rightarrow$ Danh mục này lập tức bị ẩn khỏi Form tạo Ticket mới của Sinh viên, nhưng các Ticket cũ thuộc danh mục này vẫn hiển thị tên danh mục và dữ liệu lịch sử bình thường (`BR-01`).
+* **AC-01:** (FR-M04-01/AC-01) Admin tạo danh mục mới thành công $\rightarrow$ Danh mục này hiển thị cho Sinh viên lựa chọn khi gửi Ticket.
+* **AC-02:** (FR-M04-01/AC-02) Trùng Mã danh mục (`BR-02`, `E-01`) trả về `409 Conflict`; sai quy chuẩn mã 2–6 ký tự in hoa hoặc thời hạn SLA $\le 0$ (`E-02`) trả về `422 Unprocessable Entity` và không cho phép lưu.
+* **AC-03:** (FR-M04-01/AC-03) Khi Admin chuyển trạng thái hiển thị của danh mục sang Tắt (`false`) $\rightarrow$ Danh mục này lập tức bị ẩn khỏi Form tạo Ticket mới của Sinh viên, nhưng các Ticket cũ thuộc danh mục này vẫn hiển thị tên danh mục và dữ liệu lịch sử bình thường (`BR-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -88,7 +88,7 @@ SLA sử dụng giờ làm việc theo [quy tắc nghiệp vụ mục 7](../../0
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Trưởng phòng tạo/cập nhật danh mục chuyên môn của phòng mình thành công $\rightarrow$ Sinh viên chọn phòng ban này sẽ nhìn thấy danh mục và hướng dẫn giấy tờ tương ứng; hệ thống chặn truy cập bằng mã lỗi `403 Forbidden` khi thao tác trên danh mục của phòng ban khác (`BR-01`, `E-01`); từ chối lưu và báo lỗi `409 Conflict` nếu trùng Mã danh mục hoặc `422 Unprocessable Entity` nếu thiếu trường bắt buộc hay SLA $\le 0$ (`E-02`).
+* **AC-01:** (FR-M04-02/AC-01) Trưởng phòng tạo/cập nhật danh mục chuyên môn của phòng mình thành công $\rightarrow$ Sinh viên chọn phòng ban này sẽ nhìn thấy danh mục và hướng dẫn giấy tờ tương ứng; hệ thống chặn truy cập bằng mã lỗi `403 Forbidden` khi thao tác trên danh mục của phòng ban khác (`BR-01`, `E-01`); từ chối lưu và báo lỗi `409 Conflict` nếu trùng Mã danh mục hoặc `422 Unprocessable Entity` nếu thiếu trường bắt buộc hay SLA $\le 0$ (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

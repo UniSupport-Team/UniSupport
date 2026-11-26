@@ -39,7 +39,7 @@ Dự án gồm **14 module**, được báo giá theo **13 hạng mục** (`Q-01
 > **Đơn giá** = Giá trị dự án / Tổng Effort = `338.600,4515` VNĐ/h
 
 
-**Ghi chú:** `M13` (`36h`) và `M14` (`8h`) có yêu cầu, tiến độ riêng nhưng được tính **chung 28.000.000đ** (`44h`). Tổng nguồn lực dự kiến của toàn dự án là **886 giờ**, gồm **450 giờ phát triển module** (`398h WBS + 52h BA`) và **436 giờ cho công việc chung** (`314h WBS + 122h BA` cho khởi động, kiểm thử QA/QC, nghiệm thu và bàn giao). Các giờ công việc chung **đã nằm trong giá trên**, không cộng tiền lần nữa.
+**Ghi chú:** Toàn bộ **886 giờ công** của dự án (bao gồm giờ phát triển 14 module `M01`–`M14` và giờ công việc chung cho khảo sát, thiết kế, hạ tầng, 4 đợt kiểm thử QA/QC, nghiệm thu và bàn giao) đã được phân bổ trực tiếp vào 13 hạng mục báo giá `Q-01` đến `Q-13` theo bảng trên (`406h WBS + 480h phân bổ quản lý/phân tích/kiểm thử = 886h`), khớp với sheet `BÁO GIÁ MODULES` trong file `Master Schedule.xlsx`. Riêng `M13` và `M14` có yêu cầu và tiến độ riêng nhưng được gộp chung trong hạng mục thương mại `Q-13` (`84h`, `28.442.438 VNĐ`). Các giờ công việc chung **đã nằm trọn trong đơn giá và thành tiền từng hạng mục trên**, không phát sinh khoản thu riêng.
 
 > Bảng tính giá chi tiết, đơn giá nhân sự và cách phân bổ 300 triệu theo từng module được lưu tại [Ngân sách nhân sự](Ngan-sach-nhan-su.md) và `Master Schedule.xlsx` (sheet `BÁO GIÁ MODULES`) để nhóm quản lý nội bộ.
 

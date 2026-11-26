@@ -33,7 +33,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Khi đơn ở trạng thái `Resolved` hoặc `Closed`, hiển thị đầy đủ văn bản `Resolution Notes` và tải xuống thành công các tệp trả lời đính kèm; ẩn khu vực kết quả nếu đơn chưa giải quyết xong (`BR-01`, `E-01`); nếu tệp đính kèm không tồn tại trên hệ thống lưu trữ $\rightarrow$ Hệ thống trả về mã lỗi `404 Not Found` và hiển thị thông báo lỗi thân thiện (`E-02`).
+* **AC-01:** (FR-M11-01/AC-01) Khi đơn ở trạng thái `Resolved` hoặc `Closed`, hiển thị đầy đủ văn bản `Resolution Notes` và tải xuống thành công các tệp trả lời đính kèm; ẩn khu vực kết quả nếu đơn chưa giải quyết xong (`BR-01`, `E-01`); nếu tệp đính kèm không tồn tại trên hệ thống lưu trữ $\rightarrow$ Hệ thống trả về mã lỗi `404 Not Found` và hiển thị thông báo lỗi thân thiện (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -81,8 +81,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Chọn số sao (1–5 sao) và bấm đóng đơn $\rightarrow$ Lưu điểm đánh giá CSAT thành công, chuyển trạng thái thành `Đã đóng` (`Closed`) và khóa vĩnh viễn mọi thao tác chỉnh sửa/đánh giá lại (`BR-02`, `E-02`).
-* **AC-02:** Chưa chọn sao mà bấm gửi $\rightarrow$ Báo lỗi yêu cầu chọn số sao trước khi gửi (`BR-01`, `E-01`).
+* **AC-01:** (FR-M11-02/AC-01) Chọn số sao (1–5 sao) và bấm đóng đơn $\rightarrow$ Lưu điểm đánh giá CSAT thành công, chuyển trạng thái thành `Đã đóng` (`Closed`) và khóa vĩnh viễn mọi thao tác chỉnh sửa/đánh giá lại (`BR-02`, `E-02`).
+* **AC-02:** (FR-M11-02/AC-02) Chưa chọn sao mà bấm gửi $\rightarrow$ Báo lỗi yêu cầu chọn số sao trước khi gửi (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -128,7 +128,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Sau 3 ngày làm việc ở trạng thái `Đã giải quyết` không có đánh giá $\rightarrow$ Đơn tự động chuyển sang `Đã đóng` (`auto_closed = true`, `rating = null`, không tính vào trung bình CSAT) và khóa form đánh giá (`BR-01`, `E-01`).
+* **AC-01:** (FR-M11-03/AC-01) Sau 3 ngày làm việc ở trạng thái `Đã giải quyết` không có đánh giá $\rightarrow$ Đơn tự động chuyển sang `Đã đóng` (`auto_closed = true`, `rating = null`, không tính vào trung bình CSAT) và khóa form đánh giá (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

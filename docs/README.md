@@ -97,7 +97,7 @@ docs/
 | :--- | :--- | :--- | :--- |
 | **Module** | `M01` – `M14` | `docs/03-modules/README.md` | Milestone `MS-xx` |
 | **Yêu cầu chức năng (FR)** | `FR-M01-01` .. `FR-M14-01` | `docs/03-modules/Mxx-.../prd.md` | Actor, Priority, BR, E, AC |
-| **Tiêu chí nghiệm thu (AC)** | `FR-Mxx-yy/AC-zz` | `docs/03-modules/Mxx-.../prd.md` | — |
+| **Tiêu chí nghiệm thu (AC)** | `FR-Mxx-yy/AC-zz` (hoặc `AC-zz (`FR-Mxx-yy/AC-zz`)` dưới từng mục `FR-Mxx-yy` trong PRD) | `docs/03-modules/Mxx-.../prd.md` | Mã `BR-xx`, `E-xx` và kịch bản `TC-Mxx-...` |
 | **Yêu cầu phi chức năng (NFR)** | `NFR-SEC-01`, `NFR-PERF-01`... | `docs/05-non-functional-requirements/README.md` | Ngưỡng cam kết & cách đo |
 | **Kịch bản kiểm thử (Test)** | `TC-M01-N01`... | `docs/06-acceptance/test-scenarios.md` | Mã `AC` hoặc `NFR` được kiểm |
 | **Hạng mục báo giá** | `Q-01` – `Q-13` | `docs/08-project/Bao-gia-cho-khach.md` | 14 module `M01`–`M14` (13 hạng mục giá), Giờ công, Thành tiền |
