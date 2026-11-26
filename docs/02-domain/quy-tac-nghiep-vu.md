@@ -25,4 +25,11 @@ Nhằm bảo đảm tính minh bạch và toàn vẹn của dữ liệu trong su
 *   **Xử lý ngoại lệ danh mục "Khác":** Ticket chọn "Khác" có thể chưa xác định phòng ban và được đưa vào hàng chờ Admin ở trạng thái `New`. Khi nhân viên đang xử lý phát hiện sai phòng ban, nhân viên nhập lý do, chuyển Ticket về `New`, bỏ người phụ trách cũ, đổi danh mục sang "Khác" và đưa về hàng chờ Admin. Admin phân loại lại phòng ban/danh mục rồi chuyển sang hàng chờ phòng ban đích. Mã Ticket và lịch sử không thay đổi; thao tác này không áp dụng cho Ticket đã `Closed`.
 
 ## 7. Quy tắc Tính toán Thời gian (Time & SLA Calculation Rules)
-*   **Quy tắc tính thời gian:** Tất cả các mốc đếm ngược trong hệ thống (SLA xử lý, 3 ngày chờ bổ sung Pending, 3 ngày chờ đánh giá Resolved) được tính theo **ngày làm việc** của nhà trường (Thứ 2 đến Thứ 6, không tính Thứ 7, Chủ Nhật và ngày Lễ Tết) để bảo đảm KPI của Nhân viên không bị đánh giá sai lệch.
+* **Lịch làm việc:** Múi giờ Asia/Ho_Chi_Minh (UTC+7). Mỗi ngày làm việc tính đủ 24 giờ từ 00:00 đến 00:00 ngày kế tiếp; chỉ tính thứ Hai đến thứ Sáu, loại trừ ngày lễ trong `system_holidays`. SLA 24/48/72 giờ tương ứng 1/2/3 ngày làm việc.
+* **Bắt đầu:** Từ thời điểm tạo ticket thành công (New), không chờ tiếp nhận. Điều phối lại không đặt lại SLA.
+* **Tạm dừng và tiếp tục:** Không tích lũy SLA trong trạng thái Pending; tiếp tục khi bổ sung thành công và ticket trở lại In Progress, giữ nguyên thời gian đã tích lũy.
+* **Kết thúc:** Dừng SLA khi chuyển Resolved hoặc Closed. Đơn tự đóng do không bổ sung không được coi là đã giải quyết đúng hạn; loại khỏi mẫu số tỷ lệ đúng hạn của các đơn đã giải quyết.
+* **Công thức:** Tỷ lệ sử dụng SLA = thời lượng tích lũy hợp lệ / thời hạn SLA cấu hình × 100%. Chỉ tính phần giao của khoảng thời gian không Pending với lịch làm việc; không trừ trùng các khoảng nghỉ.
+* **Ngưỡng:** Ticket chưa kết thúc có tỷ lệ dưới 80% là bình thường, từ 80% đến dưới 100% là cảnh báo, từ 100% trở lên là quá hạn. Ticket Resolved được tính đúng hạn nếu thời lượng tích lũy không vượt thời hạn SLA.
+* **Bộ đếm riêng:** 3 ngày chờ bổ sung và 3 ngày chờ đánh giá tương ứng 72 giờ làm việc, bắt đầu khi vào Pending hoặc Resolved tương ứng, độc lập với SLA xử lý.
+* **Giả định ngày lễ:** Nhà trường cung cấp danh sách ngày lễ, nhóm triển khai khởi tạo dữ liệu trong `system_holidays`. Giao diện quản lý ngày lễ và cập nhật lịch sau bàn giao nằm ngoài phạm vi hợp đồng.
