@@ -127,12 +127,13 @@ Giữ ba tài liệu Quality, Product và Governance trong `08-project/`. Repo c
 | Product | [Release Criteria](08-project/QL-san-pham.md#31-tiêu-chuẩn-nghiệm-thu-phát-hành-release-criteria), [Phản hồi](08-project/QL-san-pham.md#42-quản-lý-phân-loại-và-luồng-xử-lý-tiếp-theo) |
 | Governance | [Báo cáo tuần và escalation](08-project/Dieuphoi-Giamsat.md#22-báo-cáo-tuần-weekly-report), [Báo cáo mốc](08-project/Dieuphoi-Giamsat.md#23-báo-cáo-cột-mốc-milestone-report), [Sai lệch](08-project/Dieuphoi-Giamsat.md#53-phân-tích-sai-lệch-và-hành-động-khắc-phục) |
 | Milestones, Gantt | Master Schedule.xlsx — Final |
-| WBS, effort | Master Schedule.xlsx — Chi tiết |
+| WBS, effort | Master Schedule.xlsx — WBS (nguồn phân bổ giờ công và ngày thực hiện) |
+| Chức năng | Master Schedule.xlsx — Chi tiết; PRD là nguồn yêu cầu gốc |
 | Báo giá | Master Schedule.xlsx — BÁO GIÁ MODULES |
 | Change log | Master Schedule.xlsx — Change Log |
-| Resources | [Ngan-sach-nhan-su.md](08-project/Ngan-sach-nhan-su.md) — phân bổ theo vai trò |
+| Resources | Master Schedule.xlsx — Resources (tổng hợp từ WBS); [Ngan-sach-nhan-su.md](08-project/Ngan-sach-nhan-su.md) — baseline và chi phí theo vai trò |
 
-Ánh xạ workbook theo [Master-schedule.md](08-project/Master-schedule.md).
+Bản workbook 6 sheet đã chuẩn hóa trên [Google Sheets](https://docs.google.com/spreadsheets/d/142fvtvzqEwIIvsoaqQGOWs77DDdy6B1e-ot-V8ZA10I/edit); cần thay file Excel trong repository bằng bản xuất tương ứng trước khi bàn giao. Ánh xạ workbook theo [Master-schedule.md](08-project/Master-schedule.md).
 
 ## Danh mục tài liệu
 
