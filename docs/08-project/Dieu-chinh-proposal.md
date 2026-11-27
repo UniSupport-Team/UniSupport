@@ -35,7 +35,7 @@ Lộ trình triển khai được tái cấu trúc thành 5 giai đoạn chính 
 Đội ngũ dự án đánh giá và cam kết việc cập nhật kế hoạch trên sẽ giữ nguyên các tiêu chuẩn cốt lõi của dự án:
 - **Tiến độ và thời hạn bàn giao:** Không thay đổi. Mặc dù cấu trúc tuần được tối ưu lại để quy trình kiểm thử diễn ra sớm hơn, dự án vẫn đảm bảo hoàn thành và bàn giao đúng thời hạn cuối cùng (Deadline) đã thống nhất.
 - **Ngân sách:** Không thay đổi. Giữ nguyên mức chi phí dự kiến là 300.000.000 VNĐ.
-- **Phạm vi công việc (Scope of Work):** Bổ sung M14 (1 FR, 2 AC) bằng cách điều chuyển 8h từ M13, không tăng tổng giờ hoặc giá hợp đồng; M13/M14 được báo giá chung trong Q-13 (28.000.000đ). Chi tiết tại [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md).
+- **Phạm vi công việc (Scope of Work):** Bổ sung M14 (1 FR, 2 AC) bằng cách điều chuyển 8h từ M13, không tăng tổng giờ hoặc giá hợp đồng; M13/M14 được báo giá chung trong Q-13 (28.442.438đ). Chi tiết tại [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md).
 
 ## 5. KẾT LUẬN
 Bản cập nhật Proposal này được thực hiện nhằm hướng tới mục tiêu tối ưu hóa chất lượng sản phẩm đầu ra và giảm thiểu rủi ro phát sinh trong quá trình phối hợp. Việc gom nhóm các công việc thành các giai đoạn lớn không chỉ giúp kiểm soát chất lượng chặt chẽ mà còn tối ưu hóa thời gian thực thi của đội ngũ. Kính mong Ban Giám hiệu xem xét và thông qua sự điều chỉnh này để dự án UniSupport tiếp tục được triển khai một cách an toàn, chuyên nghiệp và thuận lợi nhất.
