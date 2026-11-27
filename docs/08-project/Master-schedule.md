@@ -23,21 +23,21 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 | **Mốc 1**<br>*(21/09 – 14/10)* | Nền tảng | M01: Đăng nhập & Xác thực | 21/09/2026 | 25/09/2026 | 5 ngày | Senior, Dev 1, Dev 2 | 40h | 4h | **44h** |
 | | | M02: Vai trò & Phân quyền | 28/09/2026 | 02/10/2026 | 5 ngày | Senior, Dev 1, Dev 3 | 40h | 4h | **44h** |
 | | | M03: Quản lý tài khoản | 05/10/2026 | 07/10/2026 | 3 ngày | Senior, Dev 3, Dev 2 | 36h | 4h | **40h** |
-| | | Test QA/QC – Đợt 1 *(khách hàng nếu muốn)* | 08/10/2026 | 14/10/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 20h | **64h** |
+| | | Test QA/QC – Đợt 1 *(mời khách hàng dùng thử, không bắt buộc)* | 08/10/2026 | 14/10/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 20h | **64h** |
 | **Mốc 2**<br>*(12/10 – 13/11)* | Ticket & Phân hệ sinh viên | M04: Quản lý danh mục | 12/10/2026 | 14/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | 36h | 4h | **40h** |
 | | | M05: Khởi tạo Ticket | 15/10/2026 | 19/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | 36h | 4h | **40h** |
 | | | M06: Tiếp nhận Ticket | 20/10/2026 | 22/10/2026 | 3 ngày | Senior, Dev 2, Dev 3 | 36h | 4h | **40h** |
 | | | M07: Điều phối Ticket | 23/10/2026 | 26/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | 18h | 4h | **22h** |
 | | | M08: Xử lý & Trao đổi | 27/10/2026 | 28/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | 16h | 4h | **20h** |
 | | | M09: Trả kết quả | 29/10/2026 | 30/10/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 24h | 4h | **28h** |
-| | | Test QA/QC – Đợt 2 *(khách hàng nếu muốn)* | 02/11/2026 | 06/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
+| | | Test QA/QC – Đợt 2 *(mời khách hàng dùng thử, không bắt buộc)* | 02/11/2026 | 06/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
 | | | M10: Theo dõi & Bổ sung | 02/11/2026 | 03/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 24h | 4h | **28h** |
 | | | M11: Kết quả & Đánh giá | 04/11/2026 | 05/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 12h | 4h | **16h** |
-| | | Test QA/QC – Đợt 3 *(khách hàng nếu muốn)* | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
+| | | Test QA/QC – Đợt 3 *(mời khách hàng dùng thử, không bắt buộc)* | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
 | **Mốc 3**<br>*(16/11 – 04/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3 | 40h | 4h | **44h** |
 | | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3 | 32h | 4h | **36h** |
 | | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | 8h | 0h | **8h** |
-| | | Test QA/QC – Đợt 4 *(khách hàng nếu muốn)* | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 24h | **68h** |
+| | | Test QA/QC – Đợt 4 *(mời khách hàng dùng thử, không bắt buộc)* | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(07/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1 | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | 25h | 10h | **35h** |
 | **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
@@ -94,7 +94,7 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
   - **M01: Đăng nhập & Xác thực (21/09 – 25/09):** Senior, Dev 1 và Dev 2 lập trình cơ chế Auth/Token/Session cùng BA làm rõ nghiệp vụ (`Senior 18h, Dev 1 4h, Dev 2 18h, BA 4h = 44h`).
   - **M02: Vai trò & Phân quyền (28/09 – 02/10):** Senior, Dev 1 và Dev 3 cấu hình ma trận quyền theo vai trò cùng BA (`Senior 18h, Dev 1 18h, Dev 3 4h, BA 4h = 44h`).
   - **M03: Quản lý tài khoản (05/10 – 07/10):** Senior, Dev 2, Dev 3 tạo các chức năng quản lý người dùng/phân hệ và import Excel cùng BA (`Senior 12h, Dev 2 12h, Dev 3 12h, BA 4h = 40h`).
-  - **Test QA/QC – Đợt 1 & Khách hàng test (08/10 – 14/10):** PM, QA 1, QA 2 và BA kiểm thử chức năng và phối hợp khách hàng trực tiếp dùng thử, nghiệm thu sơ bộ giai đoạn nền tảng (`PM 4h, QA 1 20h, QA 2 20h, BA 20h = 64h`).
+  - **Test QA/QC – Đợt 1 & mời khách hàng dùng thử (08/10 – 14/10):** PM, QA 1, QA 2 và BA kiểm thử chức năng và mời khách hàng dùng thử giai đoạn nền tảng nếu tham gia (`PM 4h, QA 1 20h, QA 2 20h, BA 20h = 64h`).
 
 ### 3. Mốc 2: Ticket & Phân hệ sinh viên (12/10/2026 – 13/11/2026)
 - **Mục tiêu:** Đây là giai đoạn trọng tâm của hệ thống, triển khai toàn bộ quy trình vòng đời của Ticket hỗ trợ *(Bắt đầu từ `12/10` với `M04`, overlap có chủ đích 3 ngày từ `12/10 – 14/10` với đợt test của Mốc 1 để tối ưu thời gian chờ)*.
@@ -128,15 +128,21 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 
 ## IV. LÝ DO CHIA MILESTONE, PHỤ THUỘC, NỖ LỰC KIỂM THỬ & DỰ PHÒNG
 
+### Quy tắc kiểm thử và đóng mốc
+
+- MS-01–MS-03: QA/QC kiểm thử bắt buộc theo kế hoạch; PM mời khách hàng dùng thử, ghi nhận phản hồi nếu có. Nếu khách hàng không tham gia, PM chỉ xác nhận hoàn thành nội bộ dựa trên báo cáo QA/QC, AC, DoD và không còn lỗi P0/P1 mở; ghi rõ khách hàng chưa tham gia, không coi là nghiệm thu của khách hàng.
+- MS-04: UAT và quyết định nghiệm thu chính thức của khách hàng theo Proposal mục 8.2 là bắt buộc; nếu chưa có xác nhận thì chưa đóng nghiệm thu chính thức và PM báo cáo theo quy trình quản trị.
+- Đây là quy tắc kế hoạch, không xác nhận kết quả thực tế. Không thay đổi lịch, effort hoặc chi phí.
+
 ### 1. Nguyên tắc chia Milestone, Sản phẩm khách hàng dùng thử và Phụ thuộc giữa các mốc
 Dự án được tổ chức theo 5 cột mốc tuần tự (`MS-00` $\rightarrow$ `MS-04`, căn cứ theo baseline tại [Dieu-chinh-proposal.md](Dieu-chinh-proposal.md)):
 
 | Mã Mốc | Thời gian | Giờ WBS | Giờ BA | Tổng Effort | Phụ thuộc | Sản phẩm chạy được / Đầu ra bàn giao & Cách khách hàng tự kiểm tra (Nghiệm thu) |
 | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 | **`MS-00`** | Tuần 1–3<br>*(01/09 – 18/09)* | 88h | 32h | **120h** | — | **Đầu ra & Nghiệm thu:** Bàn giao hồ sơ khảo sát & đặc tả yêu cầu, thiết kế kiến trúc/CSDL, hạ tầng Staging (`INF-01`) và **bản demo UI tương tác chạy được trên trình duyệt**. Khách hàng tự mở demo, chọn một trong 4 vai trò, bấm các nút điều hướng/đăng nhập mô phỏng/tạo Ticket mô phỏng/xem chi tiết/quay lại và chuyển ngôn ngữ Việt–Anh; màn hình hiển thị phản hồi bằng **dữ liệu giả lập**. **Không kết nối API/CSDL, không xác thực hay xử lý Ticket thật, không lưu dữ liệu sau khi tải lại trang**. Nghiệm thu MS-00 bằng checklist thao tác và biên bản phản hồi, **không coi đây là nghiệm thu chức năng M01–M14**. *(M01 bắt đầu phát triển thật từ MS-01.)* |
-| **`MS-01`** | Tuần 4–6<br>*(21/09 – 14/10)* | 160h | 32h | **192h** | `MS-00` | **Phần mềm chạy được:** Phân hệ Xác thực (`M01`), Phân quyền RBAC (`M02`) và Quản lý tài khoản (`M03`).<br>**Khách hàng kiểm thử (`08/10 – 14/10`):** Khách hàng trực tiếp dùng thử và nghiệm thu sơ bộ giai đoạn nền tảng: đăng nhập 4 tài khoản vai trò (`Student`, `Staff`, `Manager`, `Admin`), thử nghiệm bắt buộc đổi mật khẩu sau khi Admin đặt lại mật khẩu, khóa tài khoản khi nhập sai 5 lần, bật/tắt quyền động và import danh sách tài khoản bằng file Excel. |
-| **`MS-02`** | Tuần 7–11<br>*(12/10 – 13/11)* | 290h | 56h | **346h** | `MS-01` | **Phần mềm chạy được:** Trọn vẹn vòng đời xử lý Ticket (`M04` đến `M11`). Khởi động từ `12/10` với `M04`, gối đầu (overlap) có chủ đích 3 ngày (`12/10 – 14/10`) với giai đoạn test MS-01 để tối ưu thời gian chờ.<br>**Cách khách hàng tự dùng thử:** Khách hàng tự thực hiện luồng khép kín: Cấu hình danh mục (`M04`) $\rightarrow$ Sinh viên tạo đơn, sửa đơn trước khi tiếp nhận & đính kèm file (`M05`) $\rightarrow$ Nhân viên tiếp nhận chống trùng lặp (`M06`) / Admin & Trưởng phòng điều phối đơn mục "Khác" hoặc sai phòng ban (`M07`) $\rightarrow$ Nhân viên xử lý, yêu cầu bổ sung (đếm ngược 3 ngày làm việc) (`M08`) và trả kết quả (`M09`) $\rightarrow$ Sinh viên theo dõi, nộp bổ sung (`M10`) và đánh giá CSAT 1–5 sao hoặc tự động đóng sau 3 ngày làm việc (`M11`). |
-| **`MS-03`** | Tuần 12–14<br>*(16/11 – 04/12)* | 124h | 32h | **156h** | `MS-02` | **Phần mềm chạy được:** Giám sát tiến độ (`M12`), Dashboard & Báo cáo (`M13`) và Quản lý đa ngôn ngữ (`M14`, 8h Dev 1, chuyển ngôn ngữ Việt/Anh).<br>**Cách khách hàng tự dùng thử:** Khách hàng dùng tài khoản Admin và Trưởng phòng để xem Dashboard (tự làm mới mỗi 60 giây hoặc khi tải lại trang), kiểm tra cảnh báo SLA và xuất báo cáo Excel/PDF theo phạm vi phân quyền. Admin tra cứu Ticket toàn trường; Trưởng phòng chỉ xem dữ liệu phòng ban mình. |
+| **`MS-01`** | Tuần 4–6<br>*(21/09 – 14/10)* | 160h | 32h | **192h** | `MS-00` | **Phần mềm chạy được:** Phân hệ Xác thực (`M01`), Phân quyền RBAC (`M02`) và Quản lý tài khoản (`M03`).<br>**Kịch bản mời khách hàng dùng thử (`08/10 – 14/10`):** Nếu tham gia, khách hàng dùng thử giai đoạn nền tảng: đăng nhập 4 tài khoản vai trò (`Student`, `Staff`, `Manager`, `Admin`), thử nghiệm bắt buộc đổi mật khẩu sau khi Admin đặt lại mật khẩu, khóa tài khoản khi nhập sai 5 lần, bật/tắt quyền động và import danh sách tài khoản bằng file Excel. |
+| **`MS-02`** | Tuần 7–11<br>*(12/10 – 13/11)* | 290h | 56h | **346h** | `MS-01` | **Phần mềm chạy được:** Trọn vẹn vòng đời xử lý Ticket (`M04` đến `M11`). Khởi động từ `12/10` với `M04`, gối đầu (overlap) có chủ đích 3 ngày (`12/10 – 14/10`) với giai đoạn test MS-01 để tối ưu thời gian chờ.<br>**Kịch bản mời khách hàng dùng thử:** Nếu tham gia, khách hàng thực hiện luồng khép kín: Cấu hình danh mục (`M04`) $\rightarrow$ Sinh viên tạo đơn, sửa đơn trước khi tiếp nhận & đính kèm file (`M05`) $\rightarrow$ Nhân viên tiếp nhận chống trùng lặp (`M06`) / Admin & Trưởng phòng điều phối đơn mục "Khác" hoặc sai phòng ban (`M07`) $\rightarrow$ Nhân viên xử lý, yêu cầu bổ sung (đếm ngược 3 ngày làm việc) (`M08`) và trả kết quả (`M09`) $\rightarrow$ Sinh viên theo dõi, nộp bổ sung (`M10`) và đánh giá CSAT 1–5 sao hoặc tự động đóng sau 3 ngày làm việc (`M11`). |
+| **`MS-03`** | Tuần 12–14<br>*(16/11 – 04/12)* | 124h | 32h | **156h** | `MS-02` | **Phần mềm chạy được:** Giám sát tiến độ (`M12`), Dashboard & Báo cáo (`M13`) và Quản lý đa ngôn ngữ (`M14`, 8h Dev 1, chuyển ngôn ngữ Việt/Anh).<br>**Kịch bản mời khách hàng dùng thử:** Nếu tham gia, khách hàng dùng tài khoản Admin và Trưởng phòng để xem Dashboard (tự làm mới mỗi 60 giây hoặc khi tải lại trang), kiểm tra cảnh báo SLA và xuất báo cáo Excel/PDF theo phạm vi phân quyền. Admin tra cứu Ticket toàn trường; Trưởng phòng chỉ xem dữ liệu phòng ban mình. |
 | **`MS-04`** | Tuần 15–16<br>*(07/12 – 18/12)* | 50h | 22h | **72h** | `MS-03` | **Phần mềm chạy được:** Bản phát hành hoàn chỉnh (Release Candidate / Production) tích hợp toàn bộ 14 phân hệ (`M01`–`M14`) kèm dữ liệu mẫu nghiệm thu (`Docs-02`) và bộ tài liệu hướng dẫn (`Docs-01`).<br>**Cách khách hàng tự dùng thử:** Khách hàng thực hiện kiểm thử nghiệm thu người dùng (UAT) toàn trình trên hệ thống hoàn chỉnh theo tiêu chuẩn tại [Proposal.md — Mục 8.2](Proposal.md#82-nghiệm-thu) và ký biên bản bàn giao chính thức. |
 
 ### 2. Phân bổ giờ công Kiểm thử (Test / Regression), Tích hợp và Sửa lỗi
