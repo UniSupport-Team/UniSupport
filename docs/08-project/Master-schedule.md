@@ -42,8 +42,8 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | 25h | 10h | **35h** |
 | **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
 
-> **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (6 sheet theo bản Google Sheets đã chuẩn hóa: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `WBS`, `Resources`, `Change Log`):**
-> Bản Excel trong repository cần được thay bằng bản xuất từ [Google Sheets đã chuẩn hóa](https://docs.google.com/spreadsheets/d/142fvtvzqEwIIvsoaqQGOWs77DDdy6B1e-ot-V8ZA10I/edit) trước khi chốt bàn giao.
+> **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (6 sheet: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `WBS`, `Resources`, `Change Log`):**
+> Workbook chính thức: [Master Schedule.xlsx](Master%20Schedule.xlsx).
 > 1. **Về cột "Phụ trách (theo biểu đồ Gantt)" vs. "Giờ công thực tế theo vai trò":**
 >    - Cột **"Phụ trách (theo biểu đồ Gantt)"** giữ nguyên danh sách nhân sự hiển thị tại cột `D` của sheet `Final`; tên M10 thống nhất là `M10: Theo dõi & Bổ sung`.
 >    - **Vai trò BA (`174h`):** BA tham gia xuyên suốt dự án nên giờ BA được tách riêng ở cột `Giờ BA (h)` và cộng vào `Tổng Effort (h)`, không lặp lại tên BA tại cột `D` trên các dòng phát triển module/test của sheet `Final`.
@@ -166,4 +166,3 @@ Bảng theo dõi các phiên bản điều chỉnh đường cơ sở (Baseline)
 | **`v1.0.0`** | 17/08/2026 | Added | Hoàn thiện và chốt Proposal ban đầu của dự án UniSupport. Xác lập phạm vi triển khai, ngân sách hợp đồng `300.000.000 VNĐ` và kế hoạch dự kiến 16 tuần. | `Proposal.md`, `Proposal.pdf` |
 | **`v1.1.0`** | 24/08/2026 | Changed | Cập nhật điều chỉnh lại timeline và cấu trúc cột mốc trong Proposal. Tái cơ cấu thành 5 cột mốc tích hợp (`MS-00` $\rightarrow$ `MS-04`), bổ sung các đợt kiểm thử QA/QC sớm và gối đầu (overlap) 3 ngày (`12/10–14/10`) cho module `M04`. | `Dieu-chinh-proposal.md`, `Báo cáo điều chỉnh Proposal.pdf` |
 | **`v2.0.0`** | 01/09/2026 | Added | Bắt đầu thiết lập và vận hành Master Schedule chính thức từ ngày `01/09/2026` đến `18/12/2026` (16 tuần, `886h` effort). Khởi động giai đoạn Khảo sát & Đặc tả (`MS-00`) và áp dụng mốc thời gian triển khai theo kế hoạch. | `Master Schedule.xlsx`, `Master-schedule.md` |
-| **`v2.1.0`** | 27/11/2026 | Changed | Tổng hợp các điều chỉnh đến ngày 27/11: chuẩn hóa thứ tự M07–M11; bổ sung M14 bằng điều chuyển 8h từ M13, triển khai song song và kết thúc cùng ngày; thống nhất phạm vi demo MS-00, quy tắc SLA Ticket và SLA lỗi kỹ thuật, phân bổ nhân sự, ma trận kiểm thử và báo giá Q-13 (điều chỉnh làm tròn 1 VNĐ); chuẩn hóa tên M08, cấu trúc task cha/con, chi tiết giờ công trực tiếp tại task cha, chức danh Risk Register và phân biệt quỹ rủi ro kỹ thuật với quỹ bảo hành. Giữ tổng 886h, 300.000.000 VNĐ và thời hạn bàn giao 18/12/2026. | `Master-schedule.md`, `Dieu-chinh-proposal.md`, `Bao-gia-cho-khach.md`, PRD, Domain, Test/RTM, GitHub Issues |

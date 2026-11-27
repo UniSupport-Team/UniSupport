@@ -48,6 +48,8 @@ Hệ thống cho phép sinh viên gửi yêu cầu, theo dõi trạng thái xử
 
 ## 5. Chức năng hệ thống
 
+**Bảo mật trong phạm vi triển khai:** Đảm bảo an toàn tài khoản, dữ liệu và thông tin người dùng theo M01–M03 và NFR-SEC-01–05.
+
 ### Module 1: Quản lý / Admin
 - **Đăng nhập**
 - **Theo dõi và thống kê:**
@@ -84,6 +86,8 @@ Hệ thống cho phép sinh viên gửi yêu cầu, theo dõi trạng thái xử
 
 ### 6.1. Lộ trình triển khai (16 Tuần)
 
+> Bảng tại mục 6.1 và 6.2 chỉ dùng đối chiếu lịch sử; kế hoạch có hiệu lực là MS-00–MS-04 tại [Điều chỉnh Proposal](Dieu-chinh-proposal.md).
+
 | Tuần | Công việc chính |
 |---|---|
 | **Tuần 1** | - Khảo sát quy trình, hoàn thiện tài liệu mô tả yêu cầu.<br>- Khởi động dự án. |
@@ -110,7 +114,7 @@ Hệ thống cho phép sinh viên gửi yêu cầu, theo dõi trạng thái xử
 ---
 
 ## 7. Kinh phí
-**Tổng kinh phí gói triển khai dự án UniSupport:** `300.000.000 VNĐ` *(dự kiến, có thể thay đổi)*.
+**Tổng kinh phí gói triển khai dự án UniSupport:** `300.000.000 VNĐ` (trọn gói theo [Báo giá](Bao-gia-cho-khach.md); thay đổi chỉ theo CR được phê duyệt)..
 
 ---
 
@@ -128,14 +132,14 @@ Các sản phẩm bàn giao chính thức vào tháng cuối của dự án bao 
 - **Nguyên tắc nghiệm thu:**
   - Hoạt động đúng với các yêu cầu đã được hai bên xác nhận.
   - Hoạt động đúng trong các tình huống kiểm tra đã thống nhất.
-  - Không còn lỗi nghiêm trọng làm gián đoạn việc sử dụng hệ thống.
+  - Không nghiệm thu nếu còn bất kỳ lỗi P0/P1 mở, kể cả có workaround.
   - Các lỗi phát sinh do phía đơn vị phát triển (nếu có) được ghi nhận và có kế hoạch khắc phục cụ thể.
 
 ### 8.3. Bảo hành và hỗ trợ
 - **Thời gian bảo hành:** **06 tháng miễn phí** tính từ ngày ký Biên bản nghiệm thu và bàn giao chính thức.
-- **Phạm vi bảo hành:** Sửa chữa các lỗi kỹ thuật/lỗi phần mềm phát sinh thuộc phạm vi đã chốt tại Mốc 1. Không áp dụng cho các tính năng mới hoặc yêu cầu thay đổi ngoài scope.
+- **Phạm vi bảo hành:** Sửa chữa các lỗi kỹ thuật/lỗi phần mềm phát sinh thuộc phạm vi đã chốt tại cuối MS-00 (18/09/2026). Không áp dụng cho các tính năng mới hoặc yêu cầu thay đổi ngoài scope.
 - **Khung giờ tiếp nhận hỗ trợ:** Từ 08:00 đến 17:00 (Thứ Hai đến Thứ Sáu) và 09:00 đến 15:00 (Thứ Bảy) — *Trừ các ngày lễ, Tết*.
-- **Thời gian phản hồi:** Phản hồi trong vòng **24 giờ** kể từ khi nhận được thông tin đối với lỗi nghiêm trọng.
+- **Thời gian phản hồi:** Áp dụng SLA lỗi kỹ thuật P0–P3 tại [Điều phối và giám sát](Dieuphoi-Giamsat.md): P0 phản hồi 15 phút, khắc phục 2–4 giờ; P1 phản hồi 1 giờ, khắc phục 8–12 giờ; P2 phản hồi 4 giờ, khắc phục 24–48 giờ; P3 phản hồi trong 1 ngày làm việc, khắc phục theo phiên bản tiếp theo.
 
 ---
 
@@ -144,11 +148,11 @@ Các sản phẩm bàn giao chính thức vào tháng cuối của dự án bao 
 ### 9.1. Cam kết chung giữa hai bên
 - Cùng hợp tác trên tinh thần minh bạch, tôn trọng và hỗ trợ lẫn nhau nhằm đảm bảo dự án hoàn thành đúng mục tiêu và chất lượng đề ra.
 - Mọi phát sinh, thay đổi về phạm vi hoặc tiến độ sẽ được thảo luận công khai và thống nhất bằng văn bản trước khi thực hiện.
-- **Phát sinh yêu cầu mới ngoài phạm vi:** Phạm vi chức năng được hai bên thống nhất tại Mốc 1 – cuối Tuần 3. Sau thời điểm này, mọi yêu cầu bổ sung hoặc thay đổi sẽ được xem xét riêng về thời gian và kinh phí trước khi thực hiện.
-- **Thay đổi yêu cầu nghiệp vụ:** Thống nhất và chốt văn bản yêu cầu tại Mốc 1 – cuối Tuần 3. Mọi yêu cầu thay đổi sau thời điểm này phải tuân theo quy trình quản lý thay đổi chính thức và đánh giá lại ngân sách/tiến độ.
+- **Phát sinh yêu cầu mới ngoài phạm vi:** Phạm vi chức năng được hai bên thống nhất tại cuối MS-00 – cuối Tuần 3 (18/09/2026). Sau thời điểm này, mọi yêu cầu bổ sung hoặc thay đổi sẽ được xem xét riêng về thời gian và kinh phí trước khi thực hiện.
+- **Thay đổi yêu cầu nghiệp vụ:** Thống nhất và chốt văn bản yêu cầu tại cuối MS-00 – cuối Tuần 3 (18/09/2026). Mọi yêu cầu thay đổi sau thời điểm này phải tuân theo quy trình quản lý thay đổi chính thức và đánh giá lại ngân sách/tiến độ.
 
 ### 9.2. Cam kết từ Đơn vị triển khai (Tổ hợp Dự án UniSupport)
-- Nỗ lực tối đa triển khai dự án theo đúng lộ trình, đảm bảo chất lượng kỹ thuật, an toàn bảo mật và trải nghiệm người dùng theo đúng phạm vi đã thống nhất tại Mốc 1.
+- Nỗ lực tối đa triển khai dự án theo đúng lộ trình, đảm bảo chất lượng kỹ thuật, an toàn bảo mật và trải nghiệm người dùng theo đúng phạm vi đã thống nhất tại cuối MS-00 (18/09/2026).
 - Bàn giao đầy đủ bộ tài liệu hướng dẫn sử dụng và thực hiện dịch vụ bảo hành 06 tháng theo đúng quy định.
 - Đảm bảo tính bảo mật cho dữ liệu và thông tin nội bộ của Khách hàng trong suốt quá trình triển khai.
 - **Phát sinh lỗi kỹ thuật:** Đội kiểm thử tham gia từ sớm trong quá trình phát triển để phát hiện và xử lý lỗi trước khi đến giai đoạn nghiệm thu, thay vì chỉ kiểm tra vào cuối dự án.
