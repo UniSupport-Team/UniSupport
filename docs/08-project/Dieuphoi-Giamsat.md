@@ -226,6 +226,12 @@ Các nội dung giám sát chính bao gồm:
 | **Số lượng vấn đề chưa xử lý** | Theo dõi các vấn đề còn tồn đọng | Tổng hợp các vấn đề chưa được giải quyết |
 | **Tình trạng rủi ro** | Theo dõi các rủi ro đang ảnh hưởng đến dự án | Cập nhật trạng thái và mức độ ảnh hưởng |
 
+**Cách lấy số liệu từ GitHub:**
+- Tiến độ chức năng = số issue con đã đóng và đạt DoD / tổng issue con trong phạm vi × 100%; lọc theo milestone và các label `M01-subtask` đến `M14-subtask` (chọn từng label, cộng các tập không trùng). Loại issue trùng hoặc hủy.
+- Tiến độ bàn giao module: theo dõi riêng task cha mang label `M01` đến `M14`, đối chiếu DoD và hạn kế hoạch; không cộng task cha vào mẫu số tiến độ chức năng. Theo dõi riêng INF-01 và Docs-01/02 theo đầu ra milestone.
+- Lỗi tồn đọng: lọc issue lỗi đang mở (`is:issue is:open`), đối chiếu mức P0–P3 theo Kế hoạch quản lý chất lượng; khi chưa có label mức lỗi, phân loại từ nội dung issue, không giả định số lỗi bằng 0.
+- Đối chiếu hạn và Owner theo nội dung issue với Master Schedule; Owner kế hoạch không đồng nghĩa GitHub assignee. Không dùng phần trăm milestone mặc định làm tỷ lệ hoàn thành FR.
+
 Các chỉ số được cập nhật trong quá trình thực hiện và sử dụng làm cơ sở cho báo cáo định kỳ. Những chỉ số chưa có dữ liệu thực tế sẽ được ghi nhận khi có thông tin, không sử dụng số liệu ước đoán thay cho kết quả thực tế.
 
 ### 5.3. Phân tích sai lệch và hành động khắc phục
