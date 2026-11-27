@@ -42,8 +42,8 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | 25h | 10h | **35h** |
 | **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
 
-> **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (6 sheet theo bản Google Sheets đã chuẩn hóa: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `WBS`, `Resources`, `Change Log`):**
-> Bản Excel trong repository cần được thay bằng bản xuất từ [Google Sheets đã chuẩn hóa](https://docs.google.com/spreadsheets/d/142fvtvzqEwIIvsoaqQGOWs77DDdy6B1e-ot-V8ZA10I/edit) trước khi chốt bàn giao.
+> **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (6 sheet: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `WBS`, `Resources`, `Change Log`):**
+> Workbook chính thức: [Master Schedule.xlsx](Master%20Schedule.xlsx).
 > 1. **Về cột "Phụ trách (theo biểu đồ Gantt)" vs. "Giờ công thực tế theo vai trò":**
 >    - Cột **"Phụ trách (theo biểu đồ Gantt)"** giữ nguyên danh sách nhân sự hiển thị tại cột `D` của sheet `Final`; tên M10 thống nhất là `M10: Theo dõi & Bổ sung`.
 >    - **Vai trò BA (`174h`):** BA tham gia xuyên suốt dự án nên giờ BA được tách riêng ở cột `Giờ BA (h)` và cộng vào `Tổng Effort (h)`, không lặp lại tên BA tại cột `D` trên các dòng phát triển module/test của sheet `Final`.
