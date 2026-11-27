@@ -2,7 +2,7 @@
 
 > **Dự án:** UniSupport — Nền tảng Tiếp nhận và Hỗ trợ Thủ tục Hành chính Sinh viên  
 > **Phiên bản:** 2.1 (QA/QC Test Engineering Specification — Đồng bộ mã AC & Baseline `MS-00..MS-04`)  
-> **Phạm vi kế hoạch:** 14 Phân hệ (M01 đến M14), bao gồm **Happy Path**, **Negative Cases**, **Boundary Cases** và **Security/Concurrency**. Bảng 1 tổng hợp phân bổ kế hoạch tổng thể (182 test cases). Mục 2 liệt kê chi tiết 98 kịch bản kiểm thử tiêu biểu có ánh xạ trực tiếp đến từng Tiêu chí nghiệm thu (`AC-xx`) của PRD và Ma trận truy vết RTM, trong đó các trường hợp Negative/Edge/Security chiếm tỷ trọng lớn (> 58%).
+> **Phạm vi kế hoạch:** 14 Phân hệ (M01 đến M14), bao gồm **Happy Path**, **Negative Cases**, **Boundary Cases** và **Security/Concurrency**. Bảng 1 tổng hợp phân bổ kế hoạch tổng thể (182 test cases). Mục 2 liệt kê chi tiết 98 kịch bản kiểm thử tiêu biểu có ánh xạ trực tiếp đến từng Tiêu chí nghiệm thu (`AC-xx`) của PRD và Ma trận truy vết RTM, trong đó nhóm Negative/Edge theo mã TC chiếm 58/98 (59,18%). Kịch bản hỗn hợp được đếm một lần theo mã: M là Main/Happy, N và E là Negative/Edge; Security là thuộc tính kiểm thử có thể đi kèm.
 
 ---
 
@@ -18,7 +18,7 @@
 | **M04** | Quản lý Danh mục & SLA | `MS-02` | 5 / 7 (12) | 3 / 2 | 5 | 100% AC |
 | **M05** | Khởi tạo Ticket | `MS-02` | 6 / 12 (18) | 3 / 7 | 10 | 100% AC |
 | **M06** | Tiếp nhận Ticket & Tranh chấp đồng thời | `MS-02` | 5 / 9 (14) | 2 / 2 | 4 | 100% AC |
-| **M07** | Điều phối & Re-assign | `MS-02` | 6 / 9 (15) | 3 / 5 | 8 | 100% AC |
+| **M07** | Điều phối & Re-assign | `MS-02` | 6 / 9 (15) | 2 / 6 | 8 | 100% AC |
 | **M08** | Xử lý & Yêu cầu bổ sung | `MS-02` | 8 / 12 (20) | 4 / 6 | 10 | 100% AC |
 | **M09** | Trả kết quả xử lý | `MS-02` | 5 / 7 (12) | 2 / 3 | 5 | 100% AC |
 | **M10** | Theo dõi & Nộp bổ sung | `MS-02` | 6 / 10 (16) | 3 / 2 | 5 | 100% AC |
@@ -26,7 +26,7 @@
 | **M12** | Giám sát tiến độ & Cảnh báo SLA | `MS-03` | 6 / 8 (14) | 3 / 5 | 8 | 100% AC |
 | **M13** | Dashboard & Báo cáo | `MS-03` | 6 / 6 (12) | 4 / 4 | 8 | 100% AC |
 | **M14** | Chuyển đổi ngôn ngữ Việt/Anh | `MS-03` | 2 / 0 (2) | 2 / 0 | 2 | 100% AC |
-| | **TỔNG CỘNG** | | **74 / 108 (182)** | **41 / 57** | **98** | **Đồng bộ 100% RTM** |
+| | **TỔNG CỘNG** | | **74 / 108 (182)** | **40 / 58** | **98** | **Đồng bộ 100% RTM** |
 
 ---
 
