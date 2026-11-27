@@ -1,6 +1,6 @@
 # 6. MA TRẬN THÔNG BÁO (NOTIFICATION MATRIX)
 
-> **Quy tắc:** Có 7 hàng quy tắc mô tả 6 sự kiện thông báo duy nhất (hàng #3 và #4 cùng một sự kiện trả kết quả). Toàn bộ thông báo trong hệ thống được gửi qua kênh **In-app Notification** thời gian thực kèm huy hiệu chuông thông báo; không phát sinh email gây phiền hà người dùng. Mỗi sự kiện đều có mã Tiêu chí nghiệm thu (`AC`) và Kịch bản kiểm thử (`TC`) cụ thể kiểm chứng.
+> **Quy tắc:** Có 7 hàng quy tắc mô tả 6 sự kiện thông báo duy nhất (hàng #3 và #4 cùng một sự kiện trả kết quả). Các thông báo nghiệp vụ Ticket trong ma trận này được gửi qua kênh **In-app Notification** thời gian thực kèm huy hiệu chuông thông báo; không gửi email cho các sự kiện Ticket. Email khôi phục mật khẩu Admin thuộc FR-M01-03 và không nằm trong ma trận này. Mỗi sự kiện đều có mã Tiêu chí nghiệm thu (`AC`) và Kịch bản kiểm thử (`TC`) cụ thể kiểm chứng.
 
 ---
 
