@@ -9,7 +9,7 @@
 
 | Mã NFR | Nhóm yêu cầu | Tiêu chí kỹ thuật | Ngưỡng cam kết (Threshold) | Phương pháp / Công cụ đo kiểm |
 |:---:|---|---|---|---|
-| **`NFR-SEC-01`** | **Bảo mật** | Mã hóa phiên làm việc | JWT (HS256/RS256), thời hạn token tối đa 8 tiếng | Kiểm tra cấu hình Token Header & Expiration |
+| **`NFR-SEC-01`** | **Bảo mật** | Ký và xác minh JWT phiên làm việc | JWT (HS256/RS256), thời hạn token tối đa 8 tiếng | Kiểm tra cấu hình Token Header & Expiration |
 | **`NFR-SEC-02`** | **Bảo mật** | Chống dò quét mật khẩu (Brute-force) | Nhập sai liên tiếp 5 lần $\rightarrow$ Khóa tạm thời 15 phút | Kiểm thử tự động với script gửi 6 request sai |
 | **`NFR-SEC-03`** | **Bảo mật** | Cơ chế hệ thống đóng (Closed-Loop) | Không có nút Đăng ký; mật khẩu mặc định là ngày sinh (`DDMMYYYY`); không dùng OTP | Rà soát giao diện và kiểm thử API không cho phép tự đăng ký |
 | **`NFR-SEC-04`** | **Bảo mật** | Bắt buộc đổi mật khẩu sau khi reset | Cờ `must_change_password = true` sau khi Admin đặt lại (reset) mật khẩu ở M03 | Chặn điều hướng tới các trang khác khi chưa đổi mật khẩu |
@@ -28,7 +28,7 @@
 
 ### 2.1. Xác thực và Phân quyền (`NFR-SEC-01`, `NFR-SEC-05`)
 - **Xác thực phiên làm việc:**
-  - Hệ thống sử dụng JSON Web Token (JWT) được mã hóa an toàn.
+  - Hệ thống sử dụng JSON Web Token (JWT) được ký và xác minh chữ ký an toàn.
   - Thời hạn hiệu lực của Token là 8 tiếng (tương đương 1 ngày làm việc). Sau 8 tiếng không hoạt động hoặc khi đăng xuất, Token bị vô hiệu hóa.
 - **Phân quyền theo vai trò (RBAC):**
   - Hệ thống áp dụng 4 vai trò cố định: `STUDENT`, `STAFF`, `MANAGER`, `ADMIN`.
@@ -58,8 +58,8 @@
 ## 3. TẢI VÀ HIỆU NĂNG (PERFORMANCE & SLA)
 
 ### 3.1. Thời gian phản hồi (`NFR-PERF-01`, `NFR-PERF-02`)
-- **Tác vụ tương tác thường nhật:** Đăng nhập, tra cứu ticket, tạo form yêu cầu, tiếp nhận đơn có thời gian phản hồi trung bình **dưới 500ms** trong điều kiện mạng tiêu chuẩn.
-- **Tác vụ báo cáo tổng hợp:** Các truy vấn Dashboard trực quan, thống kê lưu lượng theo tháng toàn trường có thời gian phản hồi **dưới 2.000ms (2 giây)**, đồng nhất với cam kết kiểm thử hiệu năng trong Kế hoạch chất lượng ([QL-chat-luong.md](../08-project/QL-chat-luong.md)).
+- **Tác vụ tương tác thường nhật:** Đăng nhập, tra cứu ticket, tạo form yêu cầu, tiếp nhận đơn có thời gian phản hồi trung bình **không quá 500ms** trong điều kiện mạng tiêu chuẩn.
+- **Tác vụ báo cáo tổng hợp:** Các truy vấn Dashboard trực quan, thống kê lưu lượng theo tháng toàn trường có thời gian phản hồi **không quá 2.000ms (2 giây)**, đồng nhất với cam kết kiểm thử hiệu năng trong Kế hoạch chất lượng ([QL-chat-luong.md](../08-project/QL-chat-luong.md)).
 
 ### 3.2. Giới hạn lưu trữ tệp đính kèm (`NFR-PERF-03`)
 - Dung lượng tối đa: **5MB** cho mỗi tệp đính kèm; tối đa 5 file cho mỗi Ticket.
@@ -71,5 +71,5 @@
 ## 4. TOÀN VẸN DỮ LIỆU (DATA INTEGRITY CONSTRAINTS)
 
 - **Bất biến trạng thái Ticket đã đóng (`NFR-INT-01`):** Khi Ticket chuyển sang `CLOSED`, CSDL áp dụng ràng buộc ngăn chặn mọi thao tác sửa đổi nội dung và kết quả xử lý.
-- **Ràng buộc giải trình khi hoàn tất (`NFR-INT-02`):** Không cho phép hoàn tất đơn (`RESOLVED`) nếu trường ghi chú kết quả giải quyết (`resolution_notes`) để trống.
+- **Ràng buộc giải trình khi hoàn tất (`NFR-INT-02`):** Không cho phép hoàn tất đơn (`RESOLVED`) nếu trường ghi chú kết quả giải quyết (`resolution_notes`) có ít hơn 10 ký tự (bao gồm trường hợp để trống).
 - **Kiểm soát tương tranh (`NFR-INT-03`):** Áp dụng Atomic Update (`UPDATE tickets SET assignee_id = ? WHERE id = ? AND assignee_id IS NULL`) tại tầng CSDL để đảm bảo chỉ có đúng 1 nhân viên tiếp nhận đơn thành công khi có nhiều người cùng bấm nhận.
