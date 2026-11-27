@@ -61,7 +61,7 @@ Báo cáo cột mốc được lập khi dự án hoàn thành một giai đoạ
 
 - **Thời điểm thực hiện:** Ngay sau khi hoàn thành từng mốc tiến độ (Milestone).
 - **Mục đích:** Báo cáo kết quả nghiệm thu, demo sản phẩm cho Khách hàng và làm cơ sở xác nhận hoàn thành giai đoạn.
-- **Sản phẩm đi kèm:** Biên bản nghiệm thu mốc, tài liệu kỹ thuật hoàn chỉnh và bản demo hệ thống.
+- **Sản phẩm đi kèm:** Báo cáo hoàn thành nội bộ, tài liệu kỹ thuật và bản demo theo kế hoạch; biên bản nghiệm thu khách hàng chỉ ghi nhận khi có xác nhận. Áp dụng [quy tắc kiểm thử và đóng mốc](Master-schedule.md#quy-tắc-kiểm-thử-và-đóng-mốc).
 
 ### 2.4. Báo cáo cảnh báo rủi ro & sự cố (Alert / Incident Report)
 Báo cáo cảnh báo được phát hành đột xuất khi phát sinh sự cố khẩn cấp hoặc rủi ro nghiêm trọng đe dọa đến tiến độ, chi phí hoặc chất lượng dự án.
@@ -238,7 +238,7 @@ Khi phát hiện sai lệch, PM thực hiện:
 3. **Đề xuất biện pháp khắc phục:** Điều chỉnh cách thực hiện, phân bổ lại nguồn lực hoặc đề xuất hỗ trợ từ Ban quản lý.
 4. **Theo dõi kết quả:** Kiểm tra hiệu quả của biện pháp khắc phục trong các kỳ báo cáo tiếp theo.
 
-Đối với những sai lệch vượt quá khả năng xử lý của nhóm, PM cần báo cáo Ban quản lý để thống nhất phương án phù hợp.
+Đối với những sai lệch vượt quá khả năng xử lý của nhóm, PM cần báo cáo Ban quản lý để thống nhất phương án phù hợp. Áp dụng ngưỡng escalation và người nhận tại [Mục 2.2](#22-báo-cáo-tuần-weekly-report).
 
 ### 5.4. Báo cáo tình hình và kết quả dự án
 PM có trách nhiệm tổng hợp tình hình thực hiện và báo cáo cho các bên liên quan trong suốt quá trình triển khai.
