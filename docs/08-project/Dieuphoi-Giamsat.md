@@ -239,6 +239,8 @@ Các nội dung giám sát chính bao gồm:
 - P0/P1: đếm riêng issue lỗi mở theo mức độ, đối chiếu thời điểm phát hiện, phản hồi, khắc phục và retest với SLA mục 3.3; báo ngay nếu quá SLA hoặc ảnh hưởng nghiệm thu. Không coi issue đóng nhưng chưa retest đạt là đã khắc phục.
 - Ví dụ MS-03: chọn milestone tương ứng trên GitHub, lọc từng label subtask thuộc mốc, hợp nhất theo số issue; tử số chỉ gồm issue đóng đạt DoD, mẫu số gồm toàn bộ issue con hợp lệ. Mẫu số bằng 0 ghi N/A. PM lưu ngày chốt số liệu, bộ lọc và liên kết issue trong báo cáo tuần; không tính issue feedback quản trị vào tiến độ FR.
 
+**Kiểm chứng bộ lọc và chất lượng dữ liệu:** PM sử dụng `repo:UniSupport-Team/UniSupport is:issue milestone:"<tên milestone thực tế>" label:M14-subtask` (thay label theo module), thêm `is:closed` hoặc `is:open` để đối chiếu trạng thái; kiểm tra DoD trước khi tính tử số. Đối chiếu milestone được gán trên GitHub với mã MS trong nội dung issue và WBS; nếu thiếu hoặc lệch metadata, ghi chưa xác minh và yêu cầu cập nhật, không tự tính hoàn thành. Với lỗi, kiểm tra cả issue chưa gắn label `bug` hoặc mức P0–P3; kết quả bộ lọc rỗng không chứng minh không có lỗi. Lưu danh sách số issue, thời điểm chốt, bộ lọc và các ngoại lệ trong báo cáo tuần.
+
 Các chỉ số được cập nhật trong quá trình thực hiện và sử dụng làm cơ sở cho báo cáo định kỳ. Những chỉ số chưa có dữ liệu thực tế sẽ được ghi nhận khi có thông tin, không sử dụng số liệu ước đoán thay cho kết quả thực tế.
 
 ### 5.3. Phân tích sai lệch và hành động khắc phục
