@@ -15,31 +15,31 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 
 ## II. BẢNG TIẾN ĐỘ CHI TIẾT THEO TỪNG TASK & MỐC
 
-| Mốc | Giai đoạn | Tên Task / Module | Ngày bắt đầu | Ngày kết thúc | Thời lượng | Phụ trách (theo biểu đồ Gantt) | Giờ công thực tế theo vai trò | Giờ WBS (h) | Giờ BA (h) | Tổng Effort (h) |
-| :--- | :--- | :--- | :---: | :---: | :---: | :--- | :--- | :---: | :---: | :---: |
-| **Mốc 0**<br>*(01/09 – 18/09)* | Khởi động | Khảo sát & Đặc tả | 01/09/2026 | 02/09/2026 | 2 ngày | PM, BA | PM (8h), BA (16h) | 8h | 16h | **24h** |
-| | | Thiết kế & Tạm ứng | 03/09/2026 | 10/09/2026 | 6 ngày | PM, BA, Senior | PM (8h), Senior (24h), BA (8h) | 32h | 8h | **40h** |
-| | | Database & Nền tảng | 11/09/2026 | 18/09/2026 | 6 ngày | Senior, Dev 1 | Senior (24h), Dev 1 (24h), BA (8h) | 48h | 8h | **56h** |
-| **Mốc 1**<br>*(21/09 – 14/10)* | Nền tảng | M01: Đăng nhập & Xác thực | 21/09/2026 | 25/09/2026 | 5 ngày | Senior, Dev 1, Dev 2 | Senior (18h), Dev 1 (4h), Dev 2 (18h), BA (4h) | 40h | 4h | **44h** |
-| | | M02: Vai trò & Phân quyền | 28/09/2026 | 02/10/2026 | 5 ngày | Senior, Dev 1, Dev 3 | Senior (18h), Dev 1 (18h), Dev 3 (4h), BA (4h) | 40h | 4h | **44h** |
-| | | M03: Quản lý tài khoản | 05/10/2026 | 07/10/2026 | 3 ngày | Senior, Dev 3, Dev 2 | Senior (12h), Dev 2 (12h), Dev 3 (12h), BA (4h) | 36h | 4h | **40h** |
-| | | Test QA/QC – Đợt 1 *(khách hàng nếu muốn)* | 08/10/2026 | 14/10/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (20h) | 44h | 20h | **64h** |
-| **Mốc 2**<br>*(12/10 – 13/11)* | Ticket & Phân hệ sinh viên | M04: Quản lý danh mục | 12/10/2026 | 14/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | Senior (12h), Dev 1 (12h), Dev 3 (12h), BA (4h) | 36h | 4h | **40h** |
-| | | M05: Khởi tạo Ticket | 15/10/2026 | 19/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | Senior (12h), Dev 1 (12h), Dev 3 (12h), BA (4h) | 36h | 4h | **40h** |
-| | | M06: Tiếp nhận Ticket | 20/10/2026 | 22/10/2026 | 3 ngày | Senior, Dev 2, Dev 3 | Senior (12h), Dev 2 (12h), Dev 3 (12h), BA (4h) | 36h | 4h | **40h** |
-| | | M07: Điều phối Ticket | 23/10/2026 | 26/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | Senior (2h), Dev 1 (8h), Dev 3 (8h), BA (4h) | 18h | 4h | **22h** |
-| | | M08: Xử lý & Bổ sung | 27/10/2026 | 28/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | Senior (4h), Dev 1 (6h), Dev 3 (6h), BA (4h) | 16h | 4h | **20h** |
-| | | M09: Trả kết quả | 29/10/2026 | 30/10/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (8h), Dev 2 (8h), Dev 3 (8h), BA (4h) | 24h | 4h | **28h** |
-| | | Test QA/QC – Đợt 2 *(khách hàng nếu muốn)* | 02/11/2026 | 06/11/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (12h) | 44h | 12h | **56h** |
-| | | M10: Theo dõi & Bổ sung | 02/11/2026 | 03/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (8h), Dev 2 (8h), Dev 3 (8h), BA (4h) | 24h | 4h | **28h** |
-| | | M11: Kết quả & Đánh giá | 04/11/2026 | 05/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (4h), Dev 2 (4h), Dev 3 (4h), BA (4h) | 12h | 4h | **16h** |
-| | | Test QA/QC – Đợt 3 *(khách hàng nếu muốn)* | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (12h) | 44h | 12h | **56h** |
-| **Mốc 3**<br>*(16/11 – 04/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (8h), Dev 2 (26h), Dev 3 (6h), BA (4h) | 40h | 4h | **44h** |
-| | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3 | Dev 2 (20h), Dev 3 (12h), BA (4h) | 32h | 4h | **36h** |
-| | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | Dev 1 (8h) | 8h | 0h | **8h** |
-| | | Test QA/QC – Đợt 4 *(khách hàng nếu muốn)* | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (24h) | 44h | 24h | **68h** |
-| **Mốc 4**<br>*(07/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1 | PM (20h), QA 1 (5h), BA (12h) | 25h | 12h | **37h** |
-| | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | PM (20h), QA 2 (5h), BA (10h) | 25h | 10h | **35h** |
+| Mốc | Giai đoạn | Tên Task / Module | Ngày bắt đầu | Ngày kết thúc | Thời lượng | Phụ trách | Giờ WBS (h) | Giờ BA (h) | Tổng Effort (h) |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- | :---: | :---: | :---: |
+| **Mốc 0**<br>*(01/09 – 18/09)* | Khởi động | Khảo sát & Đặc tả | 01/09/2026 | 02/09/2026 | 2 ngày | PM, BA | 8h | 16h | **24h** |
+| | | Thiết kế & Tạm ứng | 03/09/2026 | 10/09/2026 | 6 ngày | PM, BA, Senior | 32h | 8h | **40h** |
+| | | Database & Nền tảng | 11/09/2026 | 18/09/2026 | 6 ngày | Senior, Dev 1 | 48h | 8h | **56h** |
+| **Mốc 1**<br>*(21/09 – 14/10)* | Nền tảng | M01: Đăng nhập & Xác thực | 21/09/2026 | 25/09/2026 | 5 ngày | Senior, Dev 1, Dev 2 | 40h | 4h | **44h** |
+| | | M02: Vai trò & Phân quyền | 28/09/2026 | 02/10/2026 | 5 ngày | Senior, Dev 1, Dev 3 | 40h | 4h | **44h** |
+| | | M03: Quản lý tài khoản | 05/10/2026 | 07/10/2026 | 3 ngày | Senior, Dev 3, Dev 2 | 36h | 4h | **40h** |
+| | | Test QA/QC – Đợt 1 *(khách hàng nếu muốn)* | 08/10/2026 | 14/10/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 20h | **64h** |
+| **Mốc 2**<br>*(12/10 – 13/11)* | Ticket & Phân hệ sinh viên | M04: Quản lý danh mục | 12/10/2026 | 14/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | 36h | 4h | **40h** |
+| | | M05: Khởi tạo Ticket | 15/10/2026 | 19/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | 36h | 4h | **40h** |
+| | | M06: Tiếp nhận Ticket | 20/10/2026 | 22/10/2026 | 3 ngày | Senior, Dev 2, Dev 3 | 36h | 4h | **40h** |
+| | | M07: Điều phối Ticket | 23/10/2026 | 26/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | 18h | 4h | **22h** |
+| | | M08: Xử lý & Bổ sung | 27/10/2026 | 28/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | 16h | 4h | **20h** |
+| | | M09: Trả kết quả | 29/10/2026 | 30/10/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 24h | 4h | **28h** |
+| | | Test QA/QC – Đợt 2 *(khách hàng nếu muốn)* | 02/11/2026 | 06/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
+| | | M10: Theo dõi & Bổ sung | 02/11/2026 | 03/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 24h | 4h | **28h** |
+| | | M11: Kết quả & Đánh giá | 04/11/2026 | 05/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 12h | 4h | **16h** |
+| | | Test QA/QC – Đợt 3 *(khách hàng nếu muốn)* | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
+| **Mốc 3**<br>*(16/11 – 04/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3 | 40h | 4h | **44h** |
+| | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3 | 32h | 4h | **36h** |
+| | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | 8h | 0h | **8h** |
+| | | Test QA/QC – Đợt 4 *(khách hàng nếu muốn)* | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 24h | **68h** |
+| **Mốc 4**<br>*(07/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1 | 25h | 12h | **37h** |
+| | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | 25h | 10h | **35h** |
 | **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
 
 > **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (4 sheet: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `Change Log`):**
