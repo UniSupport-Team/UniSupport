@@ -15,5 +15,8 @@ Phân hệ M14 hỗ trợ chức năng chuyển đổi ngôn ngữ giao diện V
 ---
 
 ## 3. Quy trình & Nghiệm thu
-* Triển khai cuốn chiếu trên môi trường thật theo lịch trình `MS-03` (`23/11/2026 – 27/11/2026`), đồng bộ bộ khóa ngôn ngữ Việt/Anh trên toàn bộ giao diện, biểu mẫu và thông báo hệ thống của các phân hệ `M01`–`M13`.
-* Đảm bảo kiểm
+
+- **Milestone:** `MS-03`. Triển khai song song M13, từ 23/11 đến 27/11/2026.
+- **Trọng tâm kiểm thử theo AC:** Chọn Việt/Anh cho giao diện, biểu mẫu và thông báo; giữ nguyên dữ liệu người dùng nhập; Đổi ngôn ngữ không cần đăng nhập lại; lựa chọn không hợp lệ giữ nguyên ngôn ngữ.
+- **Kịch bản kiểm thử:** `TC-M14-M01`, `TC-M14-M02`; xem [Test Scenarios](../../06-acceptance/test-scenarios.md) và [ma trận truy vết](../../06-acceptance/traceability-matrix.md).
+- **Điều kiện hoàn thành nội bộ:** Đáp ứng AC trong [PRD](prd.md), các kịch bản liên quan đạt, không còn P0/P1 mở và đáp ứng [DoD](../../08-project/QL-chat-luong.md#5-definition-of-done-dod--tiêu-chuẩn-hoàn-thành). Áp dụng [quy tắc đóng mốc](../../08-project/Master-schedule.md#quy-tắc-kiểm-thử-và-đóng-mốc). Đây là kế hoạch kiểm thử, không phải kết quả thực tế.
