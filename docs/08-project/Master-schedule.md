@@ -36,7 +36,7 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 | | | Test QA/QC – Đợt 3 *(khách hàng nếu muốn)* | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (12h) | 44h | 12h | **56h** |
 | **Mốc 3**<br>*(16/11 – 04/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (12h), Dev 2 (20h), Dev 3 (8h), BA (4h) | 40h | 4h | **44h** |
 | | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3 | Dev 2 (20h), Dev 3 (12h), BA (4h) | 32h | 4h | **36h** |
-| | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 04/12/2026 | 10 ngày | Dev 1 | Dev 1 (8h) | 8h | 0h | **8h** |
+| | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | Dev 1 (8h) | 8h | 0h | **8h** |
 | | | Test QA/QC – Đợt 4 *(khách hàng nếu muốn)* | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (24h) | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(07/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1 | PM (20h), QA 1 (5h), BA (12h) | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | PM (20h), QA 2 (5h), BA (10h) | 25h | 10h | **35h** |
@@ -115,7 +115,7 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 - **Các công việc chính:**
   - **M12: Giám sát tiến độ (16/11 – 20/11):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng màn hình tracking SLA, cảnh báo ticket quá hạn và tra cứu (`Dev 1 12h, Dev 2 20h, Dev 3 8h, BA 4h = 44h`).
   - **M13: Dashboard & Báo cáo (23/11 – 27/11):** Dev 2 và Dev 3 cùng BA xây dựng dashboard thống kê và xuất báo cáo (`Dev 2 20h, Dev 3 12h, BA 4h = 36h`).
-  - **M14: Quản lý đa ngôn ngữ (23/11 – 04/12):** Dev 1 thực hiện chuyển đổi ngôn ngữ (`Dev 1 8h`, 1 FR / 2 AC, triển khai song song `M13` và `Test QA/QC – Đợt 4`). Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md). `M13` (`36h` trực tiếp) và `M14` (`8h` trực tiếp) dùng chung hạng mục báo giá `Q-13` (`84h` sau khi cộng `40h` công việc chung phân bổ, tương đương `28.442.438 VNĐ`).
+  - **M14: Quản lý đa ngôn ngữ (23/11 – 27/11):** Dev 1 thực hiện chuyển đổi ngôn ngữ (`Dev 1 8h`, 1 FR / 2 AC, triển khai song song `M13`, kết thúc cùng ngày 27/11). Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md). `M13` (`36h` trực tiếp) và `M14` (`8h` trực tiếp) dùng chung hạng mục báo giá `Q-13` (`84h` sau khi cộng `40h` công việc chung phân bổ, tương đương `28.442.438 VNĐ`).
   - **Test QA/QC – Đợt 4 (30/11 – 04/12):** PM, QA 1, QA 2 và BA kiểm thử tính chính xác của số liệu, báo cáo và độ ổn định hệ thống (`PM 4h, QA 1 20h, QA 2 20h, BA 24h = 68h`).
 
 ### 5. Mốc 4: Bàn giao dự án (07/12/2026 – 18/12/2026)
