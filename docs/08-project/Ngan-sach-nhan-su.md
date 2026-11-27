@@ -1,8 +1,10 @@
 # TỔ CHỨC ĐỘI NGŨ VÀ PHÂN CÔNG TRÁCH NHIỆM
 
+> **Lưu ý bảo mật (Tài liệu nội bộ — Không gửi khách hàng):** Tài liệu này quy định cơ cấu nhân sự, đơn giá lương theo vai trò, quỹ dự phòng rủi ro, chi phí vận hành và biên lợi nhuận nội bộ của đội dự án UniSupport. **Chỉ lưu hành nội bộ nhóm dự án, tuyệt đối không gửi cho khách hàng** (tài liệu thương mại gửi khách hàng là [Bao-gia-cho-khach.md](Bao-gia-cho-khach.md)).
+
 Dự án UniSupport sử dụng đội ngũ 08 nhân sự bán thời gian trong thời gian triển khai 16 tuần, gồm 01 Project Manager (PM), 01 Business Analyst (BA), 01 Senior Developer, 03 Junior Developer và 02 QA/QC. Nhân sự được phân bổ theo từng giai đoạn và chức năng, BA tham gia xuyên suốt dự án; các nhân sự còn lại được huy động theo từng giai đoạn.
 
-Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04 giờ vào sáng thứ 7, tương đương 16 tuần khi nhân sự được huy động đầy đủ. Chi phí nhân sự được tính dựa trên số giờ dự kiến thực tế của từng vai trò theo kế hoạch phân công.
+Quy ước thời gian làm việc: 04 giờ/ngày từ thứ Hai đến thứ Sáu và 04 giờ vào sáng thứ Bảy, tương đương tối đa 24 giờ/tuần khi nhân sự được huy động đầy đủ. Chi phí nhân sự được tính dựa trên số giờ dự kiến thực tế của từng vai trò theo kế hoạch phân công.
 
 ## CƠ CẤU ĐỘI NGŨ
 
@@ -17,11 +19,11 @@ Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04
 | Giai đoạn | Thời gian | Nhân sự chính |
 | :--- | :---: | :--- |
 | Khởi động + phân tích yêu cầu | Tuần 1 | PM, BA, Senior |
-| Prototype + thiết kế CSDL | Tuần 2 - 3 | BA, Senior, Junior, QA |
-| Nền tảng | Tuần 4 - 6 | BA, Senior, 2 Junior, QA |
-| Ticket & Phân hệ sinh viên | Tuần 7 - 11 | BA, Senior, 3 Junior, QA |
-| Giám sát Dashboard | Tuần 12 - 14 | BA, 3 Junior, QA |
-| Bàn giao dự án | Tuần 15 - 16 | PM, BA |
+| Prototype + thiết kế CSDL | Tuần 2 - 3 | PM, BA, Senior, Dev 1 |
+| Nền tảng | Tuần 4 - 6 | PM, BA, Senior, Dev 1, Dev 2, Dev 3, QA 1, QA 2 |
+| Ticket & Phân hệ sinh viên | Tuần 7 - 11 | PM, BA, Senior, Dev 1, Dev 2, Dev 3, QA 1, QA 2 |
+| Giám sát Dashboard | Tuần 12 - 14 | PM, BA, Dev 1, Dev 2, Dev 3, QA 1, QA 2 |
+| Bàn giao dự án | Tuần 15 - 16 | PM, BA, QA 1, QA 2 |
 
 ## 2. BẢNG PHÂN BỔ LƯƠNG CHI TIẾT THEO VAI TRÒ VÀ CÁ NHÂN
 
@@ -47,8 +49,8 @@ Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04
 | 2 | Doanh thu dự án chưa VAT | ROUND(300.000.000 / 1,10) | 272.727.273 |
 | 3 | Chi phí lương nhân sự | SUM(Gross 8 vai trò) | 126.490.000 |
 | 4 | Chi phí BH DN giả định | ROUND(21,5% × (3)) | 27.195.350 |
-| 5 | Chi phí dự phòng rủi ro & bảo hành | Giữ giả định ngân sách trước đây; cần đối soát định mức V3-01 | 22.138.272 |
-| 6 | Chi phí vận hành, hạ tầng & quản lý | Giữ giả định ngân sách trước đây; cần đối soát định mức V3-01 | 15.489.366 |
+| 5 | Chi phí dự phòng rủi ro & bảo hành | Quỹ dự phòng rủi ro kỹ thuật (~10% tổng chi phí nhân sự `15.368.535đ`) + quỹ trực bảo hành 6 tháng sau bàn giao (`6.769.737đ`, tương đương ~40h hỗ trợ kỹ thuật theo SLA lỗi kỹ thuật tại [Điều phối và giám sát](Dieuphoi-Giamsat.md)) | 22.138.272 |
+| 6 | Chi phí vận hành, hạ tầng & quản lý | Hạ tầng Cloud/VPS môi trường Staging & CI/CD trong 4 tháng triển khai (`2.500.000đ/tháng × 4 = 10.000.000đ`) + bản quyền công cụ quản lý, kiểm thử & chi phí hành chính dự án (`5.489.366đ`) | 15.489.366 |
 | 7 | Tổng chi phí dự án | (3) + (4) + (5) + (6) | 191.312.988 |
 | 8 | Lợi nhuận trước thuế (EBT) | (2) − (7) | 81.414.285 |
 | 9 | Thuế TNDN giả định | ROUND(15% × (8)) | 12.212.143 |
@@ -71,37 +73,6 @@ Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04
 | **Lợi nhuận ròng** | **69.202.142** |
 | **Biên lợi nhuận ròng** | **23,07%** |
 
-## 5. CĂN CỨ ĐỒNG BỘ V1-01
-
-- Baseline **886h = 712h WBS + 174h BA**. Trong đó M01–M14 chiếm **450h** (398h WBS + 52h BA), công việc chung **436h** (314h WBS + 122h BA).
-- M14: **8h Dev 1 điều chuyển từ M13**, không tăng giờ BA/QA. M13 còn 36h; cả hai được báo giá chung Q-13 **28.000.000đ**.
-- Báo giá 300.000.000đ được phân bổ theo **trọng số lương trực tiếp module** và quy tắc làm tròn công bố tại [Bao-gia-cho-khach.md](Bao-gia-cho-khach.md). **Chi phí lương toàn dự án** tại đây bao gồm cả công việc chung, khác với trọng số lương trực tiếp trong bảng báo giá.
-- **Lưu ý đối soát:** Các tổng giờ theo từng vai trò là baseline kế hoạch; cần kiểm tra lại phân bổ cá nhân trên file Excel gốc. Dự phòng và vận hành đang giữ giả định cũ, chưa xác minh định mức chi tiết.
-
-## 6. PHỤ LỤC ĐỐI SOÁT GIÁ THEO MODULE (V1-01 — NỘI BỘ)
-
-Phụ lục này phục vụ kiểm tra phép tính, **không phải nội dung trình bày trong báo giá khách hàng**. Sau khi đổi mã module, thứ tự Q-07 đến Q-11 được sắp xếp theo mã mới, **giữ nguyên giá theo chức năng**, không thay đổi tổng hợp đồng.
-
-| Mã báo giá hiện hành | Module hiện hành | Module trước đổi mã | Giá (VNĐ) |
-|---|---|---|---:|
-| Q-07 | M07 – Điều phối Ticket | M11 | 13.000.000 |
-| Q-08 | M08 – Xử lý & Bổ sung | M07 | 10.600.000 |
-| Q-09 | M09 – Trả kết quả | M08 | 14.300.000 |
-| Q-10 | M10 – Theo dõi & Bổ sung | M09 | 14.300.000 |
-| Q-11 | M11 – Kết quả & Đánh giá | M10 | 8.800.000 |
-
-
-
-### Công thức phân bổ giá trọn gói
-
-1. **Chi phí nhân sự trực tiếp module** `C_i = Senior_i × 240.000 + (Dev1_i + Dev2_i + Dev3_i) × 90.000 + BA_i × 160.000` (VNĐ). Các giờ theo đúng phân công từng task tại [Master Schedule](Master-schedule.md); PM/QA thuộc phần công việc chung, không cộng trùng vào module.
-2. **Giá chung Q-13** (M13 + M14) được chốt thương mại ở **28.000.000đ**. Tổng effort Q-13 = M13 (32h WBS + 4h BA) + M14 (8h WBS) = **44h**.
-3. **Quỹ giá còn lại** cho Q-01–Q-12: `300.000.000 − 28.000.000 = 272.000.000đ`.
-4. **Giá Q-01–Q-11:** `ROUND((272.000.000 × C_i / SUM(C_01:C_12)) / 100.000, 0) × 100.000` (làm tròn đến 100.000đ). **Giá Q-12:** `272.000.000 − SUM(Giá Q-01:Q-11)` để loại sai lệch làm tròn. **Tổng trọng số C_01:C_12 = 53.400.000đ**.
-5. **Kiểm tra:** `SUM(Giá Q-01:Q-13) = 300.000.000đ`; `SUM(WBS module) = 398h`, `SUM(BA module) = 52h`; cộng công việc chung 314h WBS + 122h BA = **886h**.
-
-**Ví dụ kiểm tra Q-01:** Senior 20h, Dev 2 20h, BA 4h → `C_01 = 20×240.000 + 20×90.000 + 4×160.000 = 7.240.000đ`; giá Q-01 = `ROUND((272.000.000 × 7.240.000 / 53.400.000) / 100.000, 0) × 100.000 = 36.900.000đ`.
-
-> **Phân biệt giá và chi phí:** Trọng số lương trực tiếp dùng để phân bổ **giá trọn gói**, trong đó đã tính đến 436h công việc chung, vận hành, dự phòng, bảo hiểm và biên lợi nhuận; **không** có nghĩa giá bán bằng lương trực tiếp. Phương pháp này là quy tắc phân bổ thương mại được chốt cho V1-01, không phải chứng cứ giá từng module do khách hàng phê duyệt lại.
+> **Ghi chú quản trị nội bộ:** Tổng định mức **886 giờ công** tại Bảng 2 là cơ sở tính chi phí lương thực trả và kế hoạch dòng tiền nội bộ của nhóm thực hiện; khác biệt hoàn toàn về mục đích với bảng phân bổ giá bán thương mại theo hạng mục gửi khách hàng tại [Bao-gia-cho-khach.md](Bao-gia-cho-khach.md).
 
 

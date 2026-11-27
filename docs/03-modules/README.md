@@ -2,7 +2,7 @@
 
 > **Baseline milestone hiện hành:** [Báo cáo điều chỉnh kế hoạch triển khai](../08-project/Dieu-chinh-proposal.md), gồm `MS-00` đến `MS-04`.
 >
-> **Quy mô hệ thống:** 5 milestone • 14 module (`M01`–`M14`) • 41 FR trong PRD (40 FR M01–M13 + 1 FR M14) + 1 task hạ tầng (`INF-01`) • 4 vai trò. Số GitHub Issue thực tế phải đối chiếu trên công cụ quản lý, không suy ra từ tổng FR.
+> **Quy mô hệ thống:** 5 milestone • 14 module (`M01`–`M14`) • 41 FR trong PRD (40 FR M01–M13 + 1 FR M14) + 1 task hạ tầng (`INF-01`) • 4 vai trò.
 >
 > **Phân bổ module theo baseline:**
 >
@@ -86,7 +86,7 @@
   * `[M07-02]` Admin chuyển lại các đơn bị báo sai phòng ban về đúng nơi
   * `[M07-03]` Trưởng phòng phân công người xử lý đơn trong nội bộ phòng ban
 
-* **[M08-xu-ly-trao-doi/](M08-xu-ly-trao-doi/) — [M08] Xử lý & Bổ sung (4 FR)** ([prd.md](M08-xu-ly-trao-doi/prd.md) | [Xu-ly-trao-doi.md](M08-xu-ly-trao-doi/Xu-ly-trao-doi.md))
+* **[M08-xu-ly-trao-doi/](M08-xu-ly-trao-doi/) — [M08] Xử lý & Trao đổi (4 FR)** ([prd.md](M08-xu-ly-trao-doi/prd.md) | [Xu-ly-trao-doi.md](M08-xu-ly-trao-doi/Xu-ly-trao-doi.md))
 
   * `[M08-01]` Nhân viên cập nhật tiến độ, ghi chú và lưu lịch sử xử lý đơn
   * `[M08-02]` Nhân viên xem lại danh sách lịch sử các đơn mình đã xử lý

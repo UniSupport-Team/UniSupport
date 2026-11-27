@@ -33,8 +33,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Chọn đúng phòng ban và danh mục đang hoạt động $\rightarrow$ Form hiển thị đúng hướng dẫn thủ tục; nếu chưa chọn hoặc danh mục bị khóa thì báo lỗi (`E-01`).
-* **AC-02:** Chọn mục "Khác" $\rightarrow$ Cho phép tiếp tục bước nhập nội dung mà không bắt buộc chọn phòng ban để định tuyến về Hàng chờ Admin (`BR-01`).
+* **AC-01:** (FR-M05-01/AC-01) Chọn đúng phòng ban và danh mục đang hoạt động $\rightarrow$ Form hiển thị đúng hướng dẫn thủ tục; nếu chưa chọn hoặc danh mục bị khóa thì báo lỗi (`E-01`).
+* **AC-02:** (FR-M05-01/AC-02) Chọn mục "Khác" $\rightarrow$ Cho phép tiếp tục bước nhập nội dung mà không bắt buộc chọn phòng ban để định tuyến về Hàng chờ Admin (`BR-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -91,8 +91,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Nhập đủ thông tin hợp lệ và gửi thành công $\rightarrow$ Sinh đúng Mã Ticket, lưu trạng thái Chưa tiếp nhận (`New`) và chuyển vào hàng chờ phòng ban hoặc hàng chờ Admin nếu là mục "Khác" (`BR-03`).
-* **AC-02:** Bỏ trống/nhập quá ngắn Tiêu đề, Nội dung (`BR-01`, `E-02`) hoặc file đính kèm > 5MB / sai định dạng (`BR-02`, `E-01`) $\rightarrow$ Hệ thống hiển thị cảnh báo lỗi và không cho gửi.
+* **AC-01:** (FR-M05-02/AC-01) Nhập đủ thông tin hợp lệ và gửi thành công $\rightarrow$ Sinh đúng Mã Ticket, lưu trạng thái Chưa tiếp nhận (`New`) và chuyển vào hàng chờ phòng ban hoặc hàng chờ Admin nếu là mục "Khác" (`BR-03`).
+* **AC-02:** (FR-M05-02/AC-02) Bỏ trống/nhập quá ngắn Tiêu đề, Nội dung (`BR-01`, `E-02`) hoặc file đính kèm > 5MB / sai định dạng (`BR-02`, `E-01`) $\rightarrow$ Hệ thống hiển thị cảnh báo lỗi và không cho gửi.
 
 ---
 
@@ -146,8 +146,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Khi Ticket ở trạng thái `New`, sinh viên sửa Tiêu đề và Nội dung hợp lệ $\rightarrow$ Hệ thống lưu thành công và ghi lịch sử truy vết.
-* **AC-02:** Form chỉnh sửa khóa hoàn toàn trường Phòng ban và Danh mục, không cho phép thay đổi.
-* **AC-03:** Khi Ticket đã chuyển sang `In Progress` hoặc các trạng thái khác $\rightarrow$ Nút "Chỉnh sửa đơn" bị ẩn, gọi API trực tiếp trả về lỗi `400 Bad Request`.
-* **AC-04:** Khi Ticket còn `New`, sinh viên được thêm hoặc xóa tệp đính kèm hợp lệ; việc thay đổi được ghi lịch sử và không làm thay đổi mã Ticket, danh mục hoặc phòng ban.
+* **AC-01:** (FR-M05-03/AC-01) Khi Ticket ở trạng thái `New`, sinh viên sửa Tiêu đề và Nội dung hợp lệ $\rightarrow$ Hệ thống lưu thành công và ghi lịch sử truy vết.
+* **AC-02:** (FR-M05-03/AC-02) Form chỉnh sửa khóa hoàn toàn trường Phòng ban và Danh mục, không cho phép thay đổi.
+* **AC-03:** (FR-M05-03/AC-03) Khi Ticket đã chuyển sang `In Progress` hoặc các trạng thái khác $\rightarrow$ Nút "Chỉnh sửa đơn" bị ẩn, gọi API trực tiếp trả về lỗi `400 Bad Request`.
+* **AC-04:** (FR-M05-03/AC-04) Khi Ticket còn `New`, sinh viên được thêm hoặc xóa tệp đính kèm hợp lệ; việc thay đổi được ghi lịch sử và không làm thay đổi mã Ticket, danh mục hoặc phòng ban.
 

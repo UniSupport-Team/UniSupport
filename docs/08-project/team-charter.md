@@ -64,7 +64,7 @@
 | **GitHub Issues / Projects** | Quản lý task (Parent Task, Subtask), Milestone, deadline và theo dõi tiến độ công việc. |
 | **GitHub Repository** | Quản lý source code, tài liệu dự án và version control. |
 | **Figma** | Thiết kế UI, wireframe và prototype. |
-| **Google Drive** | Lưu trữ tài liệu, meeting minutes và các tài liệu dự án. |
+| **Google Drive** | Lưu trữ tài liệu dự án và biên bản họp (Meeting Minutes). |
 
 ### 3.2. Quy trình thực hiện công việc
 **Vòng đời task:** `Task Assigned` → `To Do` → `Doing` → `Review` → `QA Verify` → `Done`

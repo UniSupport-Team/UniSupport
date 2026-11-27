@@ -45,7 +45,7 @@ Báo cáo tuần dùng để đối soát tiến độ thực tế với kế ho
 - **Hình thức:** Đăng tải lên hệ thống GitHub Issues / GitHub Projects và gửi email tóm tắt.
 - **Người lập và gửi:** Project Manager (PM), tổng hợp cập nhật của Developers và QA/QC.
 - **Người nhận:** Ban quản lý dự án và đại diện khách hàng (đối với bản tổng hợp tiến độ/những quyết định cần xác nhận).
-- **Ngưỡng báo cáo vượt cấp (escalation):** PM báo ngay khi phát hiện nguy cơ trễ mốc đã cam kết, vượt ngân sách được duyệt, lỗi P0/P1 ảnh hưởng nghiệm thu, hoặc rủi ro bảo mật; các thay đổi phạm vi/chi phí/tiến độ phải đi theo quy trình Change Request tại Mục 3.4. Đây là ngưỡng quản trị đề xuất, cần được nhóm phê duyệt trước khi coi là cam kết chính thức.
+- **Ngưỡng báo cáo vượt cấp (escalation):** PM báo ngay lên Ban quản lý và đại diện Khách hàng khi phát sinh một trong các ngưỡng đo lường sau: (1) Task trên đường găng trễ $\ge 2$ ngày làm việc hoặc có nguy cơ làm trễ mốc Milestone đã cam kết; (2) Chi phí thực tế hoặc dự báo vượt $\ge 5\%$ ngân sách hạng mục; (3) Phát sinh lỗi mức **P0/P1** chưa khắc phục đúng SLA hoặc ảnh hưởng nghiệm thu mốc; (4) Xảy ra sự cố/rủi ro an toàn thông tin. Các thay đổi ảnh hưởng phạm vi/chi phí/tiến độ phải đi theo quy trình Change Request tại Mục 3.4.
 
 **Cấu trúc báo cáo tuần:**
 
@@ -61,7 +61,7 @@ Báo cáo cột mốc được lập khi dự án hoàn thành một giai đoạ
 
 - **Thời điểm thực hiện:** Ngay sau khi hoàn thành từng mốc tiến độ (Milestone).
 - **Mục đích:** Báo cáo kết quả nghiệm thu, demo sản phẩm cho Khách hàng và làm cơ sở xác nhận hoàn thành giai đoạn.
-- **Sản phẩm đi kèm:** Biên bản nghiệm thu mốc, tài liệu kỹ thuật hoàn chỉnh và bản demo hệ thống.
+- **Sản phẩm đi kèm:** Báo cáo hoàn thành nội bộ, tài liệu kỹ thuật và bản demo theo kế hoạch; biên bản nghiệm thu khách hàng chỉ ghi nhận khi có xác nhận. Áp dụng [quy tắc kiểm thử và đóng mốc](Master-schedule.md#quy-tắc-kiểm-thử-và-đóng-mốc).
 
 ### 2.4. Báo cáo cảnh báo rủi ro & sự cố (Alert / Incident Report)
 Báo cáo cảnh báo được phát hành đột xuất khi phát sinh sự cố khẩn cấp hoặc rủi ro nghiêm trọng đe dọa đến tiến độ, chi phí hoặc chất lượng dự án.
@@ -69,7 +69,7 @@ Báo cáo cảnh báo được phát hành đột xuất khi phát sinh sự c�
 - **Thời điểm phát hành:** Đột xuất, ngay khi phát hiện sự cố (trong vòng 15-60 phút tùy mức độ SLA).
 - **Quy trình xử lý báo cáo cảnh báo:**
   - **Ghi nhận & Thông báo:** Thành viên phát hiện thông báo ngay trên kênh chung (Slack).
-  - **Đánh giá tác động:** PM ghi nhận **mức lỗi P0–P3** theo [Kế hoạch quản lý chất lượng](QL-chat-luong.md#14-phân-loại-lỗi-thống-nhất-v1-09) và gửi thông báo khẩn cho Ban quản lý theo mức ảnh hưởng; bảng thời gian xử lý ba mức bên dưới đang chờ quyết định quy đổi SLA.
+  - **Đánh giá tác động:** PM ghi nhận **mức lỗi P0–P3** theo [Kế hoạch quản lý chất lượng](QL-chat-luong.md#14-phân-loại-lỗi-thống-nhất) và gửi thông báo khẩn cho Ban quản lý theo mức ảnh hưởng và thời hạn khắc phục quy định.
   - **Đề xuất giải pháp:** Lập phương án khắc phục khẩn cấp và xin phê duyệt nguồn lực ứng phó.
 
 ### 2.5. Báo cáo tổng kết dự án (Project Closure Report)
@@ -117,7 +117,7 @@ Quy định này giúp duy trì tính linh hoạt trong giao tiếp nhưng vẫn
 4. **Cập nhật tình hình:** Người phụ trách cập nhật tiến độ xử lý và kết quả trên kênh chung.
 5. **Ghi nhận sự cố:** Nội dung sự cố, quá trình xử lý và kết quả cuối cùng được lưu lại trên công cụ quản lý dự án.
 
-**SLA xử lý lỗi kỹ thuật được duyệt (V1-09):** Áp dụng một thang mức lỗi chính thức **P0–P3**. Đây là thời gian phản hồi và khắc phục sự cố/lỗi kỹ thuật, **không thay thế SLA xử lý Ticket nghiệp vụ** tại [Kế hoạch sản phẩm](QL-san-pham.md).
+**SLA xử lý lỗi kỹ thuật:** Áp dụng một thang mức lỗi chính thức **P0–P3**. Đây là thời gian phản hồi và khắc phục sự cố/lỗi kỹ thuật, **không thay thế SLA xử lý Ticket nghiệp vụ** tại [Kế hoạch sản phẩm](QL-san-pham.md).
 
 | Mức lỗi | Tình huống điển hình | Thời gian phản hồi | Thời gian khắc phục |
 |---|---|---|---|
@@ -226,6 +226,7 @@ Các nội dung giám sát chính bao gồm:
 | **Số lượng vấn đề chưa xử lý** | Theo dõi các vấn đề còn tồn đọng | Tổng hợp các vấn đề chưa được giải quyết |
 | **Tình trạng rủi ro** | Theo dõi các rủi ro đang ảnh hưởng đến dự án | Cập nhật trạng thái và mức độ ảnh hưởng |
 
+
 Các chỉ số được cập nhật trong quá trình thực hiện và sử dụng làm cơ sở cho báo cáo định kỳ. Những chỉ số chưa có dữ liệu thực tế sẽ được ghi nhận khi có thông tin, không sử dụng số liệu ước đoán thay cho kết quả thực tế.
 
 ### 5.3. Phân tích sai lệch và hành động khắc phục
@@ -237,7 +238,7 @@ Khi phát hiện sai lệch, PM thực hiện:
 3. **Đề xuất biện pháp khắc phục:** Điều chỉnh cách thực hiện, phân bổ lại nguồn lực hoặc đề xuất hỗ trợ từ Ban quản lý.
 4. **Theo dõi kết quả:** Kiểm tra hiệu quả của biện pháp khắc phục trong các kỳ báo cáo tiếp theo.
 
-Đối với những sai lệch vượt quá khả năng xử lý của nhóm, PM cần báo cáo Ban quản lý để thống nhất phương án phù hợp.
+Đối với những sai lệch vượt quá khả năng xử lý của nhóm, PM cần báo cáo Ban quản lý để thống nhất phương án phù hợp. Áp dụng ngưỡng escalation và người nhận tại [Mục 2.2](#22-báo-cáo-tuần-weekly-report).
 
 ### 5.4. Báo cáo tình hình và kết quả dự án
 PM có trách nhiệm tổng hợp tình hình thực hiện và báo cáo cho các bên liên quan trong suốt quá trình triển khai.

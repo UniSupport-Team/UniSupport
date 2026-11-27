@@ -32,7 +32,7 @@ Bộ chỉ số dưới đây dùng để đo lường mức độ thành công 
 | **Tốc độ** | Thời gian xử lý hoàn tất (Resolution Time) | Thời gian trung bình từ lúc tiếp nhận đến khi đóng Ticket | < 48 giờ làm việc (Tùy danh mục) | Hàng tuần | Trưởng phòng ban |
 | **Điều phối** | Tỷ lệ điều phối lại | Tỷ lệ Ticket bị chuyển trả lại hàng chờ phân loại | < 10% | Hàng tháng | Quản trị viên (Admin) |
 | **Tiến độ** | Tỷ lệ quá hạn SLA | Tỷ lệ Ticket vi phạm hạn chót xử lý | < 5% | Hàng ngày/Tuần | Trưởng phòng / PM |
-| **Hài lòng** | Điểm hài lòng (CSAT) | Khảo sát 1–5 sao sau khi Ticket đóng | > 4.0 / 5.0 | Hàng tháng | Ban Giám hiệu / PO |
+| **Hài lòng** | Điểm hài lòng (CSAT) | Đánh giá 1–5 sao khi Ticket Resolved, trước khi đóng theo FR-M11-02 | > 4.0 / 5.0 | Hàng tháng | Ban Giám hiệu / PO |
 
 ---
 
@@ -52,7 +52,7 @@ Hệ thống bắt buộc phải trải qua kiểm thử QC/UAT và thỏa mãn 
 
 | **Rủi ro dự kiến** | **Mức ảnh hưởng** | **Giải pháp phòng ngừa & Xử lý trên hệ thống** |
 |:---|:---:|:---|
-| **Phòng ban xử lý chậm/trễ hạn SLA** | Cao | Theo `FR-M12-02`: hiển thị cảnh báo vàng khi đạt ≥ 80% SLA; cảnh báo đỏ khi vượt 100% SLA hoặc Ticket `New` tồn đọng quá 4 giờ làm việc. Trưởng phòng và nhân viên xem cảnh báo để chủ động đôn đốc hoặc phân công lại. Chưa cam kết cơ chế gửi thông báo leo thang tự động sau 24 giờ. |
+| **Phòng ban xử lý chậm/trễ hạn SLA** | Cao | Theo `FR-M12-02`: hiển thị cảnh báo vàng từ 80% đến dưới 100% SLA; cảnh báo đỏ từ 100% SLA hoặc Ticket `New` tồn đọng quá 4 giờ làm việc. Trưởng phòng và nhân viên xem cảnh báo để chủ động đôn đốc hoặc phân công lại. Chưa cam kết cơ chế gửi thông báo leo thang tự động sau 24 giờ. |
 | **Lộ lọt thông tin cá nhân của sinh viên** | Rất cao | Áp dụng che giấu danh tính (Data Anonymization): Chỉ hiển thị thông tin cần thiết phục vụ xử lý đơn. Dữ liệu xuất báo cáo được ẩn danh. Mã hóa thông tin cá nhân trong CSDL. |
 | **Hệ thống quá tải lúc cao điểm (Đầu kỳ, thi cử)** | Cao | Tối ưu hóa tài nguyên máy chủ: Thiết lập Auto-scaling trên nền tảng Cloud (Render/AWS). Tối ưu hóa truy vấn CSDL và bộ nhớ đệm (Caching). |
 | **Sinh viên gửi nhầm phòng ban hoặc tạo đơn rác** | Trung bình | Theo `FR-M05-01`: sinh viên chọn Phòng ban tiếp nhận trước, sau đó chọn Danh mục thủ tục; nếu chưa xác định được phòng ban, chọn mục "Khác" để chuyển vào hàng chờ Admin phân loại. |
@@ -65,14 +65,14 @@ Hệ thống bắt buộc phải trải qua kiểm thử QC/UAT và thỏa mãn 
 Hệ thống kết hợp đa dạng kênh thu thập để lắng nghe cả phản hồi chủ động từ người dùng và dữ liệu hành vi thực tế:
 
 1. **Kênh tiếp nhận phản hồi trực tiếp (In-app & Online):**
-   - **Form khảo sát hài lòng (CSAT):** Tự động hiển thị đánh giá 1–5 sao kèm ô góp ý ngay khi Ticket hoàn tất (`RESOLVED`/`CLOSED`).
-   - **Nút "Góp ý & Báo lỗi" trên giao diện:** Cung cấp mẫu biểu ngắn gọn (Tiêu đề, Loại góp ý, Ảnh chụp màn hình) tại chân trang để người dùng gửi phản hồi bất kỳ lúc nào.
+   - **Form khảo sát hài lòng (CSAT):** Theo FR-M11-02, sinh viên đánh giá 1–5 sao và nhận xét khi Ticket ở trạng thái Resolved, trước khi đóng đơn; không áp dụng cho Ticket tự đóng.
+   - **Góp ý & Báo lỗi:** Trong phạm vi hiện tại, tiếp nhận qua kênh ngoài phần mềm do PO/IT quản lý. Nút và biểu mẫu góp ý trên giao diện là đề xuất sau bàn giao, cần CR/phê duyệt riêng.
    - **Mẫu GitHub Issue Feedback:** Kênh dành cho đội ngũ vận hành nội bộ và quản trị viên nhà trường ghi nhận phản hồi kỹ thuật hoặc đề xuất quy trình.
 
 2. **Phương pháp nghiên cứu dữ liệu "What & Why":**
    - **Bước 1 (Định lượng - WHAT):** Sử dụng các công cụ phân tích dữ liệu tự động:
-     - *Google Analytics (GA4) / Microsoft Clarity:* Theo dõi lưu lượng truy cập, tỷ lệ thoát trang, các luồng thao tác phổ biến.
-     - *Bản đồ nhiệt (Heatmap / Clarity):* Quan sát trực quan các vị trí click chuột, vùng cuộn trang để phát hiện điểm nghẽn giao diện.
+      - *Google Analytics (GA4) / Microsoft Clarity:* Đề xuất sau bàn giao, ngoài phạm vi PRD và hợp đồng hiện tại; chỉ tích hợp khi được phê duyệt riêng.
+      - *Bản đồ nhiệt (Heatmap / Clarity):* Đề xuất mở rộng, không phải yêu cầu triển khai hoặc nghiệm thu hiện tại.
    - **Bước 2 (Định tính - WHY):** Khoanh vùng điểm bất thường từ dữ liệu số và tổ chức phỏng vấn chuyên sâu 1:1 (5–7 người dùng đại diện) để tìm hiểu nguyên nhân tâm lý cốt lõi.
    - **Bước 3 (Phân loại - CLASSIFY):** Phân loại phản hồi theo bảng chuẩn hóa ở mục 4.2.
    - **Bước 4 (Thực thi - ACTION):** Chuyển giao phản hồi đến đúng quy trình dự án tương ứng để đưa ra hành động khắc phục hoặc cải tiến.
@@ -123,7 +123,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 | 1 | **Trung tâm trợ giúp thông minh (FAQ Hub)** | Tự động gợi ý câu trả lời cho các thắc mắc phổ biến ngay khi sinh viên gõ tiêu đề đơn; dự kiến giảm 30% lượng đơn rác/trùng lặp. | **High** | Chờ phê duyệt |
 | 2 | **Tích hợp Cổng Thông tin Sinh viên (SSO & Profile API)** | Tự động đồng bộ thông tin ngành học, lớp, trạng thái học phí khi tạo đơn; loại bỏ việc sinh viên phải nhập lại thông tin cá nhân. | **Medium** | Lên ý tưởng |
 | 3 | **Trợ lý Ảo AI tư vấn thủ tục (AI Chatbot Assistant)** | Hỗ trợ giải đáp tự động 24/7 các quy chế đào tạo, chuẩn đầu ra và hướng dẫn chuẩn bị hồ sơ trước khi nộp đơn chính thức. | **Medium** | Nghiên cứu công nghệ |
-| 4 | **Ứng dụng di động UniSupport (Mobile App)** | Đẩy thông báo đẩy (Push Notifications) thời gian thực về tiến độ đơn; phục vụ sinh viên thao tác thuận tiện trên điện thoại. | **Low** | Kế hoạch dài hạn |
+| 4 | **Ứng dụng di động UniSupport (Mobile App)** | Gửi thông báo đẩy (Push Notifications) thời gian thực về tiến độ đơn; phục vụ sinh viên thao tác thuận tiện trên điện thoại. | **Low** | Kế hoạch dài hạn |
 
 ### 6.2. Lộ trình phát triển dài hạn (Roadmap)
 
@@ -133,7 +133,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 |:---|:---|:---|:---|
 | **Giai đoạn 1 (Hiện tại: 16 tuần)** | **Triển khai Hệ thống Cốt lõi (Web Platform)** | Triển khai 14 module chức năng (M01–M14) theo cam kết PRD; hoàn thành nghiệm thu UAT với Ban Giám hiệu. | - 100% test case P0 và P1 đạt nghiệm thu (0 lỗi tồn đọng).<br>- Tỷ lệ hoàn tất xử lý đạt chuẩn cam kết SLA (> 90%). |
 | **Giai đoạn 2 (Sau bàn giao: 3–6 tháng)** | **Tối ưu hóa Vận hành & Trải nghiệm** | Tiếp nhận phản hồi thực tế; phát hành tính năng FAQ Hub; bảo hành và tinh chỉnh luồng giao diện sinh viên. | - Hệ thống vận hành liên tục không có sự cố P0 trong 60 ngày.<br>- Điểm đánh giá mức độ hài lòng (CSAT) duy trì > 4.0/5.0. |
-| **Giai đoạn 3 (Dài hạn: 1–2 năm)** | **Mở rộng Hệ sinh thái & Mobile** | Phát triển ứng dụng di động (iOS/Android); tích hợp API đào tạo và ứng dụng AI tự động hóa. | - Tỷ lệ người dùng truy cập từ thiết bị di động đạt > 70% tổng traffic (đo lường bằng GA4/Clarity).<br>- Có biên bản nghiệm thu tích hợp kỹ thuật với phòng CNTT nhà trường. |
+| **Giai đoạn 3 (Dài hạn: 1–2 năm)** | **Mở rộng Hệ sinh thái & Mobile** | Phát triển ứng dụng di động (iOS/Android); tích hợp API đào tạo và ứng dụng AI tự động hóa. | - Tỷ lệ người dùng truy cập từ thiết bị di động đạt > 70% tổng traffic (đo lường bằng GA4/Clarity nếu được phê duyệt tích hợp sau bàn giao).<br>- Có biên bản nghiệm thu tích hợp kỹ thuật với phòng CNTT nhà trường. |
 
 ### 6.3. Thẩm quyền và cơ chế ra quyết định sau bàn giao
 
@@ -141,7 +141,7 @@ Nhằm đảm bảo tính kế thừa và quy trình vận hành nhất quán sa
 
 - **Ban Giám hiệu (Sponsor / Steering Committee):** Phê duyệt tầm nhìn chiến lược, định hướng mở rộng hệ sinh thái, phê duyệt ngân sách nâng cấp định kỳ và ra quyết định cuối cùng về các thay đổi chính sách vận hành cấp trường.
 - **Đại diện các Phòng ban (Business Owners / Key Users):** Đề xuất điều chỉnh hoặc bổ sung danh mục thủ tục thuộc thẩm quyền phụ trách; quản lý phân công nhân sự nội bộ và tham gia nghiệm thu tính năng mới liên quan đến đơn vị mình.
-- **Product Owner (PO — đầu mối quản lý sản phẩm phía nhà trường):** Là vai trò nghiệp vụ được nhà trường chỉ định khi bàn giao; chịu trách nhiệm quản lý Product Backlog, xác nhận mức ưu tiên dựa trên KPI/CSAT và phản hồi người dùng, làm rõ yêu cầu với các phòng ban, đề xuất phạm vi phiên bản tiếp theo, phối hợp nghiệm thu nghiệp vụ và báo cáo định kỳ cho Ban Giám hiệu. PO **không tự phê duyệt** ngân sách, thay đổi chính sách cấp trường hoặc thay thế thẩm quyền của Sponsor. **Người đảm nhiệm cụ thể cần được nhà trường xác nhận tại bàn giao**; tài liệu này không mặc định đã bổ nhiệm.
+- **Product Owner (PO — đầu mối quản lý sản phẩm phía nhà trường):** Là vai trò nghiệp vụ do Ban Giám hiệu nhà trường chỉ định và tiếp nhận chính thức từ thời điểm nghiệm thu bàn giao (`MS-04`); chịu trách nhiệm quản lý Product Backlog, xác nhận mức ưu tiên dựa trên KPI/CSAT và phản hồi người dùng, làm rõ yêu cầu với các phòng ban, đề xuất phạm vi phiên bản tiếp theo, phối hợp nghiệm thu nghiệp vụ và báo cáo định kỳ cho Ban Giám hiệu. PO **không tự phê duyệt** ngân sách, thay đổi chính sách cấp trường hoặc thay thế thẩm quyền của Sponsor.
 - **Đội ngũ Kỹ thuật & Quản trị Hệ thống (IT):** Chịu trách nhiệm vận hành hạ tầng, bảo trì hệ thống, giám sát an toàn thông tin, phân tích và khắc phục sự cố kỹ thuật theo SLA; phối hợp với PO để ước lượng công việc, lên lịch phát hành và xác nhận khả năng triển khai.
 - **Luồng quyết định sau bàn giao:** Người dùng/phòng ban gửi phản hồi → PO phân loại, đối chiếu KPI và ưu tiên backlog → IT đánh giá kỹ thuật, effort và rủi ro → Ban Giám hiệu phê duyệt khi phát sinh ngân sách/chính sách/phạm vi cam kết → PO và IT phối hợp nghiệm thu, cập nhật tài liệu và truyền thông phát hành. Quy trình Change Request hiện hành xem [Điều phối & Giám sát — Mục 3.4](Dieuphoi-Giamsat.md#34-quy-trình-yêu-cầu-thay-đổi-change-request---cr-và-phân-cấp-phê-duyệt).
 

@@ -35,7 +35,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị chính xác 4 thẻ chỉ số (Tổng đơn, Đang xử lý, Hoàn thành, Quá hạn SLA) và biểu đồ theo mốc thời gian đã chọn (tự làm mới mỗi 60 giây theo `BR-01`, tổng tỷ lệ tròn bằng 100.0% theo `BR-02`); nếu chọn khoảng thời gian không hợp lệ (Từ ngày > Đến ngày) $\rightarrow$ Hệ thống chặn submit và trả về mã lỗi validation `422 Unprocessable Entity` (`E-01`); nếu kỳ lọc chưa có dữ liệu $\rightarrow$ Hiển thị các thẻ chỉ số bằng `0` và biểu đồ ở trạng thái trống (*Empty State*) không lỗi (`E-02`).
+* **AC-01:** (FR-M13-01/AC-01) Hiển thị chính xác 4 thẻ chỉ số (Tổng đơn, Đang xử lý, Hoàn thành, Quá hạn SLA) và biểu đồ theo mốc thời gian đã chọn (tự làm mới mỗi 60 giây theo `BR-01`, tổng tỷ lệ tròn bằng 100.0% theo `BR-02`); nếu chọn khoảng thời gian không hợp lệ (Từ ngày > Đến ngày) $\rightarrow$ Hệ thống chặn submit và trả về mã lỗi validation `422 Unprocessable Entity` (`E-01`); nếu kỳ lọc chưa có dữ liệu $\rightarrow$ Hiển thị các thẻ chỉ số bằng `0` và biểu đồ ở trạng thái trống (*Empty State*) không lỗi (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -75,8 +75,8 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Trưởng phòng chỉ xem được dữ liệu thống kê thuộc phòng ban của mình; nếu gọi API của phòng ban khác hoặc toàn trường thì bị chặn `403 Forbidden` (`BR-01`, `E-01`).
-* **AC-02:** Admin xem được toàn bộ số liệu tổng hợp của tất cả phòng ban toàn trường và lọc xem được từng phòng ban cụ thể (`BR-01`).
+* **AC-01:** (FR-M13-02/AC-01) Trưởng phòng chỉ xem được dữ liệu thống kê thuộc phòng ban của mình; nếu gọi API của phòng ban khác hoặc toàn trường thì bị chặn `403 Forbidden` (`BR-01`, `E-01`).
+* **AC-02:** (FR-M13-02/AC-02) Admin xem được toàn bộ số liệu tổng hợp của tất cả phòng ban toàn trường và lọc xem được từng phòng ban cụ thể (`BR-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -118,7 +118,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Xuất file `.xlsx` hoặc `.pdf` tải về thành công (trong thời gian $\le 2.000\text{ms}$ theo `NFR-PERF-02`), chứa đầy đủ tiêu đề trường, ngày xuất và bảng số liệu khớp 100% với bộ lọc hiện tại trên màn hình (`BR-01`); nếu định dạng xuất khác `.xlsx` hoặc `.pdf` $\rightarrow$ Backend từ chối với mã lỗi `422 Unprocessable Entity` (`E-01`); nếu danh sách lọc có 0 bản ghi $\rightarrow$ Vẫn xuất tệp hợp lệ kèm dòng thông báo *"Không có dữ liệu phát sinh trong kỳ lọc"* (`E-02`).
+* **AC-01:** (FR-M13-03/AC-01) Xuất file `.xlsx` hoặc `.pdf` tải về thành công (trong thời gian $\le 2.000\text{ms}$ theo `NFR-PERF-02`), chứa đầy đủ tiêu đề trường, ngày xuất và bảng số liệu khớp 100% với bộ lọc hiện tại trên màn hình (`BR-01`); nếu định dạng xuất khác `.xlsx` hoặc `.pdf` $\rightarrow$ Backend từ chối với mã lỗi `422 Unprocessable Entity` (`E-01`); nếu danh sách lọc có 0 bản ghi $\rightarrow$ Vẫn xuất tệp hợp lệ kèm dòng thông báo *"Không có dữ liệu phát sinh trong kỳ lọc"* (`E-02`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 
@@ -164,7 +164,7 @@
 
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
-* **AC-01:** Hiển thị chính xác bảng KPI từng nhân viên (Số Ticket đã giải quyết, Tỷ lệ hoàn thành đúng hạn SLA %, Điểm CSAT trung bình từ 1.0–5.0 tính riêng trên các đơn có đánh giá thực tế và danh sách nhận xét); hiển thị `"N/A"` nếu chưa có lượt đánh giá nào (`BR-01`, `E-01`).
+* **AC-01:** (FR-M13-04/AC-01) Hiển thị chính xác bảng KPI từng nhân viên (Số Ticket đã giải quyết, Tỷ lệ hoàn thành đúng hạn SLA %, Điểm CSAT trung bình từ 1.0–5.0 tính riêng trên các đơn có đánh giá thực tế và danh sách nhận xét); hiển thị `"N/A"` nếu chưa có lượt đánh giá nào (`BR-01`, `E-01`).
 
 **Ví dụ Edge Case (Trường hợp biên):**
 

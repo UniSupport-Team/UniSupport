@@ -2,7 +2,7 @@
 
 > **Dự án:** UniSupport — Nền tảng Tiếp nhận và Hỗ trợ Thủ tục Hành chính Sinh viên  
 > **Phiên bản:** 2.1 (QA/QC Test Engineering Specification — Đồng bộ mã AC & Baseline `MS-00..MS-04`)  
-> **Phạm vi kế hoạch:** 14 Phân hệ (M01 đến M14), bao gồm **Happy Path**, **Negative Cases**, **Boundary Cases** và **Security/Concurrency**. Bảng 1 tổng hợp phân bổ kế hoạch tổng thể (182 test cases). Mục 2 liệt kê chi tiết 98 kịch bản kiểm thử tiêu biểu có ánh xạ trực tiếp đến từng Tiêu chí nghiệm thu (`AC-xx`) của PRD và Ma trận truy vết RTM, trong đó các trường hợp Negative/Edge/Security chiếm tỷ trọng lớn (> 58%).
+> **Phạm vi kế hoạch:** 14 Phân hệ (M01 đến M14), bao gồm **Happy Path**, **Negative Cases**, **Boundary Cases** và **Security/Concurrency**. Bảng 1 tổng hợp phân bổ kế hoạch tổng thể (182 test cases). Mục 2 liệt kê chi tiết 98 kịch bản kiểm thử tiêu biểu có ánh xạ trực tiếp đến từng Tiêu chí nghiệm thu (`AC-xx`) của PRD và Ma trận truy vết RTM, trong đó nhóm Negative/Edge theo mã TC chiếm 58/98 (59,18%). Kịch bản hỗn hợp được đếm một lần theo mã: M là Main/Happy, N và E là Negative/Edge; Security là thuộc tính kiểm thử có thể đi kèm.
 
 ---
 
@@ -17,8 +17,8 @@
 | **M03** | Quản lý Tài khoản | `MS-01` | 6 / 9 (15) | 5 / 4 | 9 | 100% AC |
 | **M04** | Quản lý Danh mục & SLA | `MS-02` | 5 / 7 (12) | 3 / 2 | 5 | 100% AC |
 | **M05** | Khởi tạo Ticket | `MS-02` | 6 / 12 (18) | 3 / 7 | 10 | 100% AC |
-| **M06** | Tiếp nhận Ticket & Đua lệnh | `MS-02` | 5 / 9 (14) | 2 / 2 | 4 | 100% AC |
-| **M07** | Điều phối & Re-assign | `MS-02` | 6 / 9 (15) | 3 / 5 | 8 | 100% AC |
+| **M06** | Tiếp nhận Ticket & Tranh chấp đồng thời | `MS-02` | 5 / 9 (14) | 2 / 2 | 4 | 100% AC |
+| **M07** | Điều phối & Re-assign | `MS-02` | 6 / 9 (15) | 2 / 6 | 8 | 100% AC |
 | **M08** | Xử lý & Yêu cầu bổ sung | `MS-02` | 8 / 12 (20) | 4 / 6 | 10 | 100% AC |
 | **M09** | Trả kết quả xử lý | `MS-02` | 5 / 7 (12) | 2 / 3 | 5 | 100% AC |
 | **M10** | Theo dõi & Nộp bổ sung | `MS-02` | 6 / 10 (16) | 3 / 2 | 5 | 100% AC |
@@ -26,7 +26,7 @@
 | **M12** | Giám sát tiến độ & Cảnh báo SLA | `MS-03` | 6 / 8 (14) | 3 / 5 | 8 | 100% AC |
 | **M13** | Dashboard & Báo cáo | `MS-03` | 6 / 6 (12) | 4 / 4 | 8 | 100% AC |
 | **M14** | Chuyển đổi ngôn ngữ Việt/Anh | `MS-03` | 2 / 0 (2) | 2 / 0 | 2 | 100% AC |
-| | **TỔNG CỘNG** | | **74 / 108 (182)** | **41 / 57** | **98** | **Đồng bộ 100% RTM** |
+| | **TỔNG CỘNG** | | **74 / 108 (182)** | **40 / 58** | **98** | **Đồng bộ 100% RTM** |
 
 ---
 
@@ -89,7 +89,7 @@
 
 ---
 
-### 2.3. Phân hệ M06 — Tiếp nhận Ticket & Race Condition (Đua lệnh) (`MS-02`)
+### 2.3. Phân hệ M06 — Tiếp nhận Ticket & Tranh chấp đồng thời (Race Condition) (`MS-02`)
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|:---:|---|---|---|:---:|
 | `TC-M06-M01` | `FR-M06-01/AC-01` | Nhân viên xem danh sách đơn `New` thuộc phòng ban mình | Main / RBAC | Nhân viên phòng Đào tạo mở hộp thư tiếp nhận và lọc theo danh mục/SLA | Chỉ hiển thị các đơn `New` thuộc phòng Đào tạo; ẩn và chặn `403` với đơn của phòng khác. | Có |
@@ -104,9 +104,9 @@
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|---|---|---|---|---|
 | `TC-M07-M01` | `FR-M07-01/AC-01` | Admin phân loại đơn mục "Khác" về đúng phòng ban đích | Main | Admin mở đơn mục "Khác", chọn Phòng ban đích và Danh mục chuẩn tương ứng | Cập nhật phòng ban/danh mục, giữ nguyên mã Ticket và đưa đơn vào Hàng chờ phòng ban đích ở trạng thái `New`. | Có |
-| `TC-M07-N02` | `FR-M07-01/AC-01` | Admin phân loại đơn "Khác" nhưng bỏ trống Phòng ban hoặc Danh mục đích (`E-02`) | Negative / Validation | Admin mở đơn mục "Khác", nhấn lưu phân loại nhưng chưa chọn phòng ban hoặc danh mục đích | Hệ thống chặn lưu (`422 Unprocessable Entity`), hiển thị thông báo bắt buộc chọn đầy đủ Phòng ban và Danh mục hợp lệ. | Không |
-| `TC-M07-N03` | `FR-M07-01/AC-01` | Admin phân loại đơn "Khác" khi đơn đã được nhân viên tiếp nhận (`E-01`) | Negative / Concurrency | Admin phân loại đơn mục "Khác" nhưng đơn đó vừa được nhân viên claim sang `In Progress` | Hệ thống từ chối (`400 Bad Request`), thông báo *"Đơn đã được tiếp nhận xử lý, không thể phân loại lại"*. | Có |
-| `TC-M07-M02` | `FR-M07-02/AC-01` | Admin điều chuyển đơn bị nhân viên báo sai phòng ban | Main | Admin xem lý do chuyển trả từ `M08-04`, chọn Phòng ban và Danh mục mới | Xóa Assignee cũ, chuyển đơn về Hàng chờ phòng ban mới ở trạng thái `New` và bảo toàn lịch sử luân chuyển. | Có |
+| `TC-M07-N02` | `FR-M07-01/AC-01` | Admin phân loại đơn "Khác" với dữ liệu thiếu hoặc không khớp (`E-01`, `E-02`) | Negative / Validation | (1) Bỏ trống phòng ban hoặc danh mục đích; (2) gửi cặp department_id và category_id không khớp | (1) Chặn lưu với `422 Unprocessable Entity`; (2) từ chối với `400 Bad Request`; không thay đổi Ticket. | Không |
+| `TC-M07-N03` | `FR-M07-01/AC-01` | Admin phân loại đơn "Khác" khi đơn đã được nhân viên tiếp nhận (`E-03`) | Negative / Concurrency | Admin phân loại đơn mục "Khác" nhưng đơn đó vừa được nhân viên claim sang `In Progress` | Hệ thống từ chối (`400 Bad Request`), thông báo *"Đơn đã được tiếp nhận xử lý, không thể phân loại lại"*. | Có |
+| `TC-M07-M02` | `FR-M07-02/AC-01` | Admin điều chuyển đơn bị nhân viên báo sai phòng ban | Main | Admin xem lý do chuyển trả từ `M08-04`, chọn Phòng ban và Danh mục mới | Xóa Assignee cũ, chuyển đơn về Hàng chờ phòng ban mới ở trạng thái `New` và bảo toàn lịch sử luân chuyển; Admin nhận thông báo In-app kèm lý do từ luồng chuyển trả, không gửi Quản lý. | Có |
 | `TC-M07-N04` | `FR-M07-02/AC-01` | Admin điều chuyển đơn báo sai phòng nhưng chưa chọn phòng ban mới (`E-01`) | Negative / Validation | Admin nhấn điều chuyển đơn từ `M08-04` nhưng chưa chọn Phòng ban đích mới | Hệ thống từ chối thao tác (`422 Unprocessable Entity`), yêu cầu chọn phòng ban chuyển tiếp. | Không |
 | `TC-M07-N01` | `FR-M07-03/AC-01`, `NFR-SEC-05` | Trưởng phòng phân công cho Nhân viên không thuộc phòng ban mình (`E-01`) | Negative / Security | Chọn Assignee ID là nhân viên thuộc phòng ban khác | Backend từ chối với mã `403 Forbidden` và giữ nguyên người phụ trách hiện tại. | Có |
 | `TC-M07-E02` | `FR-M07-03/AC-01` | **Trưởng phòng Re-assign đơn đang `In Progress` từ NV A sang NV B** | **Main / Re-assign Flow** | Quản lý chọn đổi Assignee cho đơn đang xử lý | Đơn được chuyển giao thành công sang NV B, lưu lịch sử log rõ ràng ai đã điều chuyển, và hệ thống bắn thông báo In-app ngay lập tức cho NV B (Trigger #7). | Có |
@@ -119,14 +119,14 @@
 | `TC-M08-N01` | `FR-M08-03/AC-03` | **Nhân viên yêu cầu bổ sung lần thứ 2 cho cùng 1 đơn** | **Negative / BR-3** | Bấm yêu cầu bổ sung khi `supplement_count = 1` | Nút chức năng bị ẩn/disable trên UI, API trả về `400 Bad Request` ("Mỗi ticket chỉ được yêu cầu bổ sung tối đa 1 lần"). | Có |
 | `TC-M08-E02` | `FR-M08-03/AC-01` | Gửi yêu cầu bổ sung hợp lệ vào chiều Thứ Sáu và kiểm tra bỏ trống | Boundary / Business Days | Nhập nội dung $\ge 10$ ký tự lúc 16:30 Thứ Sáu (và thử gửi rỗng) | Chặn nếu nội dung rỗng; khi hợp lệ chuyển sang `Pending`, hạn chót 3 ngày làm việc rơi vào 16:30 Thứ Tư tuần sau. | Có |
 | `TC-M08-E03` | `FR-M08-03/AC-02` | **Quá hạn 3 ngày làm việc mà sinh viên không bổ sung** | **Automation / Timeout** | Background worker quét ticket Pending quá deadline | Ticket tự động chuyển sang `Closed`, gán `auto_closed = true`, `closed_reason = "TIMEOUT_PENDING"`, khóa chức năng nộp bổ sung. | Có |
-| `TC-M08-M04` | `FR-M08-04/AC-01` | Nhân viên báo sai phòng ban kèm lý do chuyển trả về Admin | Main / Negative | Đơn đang `In Progress`, nhập lý do chuyển trả (và thử bỏ trống lý do) | Chặn nếu trống lý do; khi hợp lệ thì xóa Assignee, đổi danh mục sang "Khác" và đưa về Hàng chờ Admin ở trạng thái `New`. | Có |
+| `TC-M08-M04` | `FR-M08-04/AC-01` | Nhân viên báo sai phòng ban kèm lý do chuyển trả về Admin | Main / Negative | Đơn đang `In Progress`, nhập lý do chuyển trả (và thử bỏ trống lý do) | Chặn nếu trống lý do; khi hợp lệ thì xóa Assignee, đổi danh mục sang "Khác" và đưa về Hàng chờ Admin ở trạng thái `New`, phát thông báo In-app cho Admin kèm lý do chuyển trả. | Có |
 | `TC-M08-N03` | `FR-M08-04/AC-01` | Báo sai phòng ban khi đơn không còn ở trạng thái `In Progress` (`E-02`) | Negative / Business Rules | Nhân viên gọi API chuyển trả khi đơn đang ở `Pending`, `Resolved` hoặc `Closed` | Hệ thống từ chối với mã `400 Bad Request` ("Chỉ được phép báo sai phòng ban khi đơn đang ở trạng thái Đang xử lý"). | Có |
 | `TC-M09-M01` | `FR-M09-01/AC-01` | Nhân viên nhập kết quả giải quyết và đính kèm tệp trả lời hợp lệ | Main | Nhập `Resolution Notes` ($\ge 10$ ký tự) và đính kèm file PDF trả lời $\le 5\text{MB}$ | Hệ thống lưu thành công nội dung giải trình và tệp đính kèm kết quả vào CSDL. | Có |
-| `TC-M09-N01` | `FR-M09-01/AC-02`, `NFR-INT-02` | Hoàn tất đơn nhưng để trống `Resolution Notes` | Negative / BR-5 | Bấm "Trả kết quả" nhưng không nhập nội dung giải trình | Hệ thống chặn submit (`422 Unprocessable Entity`), báo lỗi bắt buộc nhập nội dung kết quả (Min 10 ký tự). | Có |
+| `TC-M09-N01` | `FR-M09-01/AC-02`, `NFR-INT-02` | Kiểm tra biên độ dài `Resolution Notes` | Negative / BR-5 | Bấm "Trả kết quả" với nội dung giải trình lần lượt 0, 9 và 10 ký tự; các điều kiện khác hợp lệ | 0 và 9 ký tự: chặn submit (`422 Unprocessable Entity`), báo lỗi tối thiểu 10 ký tự; 10 ký tự: vượt qua kiểm tra độ dài và cho phép lưu. | Có |
 | `TC-M09-N02` | `FR-M09-01/AC-03`, `NFR-PERF-03` | Đính kèm tệp kết quả vượt quá 5MB hoặc sai định dạng | Negative | Nhân viên tải lên tệp trả lời nặng 6MB hoặc định dạng `.exe`/`.zip` | Hệ thống chặn tải file, hiển thị cảnh báo lỗi cụ thể và không cho phép hoàn thành đơn. | Có |
 | `TC-M09-N03` | `FR-M09-01/AC-03` | Nhân viên đính kèm tệp kết quả vượt quá số lượng 5 tệp (`E-02`) | Negative / Boundary | Nhân viên chọn tải lên 6 tệp tài liệu kết quả giải quyết | Hệ thống chặn submit (`422 Unprocessable Entity`), hiển thị thông báo "Tối đa đính kèm 5 tệp kết quả giải quyết". | Không |
 | `TC-M09-M02` | `FR-M09-02/AC-01` | Hoàn thành đơn chuyển sang `Resolved` và gửi 1 thông báo duy nhất | Main | Nhân viên xác nhận hoàn thành (kể cả bấm đúp 2 lần liên tiếp) | Đơn chuyển sang `Resolved`, ghi nhận `resolved_at` và chỉ phát đúng 1 thông báo kết quả duy nhất cho sinh viên. | Có |
-| `TC-M10-M01` | `FR-M10-01/AC-01` | Sinh viên xem danh sách và chi tiết Ticket cá nhân đã gửi | Main / RBAC | Sinh viên mở "Yêu cầu của tôi" và thử truy cập URL đơn của sinh viên khác | Hiển thị đúng danh sách đơn của chính sinh viên đó kèm trạng thái thực; trả về `403 Forbidden` nếu xem đơn người khác. | Có |
+| `TC-M10-M01` | `FR-M10-01/AC-01` | Sinh viên xem danh sách và chi tiết Ticket cá nhân đã gửi | Main / RBAC | Sinh viên mở "Yêu cầu của tôi" kiểm tra khi trạng thái đơn thay đổi và thử truy cập URL đơn của sinh viên khác | Hiển thị đúng danh sách đơn của chính sinh viên đó kèm trạng thái thực; Sinh viên nhận thông báo In-app mở chi tiết Ticket khi trạng thái đổi, không trùng thông báo kết quả; trả về `403 Forbidden` nếu xem đơn người khác. | Có |
 | `TC-M10-M02` | `FR-M10-01/AC-02` | Sinh viên tìm kiếm và lọc Ticket theo trạng thái | Main | Nhập mã Ticket hoặc chọn lọc trạng thái `Đang xử lý` / `Chờ bổ sung` | Trả về chính xác các đơn khớp điều kiện lọc; hiển thị thông báo rỗng nếu không có đơn. | Không |
 | `TC-M10-M03` | `FR-M10-02/AC-01` | Sinh viên nộp bổ sung hồ sơ hợp lệ khi đơn đang `Pending` | Main | Nhập nội dung giải trình $\ge 5$ ký tự và đính kèm tệp hợp lệ trước hạn 3 ngày làm việc | Dừng bộ đếm ngược, chuyển đơn về `In Progress`, giữ nguyên Mã Ticket và Nhân viên phụ trách cũ, phát thông báo cho nhân viên. | Có |
 | `TC-M10-N05` | `FR-M10-02/AC-01` | Sinh viên nộp bổ sung hồ sơ nhưng để trống nội dung giải trình (`E-02`) | Negative / Validation | Sinh viên nhấn nộp bổ sung khi đơn `Pending` nhưng ô giải trình $< 5$ ký tự | Hệ thống viền đỏ trường nhập liệu, chặn gửi (`422 Unprocessable Entity`), yêu cầu nhập tối thiểu 5 ký tự giải trình. | Không |
@@ -150,15 +150,15 @@
 | `TC-M12-N02` | `FR-M12-01/AC-01`, `NFR-SEC-05` | Trưởng phòng xem tiến độ của phòng ban khác | Negative / Data Isolation | Trưởng phòng Dept A truy cập URL/API giám sát tiến độ của Dept B | Backend từ chối với mã `403 Forbidden`, chỉ hiển thị số liệu thuộc phòng ban phụ trách. | Có |
 | `TC-M12-M02` | `FR-M12-03/AC-01` | Admin theo dõi xếp hạng các phòng ban tồn đọng nhiều đơn nhất | Main / RBAC | Admin mở màn hình giám sát toàn trường (và thử truy cập bằng tài khoản `Manager`) | Hiển thị bảng xếp hạng phòng ban giảm dần theo số đơn tồn đọng/tỷ lệ quá hạn; chặn `403` nếu không phải Admin. | Có |
 | `TC-M12-M03` | `FR-M12-04/AC-01` | Admin tìm kiếm và tra cứu chi tiết Ticket xuyên phòng ban | Main | Admin nhập Mã Ticket bất kỳ trên công cụ `Global Ticket Search` | Hiển thị đầy đủ chi tiết và toàn bộ dòng thời gian Audit Trail của Ticket dù thuộc bất kỳ phòng ban nào. | Có |
-| `TC-M12-E04` | `FR-M12-04/AC-01` | Admin tra cứu mã Ticket không tồn tại trên hệ thống (`E-01`) | Negative / Boundary | Admin nhập mã Ticket không có thực (VD: `TICK-99999999-999`) vào Global Search | Hệ thống trả về `404 Not Found`, hiển thị thông báo "Không tìm thấy yêu cầu hỗ trợ nào khớp với mã tra cứu". | Không |
-| `TC-M12-E05` | `FR-M12-04/AC-01` | Admin tra cứu mã Ticket sai định dạng chuẩn (`E-02`) | Negative / Validation | Admin nhập chuỗi ký tự đặc biệt hoặc mã không theo cấu trúc `[MÃ]-[NGÀY]-[SỐ]` | Hệ thống hiển thị cảnh báo validation `422 Unprocessable Entity` ("Mã Ticket không đúng định dạng chuẩn"). | Không |
+| `TC-M12-E04` | `FR-M12-04/AC-01` | Admin tra cứu mã Ticket không tồn tại trên hệ thống (`E-01`) | Negative / Boundary | Chuẩn bị danh mục IT hợp lệ và xác nhận mã chưa tồn tại; Admin nhập mã Ticket (VD: `IT-20261123-9999`) vào Global Search | Hệ thống trả về `404 Not Found`, hiển thị thông báo "Không tìm thấy yêu cầu hỗ trợ nào khớp với mã tra cứu". | Không |
+| `TC-M12-E05` | `FR-M12-04/AC-01` | Tra cứu trái quyền hoặc mã Ticket sai định dạng (`E-02`, `E-03`) | Negative / RBAC / Validation | (1) Tài khoản Manager gọi API tra cứu toàn trường với mã hợp lệ; (2) Admin nhập mã sai cấu trúc `[MÃ]-[NGÀY]-[SỐ]` | (1) `403 Forbidden`, không trả dữ liệu; (2) `422 Unprocessable Entity` ("Mã Ticket không đúng định dạng chuẩn"). | Không |
 | `TC-M13-M01` | `FR-M13-01/AC-01`, `NFR-AVAIL-01` | Hiển thị thẻ chỉ số KPI và biểu đồ thống kê theo thời gian | Main | Mở Dashboard, lọc theo Tháng này | Hiển thị đúng 4 thẻ KPI (Tổng đơn, Đang xử lý, Hoàn thành, Quá hạn) và biểu đồ tròn có tổng tỷ lệ đúng `100.0%`. | Có |
 | `TC-M13-E01` | `FR-M13-01/AC-01` | Lọc Dashboard với khoảng thời gian không hợp lệ (Từ ngày > Đến ngày) (`E-01`) | Negative / Validation | Chọn ngày bắt đầu sau ngày kết thúc trên bộ lọc thời gian Dashboard | Hệ thống chặn submit, báo lỗi validation `422 Unprocessable Entity` ("Từ ngày không được lớn hơn Đến ngày") và yêu cầu chọn lại. | Có |
 | `TC-M13-N01` | `FR-M13-02/AC-01`, `NFR-SEC-05` | Trưởng phòng truy cập Dashboard số liệu toàn trường của Admin | Negative / RBAC | Token của Role `Manager` gọi API Dashboard tổng hợp toàn trường hoặc phòng khác | Trả về `403 Forbidden`, Trưởng phòng chỉ xem được dữ liệu thống kê thuộc phòng ban của mình. | Có |
 | `TC-M13-M02` | `FR-M13-02/AC-02` | Admin xem thống kê toàn trường và lọc theo từng phòng ban | Main | Admin mở Global Dashboard và chọn lọc theo từng phòng ban cụ thể | Hiển thị đầy đủ số liệu toàn trường và khớp chính xác với số liệu nội bộ khi lọc theo từng phòng ban. | Có |
 | `TC-M13-E02` | `FR-M13-01/AC-01`, `NFR-PERF-02` | Lọc Dashboard với khoảng thời gian không có dữ liệu | Boundary | Chọn khoảng thời gian Từ ngày - Đến ngày trong quá khứ chưa có phát sinh đơn | Các widget hiển thị 0 đơn, biểu đồ hiển thị trạng thái Empty State sạch sẽ, phản hồi $\le 2.000\text{ms}$. | Không |
 | `TC-M13-M03` | `FR-M13-03/AC-01`, `NFR-PERF-02` | Xuất báo cáo số liệu ra file Excel (`.xlsx`) và PDF (`.pdf`) | Main | Lọc danh sách báo cáo và bấm "Xuất báo cáo Excel" / "Xuất file PDF" | Tải xuống tệp `.xlsx`/`.pdf` thành công trong $\le 2.000\text{ms}$, dữ liệu trong tệp khớp 100% với bảng lọc trên màn hình. | Có |
-| `TC-M13-N02` | `FR-M13-03/AC-01` | Xuất báo cáo khi kỳ lọc không có dữ liệu phát sinh hoặc lỗi máy chủ (`E-01`, `E-02`) | Negative / Boundary | (1) Bấm xuất báo cáo kỳ không có đơn; (2) Máy chủ xuất file bị ngắt kết nối | (1) Thông báo "Không có dữ liệu để xuất file", không tạo file rỗng; (2) Trả về thông báo lỗi thân thiện, không sập trang. | Không |
+| `TC-M13-N02` | `FR-M13-03/AC-01` | Xuất báo cáo khi kỳ lọc không có dữ liệu hoặc định dạng không hỗ trợ (`E-01`, `E-02`) | Negative / Boundary | (1) Xuất báo cáo kỳ có 0 bản ghi; (2) Gửi tham số format khác `.xlsx` và `.pdf` | (1) Vẫn xuất tệp hợp lệ có tiêu đề báo cáo và ghi chú "Không có dữ liệu phát sinh trong kỳ lọc"; (2) Backend trả về `422 Unprocessable Entity`. | Không |
 | `TC-M13-M04` | `FR-M13-04/AC-01` | Thống kê CSAT và KPI SLA độc lập | Main / Boundary | 3 đơn đã giải quyết: 2 đúng hạn (1 có rating 5, 1 không đánh giá), 1 quá hạn (rating 3); thêm 1 đơn tự đóng do Pending | SLA đúng hạn 2/3 = 66,67%; CSAT (5+3)/2 = 4; đơn tự đóng Pending không tính vào hai chỉ số; N/A khi mẫu số tương ứng bằng 0. | Có |
 
 
@@ -166,7 +166,6 @@
 
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|---|---|---|---|---|
-| `TC-M14-M01` | `FR-M14-01/AC-01` | Chọn ngôn ngữ tiếng Việt hoặc tiếng Anh | Main | Mở giao diện, lần lượt chọn tiếng Việt và tiếng Anh | Người dùng chọn được một trong hai ngôn ngữ; giao diện phản hồi theo lựa chọn | Có |
-| `TC-M14-M02` | `FR-M14-01/AC-02` | Chuyển ngôn ngữ trong phiên đăng nhập hiện tại | Main | Đăng nhập, đổi ngôn ngữ từ Việt sang Anh và ngược lại | Giao diện cập nhật ngôn ngữ mà không yêu cầu đăng nhập lại | Có |
+| `TC-M14-M01` | `FR-M14-01/AC-01` | Chọn ngôn ngữ tiếng Việt hoặc tiếng Anh | Main | Mở giao diện, nhập dữ liệu mẫu vào biểu mẫu, lần lượt chọn Việt/Anh; kiểm tra nhãn, biểu mẫu, thông báo hệ thống và đối chiếu dữ liệu đã nhập | Người dùng chọn được một trong hai ngôn ngữ; giao diện, biểu mẫu và thông báo theo lựa chọn; dữ liệu nhập giữ nguyên | Có |
+| `TC-M14-M02` | `FR-M14-01/AC-02` | Chuyển ngôn ngữ trong phiên đăng nhập hiện tại | Main / Negative | Đăng nhập, đổi ngôn ngữ từ Việt sang Anh và ngược lại; thử lựa chọn không hợp lệ | Giao diện cập nhật ngôn ngữ mà không yêu cầu đăng nhập lại; lựa chọn không hợp lệ giữ nguyên ngôn ngữ | Có |
 
-> **Trạng thái:** Hai kịch bản M14 là kế hoạch kiểm thử, chưa có kết quả thực thi. Không đặt thêm yêu cầu ghi nhớ ngôn ngữ sau khi tải lại trang hoặc các yêu cầu ngoài hai AC đã chốt.
