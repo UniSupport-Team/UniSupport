@@ -21,6 +21,6 @@
 
 - Tệp PDF lưu trữ: [Báo cáo điều chỉnh Proposal.pdf](B%C3%A1o%20c%C3%A1o%20%C4%91i%E1%BB%81u%20ch%E1%BB%89nh%20Proposal.pdf). Giữ nguyên tên tệp hiện có theo xác nhận của nhóm.
 - Nguồn nội dung hiện hành: [Dieu-chinh-proposal.md](../Dieu-chinh-proposal.md), gồm mục 5 về khóa phạm vi MS-00, bảo mật, SLA bảo hành và nghiệm thu.
-- Đã đối chiếu nội dung bản PDF cập nhật ngày 27/11/2026 do nhóm cung cấp với Markdown: khớp nội dung nghiệp vụ, số liệu và điều khoản. Chưa xác minh tệp lưu trên GitHub đồng nhất với bản PDF được cung cấp; hiệu lực các điều khoản bổ sung phụ thuộc phê duyệt.
+- Đã đối chiếu nội dung bản PDF cập nhật ngày 27/11/2026 do nhóm cung cấp với Markdown: khớp nội dung nghiệp vụ, số liệu và điều khoản. Nhóm xác nhận tệp PDF lưu trên GitHub chính là bản PDF đã cung cấp; hiệu lực các điều khoản bổ sung phụ thuộc phê duyệt.
 - Giữ nguyên Proposal.docx và Proposal.pdf ban đầu làm hồ sơ lịch sử; không tạo Proposal độc lập mới.
 - Master Schedule đã được nhóm chốt; giữ nguyên 886 giờ công, 300.000.000 VNĐ và tiến độ MS-00–MS-04.
