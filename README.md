@@ -26,5 +26,5 @@ Tài liệu tham chiếu bộ khung môn học: [HUONG-DAN.md](HUONG-DAN.md).
 
 ## 2. Cơ cấu Nhóm & Đội ngũ Dự án (Group 4)
 
-* **Ban quản lý dự án (Sinh viên thực hiện môn học):** Xem chi tiết phân công vai trò, quy định người thay thế và cơ chế phối hợp của các thành viên Group 4 tại [docs/08-project/team-charter.md](docs/08-project/team-charter.md).
+* **Ban quản lý dự án (Sinh viên thực hiện môn học):** Group 4 là nhóm sinh viên thực hiện bài tập môn học, tách biệt với đội ngũ thực thi giả định bên dưới. Team Charter mô tả vai trò và cơ chế phối hợp của đội ngũ thực thi, không phải bảng phân công cá nhân của Group 4.
 * **Đội ngũ thực thi giả định (`Mô phỏng` — 08 nhân sự bán thời gian, 886 giờ công / 16 tuần):** Gồm `01 PM`, `01 BA`, `01 Senior Developer`, `03 Junior Developer` và `02 QA/QC Specialist` (quy định chi tiết tại [docs/08-project/team-charter.md](docs/08-project/team-charter.md) và [docs/08-project/Ngan-sach-nhan-su.md](docs/08-project/Ngan-sach-nhan-su.md)).
