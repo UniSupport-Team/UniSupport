@@ -17,11 +17,10 @@
 - [Ngân sách nhân sự](../Ngan-sach-nhan-su.md): Định mức **886 giờ công** và cơ cấu chi phí nội bộ.
 
 
-## Bản điều chỉnh cập nhật ngày 27/11/2026
+## Đồng bộ hồ sơ điều chỉnh Proposal
 
-- Nguồn nội dung: [Dieu-chinh-proposal.md](../Dieu-chinh-proposal.md), gồm mục 5 về khóa phạm vi MS-00, bảo mật, SLA bảo hành và nghiệm thu.
-- Tệp Word: `Dieu-chinh-Proposal_2026-11-27.docx`.
-- Tệp PDF: `Dieu-chinh-Proposal_2026-11-27.pdf`.
-- Hai bản đã được xuất; chưa xác nhận có trong thư mục `sent` trên nhánh `fix-final`, chưa xác nhận phát hành cho khách hàng. Chỉ thay thế điều khoản tương ứng sau khi được phê duyệt.
+- Tệp PDF lưu trữ: [Báo cáo điều chỉnh Proposal.pdf](B%C3%A1o%20c%C3%A1o%20%C4%91i%E1%BB%81u%20ch%E1%BB%89nh%20Proposal.pdf). Giữ nguyên tên tệp hiện có theo xác nhận của nhóm.
+- Nguồn nội dung hiện hành: [Dieu-chinh-proposal.md](../Dieu-chinh-proposal.md), gồm mục 5 về khóa phạm vi MS-00, bảo mật, SLA bảo hành và nghiệm thu.
+- Chưa đối chiếu trực tiếp nội dung PDF với bản Markdown cập nhật; hiệu lực các điều khoản bổ sung phụ thuộc phê duyệt.
 - Giữ nguyên Proposal.docx và Proposal.pdf ban đầu làm hồ sơ lịch sử; không tạo Proposal độc lập mới.
 - Master Schedule đã được nhóm chốt; giữ nguyên 886 giờ công, 300.000.000 VNĐ và tiến độ MS-00–MS-04.
