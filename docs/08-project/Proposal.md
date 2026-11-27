@@ -92,8 +92,8 @@ Hệ thống cho phép sinh viên gửi yêu cầu, theo dõi trạng thái xử
 | **Tuần 8 – 9** | - Phát triển & kiểm thử module Nhân viên. |
 | **Tuần 10 – 11** | - Phát triển & kiểm thử module Sinh viên. |
 | **Tuần 12** | - Kết hợp và kiểm tra các luồng hoạt động chính đúng theo logic vận hành. |
-| **Tuần 13** | - **Kiểm thử với khách hàng:** Khách hàng kiểm thử trên dữ liệu giả lập. |
-| **Tuần 14** | - Khắc phục lỗi phát hiện trong quá trình kiểm thử với khách hàng.<br>- Ổn định hệ thống. |
+| **Tuần 13** | - **Kiểm thử QA/QC và mời khách hàng dùng thử:** Khách hàng có thể kiểm thử trên dữ liệu giả lập. |
+| **Tuần 14** | - Khắc phục lỗi QA/QC và phản hồi dùng thử của khách hàng (nếu có).<br>- Ổn định hệ thống. |
 | **Tuần 15** | - Nghiệm thu.<br>- Chuẩn bị các tài liệu liên quan. |
 | **Tuần 16** | - Đóng gói sản phẩm.<br>- Bàn giao tài liệu và hướng dẫn sử dụng. |
 
@@ -103,7 +103,7 @@ Hệ thống cho phép sinh viên gửi yêu cầu, theo dõi trạng thái xử
 |---|---|---|
 | **Mốc 0** | Tuần 1 | Khởi động dự án và thực hiện khoản tạm ứng theo thỏa thuận để chính thức khởi động dự án. |
 | **Mốc 1** | Tuần 2 – 3 | Hoàn thành bản mẫu và Khóa phạm vi dự án. |
-| **Mốc 2** | Tuần 13 | Kiểm thử với khách hàng. |
+| **Mốc 2** | Tuần 13 | Kiểm thử QA/QC và mời khách hàng dùng thử. |
 | **Mốc 3** | Tuần 15 | Nghiệm thu. |
 | **Mốc 4** | Tuần 16 | Bàn giao chính thức hệ thống và tài liệu. |
 
