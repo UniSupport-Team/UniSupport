@@ -32,7 +32,7 @@ Bộ chỉ số dưới đây dùng để đo lường mức độ thành công 
 | **Tốc độ** | Thời gian xử lý hoàn tất (Resolution Time) | Thời gian trung bình từ lúc tiếp nhận đến khi đóng Ticket | < 48 giờ làm việc (Tùy danh mục) | Hàng tuần | Trưởng phòng ban |
 | **Điều phối** | Tỷ lệ điều phối lại | Tỷ lệ Ticket bị chuyển trả lại hàng chờ phân loại | < 10% | Hàng tháng | Quản trị viên (Admin) |
 | **Tiến độ** | Tỷ lệ quá hạn SLA | Tỷ lệ Ticket vi phạm hạn chót xử lý | < 5% | Hàng ngày/Tuần | Trưởng phòng / PM |
-| **Hài lòng** | Điểm hài lòng (CSAT) | Khảo sát 1–5 sao sau khi Ticket đóng | > 4.0 / 5.0 | Hàng tháng | Ban Giám hiệu / PO |
+| **Hài lòng** | Điểm hài lòng (CSAT) | Đánh giá 1–5 sao khi Ticket Resolved, trước khi đóng theo FR-M11-02 | > 4.0 / 5.0 | Hàng tháng | Ban Giám hiệu / PO |
 
 ---
 
@@ -65,14 +65,14 @@ Hệ thống bắt buộc phải trải qua kiểm thử QC/UAT và thỏa mãn 
 Hệ thống kết hợp đa dạng kênh thu thập để lắng nghe cả phản hồi chủ động từ người dùng và dữ liệu hành vi thực tế:
 
 1. **Kênh tiếp nhận phản hồi trực tiếp (In-app & Online):**
-   - **Form khảo sát hài lòng (CSAT):** Tự động hiển thị đánh giá 1–5 sao kèm ô góp ý ngay khi Ticket hoàn tất (`RESOLVED`/`CLOSED`).
-   - **Nút "Góp ý & Báo lỗi" trên giao diện:** Cung cấp mẫu biểu ngắn gọn (Tiêu đề, Loại góp ý, Ảnh chụp màn hình) tại chân trang để người dùng gửi phản hồi bất kỳ lúc nào.
+   - **Form khảo sát hài lòng (CSAT):** Theo FR-M11-02, sinh viên đánh giá 1–5 sao và nhận xét khi Ticket ở trạng thái Resolved, trước khi đóng đơn; không áp dụng cho Ticket tự đóng.
+   - **Góp ý & Báo lỗi:** Trong phạm vi hiện tại, tiếp nhận qua kênh ngoài phần mềm do PO/IT quản lý. Nút và biểu mẫu góp ý trên giao diện là đề xuất sau bàn giao, cần CR/phê duyệt riêng.
    - **Mẫu GitHub Issue Feedback:** Kênh dành cho đội ngũ vận hành nội bộ và quản trị viên nhà trường ghi nhận phản hồi kỹ thuật hoặc đề xuất quy trình.
 
 2. **Phương pháp nghiên cứu dữ liệu "What & Why":**
    - **Bước 1 (Định lượng - WHAT):** Sử dụng các công cụ phân tích dữ liệu tự động:
-     - *Google Analytics (GA4) / Microsoft Clarity:* Theo dõi lưu lượng truy cập, tỷ lệ thoát trang, các luồng thao tác phổ biến.
-     - *Bản đồ nhiệt (Heatmap / Clarity):* Quan sát trực quan các vị trí click chuột, vùng cuộn trang để phát hiện điểm nghẽn giao diện.
+      - *Google Analytics (GA4) / Microsoft Clarity:* Đề xuất sau bàn giao, ngoài phạm vi PRD và hợp đồng hiện tại; chỉ tích hợp khi được phê duyệt riêng.
+      - *Bản đồ nhiệt (Heatmap / Clarity):* Đề xuất mở rộng, không phải yêu cầu triển khai hoặc nghiệm thu hiện tại.
    - **Bước 2 (Định tính - WHY):** Khoanh vùng điểm bất thường từ dữ liệu số và tổ chức phỏng vấn chuyên sâu 1:1 (5–7 người dùng đại diện) để tìm hiểu nguyên nhân tâm lý cốt lõi.
    - **Bước 3 (Phân loại - CLASSIFY):** Phân loại phản hồi theo bảng chuẩn hóa ở mục 4.2.
    - **Bước 4 (Thực thi - ACTION):** Chuyển giao phản hồi đến đúng quy trình dự án tương ứng để đưa ra hành động khắc phục hoặc cải tiến.
@@ -133,7 +133,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 |:---|:---|:---|:---|
 | **Giai đoạn 1 (Hiện tại: 16 tuần)** | **Triển khai Hệ thống Cốt lõi (Web Platform)** | Triển khai 14 module chức năng (M01–M14) theo cam kết PRD; hoàn thành nghiệm thu UAT với Ban Giám hiệu. | - 100% test case P0 và P1 đạt nghiệm thu (0 lỗi tồn đọng).<br>- Tỷ lệ hoàn tất xử lý đạt chuẩn cam kết SLA (> 90%). |
 | **Giai đoạn 2 (Sau bàn giao: 3–6 tháng)** | **Tối ưu hóa Vận hành & Trải nghiệm** | Tiếp nhận phản hồi thực tế; phát hành tính năng FAQ Hub; bảo hành và tinh chỉnh luồng giao diện sinh viên. | - Hệ thống vận hành liên tục không có sự cố P0 trong 60 ngày.<br>- Điểm đánh giá mức độ hài lòng (CSAT) duy trì > 4.0/5.0. |
-| **Giai đoạn 3 (Dài hạn: 1–2 năm)** | **Mở rộng Hệ sinh thái & Mobile** | Phát triển ứng dụng di động (iOS/Android); tích hợp API đào tạo và ứng dụng AI tự động hóa. | - Tỷ lệ người dùng truy cập từ thiết bị di động đạt > 70% tổng traffic (đo lường bằng GA4/Clarity).<br>- Có biên bản nghiệm thu tích hợp kỹ thuật với phòng CNTT nhà trường. |
+| **Giai đoạn 3 (Dài hạn: 1–2 năm)** | **Mở rộng Hệ sinh thái & Mobile** | Phát triển ứng dụng di động (iOS/Android); tích hợp API đào tạo và ứng dụng AI tự động hóa. | - Tỷ lệ người dùng truy cập từ thiết bị di động đạt > 70% tổng traffic (đo lường bằng GA4/Clarity nếu được phê duyệt tích hợp sau bàn giao).<br>- Có biên bản nghiệm thu tích hợp kỹ thuật với phòng CNTT nhà trường. |
 
 ### 6.3. Thẩm quyền và cơ chế ra quyết định sau bàn giao
 
