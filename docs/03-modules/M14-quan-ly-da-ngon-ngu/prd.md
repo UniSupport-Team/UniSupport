@@ -26,3 +26,7 @@
 **Acceptance Criteria (AC):**
 - **AC-01:** (FR-M14-01/AC-01) Người dùng có thể chọn tiếng Việt hoặc tiếng Anh; giao diện, biểu mẫu và thông báo hệ thống hiển thị theo lựa chọn, dữ liệu người dùng nhập giữ nguyên (BR-01, BR-02).
 - **AC-02:** (FR-M14-01/AC-02) Giao diện cập nhật ngôn ngữ mà không cần đăng nhập lại (BR-03); lựa chọn không hợp lệ giữ nguyên ngôn ngữ hiện tại (E-01).
+
+**Ví dụ Edge Case (Trường hợp biên):**
+- Chọn lại ngôn ngữ đang sử dụng: giao diện giữ nguyên, không yêu cầu đăng nhập lại.
+- Chọn mã ngôn ngữ không được hỗ trợ: từ chối lựa chọn và giữ nguyên ngôn ngữ hiện tại (E-01).
