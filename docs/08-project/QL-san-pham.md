@@ -123,7 +123,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 | 1 | **Trung tâm trợ giúp thông minh (FAQ Hub)** | Tự động gợi ý câu trả lời cho các thắc mắc phổ biến ngay khi sinh viên gõ tiêu đề đơn; dự kiến giảm 30% lượng đơn rác/trùng lặp. | **High** | Chờ phê duyệt |
 | 2 | **Tích hợp Cổng Thông tin Sinh viên (SSO & Profile API)** | Tự động đồng bộ thông tin ngành học, lớp, trạng thái học phí khi tạo đơn; loại bỏ việc sinh viên phải nhập lại thông tin cá nhân. | **Medium** | Lên ý tưởng |
 | 3 | **Trợ lý Ảo AI tư vấn thủ tục (AI Chatbot Assistant)** | Hỗ trợ giải đáp tự động 24/7 các quy chế đào tạo, chuẩn đầu ra và hướng dẫn chuẩn bị hồ sơ trước khi nộp đơn chính thức. | **Medium** | Nghiên cứu công nghệ |
-| 4 | **Ứng dụng di động UniSupport (Mobile App)** | Đẩy thông báo đẩy (Push Notifications) thời gian thực về tiến độ đơn; phục vụ sinh viên thao tác thuận tiện trên điện thoại. | **Low** | Kế hoạch dài hạn |
+| 4 | **Ứng dụng di động UniSupport (Mobile App)** | Gửi thông báo đẩy (Push Notifications) thời gian thực về tiến độ đơn; phục vụ sinh viên thao tác thuận tiện trên điện thoại. | **Low** | Kế hoạch dài hạn |
 
 ### 6.2. Lộ trình phát triển dài hạn (Roadmap)
 
