@@ -8,7 +8,7 @@
 2. **Phạm vi và mục tiêu hiện hành:** [Bản điều chỉnh Proposal (baseline MS-00–MS-04)](08-project/Dieu-chinh-proposal.md), [Danh sách phân hệ](03-modules/README.md). [Proposal ban đầu](08-project/Proposal.md) chỉ là **tài liệu lịch sử**, không dùng thay baseline hiện hành.
 3. **Nghiệp vụ và yêu cầu:** [Domain](02-domain/README.md), [PRD từng module](03-modules/README.md), [NFR](05-non-functional-requirements/README.md).
 4. **Kế hoạch thực hiện:** [Master Schedule](08-project/Master-schedule.md), [Báo giá](08-project/Bao-gia-cho-khach.md), [Ngân sách nhân sự](08-project/Ngan-sach-nhan-su.md).
-5. **Kiểm chứng và truy vết:** [Kịch bản kiểm thử](06-acceptance/test-scenarios.md), [Ma trận truy vết](06-acceptance/traceability-matrix.md), [GitHub Issues](https://github.com/IvyPear/UniSupport/issues).
+5. **Kiểm chứng và truy vết:** [Kịch bản kiểm thử](06-acceptance/test-scenarios.md), [Ma trận truy vết](06-acceptance/traceability-matrix.md), [GitHub Issues](https://github.com/UniSupport-Team/UniSupport/issues).
 6. **Điều hành và bàn giao:** [Sổ rủi ro](08-project/risk-register.md), [Chất lượng](08-project/QL-chat-luong.md), [Điều phối](08-project/Dieuphoi-Giamsat.md), [Lịch sử tài liệu gửi khách](08-project/sent/README.md).
 
 ---
@@ -116,6 +116,23 @@ docs/
 > 7. **Dữ liệu `Mô phỏng` & Giả định:** Khách hàng (Aurora University), đội ngũ thực thi 8 nhân sự (PM, BA, Senior Dev, 3 Junior Dev, 2 QA/QC tại `Ngan-sach-nhan-su.md` và `team-charter.md`) cùng bảng dữ liệu phân tích phản hồi tại `QL-san-pham.md` (Mục 4.3) là dữ liệu **Mô phỏng** phục vụ kế hoạch quản lý dự án môn học.
 
 ---
+
+## Tra cứu quản trị và nguồn dữ liệu
+
+Giữ ba tài liệu Quality, Product và Governance trong `08-project/`. Repo chính thức: [UniSupport-Team/UniSupport](https://github.com/UniSupport-Team/UniSupport). [Hướng dẫn bộ khung môn học](../HUONG-DAN.md) là tài liệu tham chiếu.
+
+| Nội dung | Nơi tra cứu |
+|---|---|
+| Quality | [Trách nhiệm QA/QC](08-project/QL-chat-luong.md#21-quy-trình-và-trách-nhiệm) |
+| Product | [Release Criteria](08-project/QL-san-pham.md#31-tiêu-chuẩn-nghiệm-thu-phát-hành-release-criteria), [Phản hồi](08-project/QL-san-pham.md#42-quản-lý-phân-loại-và-luồng-xử-lý-tiếp-theo) |
+| Governance | [Báo cáo tuần và escalation](08-project/Dieuphoi-Giamsat.md#22-báo-cáo-tuần-weekly-report), [Báo cáo mốc](08-project/Dieuphoi-Giamsat.md#23-báo-cáo-cột-mốc-milestone-report), [Sai lệch](08-project/Dieuphoi-Giamsat.md#53-phân-tích-sai-lệch-và-hành-động-khắc-phục) |
+| Milestones, Gantt | Master Schedule.xlsx — Final |
+| WBS, effort | Master Schedule.xlsx — Chi tiết |
+| Báo giá | Master Schedule.xlsx — BÁO GIÁ MODULES |
+| Change log | Master Schedule.xlsx — Change Log |
+| Resources | [Ngan-sach-nhan-su.md](08-project/Ngan-sach-nhan-su.md) — phân bổ theo vai trò |
+
+Ánh xạ workbook theo [Master-schedule.md](08-project/Master-schedule.md).
 
 ## Danh mục tài liệu
 
