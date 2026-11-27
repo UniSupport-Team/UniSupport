@@ -22,6 +22,8 @@ Toàn bộ tài liệu quản lý dự án, đặc tả yêu cầu (PRD), thiế
 
 ---
 
+Tài liệu tham chiếu bộ khung môn học: [HUONG-DAN.md](HUONG-DAN.md).
+
 ## 2. Cơ cấu Nhóm & Đội ngũ Dự án (Group 4)
 
 * **Ban quản lý dự án (Sinh viên thực hiện môn học):** Xem chi tiết phân công vai trò, quy định người thay thế và cơ chế phối hợp của các thành viên Group 4 tại [docs/08-project/team-charter.md](docs/08-project/team-charter.md).

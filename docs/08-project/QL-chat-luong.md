@@ -113,6 +113,8 @@ Thực hiện trên bản build đủ ổn định trước UAT hoặc bàn giao
 
 ### 3.3. Trọng tâm 3 — Kiểm thử nghiệm thu người dùng (UAT)
 
+MS-01–MS-03 kiểm thử nội bộ bắt buộc, khách hàng dùng thử tự nguyện; UAT chính thức tại MS-04 theo [quy tắc kiểm thử và đóng mốc](Master-schedule.md#quy-tắc-kiểm-thử-và-đóng-mốc).
+
 **Kịch bản:** PM và QC chuẩn bị kịch bản dựa trên AC; người dùng/bên nghiệm thu thực hiện các thao tác theo vai trò trong PRD.
 
 **Điều kiện nghiệm thu:** Không còn lỗi P0/P1 mở, các luồng trọng yếu đạt và có quyết định nghiệm thu chính thức từ bên nghiệm thu.
