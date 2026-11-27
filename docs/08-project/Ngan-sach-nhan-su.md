@@ -19,11 +19,11 @@ Quy ước thời gian làm việc: 04 giờ/ngày từ thứ Hai đến thứ S
 | Giai đoạn | Thời gian | Nhân sự chính |
 | :--- | :---: | :--- |
 | Khởi động + phân tích yêu cầu | Tuần 1 | PM, BA, Senior |
-| Prototype + thiết kế CSDL | Tuần 2 - 3 | BA, Senior, Junior, QA |
-| Nền tảng | Tuần 4 - 6 | BA, Senior, 2 Junior, QA |
-| Ticket & Phân hệ sinh viên | Tuần 7 - 11 | BA, Senior, 3 Junior, QA |
-| Giám sát Dashboard | Tuần 12 - 14 | BA, 3 Junior, QA |
-| Bàn giao dự án | Tuần 15 - 16 | PM, BA |
+| Prototype + thiết kế CSDL | Tuần 2 - 3 | PM, BA, Senior, Dev 1 |
+| Nền tảng | Tuần 4 - 6 | PM, BA, Senior, Dev 1, Dev 2, Dev 3, QA 1, QA 2 |
+| Ticket & Phân hệ sinh viên | Tuần 7 - 11 | PM, BA, Senior, Dev 1, Dev 2, Dev 3, QA 1, QA 2 |
+| Giám sát Dashboard | Tuần 12 - 14 | PM, BA, Dev 1, Dev 2, Dev 3, QA 1, QA 2 |
+| Bàn giao dự án | Tuần 15 - 16 | PM, BA, QA 1, QA 2 |
 
 ## 2. BẢNG PHÂN BỔ LƯƠNG CHI TIẾT THEO VAI TRÒ VÀ CÁ NHÂN
 
@@ -49,7 +49,7 @@ Quy ước thời gian làm việc: 04 giờ/ngày từ thứ Hai đến thứ S
 | 2 | Doanh thu dự án chưa VAT | ROUND(300.000.000 / 1,10) | 272.727.273 |
 | 3 | Chi phí lương nhân sự | SUM(Gross 8 vai trò) | 126.490.000 |
 | 4 | Chi phí BH DN giả định | ROUND(21,5% × (3)) | 27.195.350 |
-| 5 | Chi phí dự phòng rủi ro & bảo hành | Quỹ dự phòng rủi ro kỹ thuật (~10% tổng chi phí nhân sự `15.368.535đ`) + quỹ trực bảo hành 6 tháng sau bàn giao (`6.769.737đ`, tương đương ~40h hỗ trợ kỹ thuật xử lý lỗi nghiêm trọng trong 24h) | 22.138.272 |
+| 5 | Chi phí dự phòng rủi ro & bảo hành | Quỹ dự phòng rủi ro kỹ thuật (~10% tổng chi phí nhân sự `15.368.535đ`) + quỹ trực bảo hành 6 tháng sau bàn giao (`6.769.737đ`, tương đương ~40h hỗ trợ kỹ thuật theo SLA lỗi kỹ thuật tại [Điều phối và giám sát](Dieuphoi-Giamsat.md)) | 22.138.272 |
 | 6 | Chi phí vận hành, hạ tầng & quản lý | Hạ tầng Cloud/VPS môi trường Staging & CI/CD trong 4 tháng triển khai (`2.500.000đ/tháng × 4 = 10.000.000đ`) + bản quyền công cụ quản lý, kiểm thử & chi phí hành chính dự án (`5.489.366đ`) | 15.489.366 |
 | 7 | Tổng chi phí dự án | (3) + (4) + (5) + (6) | 191.312.988 |
 | 8 | Lợi nhuận trước thuế (EBT) | (2) − (7) | 81.414.285 |
