@@ -3,7 +3,7 @@
 ## 1. Thông tin Phân hệ
 * **Mã Phân hệ:** M11
 * **Tên Phân hệ:** M11: Kết quả & Đánh giá (Results & Feedback)
-* **Mốc triển khai (Milestone): MS-02
+* **Mốc triển khai (Milestone):** MS-02
 * **Đối tượng phụ trách:** Sinh viên
 * **Tài liệu Đặc tả Chi tiết (PRD FR):** [prd.md](prd.md)
 

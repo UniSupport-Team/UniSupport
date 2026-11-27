@@ -3,7 +3,7 @@
 ## 1. Thông tin Phân hệ
 * **Mã Phân hệ:** M07
 * **Tên Phân hệ:** M07: Quản lý & Điều phối Ticket (Routing & Dispatch)
-* **Mốc triển khai (Milestone): MS-02
+* **Mốc triển khai (Milestone):** MS-02
 * **Đối tượng phụ trách:** Quản lý, Admin
 * **Tài liệu Đặc tả Chi tiết (PRD FR):** [prd.md](prd.md)
 
