@@ -31,5 +31,5 @@
    - **Trung bình:** Khả năng xảy ra từ 20% đến dưới 50%, xuất hiện trong điều kiện tải lớn hoặc thao tác đồng thời.
    - **Thấp:** Khả năng xảy ra $< 20\%$, đã được kiểm soát bởi kiến trúc kỹ thuật hoặc phân quyền hệ thống.
 2. **Nguyên tắc phân định Owner duy nhất:** Mỗi rủi ro có đúng một người/vai trò chịu trách nhiệm chính theo dõi (Owner chính), các vai trò phối hợp đóng vai trò hỗ trợ kỹ thuật hoặc kiểm chứng.
-3. **Quỹ dự phòng rủi ro (`22.138.272 VNĐ`):** Được kích hoạt xử lý khi phát sinh sự cố vượt quá nguồn lực thông thường, tuân thủ đúng quy trình phê duyệt Change Request tại [Dieuphoi-Giamsat.md — Mục 3.4](Dieuphoi-Giamsat.md#34-quy-trình-yêu-cầu-thay-đổi-change-request---cr-và-phân-cấp-phê-duyệt).
+3. **Quỹ dự phòng rủi ro kỹ thuật (`15.368.535 VNĐ`):** Được kích hoạt xử lý khi phát sinh sự cố vượt quá nguồn lực thông thường, tuân thủ đúng quy trình phê duyệt Change Request tại [Dieuphoi-Giamsat.md — Mục 3.4](Dieuphoi-Giamsat.md#34-quy-trình-yêu-cầu-thay-đổi-change-request---cr-và-phân-cấp-phê-duyệt).
 4. **Cam kết theo dõi:** Tất cả 10 rủi ro (`R-01` đến `R-10`) được xác định đầy đủ xác suất, mức độ tác động, một owner duy nhất và phương án kiểm soát xuyên suốt vòng đời dự án.
