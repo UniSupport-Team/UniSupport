@@ -114,3 +114,79 @@
 | `Docs-01` | Hoàn thiện các tài liệu mô tả hệ thống và sổ tay hướng dẫn sử dụng | [#170](https://github.com/UniSupport-Team/UniSupport/issues/170) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
 | `Docs-02` | Tạo dữ liệu mẫu và chuẩn bị kịch bản để chạy thử nghiệm thu dự án (UAT) | [#169](https://github.com/UniSupport-Team/UniSupport/issues/169) | `MS-04` | Phân bổ vào `Q-01`–`Q-13` (122h UAT bàn giao) |
 
+## Truy vết luồng ngoại lệ PRD (V4-07)
+
+Mã E-xx có phạm vi trong từng FR. Bảng đối chiếu các ngoại lệ được đặc tả với test case chi tiết và task triển khai; đây là độ bao phủ thiết kế kiểm thử, không phải kết quả chạy test. PRD là nguồn gốc quy định; dữ liệu và kết quả mong đợi nằm tại [test-scenarios.md](test-scenarios.md).
+
+| FR | Ngoại lệ | Test case | Sub-issue |
+|---|---|---|---|
+| `FR-M01-01` | `E-01` | `TC-M01-N04` | [#151](https://github.com/UniSupport-Team/UniSupport/issues/151) |
+| `FR-M01-01` | `E-02` | `TC-M01-N04` | [#151](https://github.com/UniSupport-Team/UniSupport/issues/151) |
+| `FR-M01-01` | `E-03` | `TC-M01-N02` | [#151](https://github.com/UniSupport-Team/UniSupport/issues/151) |
+| `FR-M01-02` | `E-01` | `TC-M01-N01` | [#152](https://github.com/UniSupport-Team/UniSupport/issues/152) |
+| `FR-M01-03` | `E-01` | `TC-M01-N05` | [#153](https://github.com/UniSupport-Team/UniSupport/issues/153) |
+| `FR-M01-03` | `E-02` | `TC-M01-N05` | [#153](https://github.com/UniSupport-Team/UniSupport/issues/153) |
+| `FR-M01-04` | `E-01` | `TC-M03-N01` | [#154](https://github.com/UniSupport-Team/UniSupport/issues/154) |
+| `FR-M01-04` | `E-02` | `TC-M03-N01` | [#154](https://github.com/UniSupport-Team/UniSupport/issues/154) |
+| `FR-M01-05` | `E-01` | `TC-M01-N07` | [#155](https://github.com/UniSupport-Team/UniSupport/issues/155) |
+| `FR-M02-01` | `E-01` | `TC-M02-M01` | [#171](https://github.com/UniSupport-Team/UniSupport/issues/171) |
+| `FR-M02-01` | `E-02` | `TC-M02-N03` | [#171](https://github.com/UniSupport-Team/UniSupport/issues/171) |
+| `FR-M02-02` | `E-01` | `TC-M02-N02` | [#172](https://github.com/UniSupport-Team/UniSupport/issues/172) |
+| `FR-M02-02` | `E-02` | `TC-M02-N04` | [#172](https://github.com/UniSupport-Team/UniSupport/issues/172) |
+| `FR-M03-01` | `E-01` | `TC-M03-M01` | [#173](https://github.com/UniSupport-Team/UniSupport/issues/173) |
+| `FR-M03-02` | `E-01` | `TC-M03-N02` | [#174](https://github.com/UniSupport-Team/UniSupport/issues/174) |
+| `FR-M03-02` | `E-02` | `TC-M03-N02` | [#174](https://github.com/UniSupport-Team/UniSupport/issues/174) |
+| `FR-M03-03` | `E-01` | `TC-M03-N03` | [#175](https://github.com/UniSupport-Team/UniSupport/issues/175) |
+| `FR-M03-04` | `E-01` | `TC-M03-N04` | [#176](https://github.com/UniSupport-Team/UniSupport/issues/176) |
+| `FR-M03-04` | `E-02` | `TC-M03-N04` | [#176](https://github.com/UniSupport-Team/UniSupport/issues/176) |
+| `FR-M04-01` | `E-01` | `TC-M04-N01` | [#177](https://github.com/UniSupport-Team/UniSupport/issues/177) |
+| `FR-M04-01` | `E-02` | `TC-M04-N01` | [#177](https://github.com/UniSupport-Team/UniSupport/issues/177) |
+| `FR-M04-02` | `E-01` | `TC-M04-M03` | [#178](https://github.com/UniSupport-Team/UniSupport/issues/178) |
+| `FR-M04-02` | `E-02` | `TC-M04-N02` | [#178](https://github.com/UniSupport-Team/UniSupport/issues/178) |
+| `FR-M05-01` | `E-01` | `TC-M05-N07` | [#179](https://github.com/UniSupport-Team/UniSupport/issues/179) |
+| `FR-M05-02` | `E-01` | `TC-M05-N02`, `TC-M05-N03` | [#180](https://github.com/UniSupport-Team/UniSupport/issues/180) |
+| `FR-M05-02` | `E-02` | `TC-M05-N01` | [#180](https://github.com/UniSupport-Team/UniSupport/issues/180) |
+| `FR-M05-03` | `E-01` | `TC-M05-N04` | [#181](https://github.com/UniSupport-Team/UniSupport/issues/181) |
+| `FR-M05-03` | `E-02` | `TC-M05-N05` | [#181](https://github.com/UniSupport-Team/UniSupport/issues/181) |
+| `FR-M06-01` | `E-01` | `TC-M06-M01` | [#182](https://github.com/UniSupport-Team/UniSupport/issues/182) |
+| `FR-M06-02` | `E-01` | `TC-M06-E01` | [#183](https://github.com/UniSupport-Team/UniSupport/issues/183) |
+| `FR-M06-02` | `E-02` | `TC-M06-N02` | [#183](https://github.com/UniSupport-Team/UniSupport/issues/183) |
+| `FR-M07-01` | `E-01` | `TC-M07-N02` | [#184](https://github.com/UniSupport-Team/UniSupport/issues/184) |
+| `FR-M07-01` | `E-02` | `TC-M07-N02` | [#184](https://github.com/UniSupport-Team/UniSupport/issues/184) |
+| `FR-M07-01` | `E-03` | `TC-M07-N03` | [#184](https://github.com/UniSupport-Team/UniSupport/issues/184) |
+| `FR-M07-02` | `E-01` | `TC-M07-N04` | [#185](https://github.com/UniSupport-Team/UniSupport/issues/185) |
+| `FR-M07-03` | `E-01` | `TC-M07-N01` | [#186](https://github.com/UniSupport-Team/UniSupport/issues/186) |
+| `FR-M07-03` | `E-02` | `TC-M07-N05` | [#186](https://github.com/UniSupport-Team/UniSupport/issues/186) |
+| `FR-M08-01` | `E-01` | `TC-M08-M01` | [#187](https://github.com/UniSupport-Team/UniSupport/issues/187) |
+| `FR-M08-01` | `E-02` | `TC-M08-N02` | [#187](https://github.com/UniSupport-Team/UniSupport/issues/187) |
+| `FR-M08-02` | `E-01` | `TC-M08-E04` | [#188](https://github.com/UniSupport-Team/UniSupport/issues/188) |
+| `FR-M08-02` | `E-02` | `TC-M08-E04` | [#188](https://github.com/UniSupport-Team/UniSupport/issues/188) |
+| `FR-M08-03` | `E-01` | `TC-M08-N01` | [#189](https://github.com/UniSupport-Team/UniSupport/issues/189) |
+| `FR-M08-03` | `E-02` | `TC-M08-E02` | [#189](https://github.com/UniSupport-Team/UniSupport/issues/189) |
+| `FR-M08-04` | `E-01` | `TC-M08-M04` | [#190](https://github.com/UniSupport-Team/UniSupport/issues/190) |
+| `FR-M08-04` | `E-02` | `TC-M08-N03` | [#190](https://github.com/UniSupport-Team/UniSupport/issues/190) |
+| `FR-M09-01` | `E-01` | `TC-M09-N01` | [#193](https://github.com/UniSupport-Team/UniSupport/issues/193) |
+| `FR-M09-01` | `E-02` | `TC-M09-N02`, `TC-M09-N03` | [#193](https://github.com/UniSupport-Team/UniSupport/issues/193) |
+| `FR-M09-02` | `E-01` | `TC-M09-M02` | [#194](https://github.com/UniSupport-Team/UniSupport/issues/194) |
+| `FR-M10-01` | `E-01` | `TC-M10-M01` | [#195](https://github.com/UniSupport-Team/UniSupport/issues/195) |
+| `FR-M10-01` | `E-02` | `TC-M10-M02` | [#195](https://github.com/UniSupport-Team/UniSupport/issues/195) |
+| `FR-M10-02` | `E-01` | `TC-M10-N04` | [#196](https://github.com/UniSupport-Team/UniSupport/issues/196) |
+| `FR-M10-02` | `E-02` | `TC-M10-N05` | [#196](https://github.com/UniSupport-Team/UniSupport/issues/196) |
+| `FR-M11-01` | `E-01` | `TC-M11-M01` | [#197](https://github.com/UniSupport-Team/UniSupport/issues/197) |
+| `FR-M11-01` | `E-02` | `TC-M11-E02` | [#197](https://github.com/UniSupport-Team/UniSupport/issues/197) |
+| `FR-M11-02` | `E-01` | `TC-M11-N01` | [#198](https://github.com/UniSupport-Team/UniSupport/issues/198) |
+| `FR-M11-02` | `E-02` | `TC-M11-N02`, `TC-M11-E03`, `TC-M11-E04` | [#198](https://github.com/UniSupport-Team/UniSupport/issues/198) |
+| `FR-M11-03` | `E-01` | `TC-M11-E04` | [#199](https://github.com/UniSupport-Team/UniSupport/issues/199) |
+| `FR-M12-01` | `E-01` | `TC-M12-N02` | [#200](https://github.com/UniSupport-Team/UniSupport/issues/200) |
+| `FR-M12-02` | `E-01` | `TC-M12-E01` | [#201](https://github.com/UniSupport-Team/UniSupport/issues/201) |
+| `FR-M12-03` | `E-01` | `TC-M12-M02` | [#202](https://github.com/UniSupport-Team/UniSupport/issues/202) |
+| `FR-M12-04` | `E-01` | `TC-M12-E04` | [#203](https://github.com/UniSupport-Team/UniSupport/issues/203) |
+| `FR-M12-04` | `E-02` | `TC-M12-E05` | [#203](https://github.com/UniSupport-Team/UniSupport/issues/203) |
+| `FR-M12-04` | `E-03` | `TC-M12-E05` | [#203](https://github.com/UniSupport-Team/UniSupport/issues/203) |
+| `FR-M13-01` | `E-01` | `TC-M13-E01` | [#204](https://github.com/UniSupport-Team/UniSupport/issues/204) |
+| `FR-M13-01` | `E-02` | `TC-M13-E02` | [#204](https://github.com/UniSupport-Team/UniSupport/issues/204) |
+| `FR-M13-02` | `E-01` | `TC-M13-N01` | [#205](https://github.com/UniSupport-Team/UniSupport/issues/205) |
+| `FR-M13-03` | `E-01` | `TC-M13-N02` | [#206](https://github.com/UniSupport-Team/UniSupport/issues/206) |
+| `FR-M13-03` | `E-02` | `TC-M13-N02` | [#206](https://github.com/UniSupport-Team/UniSupport/issues/206) |
+| `FR-M13-04` | `E-01` | `TC-M13-M04` | [#207](https://github.com/UniSupport-Team/UniSupport/issues/207) |
+| `FR-M14-01` | `E-01` | `TC-M14-M02` | [#212](https://github.com/UniSupport-Team/UniSupport/issues/212) |
