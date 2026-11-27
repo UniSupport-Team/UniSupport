@@ -133,7 +133,7 @@ Giữ ba tài liệu Quality, Product và Governance trong `08-project/`. Repo c
 | Change log | Master Schedule.xlsx — Change Log |
 | Resources | Master Schedule.xlsx — Resources (tổng hợp từ WBS); [Ngan-sach-nhan-su.md](08-project/Ngan-sach-nhan-su.md) — baseline và chi phí theo vai trò |
 
-Bản workbook 6 sheet đã chuẩn hóa trên [Google Sheets](https://docs.google.com/spreadsheets/d/142fvtvzqEwIIvsoaqQGOWs77DDdy6B1e-ot-V8ZA10I/edit); cần thay file Excel trong repository bằng bản xuất tương ứng trước khi bàn giao. Ánh xạ workbook theo [Master-schedule.md](08-project/Master-schedule.md).
+Workbook 6 sheet chính thức: [Master Schedule.xlsx](08-project/Master%20Schedule.xlsx). Ánh xạ workbook theo [Master-schedule.md](08-project/Master-schedule.md).
 
 ## Danh mục tài liệu
 
