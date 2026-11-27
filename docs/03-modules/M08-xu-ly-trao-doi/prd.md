@@ -1,4 +1,4 @@
-# PHÂN HỆ: M08 — XỬ LÝ & BỔ SUNG (PROCESS & EXCHANGE)
+# PHÂN HỆ: M08 — XỬ LÝ & TRAO ĐỔI (PROCESS & EXCHANGE)
 
 ## [FR-M08-01] Nhân viên cập nhật tiến độ, ghi chú và lưu lịch sử xử lý đơn
 

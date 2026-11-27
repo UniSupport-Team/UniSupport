@@ -1,4 +1,4 @@
-﻿# TÀI LIỆU QUY TRÌNH — M08: Xử lý & Trao đổi — Nhân viên (Process & Exchange)
+# TÀI LIỆU QUY TRÌNH — M08: Xử lý & Trao đổi — Nhân viên (Process & Exchange)
 
 ## 1. Thông tin Phân hệ
 * **Mã Phân hệ:** M08
@@ -10,12 +10,10 @@
 ---
 
 ## 2. Mô tả Tổng quan
-Phân hệ M08 thuộc dự án UniSupport, thực thi các yêu cầu nghiệp vụ chuẩn không bao gồm mã giả (Pure Functional Requirements). Chi tiết toàn bộ User Stories, Main Flow, Alternate Flow, Business Rules và Data Fields được quy định trong tệp [prd.md](prd.md).
+Cập nhật tiến độ, lưu lịch sử, yêu cầu bổ sung và báo sai phòng ban. Chi tiết toàn bộ User Stories, Main Flow, Alternate Flow, Business Rules và Data Fields được quy định trong tệp [prd.md](prd.md).
 
 ---
 
 ## 3. Quy trình & Nghiệm thu
 * Triển khai cuốn chiếu trên môi trường thật.
 * Đảm bảo kiểm thử đầy đủ các kịch bản ngoại lệ và ràng buộc nghiệp vụ.
-
-

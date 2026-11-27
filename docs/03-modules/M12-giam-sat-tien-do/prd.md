@@ -63,14 +63,15 @@
 **Luồng chính (Main Flow):**
 
 1. Tại danh sách đơn phòng ban hoặc màn hình giám sát, hệ thống liên tục tính toán thời gian xử lý thực tế so với mốc SLA cam kết.
-2. Khi thời gian xử lý đạt $\ge 80\%$ thời hạn SLA cam kết, hệ thống hiển thị nhãn cảnh báo vàng (`Sắp quá hạn SLA`). Với các đơn quá hạn đếm ngược 3 ngày làm việc bổ sung, đơn `New` chưa tiếp nhận quá 4 giờ làm việc, hoặc đạt $100\%$ thời gian SLA:
+2. Khi thời gian xử lý đạt $\ge 80\%$ thời hạn SLA cam kết, hệ thống hiển thị nhãn cảnh báo vàng (`Sắp quá hạn SLA`). Với đơn `New` chưa tiếp nhận quá 4 giờ làm việc hoặc Ticket chưa kết thúc đạt $100\%$ thời gian SLA:
    - Hệ thống tự động tô màu đỏ nổi bật trên dòng Ticket.
    - Hiển thị nhãn cảnh báo rõ ràng: `Quá hạn SLA` kèm số giờ vượt quá.
+   - Ticket `Pending` hết hạn bổ sung 3 ngày làm việc được tự động chuyển sang `Closed` theo quy tắc nghiệp vụ, không phát sinh cảnh báo quá hạn SLA chỉ vì hết hạn bổ sung.
 3. Trưởng phòng và nhân viên nhấp vào nhãn cảnh báo để xem chi tiết và can thiệp kịp thời (phân công lại hoặc đôn đốc xử lý).
 
 **Business Rules (Quy tắc nghiệp vụ):**
 
-* **BR-01:** Mọi Ticket chưa kết thúc đạt hoặc vượt thời hạn SLA quy định đều bắt buộc phải được đánh dấu cảnh báo đỏ trên giao diện quản trị.
+* **BR-01:** Mọi Ticket chưa kết thúc đạt hoặc vượt thời hạn SLA quy định, hoặc Ticket `New` chưa tiếp nhận trên 4 giờ làm việc, đều phải được đánh dấu cảnh báo đỏ trên giao diện quản trị. Cảnh báo đỏ được ưu tiên hơn cảnh báo vàng.
 
 **Alternative / Error Flows (Luồng rẽ nhánh / Xử lý lỗi):**
 

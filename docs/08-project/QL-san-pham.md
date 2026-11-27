@@ -52,7 +52,7 @@ Hệ thống bắt buộc phải trải qua kiểm thử QC/UAT và thỏa mãn 
 
 | **Rủi ro dự kiến** | **Mức ảnh hưởng** | **Giải pháp phòng ngừa & Xử lý trên hệ thống** |
 |:---|:---:|:---|
-| **Phòng ban xử lý chậm/trễ hạn SLA** | Cao | Theo `FR-M12-02`: hiển thị cảnh báo vàng khi đạt ≥ 80% SLA; cảnh báo đỏ khi vượt 100% SLA hoặc Ticket `New` tồn đọng quá 4 giờ làm việc. Trưởng phòng và nhân viên xem cảnh báo để chủ động đôn đốc hoặc phân công lại. Chưa cam kết cơ chế gửi thông báo leo thang tự động sau 24 giờ. |
+| **Phòng ban xử lý chậm/trễ hạn SLA** | Cao | Theo `FR-M12-02`: hiển thị cảnh báo vàng từ 80% đến dưới 100% SLA; cảnh báo đỏ từ 100% SLA hoặc Ticket `New` tồn đọng quá 4 giờ làm việc. Trưởng phòng và nhân viên xem cảnh báo để chủ động đôn đốc hoặc phân công lại. Chưa cam kết cơ chế gửi thông báo leo thang tự động sau 24 giờ. |
 | **Lộ lọt thông tin cá nhân của sinh viên** | Rất cao | Áp dụng che giấu danh tính (Data Anonymization): Chỉ hiển thị thông tin cần thiết phục vụ xử lý đơn. Dữ liệu xuất báo cáo được ẩn danh. Mã hóa thông tin cá nhân trong CSDL. |
 | **Hệ thống quá tải lúc cao điểm (Đầu kỳ, thi cử)** | Cao | Tối ưu hóa tài nguyên máy chủ: Thiết lập Auto-scaling trên nền tảng Cloud (Render/AWS). Tối ưu hóa truy vấn CSDL và bộ nhớ đệm (Caching). |
 | **Sinh viên gửi nhầm phòng ban hoặc tạo đơn rác** | Trung bình | Theo `FR-M05-01`: sinh viên chọn Phòng ban tiếp nhận trước, sau đó chọn Danh mục thủ tục; nếu chưa xác định được phòng ban, chọn mục "Khác" để chuyển vào hàng chờ Admin phân loại. |
@@ -123,7 +123,7 @@ UniSupport hướng tới trở thành Cổng Dịch vụ Sinh viên Toàn diệ
 | 1 | **Trung tâm trợ giúp thông minh (FAQ Hub)** | Tự động gợi ý câu trả lời cho các thắc mắc phổ biến ngay khi sinh viên gõ tiêu đề đơn; dự kiến giảm 30% lượng đơn rác/trùng lặp. | **High** | Chờ phê duyệt |
 | 2 | **Tích hợp Cổng Thông tin Sinh viên (SSO & Profile API)** | Tự động đồng bộ thông tin ngành học, lớp, trạng thái học phí khi tạo đơn; loại bỏ việc sinh viên phải nhập lại thông tin cá nhân. | **Medium** | Lên ý tưởng |
 | 3 | **Trợ lý Ảo AI tư vấn thủ tục (AI Chatbot Assistant)** | Hỗ trợ giải đáp tự động 24/7 các quy chế đào tạo, chuẩn đầu ra và hướng dẫn chuẩn bị hồ sơ trước khi nộp đơn chính thức. | **Medium** | Nghiên cứu công nghệ |
-| 4 | **Ứng dụng di động UniSupport (Mobile App)** | Đẩy thông báo đẩy (Push Notifications) thời gian thực về tiến độ đơn; phục vụ sinh viên thao tác thuận tiện trên điện thoại. | **Low** | Kế hoạch dài hạn |
+| 4 | **Ứng dụng di động UniSupport (Mobile App)** | Gửi thông báo đẩy (Push Notifications) thời gian thực về tiến độ đơn; phục vụ sinh viên thao tác thuận tiện trên điện thoại. | **Low** | Kế hoạch dài hạn |
 
 ### 6.2. Lộ trình phát triển dài hạn (Roadmap)
 
