@@ -167,5 +167,5 @@
 | Test ID | Mã AC / NFR kiểm chứng | Tên kịch bản | Loại | Dữ liệu đầu vào / Điều kiện | Kết quả kỳ vọng (Expected Result) | Regression |
 |---|---|---|---|---|---|---|
 | `TC-M14-M01` | `FR-M14-01/AC-01` | Chọn ngôn ngữ tiếng Việt hoặc tiếng Anh | Main | Mở giao diện, nhập dữ liệu mẫu vào biểu mẫu, lần lượt chọn Việt/Anh; kiểm tra nhãn, biểu mẫu, thông báo hệ thống và đối chiếu dữ liệu đã nhập | Người dùng chọn được một trong hai ngôn ngữ; giao diện, biểu mẫu và thông báo theo lựa chọn; dữ liệu nhập giữ nguyên | Có |
-| `TC-M14-M02` | `FR-M14-01/AC-02` | Chuyển ngôn ngữ trong phiên đăng nhập hiện tại | Main | Đăng nhập, đổi ngôn ngữ từ Việt sang Anh và ngược lại; thử lựa chọn không hợp lệ | Giao diện cập nhật ngôn ngữ mà không yêu cầu đăng nhập lại; lựa chọn không hợp lệ giữ nguyên ngôn ngữ | Có |
+| `TC-M14-M02` | `FR-M14-01/AC-02` | Chuyển ngôn ngữ trong phiên đăng nhập hiện tại | Main / Negative | Đăng nhập, đổi ngôn ngữ từ Việt sang Anh và ngược lại; thử lựa chọn không hợp lệ | Giao diện cập nhật ngôn ngữ mà không yêu cầu đăng nhập lại; lựa chọn không hợp lệ giữ nguyên ngôn ngữ | Có |
 
