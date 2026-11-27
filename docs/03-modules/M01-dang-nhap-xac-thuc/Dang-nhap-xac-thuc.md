@@ -10,12 +10,10 @@
 ---
 
 ## 2. Mô tả Tổng quan
-Phân hệ M01 thuộc dự án UniSupport, thực thi các yêu cầu nghiệp vụ chuẩn không bao gồm mã giả (Pure Functional Requirements). Chi tiết toàn bộ User Stories, Main Flow, Alternate Flow, Business Rules và Data Fields được quy định trong tệp [prd.md](prd.md).
+Xác thực người dùng, quản lý đăng nhập, khóa tài khoản và kiểm soát truy cập. Chi tiết toàn bộ User Stories, Main Flow, Alternate Flow, Business Rules và Data Fields được quy định trong tệp [prd.md](prd.md).
 
 ---
 
 ## 3. Quy trình & Nghiệm thu
 * Triển khai cuốn chiếu trên môi trường thật.
 * Đảm bảo kiểm thử đầy đủ các kịch bản ngoại lệ và ràng buộc nghiệp vụ.
-
-
