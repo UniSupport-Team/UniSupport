@@ -20,21 +20,21 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 | **Mốc 0**<br>*(01/09 – 18/09)* | Khởi động | Khảo sát & Đặc tả | 01/09/2026 | 02/09/2026 | 2 ngày | PM, BA | PM (8h), BA (16h) | 8h | 16h | **24h** |
 | | | Thiết kế & Tạm ứng | 03/09/2026 | 10/09/2026 | 6 ngày | PM, BA, Senior | PM (8h), Senior (24h), BA (8h) | 32h | 8h | **40h** |
 | | | Database & Nền tảng | 11/09/2026 | 18/09/2026 | 6 ngày | Senior, Dev 1 | Senior (24h), Dev 1 (24h), BA (8h) | 48h | 8h | **56h** |
-| **Mốc 1**<br>*(21/09 – 14/10)* | Nền tảng | M01: Đăng nhập & Xác thực | 21/09/2026 | 25/09/2026 | 5 ngày | Senior, Dev 1, Dev 2 | Senior (20h), Dev 2 (20h), BA (4h) | 40h | 4h | **44h** |
-| | | M02: Vai trò & Phân quyền | 28/09/2026 | 02/10/2026 | 5 ngày | Senior, Dev 1, Dev 3 | Senior (20h), Dev 1 (20h), BA (4h) | 40h | 4h | **44h** |
+| **Mốc 1**<br>*(21/09 – 14/10)* | Nền tảng | M01: Đăng nhập & Xác thực | 21/09/2026 | 25/09/2026 | 5 ngày | Senior, Dev 1, Dev 2 | Senior (18h), Dev 1 (4h), Dev 2 (18h), BA (4h) | 40h | 4h | **44h** |
+| | | M02: Vai trò & Phân quyền | 28/09/2026 | 02/10/2026 | 5 ngày | Senior, Dev 1, Dev 3 | Senior (18h), Dev 1 (18h), Dev 3 (4h), BA (4h) | 40h | 4h | **44h** |
 | | | M03: Quản lý tài khoản | 05/10/2026 | 07/10/2026 | 3 ngày | Senior, Dev 3, Dev 2 | Senior (12h), Dev 2 (12h), Dev 3 (12h), BA (4h) | 36h | 4h | **40h** |
 | | | Test QA/QC – Đợt 1 *(khách hàng nếu muốn)* | 08/10/2026 | 14/10/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (20h) | 44h | 20h | **64h** |
 | **Mốc 2**<br>*(12/10 – 13/11)* | Ticket & Phân hệ sinh viên | M04: Quản lý danh mục | 12/10/2026 | 14/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | Senior (12h), Dev 1 (12h), Dev 3 (12h), BA (4h) | 36h | 4h | **40h** |
 | | | M05: Khởi tạo Ticket | 15/10/2026 | 19/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | Senior (12h), Dev 1 (12h), Dev 3 (12h), BA (4h) | 36h | 4h | **40h** |
 | | | M06: Tiếp nhận Ticket | 20/10/2026 | 22/10/2026 | 3 ngày | Senior, Dev 2, Dev 3 | Senior (12h), Dev 2 (12h), Dev 3 (12h), BA (4h) | 36h | 4h | **40h** |
 | | | M07: Điều phối Ticket | 23/10/2026 | 26/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | Senior (2h), Dev 1 (8h), Dev 3 (8h), BA (4h) | 18h | 4h | **22h** |
-| | | M08: Xử lý & Bổ sung | 27/10/2026 | 28/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | Dev 1 (8h), Dev 3 (8h), BA (4h) | 16h | 4h | **20h** |
+| | | M08: Xử lý & Bổ sung | 27/10/2026 | 28/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | Senior (4h), Dev 1 (6h), Dev 3 (6h), BA (4h) | 16h | 4h | **20h** |
 | | | M09: Trả kết quả | 29/10/2026 | 30/10/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (8h), Dev 2 (8h), Dev 3 (8h), BA (4h) | 24h | 4h | **28h** |
 | | | Test QA/QC – Đợt 2 *(khách hàng nếu muốn)* | 02/11/2026 | 06/11/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (12h) | 44h | 12h | **56h** |
 | | | M10: Theo dõi & Bổ sung | 02/11/2026 | 03/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (8h), Dev 2 (8h), Dev 3 (8h), BA (4h) | 24h | 4h | **28h** |
-| | | M11: Kết quả & Đánh giá | 04/11/2026 | 05/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | Dev 2 (8h), Dev 3 (4h), BA (4h) | 12h | 4h | **16h** |
+| | | M11: Kết quả & Đánh giá | 04/11/2026 | 05/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (4h), Dev 2 (4h), Dev 3 (4h), BA (4h) | 12h | 4h | **16h** |
 | | | Test QA/QC – Đợt 3 *(khách hàng nếu muốn)* | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (12h) | 44h | 12h | **56h** |
-| **Mốc 3**<br>*(16/11 – 04/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (12h), Dev 2 (20h), Dev 3 (8h), BA (4h) | 40h | 4h | **44h** |
+| **Mốc 3**<br>*(16/11 – 04/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3 | Dev 1 (8h), Dev 2 (26h), Dev 3 (6h), BA (4h) | 40h | 4h | **44h** |
 | | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3 | Dev 2 (20h), Dev 3 (12h), BA (4h) | 32h | 4h | **36h** |
 | | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | Dev 1 (8h) | 8h | 0h | **8h** |
 | | | Test QA/QC – Đợt 4 *(khách hàng nếu muốn)* | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2 | PM (4h), QA 1 (20h), QA 2 (20h), BA (24h) | 44h | 24h | **68h** |
@@ -46,7 +46,7 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 > 1. **Về cột "Phụ trách (theo biểu đồ Gantt)" vs. "Giờ công thực tế theo vai trò":**
 >    - Cột **"Phụ trách (theo biểu đồ Gantt)"** giữ nguyên danh sách nhân sự hiển thị tại cột `D` của sheet `Final` (riêng `M10` ghi tắt `"M10: Theo dõi"` trên `Final` và đầy đủ `"M10: Theo dõi & Bổ sung"` trên `Chi tiết` / `BÁO GIÁ MODULES`).
 >    - **Vai trò BA (`174h`):** BA tham gia xuyên suốt dự án nên giờ BA được tách riêng ở cột `Giờ BA (h)` và cộng vào `Tổng Effort (h)`, không lặp lại tên BA tại cột `D` trên các dòng phát triển module/test của sheet `Final`.
->    - **Nhân sự hỗ trợ review/tích hợp chéo:** Ở các module `M01` (Dev 1), `M02` (Dev 3), `M08` (Senior) và `M11` (Dev 1), nhân sự được liệt kê thêm tại cột `D` của sheet `Final` tham gia review code và hỗ trợ tích hợp liên module; còn giờ lập trình trực tiếp của từng module được hạch toán cho các vai trò tại cột **"Giờ công thực tế theo vai trò"** để đảm bảo tổng giờ từng cá nhân khớp chính xác `886h`.
+>    - **Nhân sự hỗ trợ review/tích hợp chéo:** Giờ review và tích hợp được tính trong giờ công module của Dev 1 (M01, M11), Dev 3 (M02) và Senior (M08), mỗi vai trò 4h tại module tương ứng. M12 cân đối lại phân bổ giữa Dev 1, Dev 2 và Dev 3 để giữ nguyên tổng giờ từng vai trò và baseline 886h.
 > 2. **Về cách quy đổi giữa Bảng tiến độ (712h WBS + 174h BA = 886h) và Bảng báo giá (`BÁO GIÁ MODULES` – 886h):**
 >    - Trong **Bảng tiến độ (Mục II)**, `712h WBS` gồm `398h` giờ kỹ thuật trực tiếp của 14 module (`M01`–`M14`) và `314h` giờ kỹ thuật công việc chung (khảo sát, thiết kế, hạ tầng, 4 đợt test QA/QC, nghiệm thu, bàn giao); cộng `174h BA` (`52h` BA trực tiếp trong module + `122h` BA công việc chung) = **`886h`**. Như vậy tổng giờ trực tiếp 14 module là `398h + 52h = 450h` và tổng giờ công việc chung là `314h + 122h = 436h` (`450h + 436h = 886h`).
 >    - Trong sheet **`BÁO GIÁ MODULES`**, toàn bộ `436h` công việc chung (cả kỹ thuật và BA) đã được phân bổ trực tiếp vào từng hạng mục `Q-01` đến `Q-13` nhưng vẫn giữ nguyên 2 cột cộng dồn sao cho tổng cột `Giờ WBS (h)` = **`712h`** (`398h` module + `314h` WBS công việc chung phân bổ) và tổng cột `Giờ BA (h)` = **`174h`** (`52h` BA module + `122h` BA công việc chung phân bổ), tổng cộng = **`886h`**. Hai cách trình bày đều cho cùng một tổng nguồn lực **`886h`** và tổng giá trị **`300.000.000 VNĐ`**.
@@ -91,8 +91,8 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 ### 2. Mốc 1: Nền tảng (21/09/2026 – 14/10/2026)
 - **Mục tiêu:** Xây dựng khung bảo mật, định danh người dùng, cơ chế phân quyền cốt lõi và quản trị tài khoản.
 - **Các công việc chính:**
-  - **M01: Đăng nhập & Xác thực (21/09 – 25/09):** Senior và Dev 2 lập trình cơ chế Auth/Token/Session cùng BA làm rõ nghiệp vụ (`Senior 20h, Dev 2 20h, BA 4h = 44h`).
-  - **M02: Vai trò & Phân quyền (28/09 – 02/10):** Senior và Dev 1 cấu hình ma trận quyền theo vai trò cùng BA (`Senior 20h, Dev 1 20h, BA 4h = 44h`).
+  - **M01: Đăng nhập & Xác thực (21/09 – 25/09):** Senior, Dev 1 và Dev 2 lập trình cơ chế Auth/Token/Session cùng BA làm rõ nghiệp vụ (`Senior 18h, Dev 1 4h, Dev 2 18h, BA 4h = 44h`).
+  - **M02: Vai trò & Phân quyền (28/09 – 02/10):** Senior, Dev 1 và Dev 3 cấu hình ma trận quyền theo vai trò cùng BA (`Senior 18h, Dev 1 18h, Dev 3 4h, BA 4h = 44h`).
   - **M03: Quản lý tài khoản (05/10 – 07/10):** Senior, Dev 2, Dev 3 tạo các chức năng quản lý người dùng/phân hệ và import Excel cùng BA (`Senior 12h, Dev 2 12h, Dev 3 12h, BA 4h = 40h`).
   - **Test QA/QC – Đợt 1 & Khách hàng test (08/10 – 14/10):** PM, QA 1, QA 2 và BA kiểm thử chức năng và phối hợp khách hàng trực tiếp dùng thử, nghiệm thu sơ bộ giai đoạn nền tảng (`PM 4h, QA 1 20h, QA 2 20h, BA 20h = 64h`).
 
@@ -103,17 +103,17 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
   - **M05: Khởi tạo Ticket (15/10 – 19/10):** Senior, Dev 1, Dev 3 cùng BA xây dựng giao diện và API gửi yêu cầu hỗ trợ (`Senior 12h, Dev 1 12h, Dev 3 12h, BA 4h = 40h`).
   - **M06: Tiếp nhận Ticket (20/10 – 22/10):** Senior, Dev 2, Dev 3 cùng BA xây dựng cơ chế ghi nhận và phân loại ticket đến bộ phận chuyên môn (`Senior 12h, Dev 2 12h, Dev 3 12h, BA 4h = 40h`).
   - **M07: Điều phối Ticket (23/10 – 26/10):** Senior, Dev 1, Dev 3 cùng BA phát triển chức năng phân loại đơn mục "Khác", chuyển đơn sai phòng ban và gán việc (`Senior 2h, Dev 1 8h, Dev 3 8h, BA 4h = 22h`).
-  - **M08: Xử lý & Bổ sung (27/10 – 28/10):** Dev 1, Dev 3 cùng BA thực hiện cập nhật tiến độ, yêu cầu bổ sung thông tin (đếm ngược 72h) và chuyển lại đơn sai phòng ban (`Dev 1 8h, Dev 3 8h, BA 4h = 20h`).
+  - **M08: Xử lý & Bổ sung (27/10 – 28/10):** Senior, Dev 1, Dev 3 cùng BA thực hiện cập nhật tiến độ, yêu cầu bổ sung thông tin (đếm ngược 72h) và chuyển lại đơn sai phòng ban (`Senior 4h, Dev 1 6h, Dev 3 6h, BA 4h = 20h`).
   - **M09: Trả kết quả (29/10 – 30/10):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng luồng phản hồi giải pháp/kết quả xử lý đến sinh viên (`Dev 1 8h, Dev 2 8h, Dev 3 8h, BA 4h = 28h`).
   - **Test QA/QC – Đợt 2 (02/11 – 06/11):** PM, QA 1, QA 2 và BA kiểm thử toàn bộ luồng tạo, tiếp nhận, điều phối (`M04`–`M07`), xử lý và trả kết quả (`M08`–`M09`), bao gồm kiểm thử trọn vẹn luồng nhân viên báo sai phòng ban và Admin điều chuyển lại (`FR-M08-04` $\rightarrow$ `FR-M07-02`) (`PM 4h, QA 1 20h, QA 2 20h, BA 12h = 56h`).
   - **M10: Theo dõi & Bổ sung (02/11 – 03/11):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng màn hình tra cứu trạng thái, tiến độ và nộp bổ sung hồ sơ (`Dev 1 8h, Dev 2 8h, Dev 3 8h, BA 4h = 28h`).
-  - **M11: Kết quả & Đánh giá (04/11 – 05/11):** Dev 2, Dev 3 cùng BA xây dựng chức năng xem kết quả, đánh giá chất lượng phục vụ và đóng ticket (`Dev 2 8h, Dev 3 4h, BA 4h = 16h`).
+  - **M11: Kết quả & Đánh giá (04/11 – 05/11):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng chức năng xem kết quả, đánh giá chất lượng phục vụ và đóng ticket (`Dev 1 4h, Dev 2 4h, Dev 3 4h, BA 4h = 16h`).
   - **Test QA/QC – Đợt 3 (09/11 – 13/11):** PM, QA 1, QA 2 và BA kiểm thử tích hợp trọn vẹn luồng yêu cầu & sinh viên nộp bổ sung hồ sơ (`FR-M08-03` $\leftrightarrow$ `FR-M10-02`), luồng xem kết quả, đánh giá CSAT/tự động đóng đơn (`M11`) và hồi quy toàn bộ phân hệ `MS-02` (`PM 4h, QA 1 20h, QA 2 20h, BA 12h = 56h`).
 
 ### 4. Mốc 3: Giám sát Dashboard (16/11/2026 – 04/12/2026)
 - **Mục tiêu:** Xây dựng hệ thống đo lường, phân tích hiệu suất, báo cáo dữ liệu quản trị và hỗ trợ đa ngôn ngữ.
 - **Các công việc chính:**
-  - **M12: Giám sát tiến độ (16/11 – 20/11):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng màn hình tracking SLA, cảnh báo ticket quá hạn và tra cứu (`Dev 1 12h, Dev 2 20h, Dev 3 8h, BA 4h = 44h`).
+  - **M12: Giám sát tiến độ (16/11 – 20/11):** Dev 1, Dev 2, Dev 3 cùng BA xây dựng màn hình tracking SLA, cảnh báo ticket quá hạn và tra cứu (`Dev 1 8h, Dev 2 26h, Dev 3 6h, BA 4h = 44h`).
   - **M13: Dashboard & Báo cáo (23/11 – 27/11):** Dev 2 và Dev 3 cùng BA xây dựng dashboard thống kê và xuất báo cáo (`Dev 2 20h, Dev 3 12h, BA 4h = 36h`).
   - **M14: Quản lý đa ngôn ngữ (23/11 – 27/11):** Dev 1 thực hiện chuyển đổi ngôn ngữ (`Dev 1 8h`, 1 FR / 2 AC, triển khai song song `M13`, kết thúc cùng ngày 27/11). Xem [PRD M14](../03-modules/M14-quan-ly-da-ngon-ngu/prd.md). `M13` (`36h` trực tiếp) và `M14` (`8h` trực tiếp) dùng chung hạng mục báo giá `Q-13` (`84h` sau khi cộng `40h` công việc chung phân bổ, tương đương `28.442.438 VNĐ`).
   - **Test QA/QC – Đợt 4 (30/11 – 04/12):** PM, QA 1, QA 2 và BA kiểm thử tính chính xác của số liệu, báo cáo và độ ổn định hệ thống (`PM 4h, QA 1 20h, QA 2 20h, BA 24h = 68h`).
