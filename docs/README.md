@@ -106,7 +106,14 @@ docs/
 | **Rủi ro** | `R-01` – `R-10` | `docs/08-project/risk-register.md` | Khả năng, Tác động, Owner, Phương án |
 | **Change Request** | `CR-01`... | GitHub Issues (`.github/ISSUE_TEMPLATE/4-change-request.md`) | Đánh giá 6 chiều, Tài liệu cập nhật |
 
-> **Ghi chú về dữ liệu `Mô phỏng` & Giả định:** Khách hàng (Aurora University), đội ngũ thực thi 8 nhân sự (PM, BA, Senior Dev, 3 Junior Dev, 2 QA/QC tại `Ngan-sach-nhan-su.md` và `team-charter.md`) cùng bảng dữ liệu phân tích phản hồi tại `QL-san-pham.md` (Mục 4.3) là dữ liệu **Mô phỏng** phục vụ kế hoạch quản lý dự án môn học.
+> **Quy ước đối soát dữ liệu dự án:**
+> 1. **Lương nội bộ ≠ Giá bán:** `Ngan-sach-nhan-su.md` là chi phí lương nội bộ 8 nhân sự (`126,5tr` Gross / `886h`); `Bao-gia-cho-khach.md` là giá bán thương mại trọn gói (`300tr` / `886h`). Hai bảng độc lập, không so sánh ngang hàng.
+> 2. **Baseline 886h:** Gồm `450h` module (`398h WBS + 52h BA`) + `436h` việc chung (`314h WBS + 122h BA`). Báo giá phân bổ trọn gói `886h` vào 13 hạng mục `Q-01..Q-13` theo đơn giá `338.600,4515 VNĐ/h`.
+> 3. **14 Module / 13 Hạng mục giá (`Q-13`):** `M14` (Đa ngôn ngữ Việt/Anh, `8h` Dev 1 tách từ `M13`) dùng chung hạng mục báo giá `Q-13` với `M13`, không phát sinh chi phí ngoài `300tr`.
+> 4. **Hiệu lực Proposal:** Lộ trình mốc hiện hành theo `Dieu-chinh-proposal.md` (`MS-00..MS-04`); các mục Mục tiêu, Ngoài phạm vi, Nghiệm thu & Bảo hành 6 tháng tại `Proposal.md` vẫn giữ hiệu lực.
+> 5. **Mã AC:** PRD ghi `AC-xx (FR-Mxx-yy/AC-zz)`; RTM và Kịch bản Test trích dẫn mã đầy đủ `FR-Mxx-yy/AC-zz`.
+> 6. **Tính SLA:** Thứ 2–Thứ 6 (trừ T7, CN, ngày lễ `system_holidays`). Tính từ lúc tạo đơn (`New`), tạm dừng khi `Pending` (chờ bổ sung), chạy tiếp khi bổ sung xong. Cảnh báo đỏ khi đạt `100%` SLA hoặc đơn `New` > `4h` làm việc.
+> 7. **Dữ liệu `Mô phỏng` & Giả định:** Khách hàng (Aurora University), đội ngũ thực thi 8 nhân sự (PM, BA, Senior Dev, 3 Junior Dev, 2 QA/QC tại `Ngan-sach-nhan-su.md` và `team-charter.md`) cùng bảng dữ liệu phân tích phản hồi tại `QL-san-pham.md` (Mục 4.3) là dữ liệu **Mô phỏng** phục vụ kế hoạch quản lý dự án môn học.
 
 ---
 
