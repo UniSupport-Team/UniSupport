@@ -86,7 +86,7 @@
   * `[M07-02]` Admin chuyển lại các đơn bị báo sai phòng ban về đúng nơi
   * `[M07-03]` Trưởng phòng phân công người xử lý đơn trong nội bộ phòng ban
 
-* **[M08-xu-ly-trao-doi/](M08-xu-ly-trao-doi/) — [M08] Xử lý & Bổ sung (4 FR)** ([prd.md](M08-xu-ly-trao-doi/prd.md) | [Xu-ly-trao-doi.md](M08-xu-ly-trao-doi/Xu-ly-trao-doi.md))
+* **[M08-xu-ly-trao-doi/](M08-xu-ly-trao-doi/) — [M08] Xử lý & Trao đổi (4 FR)** ([prd.md](M08-xu-ly-trao-doi/prd.md) | [Xu-ly-trao-doi.md](M08-xu-ly-trao-doi/Xu-ly-trao-doi.md))
 
   * `[M08-01]` Nhân viên cập nhật tiến độ, ghi chú và lưu lịch sử xử lý đơn
   * `[M08-02]` Nhân viên xem lại danh sách lịch sử các đơn mình đã xử lý
