@@ -17,8 +17,9 @@
 - [Ngân sách nhân sự](../Ngan-sach-nhan-su.md): Định mức **886 giờ công** và cơ cấu chi phí nội bộ.
 
 
-## Đồng bộ bản phát hành tiếp theo
+## Đồng bộ bản điều chỉnh tiếp theo
 
-- Dự kiến hợp nhất Proposal thành v2.0, xuất Word và PDF cùng nội dung, ghi phiên bản và ngày trên tên tệp.
-- Chưa phát hành v2.0; các bản Word/PDF lịch sử không được coi là đã đồng bộ với Markdown mới.
-- Chỉ cập nhật trạng thái phát hành sau khi kiểm tra nội dung và có xác nhận của nhóm/khách hàng theo quy trình dự án.
+- Giữ nguyên Proposal.docx và Proposal.pdf ban đầu làm hồ sơ lịch sử.
+- Nguồn nội dung bản điều chỉnh tiếp theo: [Dieu-chinh-proposal.md](../Dieu-chinh-proposal.md), gồm mục 5 về khóa phạm vi MS-00, bảo mật, SLA bảo hành và nghiệm thu.
+- Xuất Word/PDF bản điều chỉnh cùng nội dung, ghi phiên bản và ngày phát hành thực tế trên tên tệp; không tạo Proposal độc lập mới.
+- Bản điều chỉnh mới chưa phát hành; chỉ thay thế các điều khoản tương ứng sau khi được phê duyệt. Giữ nguyên 886 giờ công, 300.000.000 VNĐ và tiến độ MS-00–MS-04.
