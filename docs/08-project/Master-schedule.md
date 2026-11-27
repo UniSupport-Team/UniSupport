@@ -42,15 +42,16 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | 25h | 10h | **35h** |
 | **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
 
-> **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (4 sheet: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `Change Log`):**
+> **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (6 sheet theo bản Google Sheets đã chuẩn hóa: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `WBS`, `Resources`, `Change Log`):**
+> Bản Excel trong repository cần được thay bằng bản xuất từ [Google Sheets đã chuẩn hóa](https://docs.google.com/spreadsheets/d/142fvtvzqEwIIvsoaqQGOWs77DDdy6B1e-ot-V8ZA10I/edit) trước khi chốt bàn giao.
 > 1. **Về cột "Phụ trách (theo biểu đồ Gantt)" vs. "Giờ công thực tế theo vai trò":**
->    - Cột **"Phụ trách (theo biểu đồ Gantt)"** giữ nguyên danh sách nhân sự hiển thị tại cột `D` của sheet `Final` (riêng `M10` ghi tắt `"M10: Theo dõi"` trên `Final` và đầy đủ `"M10: Theo dõi & Bổ sung"` trên `Chi tiết` / `BÁO GIÁ MODULES`).
+>    - Cột **"Phụ trách (theo biểu đồ Gantt)"** giữ nguyên danh sách nhân sự hiển thị tại cột `D` của sheet `Final`; tên M10 thống nhất là `M10: Theo dõi & Bổ sung`.
 >    - **Vai trò BA (`174h`):** BA tham gia xuyên suốt dự án nên giờ BA được tách riêng ở cột `Giờ BA (h)` và cộng vào `Tổng Effort (h)`, không lặp lại tên BA tại cột `D` trên các dòng phát triển module/test của sheet `Final`.
 >    - **Nhân sự hỗ trợ review/tích hợp chéo:** Giờ review và tích hợp được tính trong giờ công module của Dev 1 (M01, M11), Dev 3 (M02) và Senior (M08), mỗi vai trò 4h tại module tương ứng. Giờ công M12 được phân bổ giữa Dev 1, Dev 2 và Dev 3 theo bảng tiến độ.
 > 2. **Về cách quy đổi giữa Bảng tiến độ (712h WBS + 174h BA = 886h) và Bảng báo giá (`BÁO GIÁ MODULES` – 886h):**
 >    - Trong **Bảng tiến độ (Mục II)**, `712h WBS` gồm `398h` giờ kỹ thuật trực tiếp của 14 module (`M01`–`M14`) và `314h` giờ kỹ thuật công việc chung (khảo sát, thiết kế, hạ tầng, 4 đợt test QA/QC, nghiệm thu, bàn giao); cộng `174h BA` (`52h` BA trực tiếp trong module + `122h` BA công việc chung) = **`886h`**. Như vậy tổng giờ trực tiếp 14 module là `398h + 52h = 450h` và tổng giờ công việc chung là `314h + 122h = 436h` (`450h + 436h = 886h`).
 >    - Trong sheet **`BÁO GIÁ MODULES`**, toàn bộ `436h` công việc chung (cả kỹ thuật và BA) đã được phân bổ trực tiếp vào từng hạng mục `Q-01` đến `Q-13` nhưng vẫn giữ nguyên 2 cột cộng dồn sao cho tổng cột `Giờ WBS (h)` = **`712h`** (`398h` module + `314h` WBS công việc chung phân bổ) và tổng cột `Giờ BA (h)` = **`174h`** (`52h` BA module + `122h` BA công việc chung phân bổ), tổng cộng = **`886h`**. Hai cách trình bày đều cho cùng một tổng nguồn lực **`886h`** và tổng giá trị **`300.000.000 VNĐ`**.
-> 3. **Quy định nguồn lực & chức năng chi tiết:** Danh sách chức năng từng module (`[FR-Mxx-xx]`) và luồng nghiệp vụ tương ứng khớp 100% với sheet `Chi tiết` trong `Master Schedule.xlsx`; bảng tổng hợp chi phí 8 vai trò xem tại [Ngan-sach-nhan-su.md](Ngan-sach-nhan-su.md).
+> 3. **Quy định nguồn lực & chức năng chi tiết:** Sheet `WBS` là nguồn phân bổ giờ công và ngày thực hiện; `Resources` tổng hợp tự động từ WBS và đối chiếu baseline; `Final` hiển thị Gantt theo WBS. Sheet `Chi tiết` đối chiếu chức năng với PRD; bảng tổng hợp chi phí 8 vai trò xem tại [Ngan-sach-nhan-su.md](Ngan-sach-nhan-su.md).
 
 ### Phân tích chuỗi quan hệ phụ thuộc kỹ thuật & luồng nghiệp vụ (Work Dependency Matrix)
 
