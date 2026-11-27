@@ -4,7 +4,7 @@
 
 Dự án UniSupport sử dụng đội ngũ 08 nhân sự bán thời gian trong thời gian triển khai 16 tuần, gồm 01 Project Manager (PM), 01 Business Analyst (BA), 01 Senior Developer, 03 Junior Developer và 02 QA/QC. Nhân sự được phân bổ theo từng giai đoạn và chức năng, BA tham gia xuyên suốt dự án; các nhân sự còn lại được huy động theo từng giai đoạn.
 
-Quy ước thời gian làm việc: 04 giờ/ngày, 05 ngày trong tuần và 04 giờ vào sáng thứ 7, tương đương 16 tuần khi nhân sự được huy động đầy đủ. Chi phí nhân sự được tính dựa trên số giờ dự kiến thực tế của từng vai trò theo kế hoạch phân công.
+Quy ước thời gian làm việc: 04 giờ/ngày từ thứ Hai đến thứ Sáu và 04 giờ vào sáng thứ Bảy, tương đương tối đa 24 giờ/tuần khi nhân sự được huy động đầy đủ. Chi phí nhân sự được tính dựa trên số giờ dự kiến thực tế của từng vai trò theo kế hoạch phân công.
 
 ## CƠ CẤU ĐỘI NGŨ
 
