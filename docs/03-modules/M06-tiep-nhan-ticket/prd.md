@@ -92,6 +92,6 @@
 **Acceptance Criteria (Tiêu chí nghiệm thu - AC):**
 
 * **AC-01:** (FR-M06-02/AC-01) Nhân viên đúng phòng ban bấm nhận thành công $\rightarrow$ Gán tên người xử lý, chuyển sang trạng thái Đang xử lý (`In Progress`); nếu nhân viên khác phòng ban cố nhận đơn thì bị chặn với mã `403 Forbidden` (`BR-01`, `E-02`).
-* **AC-02 (Kiểm thử Concurrency):** Hai nhân viên cùng bấm nhận 1 đơn $\rightarrow$ Người bấm trước nhận thành công, người bấm sau bị chặn (`409 Conflict`) và nhận thông báo lỗi (`BR-01`, `E-01`).
+* **AC-02 (Kiểm thử Concurrency):** (FR-M06-02/AC-02) Hai nhân viên cùng bấm nhận 1 đơn $\rightarrow$ Người bấm trước nhận thành công, người bấm sau bị chặn (`409 Conflict`) và nhận thông báo lỗi (`BR-01`, `E-01`).
 
 ---
