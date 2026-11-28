@@ -162,6 +162,8 @@ Dự án được tổ chức theo 5 cột mốc tuần tự (`MS-00` $\rightarr
 | Tổng | 80h | Trong 398h | Không cộng thêm WBS |
 
 PM theo dõi effort thực tế theo module, không tính trùng; lỗi hồi quy dùng effort module phát sinh. Nếu cần sử dụng giờ giữ lại sớm, PM điều phối lại, không trì hoãn P0/P1. Kiểm tra tải tối đa 24h/tuần/người kỹ thuật; M12 Dev 2 bố trí giờ kiểm thử phù hợp sang tuần khác. Nếu thiếu effort hoặc tải, PM trình duyệt quỹ dự phòng 15.368.535 VNĐ hoặc điều chỉnh kế hoạch. Chi phí giả định gồm BH DN: Senior 291.600đ/h, Junior 109.350đ/h; ví dụ 4h Senior + 8h Junior = 2.041.200đ. CR 16h là thay đổi phạm vi, phải đánh giá và phê duyệt riêng.
+
+- **Kịch bản năng lực CR sau MS-02 (16h kỹ thuật, có điều kiện):** Tuần 16–20/11, giữ khả năng điều phối Senior 8h (tải 0→8h) và Dev 1 8h (6→14h), mỗi người dưới 24h/tuần; chi phí giả định 3.207.600 VNĐ gồm BH DN. Đây là năng lực chưa cam kết, không cộng vào baseline 886h hay lấy từ 80h bug-fix. PM xác nhận kỹ năng, lịch ngày, effort BA/QA bổ sung và ngân sách còn lại trước khi trình CR; chỉ triển khai sau phê duyệt, ưu tiên P0/P1. Nếu không đủ nguồn hoặc ảnh hưởng hạn bàn giao, trình thay đổi phạm vi/tiến độ/chi phí. Không mặc định quỹ rủi ro được dùng cho thay đổi phạm vi.
 - **Tổng đối chiếu giờ công (886 giờ):** Tổng giờ công các tác vụ kỹ thuật là `88h + 160h + 290h + 124h + 50h = 712h WBS`, cộng với `32h + 32h + 56h + 32h + 22h = 174h BA` = **`886 giờ công Effort`**, khớp baseline **886h** (`450h` module + `436h` công việc chung) đã cập nhật tại [Ngan-sach-nhan-su.md](Ngan-sach-nhan-su.md) và [Bao-gia-cho-khach.md](Bao-gia-cho-khach.md).
 
 ### 3. Quỹ dự phòng cho Rủi ro & Yêu cầu thay đổi (CR), và tiếp nhận phản hồi
