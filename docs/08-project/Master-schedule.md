@@ -23,21 +23,21 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 | **Mốc 1**<br>*(21/09 – 14/10)* | Nền tảng | M01: Đăng nhập & Xác thực | 21/09/2026 | 25/09/2026 | 5 ngày | Senior, Dev 1, Dev 2 | 40h | 4h | **44h** |
 | | | M02: Vai trò & Phân quyền | 28/09/2026 | 02/10/2026 | 5 ngày | Senior, Dev 1, Dev 3 | 40h | 4h | **44h** |
 | | | M03: Quản lý tài khoản | 05/10/2026 | 07/10/2026 | 3 ngày | Senior, Dev 3, Dev 2 | 36h | 4h | **40h** |
-| | | Test QA/QC – Đợt 1 *(KH dùng thử không bắt buộc)* | 08/10/2026 | 14/10/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 20h | **64h** |
+| | | Test QA/QC – Đợt 1 *(KH trực tiếp dùng thử và nghiệm thu sơ bộ)* | 08/10/2026 | 14/10/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 20h | **64h** |
 | **Mốc 2**<br>*(12/10 – 13/11)* | Ticket & Phân hệ sinh viên | M04: Quản lý danh mục | 12/10/2026 | 14/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | 36h | 4h | **40h** |
 | | | M05: Khởi tạo Ticket | 15/10/2026 | 19/10/2026 | 3 ngày | Senior, Dev 1, Dev 3 | 36h | 4h | **40h** |
 | | | M06: Tiếp nhận Ticket | 20/10/2026 | 22/10/2026 | 3 ngày | Senior, Dev 2, Dev 3 | 36h | 4h | **40h** |
 | | | M07: Điều phối Ticket | 23/10/2026 | 26/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | 18h | 4h | **22h** |
 | | | M08: Xử lý & Trao đổi | 27/10/2026 | 28/10/2026 | 2 ngày | Senior, Dev 1, Dev 3 | 16h | 4h | **20h** |
 | | | M09: Trả kết quả | 29/10/2026 | 30/10/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 24h | 4h | **28h** |
-| | | Test QA/QC – Đợt 2 *(KH dùng thử không bắt buộc)* | 02/11/2026 | 06/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
+| | | Test QA/QC – Đợt 2 *(KH trực tiếp dùng thử và ghi nhận phản hồi)* | 02/11/2026 | 06/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
 | | | M10: Theo dõi & Bổ sung | 02/11/2026 | 03/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 24h | 4h | **28h** |
 | | | M11: Kết quả & Đánh giá | 04/11/2026 | 05/11/2026 | 2 ngày | Dev 1, Dev 2, Dev 3 | 12h | 4h | **16h** |
-| | | Test QA/QC – Đợt 3 *(KH dùng thử không bắt buộc)* | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
+| | | Test QA/QC – Đợt 3 *(KH trực tiếp dùng thử và ghi nhận phản hồi)* | 09/11/2026 | 13/11/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 12h | **56h** |
 | **Mốc 3**<br>*(16/11 – 04/12)* | Giám sát Dashboard | M12: Giám sát tiến độ | 16/11/2026 | 20/11/2026 | 5 ngày | Dev 1, Dev 2, Dev 3 | 40h | 4h | **44h** |
 | | | M13: Dashboard & Báo cáo | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 2, Dev 3 | 32h | 4h | **36h** |
 | | | M14: Quản lý đa ngôn ngữ | 23/11/2026 | 27/11/2026 | 5 ngày | Dev 1 | 8h | 0h | **8h** |
-| | | Test QA/QC – Đợt 4 *(KH dùng thử không bắt buộc)* | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 24h | **68h** |
+| | | Test QA/QC – Đợt 4 *(KH trực tiếp dùng thử và ghi nhận phản hồi)* | 30/11/2026 | 04/12/2026 | 5 ngày | PM, QA 1, QA 2 | 44h | 24h | **68h** |
 | **Mốc 4**<br>*(07/12 – 18/12)* | Bàn giao dự án | Nghiệm thu | 07/12/2026 | 11/12/2026 | 5 ngày | PM, QA 1 | 25h | 12h | **37h** |
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | 25h | 10h | **35h** |
 | **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
@@ -131,7 +131,7 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 
 ### Quy tắc kiểm thử và đóng mốc
 
-- MS-01–MS-03: QA/QC kiểm thử bắt buộc theo kế hoạch; PM tổ chức buổi dùng thử, gửi lịch và kịch bản cho khách hàng, BA ghi nhận phản hồi, kết quả và xác nhận sơ bộ (MS-01) hoặc xác nhận phản hồi từng giai đoạn (MS-02–MS-03). Nếu khách hàng vắng mặt, PM lập biên bản, ghi trạng thái chờ xác nhận và thống nhất lịch hẹn lại; chỉ xác nhận hoàn thành nội bộ dựa trên báo cáo QA/QC, AC, DoD và không còn P0/P1 mở. Không coi kết quả nội bộ là nghiệm thu khách hàng. Phản hồi ngoài phạm vi đã khóa được xử lý theo CR; PM báo cáo nếu lịch hẹn lại ảnh hưởng milestone.
+- MS-01–MS-03: QA/QC kiểm thử bắt buộc theo kế hoạch; PM tổ chức khách hàng trực tiếp dùng thử theo kế hoạch, gửi lịch và kịch bản cho khách hàng, BA ghi nhận phản hồi, kết quả và xác nhận sơ bộ (MS-01) hoặc xác nhận phản hồi từng giai đoạn (MS-02–MS-03). Nếu khách hàng vắng mặt, PM lập biên bản, ghi trạng thái chờ xác nhận và thống nhất lịch hẹn lại; chỉ xác nhận hoàn thành nội bộ dựa trên báo cáo QA/QC, AC, DoD và không còn P0/P1 mở. Không coi kết quả nội bộ là nghiệm thu khách hàng; buổi dùng thử chưa thực hiện phải được hẹn lại. Phản hồi ngoài phạm vi đã khóa được xử lý theo CR; PM báo cáo nếu lịch hẹn lại ảnh hưởng milestone.
 - MS-04: UAT và quyết định nghiệm thu chính thức của khách hàng theo Proposal mục 8.2 là bắt buộc; nếu chưa có xác nhận thì chưa đóng nghiệm thu chính thức và PM báo cáo theo quy trình quản trị.
 - Đây là quy tắc kế hoạch, không xác nhận kết quả thực tế. Không thay đổi lịch, effort hoặc chi phí.
 
@@ -181,3 +181,5 @@ Bảng theo dõi các phiên bản điều chỉnh đường cơ sở (Baseline)
 | **`v2.0.0`** | 01/09/2026 | Added | Bắt đầu thiết lập và vận hành Master Schedule chính thức từ ngày `01/09/2026` đến `18/12/2026` (16 tuần, `886h` effort). Khởi động giai đoạn Khảo sát & Đặc tả (`MS-00`) và áp dụng mốc thời gian triển khai theo kế hoạch. | `Master Schedule.xlsx`, `Master-schedule.md` |
 | **`v2.1.0`** | 28/11/2026 | Changed | Ghi nhận bổ sung M14 (điều chuyển 8h từ M13), SLA bảo hành P0–P3 thay phản hồi 24 giờ, khóa phạm vi cuối MS-00 thay Mốc 1, không nghiệm thu khi còn P0/P1 mở và làm rõ bảo mật. Bản điều chỉnh PDF cập nhật 27/11/2026; chờ xác nhận khách hàng, chưa có bằng chứng phê duyệt. Không thay đổi tổng 886h, giá 300.000.000 VNĐ hoặc tiến độ. | `Proposal.md`, `Dieu-chinh-proposal.md`, `sent/README.md` |
 | **`v2.2.0`** | 28/11/2026 | Changed | Làm rõ ngân sách 80h tự kiểm thử/sửa lỗi trong 398h kỹ thuật module, phân bổ TEST-01–04 (20/27/9/12h), UAT 8h và HANDOVER 4h; bổ sung ghi chú WBS, kiểm soát tải 24h/tuần và phân biệt CR với bug-fix. Giữ nguyên baseline 886h, giá hợp đồng và effort từng module. | `Master-schedule.md`, Master Schedule (Google Sheets) |
+
+| **`v2.3.0`** | 28/11/2026 | Changed | Đồng bộ quy định khách hàng trực tiếp dùng thử: MS-01 nghiệm thu sơ bộ; MS-02–MS-03 ghi nhận phản hồi; MS-04 nghiệm thu chính thức. Không thay đổi baseline. | `Master-schedule.md`, WBS, Final |
