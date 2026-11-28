@@ -39,7 +39,7 @@ Dự án gồm **14 module**, được báo giá theo **13 hạng mục** (`Q-01
 
 **Ghi chú minh bạch về cơ cấu giờ công và đơn giá:**
 
-**Bảng đối chiếu phân bổ thương mại (giờ):** Giờ chung phân bổ = giờ báo giá trừ giờ trực tiếp tương ứng trong Master Schedule. Đây là bảng đối chiếu cơ cấu hiện hành, không phải định mức phát triển hoặc quy tắc phân bổ theo tỷ lệ. Điều chỉnh 2h WBS/BA giữa Q-02 và Q-07 để không có phần phân bổ âm; giữ nguyên tổng giờ và giá từng hạng mục. Cơ sở nghiệp vụ phân bổ từng khoản chung cần được xác nhận riêng.
+**Bảng đối chiếu phân bổ thương mại (giờ):** Giờ chung phân bổ = giờ báo giá trừ giờ trực tiếp tương ứng trong Master Schedule. Đây là bảng đối chiếu cơ cấu hiện hành, không phải định mức phát triển hoặc quy tắc phân bổ theo tỷ lệ. Điều chỉnh 2h WBS/BA giữa Q-02 và Q-07 để không có phần phân bổ âm; giữ nguyên tổng giờ và giá từng hạng mục. Cơ sở quản lý phân bổ: giữ cơ cấu thương mại hiện hành của 13 hạng mục; lấy giờ trực tiếp từ WBS, xác định phần chung bằng hiệu giữa giờ báo giá và giờ trực tiếp theo từng nhóm WBS/BA. Kiểm soát phần chung không âm, tổng WBS chung đúng 314h và BA chung đúng 122h, không tính trùng hoặc thu riêng. Đây là phương pháp đối chiếu và kiểm soát baseline thương mại, không phải phương pháp tái lập trọng số phân bổ ban đầu. Chưa có bằng chứng xác nhận căn cứ chọn trọng số ban đầu của từng hạng mục; mọi thay đổi cơ cấu phân bổ phải được PM/BA đối chiếu và trình xác nhận trước khi cập nhật báo giá.
 
 | Hạng mục | WBS trực tiếp | BA trực tiếp | WBS chung | BA chung | Tổng |
 |---|---:|---:|---:|---:|---:|
