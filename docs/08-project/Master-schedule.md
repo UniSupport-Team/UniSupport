@@ -42,7 +42,7 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 | | | Bàn giao chính thức | 14/12/2026 | 18/12/2026 | 5 ngày | PM, QA 2 | 25h | 10h | **35h** |
 | **TỔNG CỘNG** | **Toàn dự án** | **23 hạng mục** | **01/09/2026** | **18/12/2026** | **16 tuần** | **Đủ 8 vai trò** | **712h** | **174h** | **886h** |
 
-> **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (7 sheet trong bản Google Sheets cập nhật: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `WBS`, `Resources`, `Change Log`, `Lịch bug-fix`):**
+> **Ghi chú đối chiếu minh bạch với `Master Schedule.xlsx` (9 sheet trong bản Google Sheets cập nhật: `Final`, `Chi tiết`, `BÁO GIÁ MODULES`, `WBS`, `Resources`, `Change Log`, `Lịch bug-fix`, `Tải nhân sự theo tuần`, `Milestones`):**
 > Workbook chính thức: [Master Schedule.xlsx](Master%20Schedule.xlsx).
 > 1. **Về cột "Phụ trách (theo biểu đồ Gantt)" vs. "Giờ công thực tế theo vai trò":**
 >    - Cột **"Phụ trách (theo biểu đồ Gantt)"** giữ nguyên danh sách nhân sự hiển thị tại cột `D` của sheet `Final`; tên M10 thống nhất là `M10: Theo dõi & Bổ sung`.
@@ -51,7 +51,7 @@ Tài liệu dưới đây tổng hợp chi tiết kế hoạch triển khai tổ
 > 2. **Về cách quy đổi giữa Bảng tiến độ (712h WBS + 174h BA = 886h) và Bảng báo giá (`BÁO GIÁ MODULES` – 886h):**
 >    - Trong **Bảng tiến độ (Mục II)**, `712h WBS` gồm `398h` giờ kỹ thuật trực tiếp của 14 module (`M01`–`M14`) và `314h` giờ WBS công việc chung (không gồm BA) (khảo sát, thiết kế, hạ tầng, 4 đợt test QA/QC, nghiệm thu, bàn giao); cộng `174h BA` (`52h` BA trực tiếp trong module + `122h` BA công việc chung) = **`886h`**. Như vậy tổng giờ trực tiếp 14 module là `398h + 52h = 450h` và tổng giờ công việc chung là `314h + 122h = 436h` (`450h + 436h = 886h`).
 >    - Trong sheet **`BÁO GIÁ MODULES`**, toàn bộ `436h` công việc chung (cả WBS và BA) đã được phân bổ trực tiếp vào từng hạng mục `Q-01` đến `Q-13` nhưng vẫn giữ nguyên 2 cột cộng dồn sao cho tổng cột `Giờ WBS (h)` = **`712h`** (`398h` module + `314h` WBS công việc chung phân bổ) và tổng cột `Giờ BA (h)` = **`174h`** (`52h` BA module + `122h` BA công việc chung phân bổ), tổng cộng = **`886h`**. Hai cách trình bày đều cho cùng một tổng nguồn lực **`886h`** và tổng giá trị **`300.000.000 VNĐ`**.
-> 3. **Quy định nguồn lực & chức năng chi tiết:** Sheet `WBS` là nguồn phân bổ giờ công và ngày thực hiện; `Resources` tổng hợp tự động từ WBS và đối chiếu baseline; `Final` hiển thị Gantt theo WBS. Sheet `Chi tiết` đối chiếu chức năng với PRD; bảng tổng hợp chi phí 8 vai trò xem tại [Ngan-sach-nhan-su.md](Ngan-sach-nhan-su.md).
+> 3. **Quy định nguồn lực & chức năng chi tiết:** Sheet `WBS` là nguồn phân bổ giờ công và ngày thực hiện; `Resources` tổng hợp theo milestone gốc từ WBS và đối chiếu baseline; giờ hỗ trợ thực tế MS-04 xem `Tải nhân sự theo tuần`; `Milestones` tổng hợp effort từng mốc bằng SUMIF từ WBS; `Final` hiển thị Gantt theo WBS. Sheet `Chi tiết` đối chiếu chức năng với PRD; bảng tổng hợp chi phí 8 vai trò xem tại [Ngan-sach-nhan-su.md](Ngan-sach-nhan-su.md).
 
 ### Phân tích chuỗi quan hệ phụ thuộc kỹ thuật & luồng nghiệp vụ (Work Dependency Matrix)
 
@@ -188,3 +188,4 @@ Bảng theo dõi các phiên bản điều chỉnh đường cơ sở (Baseline)
 | **`v2.2.0`** | 28/11/2026 | Changed | Làm rõ ngân sách 80h tự kiểm thử/sửa lỗi trong 398h kỹ thuật module, phân bổ TEST-01–04 (20/27/9/12h), UAT 8h và HANDOVER 4h; bổ sung ghi chú WBS, kiểm soát tải 24h/tuần và phân biệt CR với bug-fix. Giữ nguyên baseline 886h, giá hợp đồng và effort từng module. | `Master-schedule.md`, Master Schedule (Google Sheets) |
 
 | **`v2.3.0`** | 28/11/2026 | Changed | Đồng bộ quy định khách hàng trực tiếp dùng thử: MS-01 nghiệm thu sơ bộ; MS-02–MS-03 ghi nhận phản hồi; MS-04 nghiệm thu chính thức. Không thay đổi baseline. Phân biệt PDF lưu ngày 27/11 và dự thảo ngày 28/11 chưa xác nhận phát hành/phê duyệt. | `Master-schedule.md`, WBS, Final, `sent/README.md` |
+| **`v2.4.0`** | 28/11/2026 | Changed | Liên kết báo giá với WBS và trọng số thương mại 314/122; bổ sung Milestones, làm rõ Resources; giữ nguyên 886h và 300 triệu. Cập nhật nội bộ, chưa xác nhận phê duyệt khách hàng. | Google Sheets, Bao-gia-cho-khach.md |
