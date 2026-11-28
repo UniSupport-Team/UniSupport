@@ -160,7 +160,7 @@
 
 **Alternative / Error Flows (Luồng rẽ nhánh / Xử lý lỗi):**
 
-* **E-01 (Không tìm thấy Ticket):** Admin nhập Mã Ticket hoặc mã sinh viên không tồn tại $\rightarrow$ Hiển thị trạng thái rỗng kèm thông báo *"Không tìm thấy Ticket khớp với từ khóa tra cứu"*.
+* **E-01 (Không tìm thấy Ticket):** Admin nhập Mã Ticket hoặc mã sinh viên không tồn tại $\rightarrow$ Trả về `404 Not Found` và hiển thị trạng thái rỗng kèm thông báo *"Không tìm thấy Ticket khớp với từ khóa tra cứu"*.
 * **E-02 (Truy cập công cụ tra cứu toàn trường trái quyền):** Vai trò không phải `Admin` gọi API tra cứu xuyên phòng ban $\rightarrow$ Từ chối với mã `403 Forbidden` (`BR-01`).
 * **E-03 (Mã Ticket sai định dạng):** Khi tra cứu theo mã Ticket không đúng định dạng chuẩn, hệ thống trả về `422 Unprocessable Entity`.
 

@@ -20,12 +20,12 @@ Dự án gồm **14 module**, được báo giá theo **13 hạng mục** (`Q-01
 | STT | Mã báo giá | Mã module | Tên Module / Chức năng | Giờ WBS (h) | Giờ BA (h) | Tổng Effort (h) | Thành tiền (VNĐ) |
 | :---: | :---: | :---: | :--- | ---: | ---: | ---: | ---: |
 | 1 | Q-01 | M01 | Đăng nhập & xác thực | 40 | 10 | 50 | 16.930.023 |
-| 2 | Q-02 | M02 | Vai trò & Phân quyền | 38 | 9 | 47 | 15.914.221 |
+| 2 | Q-02 | M02 | Vai trò & Phân quyền | 40 | 7 | 47 | 15.914.221 |
 | 3 | Q-03 | M03 | Quản lý tài khoản | 40 | 10 | 50 | 16.930.023 |
 | 4 | Q-04 | M04 | Quản lý danh mục | 42 | 10 | 52 | 17.607.223 |
 | 5 | Q-05 | M05 | Khởi tạo Ticket | 82 | 19 | 101 | 34.198.646 |
 | 6 | Q-06 | M06 | Tiếp nhận Ticket | 75 | 17 | 92 | 31.151.242 |
-| 7 | Q-07 | M07 | Điều phối Ticket | 80 | 19 | 99 | 33.521.445 |
+| 7 | Q-07 | M07 | Điều phối Ticket | 78 | 21 | 99 | 33.521.445 |
 | 8 | Q-08 | M08 | Xử lý & Trao đổi | 62 | 14 | 76 | 25.733.634 |
 | 9 | Q-09 | M09 | Trả kết quả | 50 | 12 | 62 | 20.993.228 |
 | 10 | Q-10 | M10 | Theo dõi & Bổ sung | 34 | 9 | 43 | 14.559.819 |
@@ -38,6 +38,26 @@ Dự án gồm **14 module**, được báo giá theo **13 hạng mục** (`Q-01
 > **Đơn giá** = Giá trị dự án / Tổng Effort = `300.000.000 / 886` = **`338.600,4515` VNĐ/h**
 
 **Ghi chú minh bạch về cơ cấu giờ công và đơn giá:**
+
+**Bảng đối chiếu phân bổ thương mại (giờ):** Giờ chung phân bổ = giờ báo giá trừ giờ trực tiếp tương ứng trong Master Schedule. Đây là bảng đối chiếu cơ cấu hiện hành, không phải định mức phát triển hoặc quy tắc phân bổ theo tỷ lệ. Điều chỉnh 2h WBS/BA giữa Q-02 và Q-07 để không có phần phân bổ âm; giữ nguyên tổng giờ và giá từng hạng mục. Cơ sở quản lý phân bổ: giữ cơ cấu thương mại hiện hành của 13 hạng mục; lấy giờ trực tiếp từ WBS, xác định phần chung bằng hiệu giữa giờ báo giá và giờ trực tiếp theo từng nhóm WBS/BA. Kiểm soát phần chung không âm, tổng WBS chung đúng 314h và BA chung đúng 122h, không tính trùng hoặc thu riêng. Đây là phương pháp đối chiếu và kiểm soát baseline thương mại, không phải phương pháp tái lập trọng số phân bổ ban đầu. Ngày 28/11/2026, nhóm xác nhận sử dụng cơ cấu báo giá hiện hành làm trọng số phân bổ thương mại chính thức: trọng số WBS chung của mỗi Q bằng giờ WBS chung tại bảng dưới chia 314; trọng số BA chung bằng giờ BA chung chia 122. Phân bổ từng quỹ giờ chung theo trọng số tương ứng, cộng giờ trực tiếp từ WBS để tái lập effort báo giá. Đây là quy ước quản lý được xác lập hiện tại để giữ giá từng hạng mục, không phải bằng chứng về căn cứ lịch sử hoặc phê duyệt của khách hàng. Mọi thay đổi trọng số phải được PM/BA đối chiếu và trình xác nhận trước khi cập nhật báo giá.
+
+| Hạng mục | WBS trực tiếp | BA trực tiếp | WBS chung | BA chung | Tổng |
+|---|---:|---:|---:|---:|---:|
+| Q-01 | 40 | 4 | 0 | 6 | 50 |
+| Q-02 | 40 | 4 | 0 | 3 | 47 |
+| Q-03 | 36 | 4 | 4 | 6 | 50 |
+| Q-04 | 36 | 4 | 6 | 6 | 52 |
+| Q-05 | 36 | 4 | 46 | 15 | 101 |
+| Q-06 | 36 | 4 | 39 | 13 | 92 |
+| Q-07 | 18 | 4 | 60 | 17 | 99 |
+| Q-08 | 16 | 4 | 46 | 10 | 76 |
+| Q-09 | 24 | 4 | 26 | 8 | 62 |
+| Q-10 | 24 | 4 | 10 | 5 | 43 |
+| Q-11 | 12 | 4 | 34 | 7 | 57 |
+| Q-12 | 40 | 4 | 18 | 11 | 73 |
+| Q-13 | 40 | 4 | 25 | 15 | 84 |
+| **Tổng** | **398** | **52** | **314** | **122** | **886** |
+
 1. **Cơ sở phân bổ giờ công (`Master Schedule.xlsx`, sheet `BÁO GIÁ MODULES`):** Toàn bộ **886 giờ công** của dự án (bao gồm `450h` giờ phát triển trực tiếp 14 module `M01`–`M14` và `436h` giờ công việc chung cho khảo sát, thiết kế, hạ tầng, 4 đợt kiểm thử QA/QC, nghiệm thu và bàn giao) đã được phân bổ trực tiếp vào 13 hạng mục báo giá `Q-01` đến `Q-13` theo đúng 2 nhóm cấu phần của Master Schedule: **`712h` Giờ WBS** (`398h` kỹ thuật trực tiếp module + `314h` WBS công việc chung phân bổ) và **`174h` Giờ BA** (`52h` BA trực tiếp module + `122h` BA công việc chung phân bổ), tổng cộng = **`886h`**.
 2. **Quy tắc gộp hạng mục `Q-13` (`M13` + `M14`):** Trong tiến độ triển khai (`Master-schedule.md`), `M13: Dashboard & Báo cáo` (`36h` trực tiếp) và `M14: Quản lý đa ngôn ngữ` (`8h` trực tiếp) có yêu cầu chức năng và lịch thực hiện riêng nhưng được gộp chung trong hạng mục thương mại **`Q-13`** với tổng effort đã phân bổ công việc chung là **`84h`** (`65h WBS + 19h BA`), tương đương **`28.442.437 VNĐ`**.
 3. **Không phát sinh chi phí ngoài bảng giá:** Toàn bộ giờ công việc chung (quản lý dự án, phân tích nghiệp vụ, thiết kế, hạ tầng, kiểm thử QA/QC, nghiệm thu và bàn giao) **đã nằm trọn trong đơn giá và thành tiền từng hạng mục trên**, khách hàng không phải thanh toán thêm bất kỳ khoản thu riêng nào nếu không thay đổi phạm vi.

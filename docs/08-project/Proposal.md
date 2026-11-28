@@ -1,6 +1,6 @@
 # ĐỀ XUẤT GIẢI PHÁP HỆ THỐNG QUẢN LÝ HỖ TRỢ SINH VIÊN (UNISUPPORT)
 
-> **Trạng thái:** Bản proposal ban đầu, được lưu làm lịch sử. Baseline milestone hiện hành được xác định tại [Báo cáo điều chỉnh kế hoạch triển khai](Dieu-chinh-proposal.md).
+> **Trạng thái:** Bản tổng hợp nội bộ đã cập nhật, không phải bản phát hành ban đầu. Bản gốc ngày 17/08/2026 lưu tại [sent/Proposal.docx](sent/Proposal.docx) và [sent/Proposal.pdf](sent/Proposal.pdf). Baseline milestone hiện hành được xác định tại [Báo cáo điều chỉnh kế hoạch triển khai](Dieu-chinh-proposal.md).
 
 - **Khách hàng:** Ban Giám hiệu – Aurora University
 - **Đơn vị triển khai:** Tổ hợp Dự án UniSupport
@@ -8,11 +8,11 @@
 
 ---
 
-> **Hiệu lực:** Các nội dung về Mục tiêu, Ngoài phạm vi, Nghiệm thu và Bảo hành vẫn còn hiệu lực, trừ nội dung được thay thế rõ ràng trong [Điều chỉnh Proposal](Dieu-chinh-proposal.md) và baseline hiện hành.
+> **Hiệu lực:** Các điều khoản điều chỉnh là baseline quản lý nội bộ, chờ xác nhận của khách hàng; không thay thế điều khoản đã thỏa thuận khi chưa có phê duyệt. Xem [Điều chỉnh Proposal](Dieu-chinh-proposal.md).
 
 ## Bối cảnh vấn đề khách hàng (tham chiếu bản hiện hành)
 
-Aurora University đang tiếp nhận yêu cầu sinh viên qua nhiều kênh (học vụ, tài chính, IT, cơ sở vật chất, email, Zalo và trực tiếp). Sinh viên khó xác định đúng nơi liên hệ và theo dõi trạng thái; phòng ban khó phân loại, chống thất lạc và kiểm soát tiến độ; nhà trường thiếu dữ liệu tổng hợp để đánh giá chất lượng hỗ trợ. Đây là phần tóm tắt từ [Kế hoạch quản lý sản phẩm — Mục 1.2](QL-san-pham.md#12-vấn-đề-cần-giải-quyết), không phải khảo sát định lượng mới. Proposal này được giữ làm lịch sử; các thay đổi baseline xem [Điều chỉnh Proposal](Dieu-chinh-proposal.md).
+Aurora University đang tiếp nhận yêu cầu sinh viên qua nhiều kênh (học vụ, tài chính, IT, cơ sở vật chất, email, Zalo và trực tiếp). Sinh viên khó xác định đúng nơi liên hệ và theo dõi trạng thái; phòng ban khó phân loại, chống thất lạc và kiểm soát tiến độ; nhà trường thiếu dữ liệu tổng hợp để đánh giá chất lượng hỗ trợ. Đây là phần tóm tắt từ [Kế hoạch quản lý sản phẩm — Mục 1.2](QL-san-pham.md#12-vấn-đề-cần-giải-quyết), không phải khảo sát định lượng mới. Bản Word/PDF gốc được giữ làm lịch sử; các thay đổi baseline xem [Điều chỉnh Proposal](Dieu-chinh-proposal.md).
 
 ## 1. Mục tiêu
 Xây dựng và triển khai nền tảng UniSupport nhằm đạt được các mục tiêu cốt lõi sau:

@@ -227,6 +227,20 @@ Các nội dung giám sát chính bao gồm:
 | **Tình trạng rủi ro** | Theo dõi các rủi ro đang ảnh hưởng đến dự án | Cập nhật trạng thái và mức độ ảnh hưởng |
 
 
+**Cách lấy số liệu từ GitHub:**
+- Tiến độ chức năng = số issue con đã đóng và đạt DoD / tổng issue con trong phạm vi × 100%; lọc theo milestone và các label `M01-subtask` đến `M14-subtask` (chọn từng label, cộng các tập không trùng). Loại issue trùng hoặc hủy.
+- Tiến độ bàn giao module: theo dõi riêng task cha mang label `M01` đến `M14`, đối chiếu DoD và hạn kế hoạch; không cộng task cha vào mẫu số tiến độ chức năng. Theo dõi riêng INF-01 và Docs-01/02 theo đầu ra milestone.
+- Lỗi tồn đọng: lọc issue lỗi đang mở (`is:issue is:open`), đối chiếu mức P0–P3 theo Kế hoạch quản lý chất lượng; khi chưa có label mức lỗi, phân loại từ nội dung issue, không giả định số lỗi bằng 0.
+- Đối chiếu hạn và Owner theo nội dung issue với Master Schedule; Owner kế hoạch không đồng nghĩa GitHub assignee. Không dùng phần trăm milestone mặc định làm tỷ lệ hoàn thành FR.
+
+- Tiến độ theo kế hoạch: lọc `is:issue` theo milestone thực tế trên GitHub, kiểm tra hạn từng task trong nội dung issue và WBS; với task mở, số ngày trễ là số ngày làm việc sau hạn đến ngày báo cáo; với task hoàn thành, dùng ngày hoàn thành có bằng chứng. Task đường găng trễ từ 2 ngày làm việc hoặc có nguy cơ trễ milestone: PM báo ngay theo mục 2.2.
+- Chi phí thực tế: tổng hợp giờ thực tế có xác nhận trong cập nhật issue/báo cáo tuần theo nhân sự và đơn giá chi phí được duyệt; đối chiếu chứng từ và ngân sách hạng mục. Tỷ lệ vượt = (chi phí thực tế hoặc dự báo - ngân sách hạng mục) / ngân sách hạng mục × 100%; từ 5% báo vượt cấp. GitHub không tự cung cấp chi phí; thiếu dữ liệu ghi chưa có số liệu.
+- Rủi ro: đối chiếu sổ rủi ro với issue theo mã rủi ro, đếm các mã chưa xử lý theo trạng thái và mức ảnh hưởng; không đếm trùng các issue liên quan cùng mã. Ghi rõ rủi ro chưa có issue liên kết.
+- P0/P1: đếm riêng issue lỗi mở theo mức độ, đối chiếu thời điểm phát hiện, phản hồi, khắc phục và retest với SLA mục 3.3; báo ngay nếu quá SLA hoặc ảnh hưởng nghiệm thu. Không coi issue đóng nhưng chưa retest đạt là đã khắc phục.
+- Ví dụ MS-03: chọn milestone tương ứng trên GitHub, lọc từng label subtask thuộc mốc, hợp nhất theo số issue; tử số chỉ gồm issue đóng đạt DoD, mẫu số gồm toàn bộ issue con hợp lệ. Mẫu số bằng 0 ghi N/A. PM lưu ngày chốt số liệu, bộ lọc và liên kết issue trong báo cáo tuần; không tính issue feedback quản trị vào tiến độ FR.
+
+**Kiểm chứng bộ lọc và chất lượng dữ liệu:** PM sử dụng `repo:UniSupport-Team/UniSupport is:issue milestone:"<tên milestone thực tế>" label:M14-subtask` (thay label theo module), thêm `is:closed` hoặc `is:open` để đối chiếu trạng thái; kiểm tra DoD trước khi tính tử số. Đối chiếu milestone được gán trên GitHub với mã MS trong nội dung issue và WBS; nếu thiếu hoặc lệch metadata, ghi chưa xác minh và yêu cầu cập nhật, không tự tính hoàn thành. Với lỗi, kiểm tra cả issue chưa gắn label `bug` hoặc mức P0–P3; kết quả bộ lọc rỗng không chứng minh không có lỗi. Lưu danh sách số issue, thời điểm chốt, bộ lọc và các ngoại lệ trong báo cáo tuần.
+
 Các chỉ số được cập nhật trong quá trình thực hiện và sử dụng làm cơ sở cho báo cáo định kỳ. Những chỉ số chưa có dữ liệu thực tế sẽ được ghi nhận khi có thông tin, không sử dụng số liệu ước đoán thay cho kết quả thực tế.
 
 ### 5.3. Phân tích sai lệch và hành động khắc phục

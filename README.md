@@ -15,7 +15,7 @@ Toàn bộ tài liệu quản lý dự án, đặc tả yêu cầu (PRD), thiế
 * **Đặc tả 14 module chức năng (`M01`–`M14`, 41 FR):** [docs/03-modules/README.md](docs/03-modules/README.md)
 * **Yêu cầu phi chức năng (`NFR-SEC`, `NFR-PERF`, `NFR-INT`, `NFR-AVAIL`):** [docs/05-non-functional-requirements/README.md](docs/05-non-functional-requirements/README.md)
 * **Kịch bản kiểm thử & Ma trận truy vết (`RTM`):** [docs/06-acceptance/test-scenarios.md](docs/06-acceptance/test-scenarios.md) | [docs/06-acceptance/traceability-matrix.md](docs/06-acceptance/traceability-matrix.md)
-* **Proposal, Baseline Milestone (`MS-00`–`MS-04`) & Báo giá (`Q-01`–`Q-13`):** [docs/08-project/Proposal.md](docs/08-project/Proposal.md) | [docs/08-project/Dieu-chinh-proposal.md](docs/08-project/Dieu-chinh-proposal.md) | [docs/08-project/Bao-gia-cho-khach.md](docs/08-project/Bao-gia-cho-khach.md)
+* **Proposal tổng hợp nội bộ, Baseline Milestone (`MS-00`–`MS-04`) & Báo giá (`Q-01`–`Q-13`):** [docs/08-project/Proposal.md](docs/08-project/Proposal.md) | [docs/08-project/Dieu-chinh-proposal.md](docs/08-project/Dieu-chinh-proposal.md) | [docs/08-project/Bao-gia-cho-khach.md](docs/08-project/Bao-gia-cho-khach.md)
 * **Kế hoạch tổng thể (Master Schedule 886h) & Ngân sách nhân sự:** [docs/08-project/Master-schedule.md](docs/08-project/Master-schedule.md) | [docs/08-project/Ngan-sach-nhan-su.md](docs/08-project/Ngan-sach-nhan-su.md) | [docs/08-project/Master Schedule.xlsx](docs/08-project/Master%20Schedule.xlsx)
 * **Sổ đăng ký rủi ro (`R-01`–`R-10`):** [docs/08-project/risk-register.md](docs/08-project/risk-register.md)
 * **Team Charter, Chất lượng (`QA/QC/DoD`), Sản phẩm & Quản trị (`CR`):** [docs/08-project/team-charter.md](docs/08-project/team-charter.md) | [docs/08-project/QL-chat-luong.md](docs/08-project/QL-chat-luong.md) | [docs/08-project/QL-san-pham.md](docs/08-project/QL-san-pham.md) | [docs/08-project/Dieuphoi-Giamsat.md](docs/08-project/Dieuphoi-Giamsat.md)
@@ -26,5 +26,5 @@ Tài liệu tham chiếu bộ khung môn học: [HUONG-DAN.md](HUONG-DAN.md).
 
 ## 2. Cơ cấu Nhóm & Đội ngũ Dự án (Group 4)
 
-* **Ban quản lý dự án (Sinh viên thực hiện môn học):** Xem chi tiết phân công vai trò, quy định người thay thế và cơ chế phối hợp của các thành viên Group 4 tại [docs/08-project/team-charter.md](docs/08-project/team-charter.md).
+* **Ban quản lý dự án (Sinh viên thực hiện môn học):** Group 4 là nhóm sinh viên thực hiện bài tập môn học, tách biệt với đội ngũ thực thi giả định bên dưới. Team Charter mô tả vai trò và cơ chế phối hợp của đội ngũ thực thi, không phải bảng phân công cá nhân của Group 4.
 * **Đội ngũ thực thi giả định (`Mô phỏng` — 08 nhân sự bán thời gian, 886 giờ công / 16 tuần):** Gồm `01 PM`, `01 BA`, `01 Senior Developer`, `03 Junior Developer` và `02 QA/QC Specialist` (quy định chi tiết tại [docs/08-project/team-charter.md](docs/08-project/team-charter.md) và [docs/08-project/Ngan-sach-nhan-su.md](docs/08-project/Ngan-sach-nhan-su.md)).

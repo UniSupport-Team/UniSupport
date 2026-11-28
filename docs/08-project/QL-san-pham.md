@@ -3,7 +3,7 @@
 ## 1. Tổng quan sản phẩm
 
 ### 1.1. UniSupport là gì?
-UniSupport là nền tảng trực tuyến giúp sinh viên gửi yêu cầu hỗ trợ đến các phòng ban chuyên trách của trường và theo dõi tiến độ xử lý tại một đầu mối duy nhất. Hệ thống tự động phân loại và điều phối Ticket, giúp giảm tải quy trình thủ công và nâng cao tốc độ giải quyết thủ tục hành chính.
+UniSupport là nền tảng trực tuyến giúp sinh viên gửi yêu cầu hỗ trợ đến các phòng ban chuyên trách của trường và theo dõi tiến độ xử lý tại một đầu mối duy nhất. Sinh viên chọn phòng ban và danh mục thủ tục khi tạo Ticket; riêng mục "Khác" không bắt buộc chọn phòng ban (FR-M05-01/AC-02). Ticket thuộc mục "Khác" được đưa vào hàng chờ để Admin phân loại; khi nhân viên báo sai phòng ban, Admin điều chuyển về đúng nơi (FR-M07-01, FR-M07-02, FR-M08-04). Trưởng phòng phân công Ticket New hoặc phân công lại Ticket In Progress cho nhân viên trong nội bộ phòng ban (FR-M07-03). Hệ thống hỗ trợ định tuyến theo lựa chọn của người dùng, cập nhật hàng chờ và lưu lịch sử; không tự động phân loại nội dung Ticket.
 
 ### 1.2. Vấn đề cần giải quyết
 Việc hỗ trợ sinh viên hiện tại thông qua nhiều kênh riêng lẻ (học vụ, tài chính, cơ sở vật chất, IT...) phát sinh ba vấn đề lớn:
@@ -14,7 +14,7 @@ Việc hỗ trợ sinh viên hiện tại thông qua nhiều kênh riêng lẻ (
 ### 1.3. Giá trị cốt lõi
 - **Tập trung:** Mọi yêu cầu đi qua một cổng duy nhất, giải quyết bài toán "đi đâu, hỏi ai".
 - **Minh bạch:** Sinh viên theo dõi được thời gian thực (real-time) trạng thái xử lý yêu cầu.
-- **Hiệu quả:** Yêu cầu được tự động phân loại, có thời hạn cam kết dịch vụ (SLA) rõ ràng và đo lường được hiệu suất thực tế.
+- **Hiệu quả:** Yêu cầu được chuyển đến hàng chờ phù hợp theo phòng ban và danh mục đã chọn; Admin xử lý các trường hợp ngoại lệ. Thời hạn cam kết dịch vụ (SLA) rõ ràng giúp đo lường hiệu suất thực tế. Tính năng tự động gợi ý phòng ban chỉ là đề xuất sau bàn giao tại mục 4.3, cần phê duyệt riêng.
 
 ---
 
