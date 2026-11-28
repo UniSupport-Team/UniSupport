@@ -3,7 +3,7 @@
 ## 1. Tổng quan sản phẩm
 
 ### 1.1. UniSupport là gì?
-UniSupport là nền tảng trực tuyến giúp sinh viên gửi yêu cầu hỗ trợ đến các phòng ban chuyên trách của trường và theo dõi tiến độ xử lý tại một đầu mối duy nhất. Sinh viên chọn phòng ban và danh mục thủ tục khi tạo Ticket (FR-M05-01). Ticket thuộc mục "Khác" được đưa vào hàng chờ để Admin phân loại; khi nhân viên báo sai phòng ban, Admin điều chuyển về đúng nơi (FR-M07-01, FR-M07-02, FR-M08-04). Trưởng phòng phân công hoặc phân công lại nhân viên trong nội bộ phòng ban (FR-M07-03). Hệ thống hỗ trợ định tuyến theo lựa chọn của người dùng, cập nhật hàng chờ và lưu lịch sử; không tự động phân loại nội dung Ticket.
+UniSupport là nền tảng trực tuyến giúp sinh viên gửi yêu cầu hỗ trợ đến các phòng ban chuyên trách của trường và theo dõi tiến độ xử lý tại một đầu mối duy nhất. Sinh viên chọn phòng ban và danh mục thủ tục khi tạo Ticket; riêng mục "Khác" không bắt buộc chọn phòng ban (FR-M05-01/AC-02). Ticket thuộc mục "Khác" được đưa vào hàng chờ để Admin phân loại; khi nhân viên báo sai phòng ban, Admin điều chuyển về đúng nơi (FR-M07-01, FR-M07-02, FR-M08-04). Trưởng phòng phân công Ticket New hoặc phân công lại Ticket In Progress cho nhân viên trong nội bộ phòng ban (FR-M07-03). Hệ thống hỗ trợ định tuyến theo lựa chọn của người dùng, cập nhật hàng chờ và lưu lịch sử; không tự động phân loại nội dung Ticket.
 
 ### 1.2. Vấn đề cần giải quyết
 Việc hỗ trợ sinh viên hiện tại thông qua nhiều kênh riêng lẻ (học vụ, tài chính, cơ sở vật chất, IT...) phát sinh ba vấn đề lớn:
